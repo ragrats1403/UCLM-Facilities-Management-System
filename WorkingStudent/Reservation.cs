@@ -26,7 +26,7 @@ namespace Function_Hall_Reservation_System.WorkingStudent
         {
             //Functions.Functions.gen = "Select events.eventid AS [EVENT ID], events.eventname AS [EVENT NAME], events.eventprice AS [Event Price],events.dateregistered AS [DATE REGISTERED] from events";
             //Functions.Functions.gen = "Select * from reservation where studentid = '" + Form1.setstudentid + "'";
-            Functions.Functions.gen = "Select * from reservation where reservationstatus = 'Pending'";
+            Functions.Functions.gen = "Select * from fhreservation where reservationstatus = 'Pending'";
             Functions.Functions.fill(Functions.Functions.gen, dataGridView1);
         }
 
@@ -164,10 +164,10 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             try
             {
                 Connection.Connection.DB();
-                Functions.Functions.gen = "UPDATE reservation SET reservationstatus='" + cmbstatus.Text +"',checkedby='"+Form1.setfullname+"' where reservationid = '"+txtreservationid.Text+"'";
+                Functions.Functions.gen = "UPDATE fhreservation SET reservationstatus='" + cmbstatus.Text +"',checkedby='"+Form1.setfullname+"' where reservationid = '"+txtreservationid.Text+"'";
                 Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
                 Functions.Functions.command.ExecuteNonQuery();
-                MessageBox.Show("Successfully Updated!", "reservation", MessageBoxButtons.OK);
+                MessageBox.Show("Successfully Updated!", "fhreservation", MessageBoxButtons.OK);
                 Connection.Connection.conn.Close();
                 Reservation res = new Reservation();
                 this.Close();

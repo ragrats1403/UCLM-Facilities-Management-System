@@ -68,7 +68,7 @@ namespace Function_Hall_Reservation_System.Admin
         }
         public void Filldata()
         {
-            Functions.Functions.gen = "Select * from Equipments";
+            Functions.Functions.gen = "Select * from fhequipments";
             Functions.Functions.fill(Functions.Functions.gen, dataGridView1);
         }
 
@@ -103,7 +103,7 @@ namespace Function_Hall_Reservation_System.Admin
             try
             {
                 Connection.Connection.DB();
-                Functions.Functions.gen = "UPDATE Equipments SET equipmentstatus='" + cmbstatus.Text + "' WHERE equipmentname='" + txtequipmentname.Text + "'";
+                Functions.Functions.gen = "UPDATE fhequipments SET equipmentstatus='" + cmbstatus.Text + "' WHERE equipmentname='" + txtequipmentname.Text + "'";
                 Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
                 Functions.Functions.command.ExecuteNonQuery();
                 MessageBox.Show("Successfully Updated Equipments Status!", "Equipments", MessageBoxButtons.OK);
@@ -128,7 +128,7 @@ namespace Function_Hall_Reservation_System.Admin
             // Connection.Connection.conn.Open();
             if (Connection.Connection.conn.State == System.Data.ConnectionState.Open)
             {
-                Functions.Functions.gen = "Select * from Equipments where equipmentname='" + txtequipmentname.Text + "'";
+                Functions.Functions.gen = "Select * from fhequipments where equipmentname='" + txtequipmentname.Text + "'";
                 Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
                 Functions.Functions.command.Connection = Connection.Connection.conn;
                 Functions.Functions.command.CommandType = System.Data.CommandType.Text;
@@ -152,7 +152,7 @@ namespace Function_Hall_Reservation_System.Admin
 
                 if (chkdup(eq))
                 {
-                    MessageBox.Show("Equipment already exists with Equipment Name: " + txtequipmentname.Text, "Equipments", MessageBoxButtons.OK);
+                    MessageBox.Show("Equipment already exists with Equipment Name: " + txtequipmentname.Text, "fhequipments", MessageBoxButtons.OK);
                     this.Close();
                     Equipment equ = new Equipment();
                     equ.Show();
@@ -162,11 +162,11 @@ namespace Function_Hall_Reservation_System.Admin
                 {
 
                     Connection.Connection.DB();
-                    Functions.Functions.gen = "Insert Into Equipments(equipmentname,equipmentstatus)values('" + txtequipmentname.Text + "','" + cmbstatus.Text + "')";
+                    Functions.Functions.gen = "Insert Into fhequipments(equipmentname,equipmentstatus)values('" + txtequipmentname.Text + "','" + cmbstatus.Text + "')";
                     Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
 
                     Functions.Functions.command.ExecuteNonQuery();
-                    MessageBox.Show("Equipment Added!", "Equipments", MessageBoxButtons.OK);
+                    MessageBox.Show("Equipment Added!", "fhequipments", MessageBoxButtons.OK);
 
                     Connection.Connection.conn.Close();
                     this.Close();
@@ -189,11 +189,11 @@ namespace Function_Hall_Reservation_System.Admin
                 var gen = MessageBox.Show("Are you sure you want to delete this Equipment?", "Delete equipment", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (gen == DialogResult.Yes)
                 {
-                    Functions.Functions.gen = "Delete from Equipments where equipmentname ='" + txtequipmentname.Text + "'";
+                    Functions.Functions.gen = "Delete from fhequipments where equipmentname ='" + txtequipmentname.Text + "'";
                     Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
                     Functions.Functions.command.ExecuteNonQuery();
                     Connection.Connection.conn.Close();
-                    MessageBox.Show("Equipment Removed!", "Equipments", MessageBoxButtons.OK);
+                    MessageBox.Show("Equipment Removed!", "fhequipments", MessageBoxButtons.OK);
                     this.Close();
                     Equipment equ = new Equipment();
                     equ.Show();

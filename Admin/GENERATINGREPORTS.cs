@@ -29,7 +29,7 @@ namespace Function_Hall_Reservation_System.Admin
 
         public void filldata()
             {
-                Functions.Functions.gen = "Select * from users inner join reservation on reservation.studentid = users.studentid where reservation.reservationstatus = 'Approved'";
+                Functions.Functions.gen = "Select * from users inner join fhreservation on fhreservation.studentid = users.studentid where fhreservation.reservationstatus = 'Approved'";
                 Functions.Functions.fill(Functions.Functions.gen, dataGridView1);
             }
         

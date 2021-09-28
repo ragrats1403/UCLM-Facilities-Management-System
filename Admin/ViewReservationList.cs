@@ -73,7 +73,7 @@ namespace Function_Hall_Reservation_System.Admin
         public void Filldata()
         {
             
-            Functions.Functions.gen = "Select * from reservation";
+            Functions.Functions.gen = "Select * from fhreservation";
             Functions.Functions.fill(Functions.Functions.gen, dataGridView1);
         }
 
@@ -130,10 +130,10 @@ namespace Function_Hall_Reservation_System.Admin
             try
             {
                 Connection.Connection.DB();
-                Functions.Functions.gen = "UPDATE reservation SET reservationstatus='" + cmbstatus.Text + "',approvedby = '"+Form1.setfullname+"' where reservationid= '"+txtreservationid.Text+"'";
+                Functions.Functions.gen = "UPDATE fhreservation SET fhreservationstatus='" + cmbstatus.Text + "',approvedby = '"+Form1.setfullname+"' where reservationid= '"+txtreservationid.Text+"'";
                 Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
                 Functions.Functions.command.ExecuteNonQuery();
-                MessageBox.Show("Successfully Updated!", "reservation", MessageBoxButtons.OK);
+                MessageBox.Show("Successfully Updated!", "fhreservation", MessageBoxButtons.OK);
                 Connection.Connection.conn.Close();
                 ViewReservationList viewres = new ViewReservationList();
                 this.Close();
