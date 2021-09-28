@@ -63,5 +63,9 @@ namespace Function_Hall_Reservation_System.Student
             dataGridView1.Columns[3].Width = 110;
         }
 
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

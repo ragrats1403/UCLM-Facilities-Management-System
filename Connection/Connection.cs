@@ -13,7 +13,7 @@ namespace Function_Hall_Reservation_System.Connection
     class Connection
     {
         public static SqlConnection conn;
-        private static string dbconnect = "Data Source=WIN-8IJEV42BG6T\\SQLEXPRESS;Initial Catalog=FunctionHallReservation;Integrated Security=True";
+        private static string dbconnect = "Data Source=DESKTOP-7V8P92N\\SQLEXPRESS;Initial Catalog=uclmfacilitiesdatabase;Integrated Security=True";
 
         public static void DB()
         {

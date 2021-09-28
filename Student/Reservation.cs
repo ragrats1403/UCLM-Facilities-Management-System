@@ -38,7 +38,7 @@ namespace Function_Hall_Reservation_System.Student
         public void chkboxfill()
         {
             Connection.Connection.DB();
-            Functions.Functions.gen = "Select equipmentname from Equipments where equipmentstatus = 'Available'";
+            Functions.Functions.gen = "Select equipmentname from fhequipments where fhequipmentstatus = 'Available'";
             Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
             Functions.Functions.reader = Functions.Functions.command.ExecuteReader();
             while (Functions.Functions.reader.Read())
@@ -162,7 +162,7 @@ namespace Function_Hall_Reservation_System.Student
                 try
                 {
                       Connection.Connection.DB();
-                      Functions.Functions.gen = "Select * from reservation";
+                      Functions.Functions.gen = "Select * from fhreservation";
                       Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
                       Functions.Functions.reader = Functions.Functions.command.ExecuteReader();
                       Functions.Functions.reader.Read();
@@ -184,7 +184,7 @@ namespace Function_Hall_Reservation_System.Student
 
 
                 Connection.Connection.DB();
-                Functions.Functions.gen = "Insert Into reservation(eventname,reservedby,reservationstatus,datereserved,checkedby,studentid,studentname,reservedequipments,approvedby,timestart,month,timeend,reserveddate)values('" + txtEventname.Text + "','" + name + "','Pending','" + DateTime.Now.ToString() + "','N/A','" + txtStudentid.Text + "','" + txtStudentName.Text + "','" + allequip + "','N/A','" + timestart + "','"+ month + " ','"+ timeend +"','"+dateval+"')";
+                Functions.Functions.gen = "Insert Into fhreservation(eventname,reservedby,reservationstatus,datereserved,checkedby,studentid,studentname,reservedequipments,approvedby,timestart,month,timeend,reserveddate)values('" + txtEventname.Text + "','" + name + "','Pending','" + DateTime.Now.ToString() + "','N/A','" + txtStudentid.Text + "','" + txtStudentName.Text + "','" + allequip + "','N/A','" + timestart + "','"+ month + " ','"+ timeend +"','"+dateval+"')";
                 Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
 
                 Functions.Functions.command.ExecuteNonQuery();
@@ -205,7 +205,7 @@ namespace Function_Hall_Reservation_System.Student
         }
         public void filldata()
         {
-            Functions.Functions.gen = "Select * from reservation where studentid = '" + Form1.setstudentid + "'";
+            Functions.Functions.gen = "Select * from fhreservation where studentid = '" + Form1.setstudentid + "'";
             Functions.Functions.fill(Functions.Functions.gen, dataGridView1);
         }
 
