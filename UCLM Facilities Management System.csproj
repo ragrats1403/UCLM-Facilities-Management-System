@@ -1,0 +1,276 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{71E3FBDB-233F-4339-AFD7-882F20BAB500}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Function_Hall_Reservation_System</RootNamespace>
+    <AssemblyName>Function Hall Reservation System</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\ACCOUNTS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\ACCOUNTS.Designer.cs">
+      <DependentUpon>ACCOUNTS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\CalendarOfActivities.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\CalendarOfActivities.Designer.cs">
+      <DependentUpon>CalendarOfActivities.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Equipment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\Equipment.Designer.cs">
+      <DependentUpon>Equipment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\GENERATINGREPORTS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\GENERATINGREPORTS.Designer.cs">
+      <DependentUpon>GENERATINGREPORTS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ViewReservationList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\ViewReservationList.Designer.cs">
+      <DependentUpon>ViewReservationList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Connection\Connection.cs" />
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FunctionHallReservationDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FunctionHallReservationDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FunctionHallReservationDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FunctionHallReservationDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FunctionHallReservationDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FunctionHallReservationDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Functions\Functions.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Registration\Registration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registration\Registration.Designer.cs">
+      <DependentUpon>Registration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Student\Reservation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student\Reservation.Designer.cs">
+      <DependentUpon>Reservation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Student\StudentDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student\StudentDashboard.Designer.cs">
+      <DependentUpon>StudentDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Student\StudentCalendar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student\StudentCalendar.Designer.cs">
+      <DependentUpon>StudentCalendar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WorkingStudent\Accounts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WorkingStudent\Accounts.Designer.cs">
+      <DependentUpon>Accounts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WorkingStudent\CalendarOfActivities.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WorkingStudent\CalendarOfActivities.Designer.cs">
+      <DependentUpon>CalendarOfActivities.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WorkingStudent\Equipments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WorkingStudent\Equipments.Designer.cs">
+      <DependentUpon>Equipments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WorkingStudent\GenerateReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WorkingStudent\GenerateReports.Designer.cs">
+      <DependentUpon>GenerateReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WorkingStudent\Reservation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WorkingStudent\Reservation.Designer.cs">
+      <DependentUpon>Reservation.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Admin\ACCOUNTS.resx">
+      <DependentUpon>ACCOUNTS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\CalendarOfActivities.resx">
+      <DependentUpon>CalendarOfActivities.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Equipment.resx">
+      <DependentUpon>Equipment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\GENERATINGREPORTS.resx">
+      <DependentUpon>GENERATINGREPORTS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\ViewReservationList.resx">
+      <DependentUpon>ViewReservationList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Registration\Registration.resx">
+      <DependentUpon>Registration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student\Reservation.resx">
+      <DependentUpon>Reservation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student\StudentDashboard.resx">
+      <DependentUpon>StudentDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student\StudentCalendar.resx">
+      <DependentUpon>StudentCalendar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkingStudent\Accounts.resx">
+      <DependentUpon>Accounts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkingStudent\CalendarOfActivities.resx">
+      <DependentUpon>CalendarOfActivities.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkingStudent\Equipments.resx">
+      <DependentUpon>Equipments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkingStudent\GenerateReports.resx">
+      <DependentUpon>GenerateReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkingStudent\Reservation.resx">
+      <DependentUpon>Reservation.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="FunctionHallReservationDataSet.xsc">
+      <DependentUpon>FunctionHallReservationDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FunctionHallReservationDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FunctionHallReservationDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FunctionHallReservationDataSet.xss">
+      <DependentUpon>FunctionHallReservationDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FunctionHallReservationDataSet1.xsc">
+      <DependentUpon>FunctionHallReservationDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="FunctionHallReservationDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FunctionHallReservationDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FunctionHallReservationDataSet1.xss">
+      <DependentUpon>FunctionHallReservationDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="FunctionHallReservationDataSet2.xsc">
+      <DependentUpon>FunctionHallReservationDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="FunctionHallReservationDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FunctionHallReservationDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FunctionHallReservationDataSet2.xss">
+      <DependentUpon>FunctionHallReservationDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
