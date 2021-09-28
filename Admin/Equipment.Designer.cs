@@ -37,11 +37,12 @@ namespace Function_Hall_Reservation_System.Admin
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.txtequipmentid = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lblfullname = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -53,13 +54,10 @@ namespace Function_Hall_Reservation_System.Admin
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabPage1.SuspendLayout();
             this.tabControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -150,6 +148,27 @@ namespace Function_Hall_Reservation_System.Admin
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Add | Update Equipments";
             // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(314, 178);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(92, 32);
+            this.button9.TabIndex = 29;
+            this.button9.Text = "DELETE";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Visible = false;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(220, 178);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(88, 31);
+            this.button5.TabIndex = 28;
+            this.button5.Text = "ADD";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // txtequipmentid
             // 
             this.txtequipmentid.Enabled = false;
@@ -195,17 +214,6 @@ namespace Function_Hall_Reservation_System.Admin
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(749, 271);
             this.tabControl1.TabIndex = 20;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(196, 3);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(183, 92);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 17;
-            this.pictureBox2.TabStop = false;
             // 
             // lblfullname
             // 
@@ -324,27 +332,6 @@ namespace Function_Hall_Reservation_System.Admin
             this.label4.TabIndex = 18;
             this.label4.Text = "Welcome Admin!";
             // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(220, 178);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(88, 31);
-            this.button5.TabIndex = 28;
-            this.button5.Text = "ADD";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // button9
-            // 
-            this.button9.Location = new System.Drawing.Point(314, 178);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(92, 32);
-            this.button9.TabIndex = 29;
-            this.button9.Text = "DELETE";
-            this.button9.UseVisualStyleBackColor = true;
-            this.button9.Visible = false;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
-            // 
             // Equipment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -352,7 +339,6 @@ namespace Function_Hall_Reservation_System.Admin
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(938, 450);
             this.Controls.Add(this.tabControl1);
-            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label4);
@@ -364,7 +350,6 @@ namespace Function_Hall_Reservation_System.Admin
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabPage1.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -386,7 +371,6 @@ namespace Function_Hall_Reservation_System.Admin
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label lblfullname;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel1;
