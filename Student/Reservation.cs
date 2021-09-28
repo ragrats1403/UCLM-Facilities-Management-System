@@ -38,7 +38,7 @@ namespace Function_Hall_Reservation_System.Student
         public void chkboxfill()
         {
             Connection.Connection.DB();
-            Functions.Functions.gen = "Select equipmentname from fhequipments where fhequipmentstatus = 'Available'";
+            Functions.Functions.gen = "Select equipmentname from fhequipments where equipmentstatus = 'Available'";
             Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
             Functions.Functions.reader = Functions.Functions.command.ExecuteReader();
             while (Functions.Functions.reader.Read())

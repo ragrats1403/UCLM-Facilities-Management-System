@@ -54,7 +54,7 @@ namespace Function_Hall_Reservation_System.Student
         {
             lblfullname.Text = Form1.setfullname;   
            // dataGridView1.Columns[2].Width = 108;
-            Functions.Functions.gen = "Select reservation.eventname as [Event Name],reservation.reserveddate as [Date],reservation.timestart as [Time Start], reservation.timeend as [Time End] from reservation where reservation.reservationstatus = 'Approved'";
+            Functions.Functions.gen = "Select fhreservation.eventname as [Event Name],fhreservation.reserveddate as [Date],fhreservation.timestart as [Time Start], fhreservation.timeend as [Time End] from fhreservation where fhreservation.reservationstatus = 'Approved'";
             Functions.Functions.fill(Functions.Functions.gen, dataGridView1);
             
             dataGridView1.Columns[0].Width = 200;
