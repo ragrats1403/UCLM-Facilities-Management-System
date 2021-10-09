@@ -47,9 +47,7 @@ namespace Function_Hall_Reservation_System.Admin
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.cmbstatus = new System.Windows.Forms.ComboBox();
-            this.txtage = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.txtroleid = new System.Windows.Forms.TextBox();
@@ -157,9 +155,7 @@ namespace Function_Hall_Reservation_System.Admin
             this.tabPage2.Controls.Add(this.dateTimePicker1);
             this.tabPage2.Controls.Add(this.label5);
             this.tabPage2.Controls.Add(this.cmbstatus);
-            this.tabPage2.Controls.Add(this.txtage);
             this.tabPage2.Controls.Add(this.label10);
-            this.tabPage2.Controls.Add(this.label6);
             this.tabPage2.Controls.Add(this.label11);
             this.tabPage2.Controls.Add(this.label7);
             this.tabPage2.Controls.Add(this.txtroleid);
@@ -250,7 +246,7 @@ namespace Function_Hall_Reservation_System.Admin
             // 
             this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.Enabled = false;
-            this.dateTimePicker1.Location = new System.Drawing.Point(173, 203);
+            this.dateTimePicker1.Location = new System.Drawing.Point(174, 161);
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(134, 20);
@@ -276,21 +272,11 @@ namespace Function_Hall_Reservation_System.Admin
             "Single",
             "Divorced",
             "Married"});
-            this.cmbstatus.Location = new System.Drawing.Point(175, 163);
+            this.cmbstatus.Location = new System.Drawing.Point(176, 121);
             this.cmbstatus.Margin = new System.Windows.Forms.Padding(2);
             this.cmbstatus.Name = "cmbstatus";
             this.cmbstatus.Size = new System.Drawing.Size(133, 28);
             this.cmbstatus.TabIndex = 38;
-            // 
-            // txtage
-            // 
-            this.txtage.Enabled = false;
-            this.txtage.Location = new System.Drawing.Point(175, 124);
-            this.txtage.Margin = new System.Windows.Forms.Padding(2);
-            this.txtage.Multiline = true;
-            this.txtage.Name = "txtage";
-            this.txtage.Size = new System.Drawing.Size(133, 28);
-            this.txtage.TabIndex = 27;
             // 
             // label10
             // 
@@ -302,17 +288,6 @@ namespace Function_Hall_Reservation_System.Admin
             this.label10.Size = new System.Drawing.Size(74, 24);
             this.label10.TabIndex = 37;
             this.label10.Text = "Gender";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(28, 124);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(45, 24);
-            this.label6.TabIndex = 28;
-            this.label6.Text = "Age";
             // 
             // label11
             // 
@@ -329,7 +304,7 @@ namespace Function_Hall_Reservation_System.Admin
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(28, 163);
+            this.label7.Location = new System.Drawing.Point(29, 121);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(60, 24);
@@ -349,7 +324,7 @@ namespace Function_Hall_Reservation_System.Admin
             // 
             this.lbldate.AutoSize = true;
             this.lbldate.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbldate.Location = new System.Drawing.Point(28, 199);
+            this.lbldate.Location = new System.Drawing.Point(29, 157);
             this.lbldate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbldate.Name = "lbldate";
             this.lbldate.Size = new System.Drawing.Size(132, 24);
@@ -560,9 +535,7 @@ namespace Function_Hall_Reservation_System.Admin
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox cmbstatus;
-        private System.Windows.Forms.TextBox txtage;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtroleid;
