@@ -61,5 +61,14 @@ namespace Function_Hall_Reservation_System.Student
             dataGridView1.Columns[3].Width = 110;
         }
 
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

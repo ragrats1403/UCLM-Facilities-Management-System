@@ -57,6 +57,7 @@ namespace Function_Hall_Reservation_System.Student
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPage2.SuspendLayout();
@@ -78,20 +79,22 @@ namespace Function_Hall_Reservation_System.Student
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.lblfullname);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(6, 3);
+            this.panel1.Location = new System.Drawing.Point(-1, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(208, 493);
+            this.panel1.Size = new System.Drawing.Size(215, 452);
             this.panel1.TabIndex = 4;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(0, 282);
+            this.button4.Location = new System.Drawing.Point(3, 272);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(208, 37);
             this.button4.TabIndex = 6;
@@ -101,7 +104,7 @@ namespace Function_Hall_Reservation_System.Student
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(0, 239);
+            this.button2.Location = new System.Drawing.Point(3, 229);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(208, 37);
             this.button2.TabIndex = 4;
@@ -110,7 +113,7 @@ namespace Function_Hall_Reservation_System.Student
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(0, 196);
+            this.button1.Location = new System.Drawing.Point(3, 186);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(208, 37);
             this.button1.TabIndex = 3;
@@ -121,7 +124,7 @@ namespace Function_Hall_Reservation_System.Student
             // lblfullname
             // 
             this.lblfullname.AutoSize = true;
-            this.lblfullname.Location = new System.Drawing.Point(43, 141);
+            this.lblfullname.Location = new System.Drawing.Point(33, 139);
             this.lblfullname.Name = "lblfullname";
             this.lblfullname.Size = new System.Drawing.Size(35, 13);
             this.lblfullname.TabIndex = 1;
@@ -134,7 +137,7 @@ namespace Function_Hall_Reservation_System.Student
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(208, 126);
+            this.pictureBox1.Size = new System.Drawing.Size(215, 126);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -325,7 +328,7 @@ namespace Function_Hall_Reservation_System.Student
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(7, 7);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(651, 323);
+            this.dataGridView1.Size = new System.Drawing.Size(561, 267);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -342,16 +345,25 @@ namespace Function_Hall_Reservation_System.Student
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(220, 108);
+            this.comboBox1.Location = new System.Drawing.Point(231, 107);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 8;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(3, 402);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(208, 37);
+            this.button3.TabIndex = 7;
+            this.button3.Text = "Logout";
+            this.button3.UseVisualStyleBackColor = true;
             // 
             // Reservation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(913, 515);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.label3);
@@ -402,5 +414,6 @@ namespace Function_Hall_Reservation_System.Student
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.CheckedListBox checkedListBox1;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button button3;
     }
 }
