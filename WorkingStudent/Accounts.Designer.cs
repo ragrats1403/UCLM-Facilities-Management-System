@@ -59,8 +59,6 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             this.label13 = new System.Windows.Forms.Label();
             this.lbldate = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtage = new System.Windows.Forms.TextBox();
             this.txtlastname = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtfirstname = new System.Windows.Forms.TextBox();
@@ -257,8 +255,6 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             this.tabPage2.Controls.Add(this.label13);
             this.tabPage2.Controls.Add(this.lbldate);
             this.tabPage2.Controls.Add(this.label7);
-            this.tabPage2.Controls.Add(this.label6);
-            this.tabPage2.Controls.Add(this.txtage);
             this.tabPage2.Controls.Add(this.txtlastname);
             this.tabPage2.Controls.Add(this.label5);
             this.tabPage2.Controls.Add(this.txtfirstname);
@@ -313,7 +309,7 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             // 
             this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.Enabled = false;
-            this.dateTimePicker1.Location = new System.Drawing.Point(187, 167);
+            this.dateTimePicker1.Location = new System.Drawing.Point(187, 127);
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(134, 20);
@@ -329,7 +325,7 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             "Single",
             "Divorced",
             "Married"});
-            this.cmbstatus.Location = new System.Drawing.Point(188, 128);
+            this.cmbstatus.Location = new System.Drawing.Point(188, 88);
             this.cmbstatus.Margin = new System.Windows.Forms.Padding(2);
             this.cmbstatus.Name = "cmbstatus";
             this.cmbstatus.Size = new System.Drawing.Size(133, 28);
@@ -413,7 +409,7 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             // 
             this.lbldate.AutoSize = true;
             this.lbldate.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbldate.Location = new System.Drawing.Point(42, 163);
+            this.lbldate.Location = new System.Drawing.Point(42, 123);
             this.lbldate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbldate.Name = "lbldate";
             this.lbldate.Size = new System.Drawing.Size(132, 24);
@@ -424,33 +420,12 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(42, 128);
+            this.label7.Location = new System.Drawing.Point(42, 88);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(60, 24);
             this.label7.TabIndex = 6;
             this.label7.Text = "Status";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(42, 88);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(45, 24);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Age";
-            // 
-            // txtage
-            // 
-            this.txtage.Enabled = false;
-            this.txtage.Location = new System.Drawing.Point(188, 88);
-            this.txtage.Margin = new System.Windows.Forms.Padding(2);
-            this.txtage.Multiline = true;
-            this.txtage.Name = "txtage";
-            this.txtage.Size = new System.Drawing.Size(133, 28);
-            this.txtage.TabIndex = 4;
             // 
             // txtlastname
             // 
@@ -541,8 +516,6 @@ namespace Function_Hall_Reservation_System.WorkingStudent
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Label lbldate;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtage;
         private System.Windows.Forms.TextBox txtlastname;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtfirstname;
