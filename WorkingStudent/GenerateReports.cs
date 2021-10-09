@@ -103,7 +103,7 @@ namespace Function_Hall_Reservation_System.WorkingStudent
            
             try
             {
-                e.Graphics.DrawImage(pictureBox1.Image, 0, 0);
+                e.Graphics.DrawImage(pictureBox3.Image, 0, 0);
                 e.Graphics.DrawString(richTextBox1.Text, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(0, 0));
             }
 
