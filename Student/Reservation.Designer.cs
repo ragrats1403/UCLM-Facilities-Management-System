@@ -56,6 +56,7 @@ namespace Function_Hall_Reservation_System.Student
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPage2.SuspendLayout();
@@ -68,7 +69,7 @@ namespace Function_Hall_Reservation_System.Student
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(213, 104);
+            this.label3.Location = new System.Drawing.Point(217, 67);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(185, 37);
             this.label3.TabIndex = 6;
@@ -171,6 +172,7 @@ namespace Function_Hall_Reservation_System.Student
             this.checkedListBox1.Name = "checkedListBox1";
             this.checkedListBox1.Size = new System.Drawing.Size(319, 94);
             this.checkedListBox1.TabIndex = 21;
+            this.checkedListBox1.SelectedIndexChanged += new System.EventHandler(this.checkedListBox1_SelectedIndexChanged_1);
             // 
             // dateTimePicker3
             // 
@@ -337,14 +339,24 @@ namespace Function_Hall_Reservation_System.Student
             this.tabControl1.Size = new System.Drawing.Size(672, 359);
             this.tabControl1.TabIndex = 7;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(220, 108);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 8;
+            // 
             // Reservation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(913, 515);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Reservation";
             this.Text = "Reservation";
             this.Load += new System.EventHandler(this.Reservation_Load);
@@ -389,5 +401,6 @@ namespace Function_Hall_Reservation_System.Student
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.CheckedListBox checkedListBox1;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

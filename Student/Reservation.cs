@@ -254,5 +254,10 @@ namespace Function_Hall_Reservation_System.Student
         {
 
         }
+
+        private void checkedListBox1_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

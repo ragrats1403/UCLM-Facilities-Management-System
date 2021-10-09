@@ -41,7 +41,7 @@ namespace Function_Hall_Reservation_System.Registration
             try
             {
                 Connection.Connection.DB();
-                Functions.Functions.gen = "Insert into users(firstname,lastname,age,gender,status,studentid,password,dateregistered,roleid)values('" + txtFirstname.Text + "','" + txtLastname.Text + "'," + txtAge.Text + ",'" + str + "','" + cmbStatus.Text + "','" + txtUsername.Text + "','" + txtPassword.Text + "','" + DateTime.Now.ToString() + "',1)";
+                Functions.Functions.gen = "Insert into users(firstname,lastname,gender,status,studentid,password,dateregistered,roleid)values('" + txtFirstname.Text + "','" + txtLastname.Text + "','" + str + "','" + cmbStatus.Text + "','" + txtUsername.Text + "','" + txtPassword.Text + "','" + DateTime.Now.ToString() + "',1)";
                 Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
                 Functions.Functions.command.ExecuteNonQuery();
                 MessageBox.Show("Registered Successfully!\n can now log in with your account", "Login", MessageBoxButtons.OK);

@@ -37,14 +37,12 @@ namespace Function_Hall_Reservation_System.Registration
             this.rdbFemale = new System.Windows.Forms.RadioButton();
             this.rdbMale = new System.Windows.Forms.RadioButton();
             this.txtUsername = new System.Windows.Forms.TextBox();
-            this.txtAge = new System.Windows.Forms.TextBox();
             this.txtLastname = new System.Windows.Forms.TextBox();
             this.txtFirstname = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
@@ -60,14 +58,12 @@ namespace Function_Hall_Reservation_System.Registration
             this.groupBox1.Controls.Add(this.rdbFemale);
             this.groupBox1.Controls.Add(this.rdbMale);
             this.groupBox1.Controls.Add(this.txtUsername);
-            this.groupBox1.Controls.Add(this.txtAge);
             this.groupBox1.Controls.Add(this.txtLastname);
             this.groupBox1.Controls.Add(this.txtFirstname);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.btnBack);
@@ -159,17 +155,9 @@ namespace Function_Hall_Reservation_System.Registration
             this.txtUsername.Size = new System.Drawing.Size(223, 31);
             this.txtUsername.TabIndex = 29;
             // 
-            // txtAge
-            // 
-            this.txtAge.Location = new System.Drawing.Point(312, 142);
-            this.txtAge.Multiline = true;
-            this.txtAge.Name = "txtAge";
-            this.txtAge.Size = new System.Drawing.Size(223, 31);
-            this.txtAge.TabIndex = 28;
-            // 
             // txtLastname
             // 
-            this.txtLastname.Location = new System.Drawing.Point(312, 99);
+            this.txtLastname.Location = new System.Drawing.Point(312, 132);
             this.txtLastname.Multiline = true;
             this.txtLastname.Name = "txtLastname";
             this.txtLastname.Size = new System.Drawing.Size(223, 31);
@@ -177,7 +165,7 @@ namespace Function_Hall_Reservation_System.Registration
             // 
             // txtFirstname
             // 
-            this.txtFirstname.Location = new System.Drawing.Point(312, 56);
+            this.txtFirstname.Location = new System.Drawing.Point(312, 89);
             this.txtFirstname.Multiline = true;
             this.txtFirstname.Name = "txtFirstname";
             this.txtFirstname.Size = new System.Drawing.Size(223, 31);
@@ -223,21 +211,11 @@ namespace Function_Hall_Reservation_System.Registration
             this.label4.TabIndex = 22;
             this.label4.Text = "Gender";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Location = new System.Drawing.Point(91, 142);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(50, 25);
-            this.label3.TabIndex = 21;
-            this.label3.Text = "Age";
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(91, 99);
+            this.label2.Location = new System.Drawing.Point(91, 132);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(115, 25);
             this.label2.TabIndex = 20;
@@ -247,7 +225,7 @@ namespace Function_Hall_Reservation_System.Registration
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(89, 56);
+            this.label1.Location = new System.Drawing.Point(89, 89);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(116, 25);
             this.label1.TabIndex = 19;
@@ -291,14 +269,12 @@ namespace Function_Hall_Reservation_System.Registration
         private System.Windows.Forms.RadioButton rdbFemale;
         private System.Windows.Forms.RadioButton rdbMale;
         private System.Windows.Forms.TextBox txtUsername;
-        private System.Windows.Forms.TextBox txtAge;
         private System.Windows.Forms.TextBox txtLastname;
         private System.Windows.Forms.TextBox txtFirstname;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnBack;
