@@ -93,6 +93,7 @@ namespace Function_Hall_Reservation_System.Admin
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // dataGridView1
             // 
@@ -487,6 +488,7 @@ namespace Function_Hall_Reservation_System.Admin
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel1.Controls.Add(this.button7);
             this.panel1.Controls.Add(this.button6);
             this.panel1.Controls.Add(this.button4);
@@ -562,7 +564,7 @@ namespace Function_Hall_Reservation_System.Admin
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.SteelBlue;
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.tabControl1);
@@ -581,6 +583,7 @@ namespace Function_Hall_Reservation_System.Admin
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1003, 450);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ViewReservationList";
             this.Text = "ViewReservationList";
             this.Load += new System.EventHandler(this.ViewReservationList_Load);

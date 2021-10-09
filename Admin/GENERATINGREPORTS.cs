@@ -41,7 +41,7 @@ namespace Function_Hall_Reservation_System.Admin
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
 
         {
-            e.Graphics.DrawImage(pictureBox3.Image, 0, 0);
+            e.Graphics.DrawImage(pictureBox1.Image, 0, 0);
             e.Graphics.DrawString(richTextBox1.Text, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(0, 0));
            
         }
@@ -228,6 +228,11 @@ namespace Function_Hall_Reservation_System.Admin
         }
 
         private void richTextBox1_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }

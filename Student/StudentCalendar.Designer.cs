@@ -83,6 +83,7 @@ namespace Function_Hall_Reservation_System.Student
             this.button1.TabIndex = 3;
             this.button1.Text = "Calendar Of Activities";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // lblfullname
             // 

@@ -88,6 +88,9 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FunctionHallReservationDataSet.cs">
+      <DependentUpon>FunctionHallReservationDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FunctionHallReservationDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

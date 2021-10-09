@@ -415,6 +415,7 @@ namespace Function_Hall_Reservation_System.Admin
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel1.Controls.Add(this.button7);
             this.panel1.Controls.Add(this.button6);
             this.panel1.Controls.Add(this.button4);
@@ -423,9 +424,9 @@ namespace Function_Hall_Reservation_System.Admin
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.lblfullname);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(-1, 3);
+            this.panel1.Location = new System.Drawing.Point(-1, -1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(208, 445);
+            this.panel1.Size = new System.Drawing.Size(208, 595);
             this.panel1.TabIndex = 11;
             // 
             // lblfullname
@@ -448,6 +449,7 @@ namespace Function_Hall_Reservation_System.Admin
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label4
             // 
@@ -844,12 +846,13 @@ namespace Function_Hall_Reservation_System.Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.SteelBlue;
+            this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.ClientSize = new System.Drawing.Size(1443, 594);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label4);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "GENERATINGREPORTS";
             this.Text = "GeneratingReports";
             this.Load += new System.EventHandler(this.GENERATINGREPORTS_Load);

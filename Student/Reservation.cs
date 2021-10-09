@@ -172,7 +172,6 @@ namespace Function_Hall_Reservation_System.Student
                         timeend = dateTimePicker3.Value.ToString("hh:mm:tt");
                         Connection.Connection.conn.Close();
 
-
                 }
                 catch (Exception ex)
                   {

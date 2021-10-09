@@ -237,6 +237,7 @@ namespace Function_Hall_Reservation_System.Admin
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel1.Controls.Add(this.button7);
             this.panel1.Controls.Add(this.button6);
             this.panel1.Controls.Add(this.button4);
@@ -245,9 +246,9 @@ namespace Function_Hall_Reservation_System.Admin
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.lblfullname);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(-3, 3);
+            this.panel1.Location = new System.Drawing.Point(-3, -1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(197, 445);
+            this.panel1.Size = new System.Drawing.Size(197, 449);
             this.panel1.TabIndex = 16;
             // 
             // button7
@@ -336,12 +337,13 @@ namespace Function_Hall_Reservation_System.Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.SteelBlue;
+            this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.ClientSize = new System.Drawing.Size(938, 450);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label4);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Equipment";
             this.Text = "Equipment";
             this.Load += new System.EventHandler(this.Equipment_Load);

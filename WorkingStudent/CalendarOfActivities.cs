@@ -94,5 +94,10 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             this.Close();
             form.Show();
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

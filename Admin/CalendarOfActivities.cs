@@ -97,5 +97,20 @@ namespace Function_Hall_Reservation_System.Admin
             filldata();
             lblfullname.Text = Form1.setfullname;
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

@@ -473,7 +473,7 @@ namespace Function_Hall_Reservation_System.Admin
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(208, 126);
+            this.pictureBox1.Size = new System.Drawing.Size(211, 126);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -490,6 +490,7 @@ namespace Function_Hall_Reservation_System.Admin
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel1.Controls.Add(this.button7);
             this.panel1.Controls.Add(this.button6);
             this.panel1.Controls.Add(this.button4);
@@ -498,21 +499,22 @@ namespace Function_Hall_Reservation_System.Admin
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.lblfullname);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(1, 3);
+            this.panel1.Location = new System.Drawing.Point(-2, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(208, 445);
+            this.panel1.Size = new System.Drawing.Size(211, 450);
             this.panel1.TabIndex = 11;
             // 
             // ACCOUNTS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.SteelBlue;
+            this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.ClientSize = new System.Drawing.Size(934, 450);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ACCOUNTS";
             this.Text = "Accounts";
             this.Load += new System.EventHandler(this.ACCOUNTS_Load);

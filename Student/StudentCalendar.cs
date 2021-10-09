@@ -67,5 +67,10 @@ namespace Function_Hall_Reservation_System.Student
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -177,5 +177,10 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             this.Close();
             form.Show();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
