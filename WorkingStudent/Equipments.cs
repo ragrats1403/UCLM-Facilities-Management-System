@@ -16,6 +16,9 @@ namespace Function_Hall_Reservation_System.WorkingStudent
     {
         public static string cureqname;
 
+        public static string idname;
+        public string loadedid;
+
         
         public Equipments()
         {
@@ -56,8 +59,12 @@ namespace Function_Hall_Reservation_System.WorkingStudent
         }
         public void Fillfhequipmentdata()
         {
+            idname = "fhequipments";
             Functions.Functions.gen = "Select * from fhequipments";
             Functions.Functions.fill(Functions.Functions.gen, dataGridView1);
+
+           
+
         }
 
         private void tabPage1_Click(object sender, EventArgs e)
@@ -179,7 +186,7 @@ namespace Function_Hall_Reservation_System.WorkingStudent
            // Connection.Connection.conn.Open();
             if (Connection.Connection.conn.State == System.Data.ConnectionState.Open)
             {
-                Functions.Functions.gen = "Select * from fhequipments where equipmentname='" + txtequipmentname.Text + "'";
+                Functions.Functions.gen = "Select * from "+loadedid+" where equipmentname='" + txtequipmentname.Text + "'";
                 Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
                 Functions.Functions.command.Connection = Connection.Connection.conn;
                 Functions.Functions.command.CommandType = System.Data.CommandType.Text;
@@ -205,7 +212,7 @@ namespace Function_Hall_Reservation_System.WorkingStudent
 
                 if (chkdup(eq))
                 {
-                    MessageBox.Show("Equipment already exists with Equipment Name: " + txtequipmentname.Text, "fhequipments", MessageBoxButtons.OK);
+                    MessageBox.Show("Equipment already exists with Equipment Name: " + txtequipmentname.Text,""+loadedid, MessageBoxButtons.OK);
                     this.Close();
                     Equipments equ = new Equipments();
                     equ.Show();
@@ -215,7 +222,7 @@ namespace Function_Hall_Reservation_System.WorkingStudent
                 {
 
                     Connection.Connection.DB();
-                    Functions.Functions.gen = "Insert Into fhequipments(equipmentname,equipmentstatus)values('" + txtequipmentname.Text + "','" + cmbstatus.Text + "')";
+                    Functions.Functions.gen = "Insert Into "+loadedid+"(equipmentname,equipmentstatus)values('" + txtequipmentname.Text + "','" + cmbstatus.Text + "')";
                     Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
 
                     Functions.Functions.command.ExecuteNonQuery();
@@ -257,7 +264,7 @@ namespace Function_Hall_Reservation_System.WorkingStudent
                 var gen = MessageBox.Show("Are you sure you want to delete this Equipment?", "Delete equipment", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (gen == DialogResult.Yes)
                 {
-                    Functions.Functions.gen = "Delete from fhequipments where equipmentname ='" + txtequipmentname.Text + "'";
+                    Functions.Functions.gen = "Delete from "+loadedid+" where equipmentname ='" + txtequipmentname.Text + "'";
                     Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
                     Functions.Functions.command.ExecuteNonQuery();
                     Connection.Connection.conn.Close();
@@ -276,12 +283,14 @@ namespace Function_Hall_Reservation_System.WorkingStudent
 
         private void facilitycb_SelectedIndexChanged(object sender, EventArgs e)
         {
+            
             try
             {
                 if (facilitycb.SelectedItem.ToString() == "Function Hall")
                 {
                     MessageBox.Show("Debug Line for Functionhall selection Executed");
                     Fillfhequipmentdata();
+                    loadedid = idname;
                 }
                 else if (facilitycb.SelectedItem.ToString() == "Auditorium")
                 {
