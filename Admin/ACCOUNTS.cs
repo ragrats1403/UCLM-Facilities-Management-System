@@ -83,7 +83,7 @@ namespace Function_Hall_Reservation_System.Admin
             {
                 txtfirstname.Text = dataGridView1[1, e.RowIndex].Value.ToString();
                 txtlastname.Text = dataGridView1[2, e.RowIndex].Value.ToString();
-                txtage.Text = dataGridView1[3, e.RowIndex].Value.ToString();
+                
                 cmbstatus.Text = dataGridView1[4, e.RowIndex].Value.ToString();
                 dateTimePicker1.Value = Convert.ToDateTime(dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString());
                 txtstudentid.Text = dataGridView1[6, e.RowIndex].Value.ToString();

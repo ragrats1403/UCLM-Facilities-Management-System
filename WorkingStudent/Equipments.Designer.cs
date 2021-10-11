@@ -54,6 +54,7 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             this.label12 = new System.Windows.Forms.Label();
             this.txtequipmentid = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
+            this.facilitycb = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -348,11 +349,27 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             this.label13.Text = "Equipment ID";
             this.label13.Visible = false;
             // 
+            // facilitycb
+            // 
+            this.facilitycb.FormattingEnabled = true;
+            this.facilitycb.Items.AddRange(new object[] {
+            "Function Hall",
+            "Old AVR",
+            "New AVR",
+            "Auditorium"});
+            this.facilitycb.Location = new System.Drawing.Point(209, 86);
+            this.facilitycb.Name = "facilitycb";
+            this.facilitycb.Size = new System.Drawing.Size(121, 21);
+            this.facilitycb.TabIndex = 5;
+            this.facilitycb.Text = "Select Facility";
+            this.facilitycb.SelectedIndexChanged += new System.EventHandler(this.facilitycb_SelectedIndexChanged);
+            // 
             // Equipments
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(956, 410);
+            this.Controls.Add(this.facilitycb);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -402,6 +419,7 @@ namespace Function_Hall_Reservation_System.WorkingStudent
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ComboBox facilitycb;
     }
 }
 

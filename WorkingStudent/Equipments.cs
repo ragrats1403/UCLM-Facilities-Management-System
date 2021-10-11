@@ -15,6 +15,8 @@ namespace Function_Hall_Reservation_System.WorkingStudent
     public partial class Equipments : Form
     {
         public static string cureqname;
+
+        
         public Equipments()
         {
             InitializeComponent();
@@ -28,7 +30,29 @@ namespace Function_Hall_Reservation_System.WorkingStudent
         private void Form1_Load(object sender, EventArgs e)
         {
             Filldata();
+            
             lblfullname.Text = Form1.setfullname;
+        }
+
+       
+
+        public void FillEq()
+        {
+            String facilityname = facilitycb.SelectedText.ToString();
+            facilitycb.DropDownStyle = ComboBoxStyle.DropDownList;
+            int t = 0;
+            try
+            {
+                
+                if (facilityname == "Function Hall")
+                {
+                    MessageBox.Show("Debug Line Executed");
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
         public void Filldata()
         {
@@ -242,6 +266,25 @@ namespace Function_Hall_Reservation_System.WorkingStudent
                     Equipments equ = new Equipments();
                     equ.Show();
                     this.tabControl1.SelectedIndex = 1;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void facilitycb_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (facilitycb.SelectedItem.ToString() == "Function Hall")
+                {
+                    MessageBox.Show("Debug Line for Functionhall selection Executed");
+                }
+                else if (facilitycb.SelectedItem.ToString() == "Auditorium")
+                {
+                    MessageBox.Show("Debug Line for Auditorium Executed");
                 }
             }
             catch (Exception ex)
