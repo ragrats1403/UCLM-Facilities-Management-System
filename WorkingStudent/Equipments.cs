@@ -29,8 +29,8 @@ namespace Function_Hall_Reservation_System.WorkingStudent
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            Filldata();
             
+
             lblfullname.Text = Form1.setfullname;
         }
 
@@ -54,7 +54,7 @@ namespace Function_Hall_Reservation_System.WorkingStudent
                 MessageBox.Show(ex.Message);
             }
         }
-        public void Filldata()
+        public void Fillfhequipmentdata()
         {
             Functions.Functions.gen = "Select * from fhequipments";
             Functions.Functions.fill(Functions.Functions.gen, dataGridView1);
@@ -281,6 +281,7 @@ namespace Function_Hall_Reservation_System.WorkingStudent
                 if (facilitycb.SelectedItem.ToString() == "Function Hall")
                 {
                     MessageBox.Show("Debug Line for Functionhall selection Executed");
+                    Fillfhequipmentdata();
                 }
                 else if (facilitycb.SelectedItem.ToString() == "Auditorium")
                 {
