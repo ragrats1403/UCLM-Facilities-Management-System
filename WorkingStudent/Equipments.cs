@@ -63,7 +63,34 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             Functions.Functions.gen = "Select * from fhequipments";
             Functions.Functions.fill(Functions.Functions.gen, dataGridView1);
 
-           
+
+
+        }
+        public void Fillaudequipmentdata()
+        {
+            idname = "audequipments";
+            Functions.Functions.gen = "Select * from audequipments";
+            Functions.Functions.fill(Functions.Functions.gen, dataGridView1);
+
+
+
+        }
+        public void Fillnaequipmentdata()
+        {
+            idname = "naequipments";
+            Functions.Functions.gen = "Select * from naequipments";
+            Functions.Functions.fill(Functions.Functions.gen, dataGridView1);
+
+
+
+        }
+        public void Filloaequipmentdata()
+        {
+            idname = "oaequipments";
+            Functions.Functions.gen = "Select * from oaequipments";
+            Functions.Functions.fill(Functions.Functions.gen, dataGridView1);
+
+
 
         }
 
@@ -283,7 +310,7 @@ namespace Function_Hall_Reservation_System.WorkingStudent
 
         private void facilitycb_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+
             try
             {
                 if (facilitycb.SelectedItem.ToString() == "Function Hall")
@@ -294,7 +321,25 @@ namespace Function_Hall_Reservation_System.WorkingStudent
                 }
                 else if (facilitycb.SelectedItem.ToString() == "Auditorium")
                 {
+
                     MessageBox.Show("Debug Line for Auditorium Executed");
+                    Fillaudequipmentdata();
+                    loadedid = idname;
+                }
+                else if (facilitycb.SelectedItem.ToString() == "New AVR")
+                {
+
+                    MessageBox.Show("Debug Line for New AVR Executed");
+                    Fillnaequipmentdata();
+                    loadedid = idname;
+                }
+
+                else if (facilitycb.SelectedItem.ToString() == "Old AVR")
+                {
+
+                    MessageBox.Show("Debug Line for Old AVR Executed");
+                    Filloaequipmentdata();
+                    loadedid = idname;
                 }
             }
             catch (Exception ex)
