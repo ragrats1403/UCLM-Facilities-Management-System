@@ -45,6 +45,8 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.txtquantity = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.button9 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.cmbstatus = new System.Windows.Forms.ComboBox();
@@ -55,8 +57,6 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             this.txtequipmentid = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.facilitycb = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtquantity = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -81,6 +81,7 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(202, 414);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // pictureBox1
             // 
@@ -252,6 +253,27 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             this.tabPage2.Text = "Add | Update Equipment";
             this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
             // 
+            // txtquantity
+            // 
+            this.txtquantity.Location = new System.Drawing.Point(584, 85);
+            this.txtquantity.Margin = new System.Windows.Forms.Padding(2);
+            this.txtquantity.Multiline = true;
+            this.txtquantity.Name = "txtquantity";
+            this.txtquantity.Size = new System.Drawing.Size(133, 28);
+            this.txtquantity.TabIndex = 30;
+            this.txtquantity.TextChanged += new System.EventHandler(this.txtquantity_TextChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(360, 85);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(175, 24);
+            this.label1.TabIndex = 29;
+            this.label1.Text = "Equipment Quantity";
+            // 
             // button9
             // 
             this.button9.Location = new System.Drawing.Point(317, 158);
@@ -368,29 +390,6 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             this.facilitycb.TabIndex = 5;
             this.facilitycb.Text = "Select Facility";
             this.facilitycb.SelectedIndexChanged += new System.EventHandler(this.facilitycb_SelectedIndexChanged);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(360, 85);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(175, 24);
-            this.label1.TabIndex = 29;
-            this.label1.Text = "Equipment Quantity";
-            // 
-            // txtquantity
-            // 
-            this.txtquantity.Enabled = false;
-            this.txtquantity.Location = new System.Drawing.Point(584, 85);
-            this.txtquantity.Margin = new System.Windows.Forms.Padding(2);
-            this.txtquantity.Multiline = true;
-            this.txtquantity.Name = "txtquantity";
-            this.txtquantity.Size = new System.Drawing.Size(133, 28);
-            this.txtquantity.TabIndex = 30;
-            this.txtquantity.Visible = false;
-            this.txtquantity.TextChanged += new System.EventHandler(this.txtquantity_TextChanged);
             // 
             // Equipments
             // 

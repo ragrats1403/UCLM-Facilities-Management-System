@@ -300,21 +300,21 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             {
                 if (facilitycb.SelectedItem.ToString() == "Function Hall")
                 {
-                    MessageBox.Show("Debug Line for Functionhall selection Executed");
+                    //MessageBox.Show("Debug Line for Functionhall selection Executed");
                     Fillfhequipmentdata();
                     loadedid = idname;
                 }
                 else if (facilitycb.SelectedItem.ToString() == "Auditorium")
                 {
 
-                    MessageBox.Show("Debug Line for Auditorium Executed");
+                    //MessageBox.Show("Debug Line for Auditorium Executed");
                     Fillaudequipmentdata();
                     loadedid = idname;
                 }
                 else if (facilitycb.SelectedItem.ToString() == "New AVR")
                 {
 
-                    MessageBox.Show("Debug Line for New AVR Executed");
+                    //MessageBox.Show("Debug Line for New AVR Executed");
                     Fillnaequipmentdata();
                     loadedid = idname;
                 }
@@ -322,7 +322,7 @@ namespace Function_Hall_Reservation_System.WorkingStudent
                 else if (facilitycb.SelectedItem.ToString() == "Old AVR")
                 {
 
-                    MessageBox.Show("Debug Line for Old AVR Executed");
+                   //MessageBox.Show("Debug Line for Old AVR Executed");
                     Filloaequipmentdata();
                     loadedid = idname;
                 }
@@ -339,6 +339,11 @@ namespace Function_Hall_Reservation_System.WorkingStudent
         }
 
         private void txtquantity_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
