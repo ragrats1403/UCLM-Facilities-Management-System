@@ -249,7 +249,7 @@ namespace Function_Hall_Reservation_System.WorkingStudent
                 {
 
                     Connection.Connection.DB();
-                    Functions.Functions.gen = "Insert Into "+loadedid+"(equipmentname,equipmentstatus)values('" + txtequipmentname.Text + "','" + cmbstatus.Text + "')";
+                    Functions.Functions.gen = "Insert Into "+loadedid+"(equipmentname,equipmentstatus,equipmentquantity)values('" + txtequipmentname.Text + "','" + cmbstatus.Text + "','"+ txtquantity+"')";
                     Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
 
                     Functions.Functions.command.ExecuteNonQuery();
@@ -266,21 +266,6 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             {
                 MessageBox.Show(ex.Message);
             }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         }
 
         private void button9_Click(object sender, EventArgs e)
@@ -346,6 +331,16 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void tabPage2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtquantity_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -54,6 +54,8 @@ namespace Function_Hall_Reservation_System.Admin
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.label69 = new System.Windows.Forms.Label();
+            this.txtquantity = new System.Windows.Forms.TextBox();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabPage1.SuspendLayout();
@@ -69,7 +71,7 @@ namespace Function_Hall_Reservation_System.Admin
             this.cmbstatus.Items.AddRange(new object[] {
             "Available",
             "Defective"});
-            this.cmbstatus.Location = new System.Drawing.Point(407, 114);
+            this.cmbstatus.Location = new System.Drawing.Point(581, 47);
             this.cmbstatus.Margin = new System.Windows.Forms.Padding(2);
             this.cmbstatus.Name = "cmbstatus";
             this.cmbstatus.Size = new System.Drawing.Size(133, 28);
@@ -77,7 +79,7 @@ namespace Function_Hall_Reservation_System.Admin
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(411, 178);
+            this.button8.Location = new System.Drawing.Point(470, 152);
             this.button8.Margin = new System.Windows.Forms.Padding(2);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(97, 31);
@@ -91,7 +93,7 @@ namespace Function_Hall_Reservation_System.Admin
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(184, 114);
+            this.label11.Location = new System.Drawing.Point(372, 51);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(154, 24);
@@ -100,7 +102,7 @@ namespace Function_Hall_Reservation_System.Admin
             // 
             // txtequipmentname
             // 
-            this.txtequipmentname.Location = new System.Drawing.Point(407, 74);
+            this.txtequipmentname.Location = new System.Drawing.Point(207, 84);
             this.txtequipmentname.Margin = new System.Windows.Forms.Padding(2);
             this.txtequipmentname.Multiline = true;
             this.txtequipmentname.Name = "txtequipmentname";
@@ -111,7 +113,7 @@ namespace Function_Hall_Reservation_System.Admin
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(184, 74);
+            this.label12.Location = new System.Drawing.Point(26, 88);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(155, 24);
@@ -122,7 +124,7 @@ namespace Function_Hall_Reservation_System.Admin
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(184, 37);
+            this.label13.Location = new System.Drawing.Point(26, 51);
             this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(124, 24);
@@ -132,6 +134,8 @@ namespace Function_Hall_Reservation_System.Admin
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.txtquantity);
+            this.tabPage2.Controls.Add(this.label69);
             this.tabPage2.Controls.Add(this.button9);
             this.tabPage2.Controls.Add(this.button5);
             this.tabPage2.Controls.Add(this.cmbstatus);
@@ -147,10 +151,11 @@ namespace Function_Hall_Reservation_System.Admin
             this.tabPage2.Size = new System.Drawing.Size(741, 245);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Add | Update Equipments";
+            this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
             // 
             // button9
             // 
-            this.button9.Location = new System.Drawing.Point(314, 178);
+            this.button9.Location = new System.Drawing.Point(330, 151);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(92, 32);
             this.button9.TabIndex = 29;
@@ -161,7 +166,7 @@ namespace Function_Hall_Reservation_System.Admin
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(220, 178);
+            this.button5.Location = new System.Drawing.Point(194, 151);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(88, 31);
             this.button5.TabIndex = 28;
@@ -172,7 +177,7 @@ namespace Function_Hall_Reservation_System.Admin
             // txtequipmentid
             // 
             this.txtequipmentid.Enabled = false;
-            this.txtequipmentid.Location = new System.Drawing.Point(407, 37);
+            this.txtequipmentid.Location = new System.Drawing.Point(207, 47);
             this.txtequipmentid.Margin = new System.Windows.Forms.Padding(2);
             this.txtequipmentid.Multiline = true;
             this.txtequipmentid.Name = "txtequipmentid";
@@ -333,6 +338,27 @@ namespace Function_Hall_Reservation_System.Admin
             this.label4.TabIndex = 18;
             this.label4.Text = "Welcome Admin!";
             // 
+            // label69
+            // 
+            this.label69.AutoSize = true;
+            this.label69.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label69.Location = new System.Drawing.Point(372, 88);
+            this.label69.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label69.Name = "label69";
+            this.label69.Size = new System.Drawing.Size(175, 24);
+            this.label69.TabIndex = 30;
+            this.label69.Text = "Equipment Quantity";
+            this.label69.Click += new System.EventHandler(this.txtquatity_Click);
+            // 
+            // txtquantity
+            // 
+            this.txtquantity.Location = new System.Drawing.Point(581, 84);
+            this.txtquantity.Margin = new System.Windows.Forms.Padding(2);
+            this.txtquantity.Multiline = true;
+            this.txtquantity.Name = "txtquantity";
+            this.txtquantity.Size = new System.Drawing.Size(133, 28);
+            this.txtquantity.TabIndex = 31;
+            // 
             // Equipment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -386,5 +412,7 @@ namespace Function_Hall_Reservation_System.Admin
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Label label69;
+        private System.Windows.Forms.TextBox txtquantity;
     }
 }

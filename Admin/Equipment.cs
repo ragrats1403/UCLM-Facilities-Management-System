@@ -162,7 +162,7 @@ namespace Function_Hall_Reservation_System.Admin
                 {
 
                     Connection.Connection.DB();
-                    Functions.Functions.gen = "Insert Into fhequipments(equipmentname,equipmentstatus)values('" + txtequipmentname.Text + "','" + cmbstatus.Text + "')";
+                    Functions.Functions.gen = "Insert Into fhequipments(equipmentname,equipmentstatus,equipmentquantity)values('" + txtequipmentname.Text + "','" + cmbstatus.Text + "','" + txtquantity + "')";
                     Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
 
                     Functions.Functions.command.ExecuteNonQuery();
@@ -204,6 +204,16 @@ namespace Function_Hall_Reservation_System.Admin
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void tabPage2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtquatity_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
