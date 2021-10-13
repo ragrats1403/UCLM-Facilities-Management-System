@@ -178,7 +178,7 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             // lblfullname
             // 
             this.lblfullname.AutoSize = true;
-            this.lblfullname.Location = new System.Drawing.Point(77, 134);
+            this.lblfullname.Location = new System.Drawing.Point(61, 134);
             this.lblfullname.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblfullname.Name = "lblfullname";
             this.lblfullname.Size = new System.Drawing.Size(17, 13);

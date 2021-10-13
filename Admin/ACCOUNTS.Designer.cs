@@ -76,7 +76,7 @@ namespace Function_Hall_Reservation_System.Admin
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(0, 318);
+            this.button7.Location = new System.Drawing.Point(3, 318);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(208, 37);
             this.button7.TabIndex = 9;
@@ -86,7 +86,7 @@ namespace Function_Hall_Reservation_System.Admin
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(0, 275);
+            this.button6.Location = new System.Drawing.Point(3, 275);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(208, 37);
             this.button6.TabIndex = 8;
@@ -96,7 +96,7 @@ namespace Function_Hall_Reservation_System.Admin
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(0, 404);
+            this.button4.Location = new System.Drawing.Point(3, 404);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(208, 37);
             this.button4.TabIndex = 6;
@@ -106,7 +106,7 @@ namespace Function_Hall_Reservation_System.Admin
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(0, 361);
+            this.button3.Location = new System.Drawing.Point(3, 361);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(208, 37);
             this.button3.TabIndex = 5;
@@ -116,7 +116,7 @@ namespace Function_Hall_Reservation_System.Admin
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(0, 232);
+            this.button2.Location = new System.Drawing.Point(3, 232);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(208, 37);
             this.button2.TabIndex = 4;
@@ -126,7 +126,7 @@ namespace Function_Hall_Reservation_System.Admin
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(0, 189);
+            this.button1.Location = new System.Drawing.Point(3, 189);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(208, 37);
             this.button1.TabIndex = 3;
@@ -138,7 +138,7 @@ namespace Function_Hall_Reservation_System.Admin
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            this.label3.Location = new System.Drawing.Point(581, 79);
+            this.label3.Location = new System.Drawing.Point(521, 73);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(110, 29);
             this.label3.TabIndex = 14;
@@ -398,7 +398,7 @@ namespace Function_Hall_Reservation_System.Admin
             // lblfullname
             // 
             this.lblfullname.AutoSize = true;
-            this.lblfullname.Location = new System.Drawing.Point(65, 129);
+            this.lblfullname.Location = new System.Drawing.Point(61, 134);
             this.lblfullname.Name = "lblfullname";
             this.lblfullname.Size = new System.Drawing.Size(35, 13);
             this.lblfullname.TabIndex = 1;
@@ -457,7 +457,7 @@ namespace Function_Hall_Reservation_System.Admin
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F);
-            this.label4.Location = new System.Drawing.Point(512, 22);
+            this.label4.Location = new System.Drawing.Point(460, 15);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(239, 36);
             this.label4.TabIndex = 13;
@@ -491,6 +491,7 @@ namespace Function_Hall_Reservation_System.Admin
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ACCOUNTS";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Accounts";
             this.Load += new System.EventHandler(this.ACCOUNTS_Load);
             this.tabPage2.ResumeLayout(false);

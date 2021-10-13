@@ -419,7 +419,7 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             // lblfullname
             // 
             this.lblfullname.AutoSize = true;
-            this.lblfullname.Location = new System.Drawing.Point(78, 128);
+            this.lblfullname.Location = new System.Drawing.Point(61, 134);
             this.lblfullname.Name = "lblfullname";
             this.lblfullname.Size = new System.Drawing.Size(17, 13);
             this.lblfullname.TabIndex = 1;
@@ -430,7 +430,7 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F);
-            this.label2.Location = new System.Drawing.Point(413, 7);
+            this.label2.Location = new System.Drawing.Point(544, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(377, 36);
             this.label2.TabIndex = 1;
@@ -440,7 +440,7 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            this.label3.Location = new System.Drawing.Point(501, 55);
+            this.label3.Location = new System.Drawing.Point(632, 57);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(195, 29);
             this.label3.TabIndex = 3;

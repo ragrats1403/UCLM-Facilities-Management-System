@@ -407,11 +407,12 @@ namespace Function_Hall_Reservation_System.Admin
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            this.label3.Location = new System.Drawing.Point(525, 77);
+            this.label3.Location = new System.Drawing.Point(651, 73);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(204, 29);
             this.label3.TabIndex = 14;
             this.label3.Text = "Generate Reports";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // panel1
             // 
@@ -432,7 +433,7 @@ namespace Function_Hall_Reservation_System.Admin
             // lblfullname
             // 
             this.lblfullname.AutoSize = true;
-            this.lblfullname.Location = new System.Drawing.Point(43, 130);
+            this.lblfullname.Location = new System.Drawing.Point(61, 134);
             this.lblfullname.Name = "lblfullname";
             this.lblfullname.Size = new System.Drawing.Size(35, 13);
             this.lblfullname.TabIndex = 1;
@@ -455,7 +456,7 @@ namespace Function_Hall_Reservation_System.Admin
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F);
-            this.label4.Location = new System.Drawing.Point(510, 22);
+            this.label4.Location = new System.Drawing.Point(637, 19);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(239, 36);
             this.label4.TabIndex = 13;
@@ -854,6 +855,7 @@ namespace Function_Hall_Reservation_System.Admin
             this.Controls.Add(this.label4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "GENERATINGREPORTS";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GeneratingReports";
             this.Load += new System.EventHandler(this.GENERATINGREPORTS_Load);
             this.panel1.ResumeLayout(false);

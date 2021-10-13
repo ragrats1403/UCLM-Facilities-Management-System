@@ -236,5 +236,10 @@ namespace Function_Hall_Reservation_System.Admin
         {
 
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
