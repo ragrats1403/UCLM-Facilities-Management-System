@@ -32,7 +32,7 @@ namespace Function_Hall_Reservation_System.Student
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Reservation));
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.lblfullname = new System.Windows.Forms.Label();
@@ -57,7 +57,6 @@ namespace Function_Hall_Reservation_System.Student
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button3 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPage2.SuspendLayout();
@@ -81,7 +80,6 @@ namespace Function_Hall_Reservation_System.Student
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.lblfullname);
@@ -92,15 +90,15 @@ namespace Function_Hall_Reservation_System.Student
             this.panel1.TabIndex = 4;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // button4
+            // button3
             // 
-            this.button4.Location = new System.Drawing.Point(3, 272);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(208, 37);
-            this.button4.TabIndex = 6;
-            this.button4.Text = "Logout";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.button3.Location = new System.Drawing.Point(4, 401);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(208, 37);
+            this.button3.TabIndex = 7;
+            this.button3.Text = "Logout";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -350,15 +348,6 @@ namespace Function_Hall_Reservation_System.Student
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 8;
             // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(3, 402);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(208, 37);
-            this.button3.TabIndex = 7;
-            this.button3.Text = "Logout";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
             // Reservation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -389,7 +378,6 @@ namespace Function_Hall_Reservation_System.Student
 
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label lblfullname;

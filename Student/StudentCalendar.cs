@@ -72,5 +72,13 @@ namespace Function_Hall_Reservation_System.Student
         {
 
         }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            MessageBox.Show("Successfully Logged out!", "Logout", MessageBoxButtons.OK);
+            Form1 form = new Form1();
+            this.Close();
+            form.Show();
+        }
     }
 }
