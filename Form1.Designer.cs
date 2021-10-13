@@ -61,7 +61,7 @@ namespace Function_Hall_Reservation_System
             // btnExit
             // 
             this.btnExit.BackColor = System.Drawing.Color.Transparent;
-            this.btnExit.Location = new System.Drawing.Point(227, 262);
+            this.btnExit.Location = new System.Drawing.Point(205, 256);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(75, 41);
             this.btnExit.TabIndex = 14;

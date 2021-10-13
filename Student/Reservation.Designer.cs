@@ -359,6 +359,7 @@ namespace Function_Hall_Reservation_System.Student
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Reservation";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reservation";
             this.Load += new System.EventHandler(this.Reservation_Load);
             this.panel1.ResumeLayout(false);

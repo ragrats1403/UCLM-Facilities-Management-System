@@ -136,6 +136,7 @@ namespace Function_Hall_Reservation_System.Student
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "StudentCalendar";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "StudentCalendar";
             this.Load += new System.EventHandler(this.StudentCalendar_Load);
             this.panel1.ResumeLayout(false);

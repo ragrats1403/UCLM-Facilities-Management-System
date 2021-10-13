@@ -116,7 +116,7 @@ namespace Function_Hall_Reservation_System
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
-            MessageBox.Show("Goodbye!");
+            MessageBox.Show("See you next time!");
         }
     }
     }
