@@ -313,7 +313,6 @@ namespace Function_Hall_Reservation_System.WorkingStudent
                 }
                 else if (facilitycb.SelectedItem.ToString() == "New AVR")
                 {
-
                     //MessageBox.Show("Debug Line for New AVR Executed");
                     Fillnaequipmentdata();
                     loadedid = idname;

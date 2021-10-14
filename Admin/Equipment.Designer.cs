@@ -56,6 +56,7 @@ namespace Function_Hall_Reservation_System.Admin
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.facilitycb = new System.Windows.Forms.ComboBox();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabPage1.SuspendLayout();
@@ -148,7 +149,7 @@ namespace Function_Hall_Reservation_System.Admin
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Size = new System.Drawing.Size(741, 245);
+            this.tabPage2.Size = new System.Drawing.Size(726, 245);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Add | Update Equipments";
             this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
@@ -359,12 +360,28 @@ namespace Function_Hall_Reservation_System.Admin
             this.label4.TabIndex = 18;
             this.label4.Text = "Welcome Admin!";
             // 
+            // facilitycb
+            // 
+            this.facilitycb.FormattingEnabled = true;
+            this.facilitycb.Items.AddRange(new object[] {
+            "Function Hall",
+            "Old AVR",
+            "New AVR",
+            "Auditorium"});
+            this.facilitycb.Location = new System.Drawing.Point(215, 104);
+            this.facilitycb.Name = "facilitycb";
+            this.facilitycb.Size = new System.Drawing.Size(121, 21);
+            this.facilitycb.TabIndex = 21;
+            this.facilitycb.Text = "Select Facility";
+            this.facilitycb.SelectedIndexChanged += new System.EventHandler(this.facilitycb_SelectedIndexChanged);
+            // 
             // Equipment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.ClientSize = new System.Drawing.Size(938, 450);
+            this.Controls.Add(this.facilitycb);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel1);
@@ -415,5 +432,6 @@ namespace Function_Hall_Reservation_System.Admin
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Label label69;
         private System.Windows.Forms.TextBox txtquantity;
+        private System.Windows.Forms.ComboBox facilitycb;
     }
 }
