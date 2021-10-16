@@ -101,7 +101,7 @@ namespace Function_Hall_Reservation_System.Registration
             // 
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Location = new System.Drawing.Point(86, 361);
+            this.label8.Location = new System.Drawing.Point(86, 358);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(158, 25);
             this.label8.TabIndex = 33;
