@@ -13,21 +13,68 @@ namespace Function_Hall_Reservation_System.WorkingStudent
 {
     public partial class Reservation : Form
     {
+        public static string idname;
+        public string loadedid;
+
         public Reservation()
         {
             InitializeComponent();
+            
+        }
+        public void cbstyleset()
+        {
+
+            facilitycb.DropDownStyle = ComboBoxStyle.DropDownList;
+
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-            Filldata();
+            
+            cbstyleset();
             lblfullname.Text = Form1.setfullname;
         }
-        public void Filldata()
+      /*  public void Filldata()
         {
             //Functions.Functions.gen = "Select events.eventid AS [EVENT ID], events.eventname AS [EVENT NAME], events.eventprice AS [Event Price],events.dateregistered AS [DATE REGISTERED] from events";
             //Functions.Functions.gen = "Select * from reservation where studentid = '" + Form1.setstudentid + "'";
             Functions.Functions.gen = "Select * from fhreservation where reservationstatus = 'Pending'";
             Functions.Functions.fill(Functions.Functions.gen, dataGridView1);
+        }*/
+        public void Fillfhreservationdata()
+        {
+            idname = "fhreservation";
+            Functions.Functions.gen = "Select * from fhreservation";
+            Functions.Functions.fill(Functions.Functions.gen, dataGridView1);
+
+
+
+        }
+        public void Fillaudreservationdata()
+        {
+            idname = "audreservation";
+            Functions.Functions.gen = "Select * from audreservations";
+            Functions.Functions.fill(Functions.Functions.gen, dataGridView1);
+
+
+
+        }
+        public void Fillnareservationdata()
+        {
+            idname = "nareservations";
+            Functions.Functions.gen = "Select * from nareservations";
+            Functions.Functions.fill(Functions.Functions.gen, dataGridView1);
+
+
+
+        }
+        public void Filloareservationdata()
+        {
+            idname = "oareservations";
+            Functions.Functions.gen = "Select * from oareservations";
+            Functions.Functions.fill(Functions.Functions.gen, dataGridView1);
+
+
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -158,13 +205,52 @@ namespace Function_Hall_Reservation_System.WorkingStudent
                 MessageBox.Show(ex.Message);
             }
         }
+        
+        private void facilitycb_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
-        private void button7_Click(object sender, EventArgs e)
+            try
+            {
+                if (facilitycb.SelectedItem.ToString() == "Function Hall")
+                {
+                    //MessageBox.Show("Debug Line for Functionhall selection Executed");
+                    Fillfhreservationdata();
+                    loadedid = idname;
+                }
+                else if (facilitycb.SelectedItem.ToString() == "Auditorium")
+                {
+
+                    //MessageBox.Show("Debug Line for Auditorium Executed");
+                    Fillaudreservationdata();
+                    loadedid = idname;
+                }
+                else if (facilitycb.SelectedItem.ToString() == "New AVR")
+                {
+                    //MessageBox.Show("Debug Line for New AVR Executed");
+                    Fillnareservationdata();
+                    loadedid = idname;
+                }
+
+                else if (facilitycb.SelectedItem.ToString() == "Old AVR")
+                {
+
+                    //MessageBox.Show("Debug Line for Old AVR Executed");
+                    Filloareservationdata();
+                    loadedid = idname;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+            private void button7_Click(object sender, EventArgs e)
         {
             try
             {
                 Connection.Connection.DB();
-                Functions.Functions.gen = "UPDATE fhreservation SET reservationstatus='" + cmbstatus.Text +"',checkedby='"+Form1.setfullname+"' where reservationid = '"+txtreservationid.Text+"'";
+                Functions.Functions.gen = "UPDATE "+loadedid+" SET reservationstatus='" + cmbstatus.Text +"',checkedby='"+Form1.setfullname+"' where reservationid = '"+txtreservationid.Text+"'";
                 Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
                 Functions.Functions.command.ExecuteNonQuery();
                 MessageBox.Show("Successfully Updated!", "fhreservation", MessageBoxButtons.OK);

@@ -23,6 +23,7 @@ namespace Function_Hall_Reservation_System.WorkingStudent
         public Equipments()
         {
             InitializeComponent();
+            cbstyleset();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -37,25 +38,13 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             lblfullname.Text = Form1.setfullname;
         }
 
-       
 
-        public void FillEq()
+
+        public void cbstyleset ()
         {
-            String facilityname = facilitycb.SelectedText.ToString();
+            
             facilitycb.DropDownStyle = ComboBoxStyle.DropDownList;
-            int t = 0;
-            try
-            {
-                
-                if (facilityname == "Function Hall")
-                {
-                    MessageBox.Show("Debug Line Executed");
-                }
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+           
         }
         public void Fillfhequipmentdata()
         {
