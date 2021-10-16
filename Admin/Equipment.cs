@@ -215,5 +215,10 @@ namespace Function_Hall_Reservation_System.Admin
         {
 
         }
+
+        private void facilitycb_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
