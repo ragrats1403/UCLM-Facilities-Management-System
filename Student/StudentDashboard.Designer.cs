@@ -131,7 +131,7 @@ namespace Function_Hall_Reservation_System.Student
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(215, 92);
+            this.label3.Location = new System.Drawing.Point(215, 88);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(287, 37);
             this.label3.TabIndex = 3;
