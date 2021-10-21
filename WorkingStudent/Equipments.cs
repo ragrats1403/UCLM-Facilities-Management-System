@@ -40,7 +40,7 @@ namespace Function_Hall_Reservation_System.WorkingStudent
 
 
 
-        public void cbstyleset ()
+        public void cbstyleset()
         {
             
             facilitycb.DropDownStyle = ComboBoxStyle.DropDownList;

@@ -14,6 +14,8 @@ namespace Function_Hall_Reservation_System.Student
     public partial class StudentDashboard : Form
     {
         private static int count = 0;
+        //public static string idname;
+        public string loadedid;
         public StudentDashboard()
         {
             InitializeComponent();
@@ -22,19 +24,59 @@ namespace Function_Hall_Reservation_System.Student
         private void StudentDashboard_Load(object sender, EventArgs e)
         {
             //filldata();
-            countreservation();
+        }
+        public void filldata(String idname)
+        {
+            lblfullname.Text = Form1.setfullname;
+            // dataGridView1.Columns[2].Width = 108;
+            Functions.Functions.gen = "Select "+idname+ ".eventname as [Event Name]," + idname + ".reserveddate as [Date],fhreservation.timestart as [Time Start], fhreservation.timeend as [Time End] from fhreservation where fhreservation.reservedby = '" + lblfullname.Text+"'";
+            Functions.Functions.fill(Functions.Functions.gen, dataGridView1);
+
+            dataGridView1.Columns[0].Width = 200;
+            dataGridView1.Columns[1].Width = 110;
+            dataGridView1.Columns[2].Width = 110;
+            dataGridView1.Columns[3].Width = 110;
         }
 
-        public void countreservation()
+        public void reservationtotalcount(String idname)
         {
+            
             Connection.Connection.DB();
-            Functions.Functions.gen = "select count(*) from fhreservation";
+            Functions.Functions.gen = "Select count(*) from "+idname+"";
             Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
             Functions.Functions.reader = Functions.Functions.command.ExecuteReader();
             while (Functions.Functions.reader.Read())
             {
                 count = Functions.Functions.reader.GetInt32(0);
                 lblreservationcount.Text = count.ToString();
+            }
+            Connection.Connection.conn.Close();
+        }
+        public void pendingtotalcount(String idname)
+        {
+
+            Connection.Connection.DB();
+            Functions.Functions.gen = "select count(*) from "+idname+" where fhreservation.reservationstatus = 'Pending'";
+            Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
+            Functions.Functions.reader = Functions.Functions.command.ExecuteReader();
+            while (Functions.Functions.reader.Read())
+            {
+                count = Functions.Functions.reader.GetInt32(0);
+                lblpendingcount.Text = count.ToString();
+            }
+            Connection.Connection.conn.Close();
+        }
+        public void approvedtotalcount(String idname)
+        {
+
+            Connection.Connection.DB();
+            Functions.Functions.gen = "select count(*) from "+idname+" where fhreservation.reservationstatus = 'Approved'";
+            Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
+            Functions.Functions.reader = Functions.Functions.command.ExecuteReader();
+            while (Functions.Functions.reader.Read())
+            {
+                count = Functions.Functions.reader.GetInt32(0);
+                lblapprovedcount.Text = count.ToString();
             }
             Connection.Connection.conn.Close();
         }
@@ -84,5 +126,57 @@ namespace Function_Hall_Reservation_System.Student
         {
 
         }
+
+        private void facilitycb_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (facilitycb.SelectedItem.ToString() == "Function Hall")
+                {
+
+                    //MessageBox.Show("Debug Line for Functionhall selection Executed");
+                    loadedid = "fhreservation";
+                    reservationtotalcount(loadedid);
+                    approvedtotalcount(loadedid);
+                    pendingtotalcount(loadedid);
+
+                }
+                else if (facilitycb.SelectedItem.ToString() == "Auditorium")
+                {
+
+                    //MessageBox.Show("Debug Line for Auditorium Executed");
+
+                    loadedid = "audreservations";
+                    reservationtotalcount(loadedid);
+                    approvedtotalcount(loadedid);
+                    pendingtotalcount(loadedid);
+                }
+                else if (facilitycb.SelectedItem.ToString() == "New AVR")
+                {
+                    //MessageBox.Show("Debug Line for New AVR Executed");
+
+                    loadedid = "nareservations";
+                    reservationtotalcount(loadedid);
+                    approvedtotalcount(loadedid);
+                    pendingtotalcount(loadedid);
+                }
+
+                else if (facilitycb.SelectedItem.ToString() == "Old AVR")
+                {
+
+                    //MessageBox.Show("Debug Line for Old AVR Executed");
+
+                    loadedid = "oareservations";
+                    reservationtotalcount(loadedid);
+                    approvedtotalcount(loadedid);
+                    pendingtotalcount(loadedid);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
-}
+    }
+

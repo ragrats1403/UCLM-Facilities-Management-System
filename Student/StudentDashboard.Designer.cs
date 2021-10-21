@@ -37,11 +37,24 @@ namespace Function_Hall_Reservation_System.Student
             this.button1 = new System.Windows.Forms.Button();
             this.lblfullname = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
             this.lblreservationcount = new System.Windows.Forms.Label();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label6 = new System.Windows.Forms.Label();
+            this.lblpendingcount = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.lblapprovedcount = new System.Windows.Forms.Label();
+            this.facilitycb = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -120,19 +133,11 @@ namespace Function_Hall_Reservation_System.Student
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(222, 132);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(573, 309);
-            this.dataGridView1.TabIndex = 2;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(215, 88);
+            this.label3.Location = new System.Drawing.Point(222, 64);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(287, 37);
             this.label3.TabIndex = 3;
@@ -141,20 +146,145 @@ namespace Function_Hall_Reservation_System.Student
             // lblreservationcount
             // 
             this.lblreservationcount.AutoSize = true;
-            this.lblreservationcount.Location = new System.Drawing.Point(529, 59);
+            this.lblreservationcount.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblreservationcount.Location = new System.Drawing.Point(613, 48);
             this.lblreservationcount.Name = "lblreservationcount";
-            this.lblreservationcount.Size = new System.Drawing.Size(35, 13);
+            this.lblreservationcount.Size = new System.Drawing.Size(98, 108);
             this.lblreservationcount.TabIndex = 4;
-            this.lblreservationcount.Text = "label1";
+            this.lblreservationcount.Text = "0";
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Location = new System.Drawing.Point(222, 115);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(815, 323);
+            this.tabControl1.TabIndex = 5;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.label6);
+            this.tabPage1.Controls.Add(this.lblpendingcount);
+            this.tabPage1.Controls.Add(this.label4);
+            this.tabPage1.Controls.Add(this.lblapprovedcount);
+            this.tabPage1.Controls.Add(this.facilitycb);
+            this.tabPage1.Controls.Add(this.label1);
+            this.tabPage1.Controls.Add(this.lblreservationcount);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(807, 297);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Total Reservations";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(69, 192);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(145, 50);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "Total Pending\r\nReservations\r\n";
+            // 
+            // lblpendingcount
+            // 
+            this.lblpendingcount.AutoSize = true;
+            this.lblpendingcount.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblpendingcount.Location = new System.Drawing.Point(89, 48);
+            this.lblpendingcount.Name = "lblpendingcount";
+            this.lblpendingcount.Size = new System.Drawing.Size(98, 108);
+            this.lblpendingcount.TabIndex = 9;
+            this.lblpendingcount.Text = "0";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(322, 192);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(158, 50);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Total Approved\r\nReservations";
+            // 
+            // lblapprovedcount
+            // 
+            this.lblapprovedcount.AutoSize = true;
+            this.lblapprovedcount.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblapprovedcount.Location = new System.Drawing.Point(351, 48);
+            this.lblapprovedcount.Name = "lblapprovedcount";
+            this.lblapprovedcount.Size = new System.Drawing.Size(98, 108);
+            this.lblapprovedcount.TabIndex = 7;
+            this.lblapprovedcount.Text = "0";
+            // 
+            // facilitycb
+            // 
+            this.facilitycb.FormattingEnabled = true;
+            this.facilitycb.Items.AddRange(new object[] {
+            "Function Hall",
+            "Old AVR",
+            "New AVR",
+            "Auditorium"});
+            this.facilitycb.Location = new System.Drawing.Point(6, 6);
+            this.facilitycb.Name = "facilitycb";
+            this.facilitycb.Size = new System.Drawing.Size(121, 21);
+            this.facilitycb.TabIndex = 6;
+            this.facilitycb.Text = "Select Facilities";
+            this.facilitycb.SelectedIndexChanged += new System.EventHandler(this.facilitycb_SelectedIndexChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(560, 192);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(192, 25);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Total Reservations";
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.comboBox1);
+            this.tabPage2.Controls.Add(this.dataGridView1);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Size = new System.Drawing.Size(807, 297);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "My Reservation";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(3, 30);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(801, 267);
+            this.dataGridView1.TabIndex = 0;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Function Hall",
+            "Old AVR",
+            "New AVR",
+            "Auditorium"});
+            this.comboBox1.Location = new System.Drawing.Point(3, 3);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 6;
+            this.comboBox1.Text = "Select Facility";
             // 
             // StudentDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.lblreservationcount);
+            this.ClientSize = new System.Drawing.Size(1049, 450);
+            this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "StudentDashboard";
@@ -164,6 +294,10 @@ namespace Function_Hall_Reservation_System.Student
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -178,9 +312,19 @@ namespace Function_Hall_Reservation_System.Student
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label lblfullname;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label lblreservationcount;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.ComboBox facilitycb;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblpendingcount;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblapprovedcount;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

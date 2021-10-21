@@ -18,6 +18,7 @@ namespace Function_Hall_Reservation_System.Student
         public static string tempdate = "";
         public static string temptimestart = "";
         public static string temptimeend = "";
+        private String loadedid;
 
         public Reservation()
         {
@@ -26,7 +27,7 @@ namespace Function_Hall_Reservation_System.Student
 
         private void Reservation_Load(object sender, EventArgs e)
         {
-            
+
             fillstudnameid();
             filldata();
             timestart();
@@ -47,7 +48,7 @@ namespace Function_Hall_Reservation_System.Student
                 checkedListBox1.Items.Add(fill);
             }
 
-            
+
             Connection.Connection.conn.Close();
         }
         public void timestart()
@@ -140,14 +141,14 @@ namespace Function_Hall_Reservation_System.Student
         private void btnrequest_Click(object sender, EventArgs e)
         {
             var name = Form1.setfirstname + " " + Form1.setlastname;
-           
+
             string month = "";
             string dateval = "";
-            
-            
+
+
             string timestart = "";
             string timeend = "";
-            
+
             var selectedequip = new List<string>();
             try
             {
@@ -158,32 +159,32 @@ namespace Function_Hall_Reservation_System.Student
                 }
                 string allequip = string.Join(", ", selectedequip);
                 month = dateTimePicker2.Value.ToString("MMMM");
-                
+
                 try
                 {
-                      Connection.Connection.DB();
-                      Functions.Functions.gen = "Select * from fhreservation";
-                      Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
-                      Functions.Functions.reader = Functions.Functions.command.ExecuteReader();
-                      Functions.Functions.reader.Read();
-                      
-                        dateval = dateTimePicker2.Value.ToString("MM/dd/yyyy");
-                        timestart = dateTimePicker1.Value.ToString("hh:mm:tt");
-                        timeend = dateTimePicker3.Value.ToString("hh:mm:tt");
-                        Connection.Connection.conn.Close();
+                    Connection.Connection.DB();
+                    Functions.Functions.gen = "Select * from fhreservation";
+                    Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
+                    Functions.Functions.reader = Functions.Functions.command.ExecuteReader();
+                    Functions.Functions.reader.Read();
+
+                    dateval = dateTimePicker2.Value.ToString("MM/dd/yyyy");
+                    timestart = dateTimePicker1.Value.ToString("hh:mm:tt");
+                    timeend = dateTimePicker3.Value.ToString("hh:mm:tt");
+                    Connection.Connection.conn.Close();
 
                 }
                 catch (Exception ex)
-                  {
-                      MessageBox.Show(ex.Message);
-                  }
+                {
+                    MessageBox.Show(ex.Message);
+                }
 
-                
-                  
+
+
 
 
                 Connection.Connection.DB();
-                Functions.Functions.gen = "Insert Into fhreservation(eventname,reservedby,reservationstatus,datereserved,checkedby,studentid,studentname,reservedequipments,approvedby,timestart,month,timeend,reserveddate)values('" + txtEventname.Text + "','" + name + "','Pending','" + DateTime.Now.ToString() + "','N/A','" + txtStudentid.Text + "','" + txtStudentName.Text + "','" + allequip + "','N/A','" + timestart + "','"+ month + " ','"+ timeend +"','"+dateval+"')";
+                Functions.Functions.gen = "Insert Into "+loadedid+"(eventname,reservedby,reservationstatus,datereserved,checkedby,studentid,studentname,reservedequipments,approvedby,timestart,month,timeend,reserveddate)values('" + txtEventname.Text + "','" + name + "','Pending','" + DateTime.Now.ToString() + "','N/A','" + txtStudentid.Text + "','" + txtStudentName.Text + "','" + allequip + "','N/A','" + timestart + "','" + month + " ','" + timeend + "','" + dateval + "')";
                 Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
 
                 Functions.Functions.command.ExecuteNonQuery();
@@ -216,9 +217,9 @@ namespace Function_Hall_Reservation_System.Student
             txtStudentid.Text = id;
 
         }
-        
-        
-        
+
+
+
 
         private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -266,6 +267,45 @@ namespace Function_Hall_Reservation_System.Student
             Form1 form = new Form1();
             this.Close();
             form.Show();
+        }
+        private void facilitycb_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (facilitycb.SelectedItem.ToString() == "Function Hall")
+                {
+                    //MessageBox.Show("Debug Line for Functionhall selection Executed");|
+                    loadedid = "fhreservation";
+                    
+                }
+                else if (facilitycb.SelectedItem.ToString() == "Auditorium")
+                {
+
+                    //MessageBox.Show("Debug Line for Auditorium Executed");
+                    loadedid = "audreservations";
+
+                }
+                else if (facilitycb.SelectedItem.ToString() == "New AVR")
+                {
+                    //MessageBox.Show("Debug Line for New AVR Executed");
+                    loadedid = "nareservations";
+
+                }
+
+                else if (facilitycb.SelectedItem.ToString() == "Old AVR")
+                {
+
+                    //MessageBox.Show("Debug Line for Old AVR Executed");
+                    loadedid = "oareservations";
+
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
         }
     }
 }
