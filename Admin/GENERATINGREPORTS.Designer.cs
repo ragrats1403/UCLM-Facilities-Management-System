@@ -148,206 +148,208 @@ namespace Function_Hall_Reservation_System.Admin
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new System.Drawing.Point(321, 290);
+            label7.Location = new System.Drawing.Point(289, 270);
             label7.Name = "label7";
-            label7.Size = new System.Drawing.Size(46, 13);
+            label7.Size = new System.Drawing.Size(52, 17);
             label7.TabIndex = 165;
             label7.Text = "Role ID:";
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new System.Drawing.Point(944, 285);
+            label5.Location = new System.Drawing.Point(917, 262);
             label5.Name = "label5";
-            label5.Size = new System.Drawing.Size(53, 13);
+            label5.Size = new System.Drawing.Size(65, 17);
             label5.TabIndex = 158;
             label5.Text = "Time start";
             // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new System.Drawing.Point(944, 312);
+            label6.Location = new System.Drawing.Point(917, 287);
             label6.Name = "label6";
-            label6.Size = new System.Drawing.Size(51, 13);
+            label6.Size = new System.Drawing.Size(61, 17);
             label6.TabIndex = 160;
             label6.Text = "Time end";
             // 
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new System.Drawing.Point(944, 337);
+            label8.Location = new System.Drawing.Point(917, 310);
             label8.Name = "label8";
-            label8.Size = new System.Drawing.Size(71, 13);
+            label8.Size = new System.Drawing.Size(88, 17);
             label8.TabIndex = 162;
             label8.Text = "Reserve date";
             // 
             // reservationidLabel
             // 
             reservationidLabel.AutoSize = true;
-            reservationidLabel.Location = new System.Drawing.Point(623, 209);
+            reservationidLabel.Location = new System.Drawing.Point(584, 193);
             reservationidLabel.Name = "reservationidLabel";
-            reservationidLabel.Size = new System.Drawing.Size(70, 13);
+            reservationidLabel.Size = new System.Drawing.Size(90, 17);
             reservationidLabel.TabIndex = 139;
             reservationidLabel.Text = "reservationid:";
             // 
             // eventnameLabel
             // 
             eventnameLabel.AutoSize = true;
-            eventnameLabel.Location = new System.Drawing.Point(623, 236);
+            eventnameLabel.Location = new System.Drawing.Point(584, 218);
             eventnameLabel.Name = "eventnameLabel";
-            eventnameLabel.Size = new System.Drawing.Size(63, 13);
+            eventnameLabel.Size = new System.Drawing.Size(81, 17);
             eventnameLabel.TabIndex = 141;
             eventnameLabel.Text = "eventname:";
             // 
             // reservedbyLabel
             // 
             reservedbyLabel.AutoSize = true;
-            reservedbyLabel.Location = new System.Drawing.Point(623, 263);
+            reservedbyLabel.Location = new System.Drawing.Point(584, 243);
             reservedbyLabel.Name = "reservedbyLabel";
-            reservedbyLabel.Size = new System.Drawing.Size(62, 13);
+            reservedbyLabel.Size = new System.Drawing.Size(78, 17);
             reservedbyLabel.TabIndex = 143;
             reservedbyLabel.Text = "reservedby:";
             // 
             // reservationstatusLabel
             // 
             reservationstatusLabel.AutoSize = true;
-            reservationstatusLabel.Location = new System.Drawing.Point(623, 295);
+            reservationstatusLabel.Location = new System.Drawing.Point(584, 272);
             reservationstatusLabel.Name = "reservationstatusLabel";
-            reservationstatusLabel.Size = new System.Drawing.Size(90, 13);
+            reservationstatusLabel.Size = new System.Drawing.Size(114, 17);
             reservationstatusLabel.TabIndex = 145;
             reservationstatusLabel.Text = "reservationstatus:";
             // 
             // datereservedLabel
             // 
             datereservedLabel.AutoSize = true;
-            datereservedLabel.Location = new System.Drawing.Point(623, 324);
+            datereservedLabel.Location = new System.Drawing.Point(584, 299);
             datereservedLabel.Name = "datereservedLabel";
-            datereservedLabel.Size = new System.Drawing.Size(72, 13);
+            datereservedLabel.Size = new System.Drawing.Size(93, 17);
             datereservedLabel.TabIndex = 147;
             datereservedLabel.Text = "datereserved:";
             // 
             // checkedbyLabel
             // 
             checkedbyLabel.AutoSize = true;
-            checkedbyLabel.Location = new System.Drawing.Point(623, 350);
+            checkedbyLabel.Location = new System.Drawing.Point(584, 323);
             checkedbyLabel.Name = "checkedbyLabel";
-            checkedbyLabel.Size = new System.Drawing.Size(63, 13);
+            checkedbyLabel.Size = new System.Drawing.Size(78, 17);
             checkedbyLabel.TabIndex = 148;
             checkedbyLabel.Text = "checkedby:";
             // 
             // approvedbyLabel
             // 
             approvedbyLabel.AutoSize = true;
-            approvedbyLabel.Location = new System.Drawing.Point(944, 207);
+            approvedbyLabel.Location = new System.Drawing.Point(917, 190);
             approvedbyLabel.Name = "approvedbyLabel";
-            approvedbyLabel.Size = new System.Drawing.Size(66, 13);
+            approvedbyLabel.Size = new System.Drawing.Size(85, 17);
             approvedbyLabel.TabIndex = 150;
             approvedbyLabel.Text = "approvedby:";
             // 
             // studentnameLabel
             // 
             studentnameLabel.AutoSize = true;
-            studentnameLabel.Location = new System.Drawing.Point(944, 235);
+            studentnameLabel.Location = new System.Drawing.Point(917, 216);
             studentnameLabel.Name = "studentnameLabel";
-            studentnameLabel.Size = new System.Drawing.Size(71, 13);
+            studentnameLabel.Size = new System.Drawing.Size(90, 17);
             studentnameLabel.TabIndex = 152;
             studentnameLabel.Text = "studentname:";
             // 
             // reservedequipmentsLabel
             // 
             reservedequipmentsLabel.AutoSize = true;
-            reservedequipmentsLabel.Location = new System.Drawing.Point(944, 262);
+            reservedequipmentsLabel.Location = new System.Drawing.Point(917, 241);
             reservedequipmentsLabel.Name = "reservedequipmentsLabel";
-            reservedequipmentsLabel.Size = new System.Drawing.Size(105, 13);
+            reservedequipmentsLabel.Size = new System.Drawing.Size(134, 17);
             reservedequipmentsLabel.TabIndex = 154;
             reservedequipmentsLabel.Text = "reservedequipments:";
             // 
             // useridLabel
             // 
             useridLabel.AutoSize = true;
-            useridLabel.Location = new System.Drawing.Point(16, 208);
+            useridLabel.Location = new System.Drawing.Point(7, 194);
             useridLabel.Name = "useridLabel";
-            useridLabel.Size = new System.Drawing.Size(38, 13);
+            useridLabel.Size = new System.Drawing.Size(46, 17);
             useridLabel.TabIndex = 123;
             useridLabel.Text = "userid:";
             // 
             // firstnameLabel
             // 
             firstnameLabel.AutoSize = true;
-            firstnameLabel.Location = new System.Drawing.Point(16, 235);
+            firstnameLabel.Location = new System.Drawing.Point(3, 220);
             firstnameLabel.Name = "firstnameLabel";
-            firstnameLabel.Size = new System.Drawing.Size(52, 13);
+            firstnameLabel.Size = new System.Drawing.Size(66, 17);
             firstnameLabel.TabIndex = 125;
             firstnameLabel.Text = "firstname:";
             // 
             // lastnameLabel
             // 
             lastnameLabel.AutoSize = true;
-            lastnameLabel.Location = new System.Drawing.Point(16, 262);
+            lastnameLabel.Location = new System.Drawing.Point(3, 247);
             lastnameLabel.Name = "lastnameLabel";
-            lastnameLabel.Size = new System.Drawing.Size(52, 13);
+            lastnameLabel.Size = new System.Drawing.Size(66, 17);
             lastnameLabel.TabIndex = 127;
             lastnameLabel.Text = "lastname:";
             // 
             // ageLabel
             // 
             ageLabel.AutoSize = true;
-            ageLabel.Location = new System.Drawing.Point(16, 289);
+            ageLabel.Location = new System.Drawing.Point(7, 273);
             ageLabel.Name = "ageLabel";
-            ageLabel.Size = new System.Drawing.Size(28, 13);
+            ageLabel.Size = new System.Drawing.Size(35, 17);
             ageLabel.TabIndex = 129;
             ageLabel.Text = "age:";
             // 
             // statusLabel
             // 
             statusLabel.AutoSize = true;
-            statusLabel.Location = new System.Drawing.Point(16, 316);
+            statusLabel.Location = new System.Drawing.Point(7, 303);
             statusLabel.Name = "statusLabel";
-            statusLabel.Size = new System.Drawing.Size(38, 13);
+            statusLabel.Size = new System.Drawing.Size(46, 17);
             statusLabel.TabIndex = 131;
             statusLabel.Text = "status:";
             // 
             // dateregisteredLabel
             // 
             dateregisteredLabel.AutoSize = true;
-            dateregisteredLabel.Location = new System.Drawing.Point(321, 208);
+            dateregisteredLabel.Location = new System.Drawing.Point(277, 193);
             dateregisteredLabel.Name = "dateregisteredLabel";
-            dateregisteredLabel.Size = new System.Drawing.Size(77, 13);
+            dateregisteredLabel.Size = new System.Drawing.Size(101, 17);
             dateregisteredLabel.TabIndex = 133;
             dateregisteredLabel.Text = "dateregistered:";
+            dateregisteredLabel.Click += new System.EventHandler(this.dateregisteredLabel_Click);
             // 
             // studentidLabel
             // 
             studentidLabel.AutoSize = true;
-            studentidLabel.Location = new System.Drawing.Point(321, 234);
+            studentidLabel.Location = new System.Drawing.Point(289, 218);
             studentidLabel.Name = "studentidLabel";
-            studentidLabel.Size = new System.Drawing.Size(53, 13);
+            studentidLabel.Size = new System.Drawing.Size(67, 17);
             studentidLabel.TabIndex = 134;
             studentidLabel.Text = "studentid:";
             // 
             // passwordLabel
             // 
             passwordLabel.AutoSize = true;
-            passwordLabel.Location = new System.Drawing.Point(321, 261);
+            passwordLabel.Location = new System.Drawing.Point(289, 243);
             passwordLabel.Name = "passwordLabel";
-            passwordLabel.Size = new System.Drawing.Size(55, 13);
+            passwordLabel.Size = new System.Drawing.Size(67, 17);
             passwordLabel.TabIndex = 136;
             passwordLabel.Text = "password:";
             // 
             // genderLabel
             // 
             genderLabel.AutoSize = true;
-            genderLabel.Location = new System.Drawing.Point(321, 315);
+            genderLabel.Location = new System.Drawing.Point(289, 293);
             genderLabel.Name = "genderLabel";
-            genderLabel.Size = new System.Drawing.Size(43, 13);
+            genderLabel.Size = new System.Drawing.Size(54, 17);
             genderLabel.TabIndex = 138;
             genderLabel.Text = "gender:";
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(0, 318);
+            this.button7.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.Location = new System.Drawing.Point(0, 294);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(208, 37);
+            this.button7.Size = new System.Drawing.Size(208, 34);
             this.button7.TabIndex = 9;
             this.button7.Text = "EQUIPMENTS";
             this.button7.UseVisualStyleBackColor = true;
@@ -355,9 +357,10 @@ namespace Function_Hall_Reservation_System.Admin
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(0, 275);
+            this.button6.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.Location = new System.Drawing.Point(0, 254);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(208, 37);
+            this.button6.Size = new System.Drawing.Size(208, 34);
             this.button6.TabIndex = 8;
             this.button6.Text = "ACCOUNTS";
             this.button6.UseVisualStyleBackColor = true;
@@ -365,9 +368,10 @@ namespace Function_Hall_Reservation_System.Admin
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(0, 404);
+            this.button4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Location = new System.Drawing.Point(0, 373);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(208, 37);
+            this.button4.Size = new System.Drawing.Size(208, 34);
             this.button4.TabIndex = 6;
             this.button4.Text = "LOG OUT";
             this.button4.UseVisualStyleBackColor = true;
@@ -375,19 +379,21 @@ namespace Function_Hall_Reservation_System.Admin
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(0, 361);
+            this.button3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(0, 333);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(208, 37);
+            this.button3.Size = new System.Drawing.Size(208, 34);
             this.button3.TabIndex = 5;
-            this.button3.Text = "GENERATING REPORTS";
+            this.button3.Text = "GENERATE REPORTS";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(0, 232);
+            this.button2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(0, 214);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(208, 37);
+            this.button2.Size = new System.Drawing.Size(208, 34);
             this.button2.TabIndex = 4;
             this.button2.Text = "VIEW RESERVATION LIST";
             this.button2.UseVisualStyleBackColor = true;
@@ -395,9 +401,10 @@ namespace Function_Hall_Reservation_System.Admin
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(0, 188);
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(0, 174);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(208, 37);
+            this.button1.Size = new System.Drawing.Size(208, 34);
             this.button1.TabIndex = 3;
             this.button1.Text = "CALENDAR OF ACTIVITIES";
             this.button1.UseVisualStyleBackColor = true;
@@ -406,17 +413,18 @@ namespace Function_Hall_Reservation_System.Admin
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            this.label3.Location = new System.Drawing.Point(651, 73);
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.Menu;
+            this.label3.Location = new System.Drawing.Point(651, 67);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(204, 29);
+            this.label3.Size = new System.Drawing.Size(223, 30);
             this.label3.TabIndex = 14;
             this.label3.Text = "Generate Reports";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(129)))), ((int)(((byte)(49)))));
             this.panel1.Controls.Add(this.button7);
             this.panel1.Controls.Add(this.button6);
             this.panel1.Controls.Add(this.button4);
@@ -427,15 +435,16 @@ namespace Function_Hall_Reservation_System.Admin
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(-1, -1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(208, 595);
+            this.panel1.Size = new System.Drawing.Size(211, 549);
             this.panel1.TabIndex = 11;
             // 
             // lblfullname
             // 
             this.lblfullname.AutoSize = true;
-            this.lblfullname.Location = new System.Drawing.Point(61, 134);
+            this.lblfullname.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblfullname.Location = new System.Drawing.Point(61, 124);
             this.lblfullname.Name = "lblfullname";
-            this.lblfullname.Size = new System.Drawing.Size(35, 13);
+            this.lblfullname.Size = new System.Drawing.Size(45, 17);
             this.lblfullname.TabIndex = 1;
             this.lblfullname.Text = "label1";
             // 
@@ -444,9 +453,9 @@ namespace Function_Hall_Reservation_System.Admin
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(208, 126);
+            this.pictureBox1.Size = new System.Drawing.Size(211, 116);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -455,21 +464,23 @@ namespace Function_Hall_Reservation_System.Admin
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F);
-            this.label4.Location = new System.Drawing.Point(637, 19);
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 23.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.Menu;
+            this.label4.Location = new System.Drawing.Point(637, 18);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(239, 36);
+            this.label4.Size = new System.Drawing.Size(278, 37);
             this.label4.TabIndex = 13;
             this.label4.Text = "Welcome Admin!";
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Location = new System.Drawing.Point(213, 111);
+            this.tabControl1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControl1.Location = new System.Drawing.Point(213, 102);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1277, 482);
+            this.tabControl1.Size = new System.Drawing.Size(1277, 445);
             this.tabControl1.TabIndex = 15;
             // 
             // tabPage1
@@ -523,11 +534,11 @@ namespace Function_Hall_Reservation_System.Admin
             this.tabPage1.Controls.Add(this.richTextBox1);
             this.tabPage1.Controls.Add(this.button10);
             this.tabPage1.Controls.Add(this.dataGridView1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Location = new System.Drawing.Point(4, 26);
             this.tabPage1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage1.Size = new System.Drawing.Size(1269, 456);
+            this.tabPage1.Size = new System.Drawing.Size(1269, 415);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Print Student & Reservation Details";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -536,185 +547,185 @@ namespace Function_Hall_Reservation_System.Admin
             // txtroleid
             // 
             this.txtroleid.Enabled = false;
-            this.txtroleid.Location = new System.Drawing.Point(407, 291);
+            this.txtroleid.Location = new System.Drawing.Point(378, 267);
             this.txtroleid.Name = "txtroleid";
-            this.txtroleid.Size = new System.Drawing.Size(200, 20);
+            this.txtroleid.Size = new System.Drawing.Size(200, 22);
             this.txtroleid.TabIndex = 166;
             // 
             // txtgender
             // 
             this.txtgender.Enabled = false;
-            this.txtgender.Location = new System.Drawing.Point(407, 316);
+            this.txtgender.Location = new System.Drawing.Point(378, 293);
             this.txtgender.Name = "txtgender";
-            this.txtgender.Size = new System.Drawing.Size(200, 20);
+            this.txtgender.Size = new System.Drawing.Size(200, 22);
             this.txtgender.TabIndex = 164;
             // 
             // txttimestart
             // 
             this.txttimestart.Enabled = false;
-            this.txttimestart.Location = new System.Drawing.Point(1059, 282);
+            this.txttimestart.Location = new System.Drawing.Point(1059, 259);
             this.txttimestart.Name = "txttimestart";
-            this.txttimestart.Size = new System.Drawing.Size(200, 20);
+            this.txttimestart.Size = new System.Drawing.Size(200, 22);
             this.txttimestart.TabIndex = 159;
             // 
             // txttimeend
             // 
             this.txttimeend.Enabled = false;
-            this.txttimeend.Location = new System.Drawing.Point(1059, 309);
+            this.txttimeend.Location = new System.Drawing.Point(1059, 284);
             this.txttimeend.Name = "txttimeend";
-            this.txttimeend.Size = new System.Drawing.Size(200, 20);
+            this.txttimeend.Size = new System.Drawing.Size(200, 22);
             this.txttimeend.TabIndex = 161;
             // 
             // txtreservedate
             // 
             this.txtreservedate.Enabled = false;
-            this.txtreservedate.Location = new System.Drawing.Point(1059, 333);
+            this.txtreservedate.Location = new System.Drawing.Point(1059, 307);
             this.txtreservedate.Name = "txtreservedate";
-            this.txtreservedate.Size = new System.Drawing.Size(200, 20);
+            this.txtreservedate.Size = new System.Drawing.Size(200, 22);
             this.txtreservedate.TabIndex = 163;
             // 
             // txtdateregistered
             // 
             this.txtdateregistered.Enabled = false;
-            this.txtdateregistered.Location = new System.Drawing.Point(407, 206);
+            this.txtdateregistered.Location = new System.Drawing.Point(378, 190);
             this.txtdateregistered.Name = "txtdateregistered";
-            this.txtdateregistered.Size = new System.Drawing.Size(200, 20);
+            this.txtdateregistered.Size = new System.Drawing.Size(200, 22);
             this.txtdateregistered.TabIndex = 157;
             // 
             // datereserved
             // 
             this.datereserved.Enabled = false;
-            this.datereserved.Location = new System.Drawing.Point(738, 321);
+            this.datereserved.Location = new System.Drawing.Point(701, 297);
             this.datereserved.Name = "datereserved";
-            this.datereserved.Size = new System.Drawing.Size(200, 20);
+            this.datereserved.Size = new System.Drawing.Size(200, 22);
             this.datereserved.TabIndex = 156;
             // 
             // reservationidTextBox
             // 
             this.reservationidTextBox.Enabled = false;
-            this.reservationidTextBox.Location = new System.Drawing.Point(738, 206);
+            this.reservationidTextBox.Location = new System.Drawing.Point(701, 191);
             this.reservationidTextBox.Name = "reservationidTextBox";
-            this.reservationidTextBox.Size = new System.Drawing.Size(200, 20);
+            this.reservationidTextBox.Size = new System.Drawing.Size(200, 22);
             this.reservationidTextBox.TabIndex = 140;
             // 
             // eventnameTextBox
             // 
             this.eventnameTextBox.Enabled = false;
-            this.eventnameTextBox.Location = new System.Drawing.Point(738, 233);
+            this.eventnameTextBox.Location = new System.Drawing.Point(701, 216);
             this.eventnameTextBox.Name = "eventnameTextBox";
-            this.eventnameTextBox.Size = new System.Drawing.Size(200, 20);
+            this.eventnameTextBox.Size = new System.Drawing.Size(200, 22);
             this.eventnameTextBox.TabIndex = 142;
             // 
             // reservedbyTextBox
             // 
             this.reservedbyTextBox.Enabled = false;
-            this.reservedbyTextBox.Location = new System.Drawing.Point(738, 260);
+            this.reservedbyTextBox.Location = new System.Drawing.Point(701, 241);
             this.reservedbyTextBox.Name = "reservedbyTextBox";
-            this.reservedbyTextBox.Size = new System.Drawing.Size(200, 20);
+            this.reservedbyTextBox.Size = new System.Drawing.Size(200, 22);
             this.reservedbyTextBox.TabIndex = 144;
             // 
             // reservationstatusTextBox
             // 
             this.reservationstatusTextBox.Enabled = false;
-            this.reservationstatusTextBox.Location = new System.Drawing.Point(738, 292);
+            this.reservationstatusTextBox.Location = new System.Drawing.Point(701, 271);
             this.reservationstatusTextBox.Name = "reservationstatusTextBox";
-            this.reservationstatusTextBox.Size = new System.Drawing.Size(200, 20);
+            this.reservationstatusTextBox.Size = new System.Drawing.Size(200, 22);
             this.reservationstatusTextBox.TabIndex = 146;
             // 
             // checkedbyTextBox
             // 
             this.checkedbyTextBox.Enabled = false;
-            this.checkedbyTextBox.Location = new System.Drawing.Point(738, 346);
+            this.checkedbyTextBox.Location = new System.Drawing.Point(701, 324);
             this.checkedbyTextBox.Name = "checkedbyTextBox";
-            this.checkedbyTextBox.Size = new System.Drawing.Size(200, 20);
+            this.checkedbyTextBox.Size = new System.Drawing.Size(200, 22);
             this.checkedbyTextBox.TabIndex = 149;
             // 
             // approvedbyTextBox
             // 
             this.approvedbyTextBox.Enabled = false;
-            this.approvedbyTextBox.Location = new System.Drawing.Point(1059, 204);
+            this.approvedbyTextBox.Location = new System.Drawing.Point(1059, 185);
             this.approvedbyTextBox.Name = "approvedbyTextBox";
-            this.approvedbyTextBox.Size = new System.Drawing.Size(200, 20);
+            this.approvedbyTextBox.Size = new System.Drawing.Size(200, 22);
             this.approvedbyTextBox.TabIndex = 151;
             // 
             // studentnameTextBox
             // 
             this.studentnameTextBox.Enabled = false;
-            this.studentnameTextBox.Location = new System.Drawing.Point(1059, 233);
+            this.studentnameTextBox.Location = new System.Drawing.Point(1059, 211);
             this.studentnameTextBox.Name = "studentnameTextBox";
-            this.studentnameTextBox.Size = new System.Drawing.Size(200, 20);
+            this.studentnameTextBox.Size = new System.Drawing.Size(200, 22);
             this.studentnameTextBox.TabIndex = 153;
             // 
             // reservedequipmentsTextBox
             // 
             this.reservedequipmentsTextBox.Enabled = false;
-            this.reservedequipmentsTextBox.Location = new System.Drawing.Point(1059, 259);
+            this.reservedequipmentsTextBox.Location = new System.Drawing.Point(1059, 236);
             this.reservedequipmentsTextBox.Name = "reservedequipmentsTextBox";
-            this.reservedequipmentsTextBox.Size = new System.Drawing.Size(200, 20);
+            this.reservedequipmentsTextBox.Size = new System.Drawing.Size(200, 22);
             this.reservedequipmentsTextBox.TabIndex = 155;
             // 
             // useridTextBox
             // 
             this.useridTextBox.Enabled = false;
-            this.useridTextBox.Location = new System.Drawing.Point(102, 205);
+            this.useridTextBox.Location = new System.Drawing.Point(71, 191);
             this.useridTextBox.Name = "useridTextBox";
-            this.useridTextBox.Size = new System.Drawing.Size(200, 20);
+            this.useridTextBox.Size = new System.Drawing.Size(200, 22);
             this.useridTextBox.TabIndex = 124;
             // 
             // firstnameTextBox
             // 
             this.firstnameTextBox.Enabled = false;
-            this.firstnameTextBox.Location = new System.Drawing.Point(102, 232);
+            this.firstnameTextBox.Location = new System.Drawing.Point(71, 217);
             this.firstnameTextBox.Name = "firstnameTextBox";
-            this.firstnameTextBox.Size = new System.Drawing.Size(200, 20);
+            this.firstnameTextBox.Size = new System.Drawing.Size(200, 22);
             this.firstnameTextBox.TabIndex = 126;
             // 
             // lastnameTextBox
             // 
             this.lastnameTextBox.Enabled = false;
-            this.lastnameTextBox.Location = new System.Drawing.Point(102, 259);
+            this.lastnameTextBox.Location = new System.Drawing.Point(71, 244);
             this.lastnameTextBox.Name = "lastnameTextBox";
-            this.lastnameTextBox.Size = new System.Drawing.Size(200, 20);
+            this.lastnameTextBox.Size = new System.Drawing.Size(200, 22);
             this.lastnameTextBox.TabIndex = 128;
             // 
             // ageTextBox
             // 
             this.ageTextBox.Enabled = false;
-            this.ageTextBox.Location = new System.Drawing.Point(102, 286);
+            this.ageTextBox.Location = new System.Drawing.Point(71, 272);
             this.ageTextBox.Name = "ageTextBox";
-            this.ageTextBox.Size = new System.Drawing.Size(200, 20);
+            this.ageTextBox.Size = new System.Drawing.Size(200, 22);
             this.ageTextBox.TabIndex = 130;
             // 
             // statusTextBox
             // 
             this.statusTextBox.Enabled = false;
-            this.statusTextBox.Location = new System.Drawing.Point(102, 313);
+            this.statusTextBox.Location = new System.Drawing.Point(71, 300);
             this.statusTextBox.Name = "statusTextBox";
-            this.statusTextBox.Size = new System.Drawing.Size(200, 20);
+            this.statusTextBox.Size = new System.Drawing.Size(200, 22);
             this.statusTextBox.TabIndex = 132;
             // 
             // studentidTextBox
             // 
             this.studentidTextBox.Enabled = false;
-            this.studentidTextBox.Location = new System.Drawing.Point(407, 231);
+            this.studentidTextBox.Location = new System.Drawing.Point(378, 215);
             this.studentidTextBox.Name = "studentidTextBox";
-            this.studentidTextBox.Size = new System.Drawing.Size(200, 20);
+            this.studentidTextBox.Size = new System.Drawing.Size(200, 22);
             this.studentidTextBox.TabIndex = 135;
             // 
             // passwordTextBox
             // 
             this.passwordTextBox.Enabled = false;
-            this.passwordTextBox.Location = new System.Drawing.Point(407, 258);
+            this.passwordTextBox.Location = new System.Drawing.Point(378, 240);
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.PasswordChar = '*';
-            this.passwordTextBox.Size = new System.Drawing.Size(200, 20);
+            this.passwordTextBox.Size = new System.Drawing.Size(200, 22);
             this.passwordTextBox.TabIndex = 137;
             // 
             // button11
             // 
-            this.button11.Location = new System.Drawing.Point(503, 406);
+            this.button11.Location = new System.Drawing.Point(503, 375);
             this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(75, 25);
+            this.button11.Size = new System.Drawing.Size(75, 23);
             this.button11.TabIndex = 122;
             this.button11.Text = "Records";
             this.button11.UseVisualStyleBackColor = true;
@@ -722,19 +733,19 @@ namespace Function_Hall_Reservation_System.Admin
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(665, 25);
+            this.richTextBox1.Location = new System.Drawing.Point(665, 23);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.ReadOnly = true;
-            this.richTextBox1.Size = new System.Drawing.Size(236, 175);
+            this.richTextBox1.Size = new System.Drawing.Size(236, 162);
             this.richTextBox1.TabIndex = 121;
             this.richTextBox1.Text = "";
             this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged_1);
             // 
             // button10
             // 
-            this.button10.Location = new System.Drawing.Point(584, 406);
+            this.button10.Location = new System.Drawing.Point(584, 375);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(75, 25);
+            this.button10.Size = new System.Drawing.Size(75, 23);
             this.button10.TabIndex = 120;
             this.button10.Text = "Print";
             this.button10.UseVisualStyleBackColor = true;
@@ -743,12 +754,12 @@ namespace Function_Hall_Reservation_System.Admin
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(10, 27);
+            this.dataGridView1.Location = new System.Drawing.Point(10, 25);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(649, 172);
+            this.dataGridView1.Size = new System.Drawing.Size(649, 159);
             this.dataGridView1.TabIndex = 117;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseClick);
@@ -845,10 +856,10 @@ namespace Function_Hall_Reservation_System.Admin
             // 
             // GENERATINGREPORTS
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.ClientSize = new System.Drawing.Size(1443, 594);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.ClientSize = new System.Drawing.Size(1490, 550);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel1);

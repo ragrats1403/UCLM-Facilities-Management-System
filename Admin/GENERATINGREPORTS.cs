@@ -241,5 +241,10 @@ namespace Function_Hall_Reservation_System.Admin
         {
 
         }
+
+        private void dateregisteredLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
