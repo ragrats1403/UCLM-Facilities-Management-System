@@ -43,6 +43,7 @@ namespace Function_Hall_Reservation_System.Admin
             this.lblfullname = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.facilitycb = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -66,6 +67,7 @@ namespace Function_Hall_Reservation_System.Admin
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.groupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.groupBox1.Controls.Add(this.facilitycb);
             this.groupBox1.Controls.Add(this.dataGridView1);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.panel1);
@@ -198,6 +200,20 @@ namespace Function_Hall_Reservation_System.Admin
             this.label4.TabIndex = 9;
             this.label4.Text = "Welcome Admin!";
             // 
+            // facilitycb
+            // 
+            this.facilitycb.FormattingEnabled = true;
+            this.facilitycb.Items.AddRange(new object[] {
+            "Function Hall",
+            "Old AVR",
+            "New AVR",
+            "Auditorium"});
+            this.facilitycb.Location = new System.Drawing.Point(215, 104);
+            this.facilitycb.Name = "facilitycb";
+            this.facilitycb.Size = new System.Drawing.Size(121, 21);
+            this.facilitycb.TabIndex = 22;
+            this.facilitycb.Text = "Select Facility";
+            // 
             // CalendarOfActivities
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -234,5 +250,6 @@ namespace Function_Hall_Reservation_System.Admin
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox facilitycb;
     }
 }

@@ -12,12 +12,53 @@ namespace Function_Hall_Reservation_System.Admin
 {
     public partial class Equipment : Form
     {
+        public static string idname;
+        public string loadedid;
+
         public Equipment()
         {
             InitializeComponent();
+            cbstyleset();
+        }
+        public void cbstyleset()
+        {
+            facilitycb.DropDownStyle = ComboBoxStyle.DropDownList;
+        }
+        public void Fillfhequipmentdata()
+        {
+            idname = "fhequipments";
+            Functions.Functions.gen = "Select * from fhequipments";
+            Functions.Functions.fill(Functions.Functions.gen, dataGridView1);
+
+
+
+        }
+        public void Fillaudequipmentdata()
+        {
+            idname = "audequipments";
+            Functions.Functions.gen = "Select * from audequipments";
+            Functions.Functions.fill(Functions.Functions.gen, dataGridView1);
+
+
+
+        }
+        public void Fillnaequipmentdata()
+        {
+            idname = "naequipments";
+            Functions.Functions.gen = "Select * from naequipments";
+            Functions.Functions.fill(Functions.Functions.gen, dataGridView1);
+
+
+
+        }
+        public void Filloaequipmentdata()
+        {
+            idname = "oaequipments";
+            Functions.Functions.gen = "Select * from oaequipments";
+            Functions.Functions.fill(Functions.Functions.gen, dataGridView1);
+
         }
 
-        
         private void button1_Click(object sender, EventArgs e)
         {
             CalendarOfActivities coa = new CalendarOfActivities();
@@ -218,7 +259,40 @@ namespace Function_Hall_Reservation_System.Admin
 
         private void facilitycb_SelectedIndexChanged(object sender, EventArgs e)
         {
+            try
+            {
+                if (facilitycb.SelectedItem.ToString() == "Function Hall")
+                {
+                    //MessageBox.Show("Debug Line for Functionhall selection Executed");
+                    Fillfhequipmentdata();
+                    loadedid = idname;
+                }
+                else if (facilitycb.SelectedItem.ToString() == "Auditorium")
+                {
 
+                    //MessageBox.Show("Debug Line for Auditorium Executed");
+                    Fillaudequipmentdata();
+                    loadedid = idname;
+                }
+                else if (facilitycb.SelectedItem.ToString() == "New AVR")
+                {
+                    //MessageBox.Show("Debug Line for New AVR Executed");
+                    Fillnaequipmentdata();
+                    loadedid = idname;
+                }
+
+                else if (facilitycb.SelectedItem.ToString() == "Old AVR")
+                {
+
+                    //MessageBox.Show("Debug Line for Old AVR Executed");
+                    Filloaequipmentdata();
+                    loadedid = idname;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

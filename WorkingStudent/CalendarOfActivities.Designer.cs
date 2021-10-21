@@ -42,6 +42,7 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.facilitycb = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -189,11 +190,26 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseClick);
             // 
+            // facilitycb
+            // 
+            this.facilitycb.FormattingEnabled = true;
+            this.facilitycb.Items.AddRange(new object[] {
+            "Function Hall",
+            "Old AVR",
+            "New AVR",
+            "Auditorium"});
+            this.facilitycb.Location = new System.Drawing.Point(209, 86);
+            this.facilitycb.Name = "facilitycb";
+            this.facilitycb.Size = new System.Drawing.Size(121, 21);
+            this.facilitycb.TabIndex = 6;
+            this.facilitycb.Text = "Select Facility";
+            // 
             // CalendarOfActivities
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(957, 410);
+            this.Controls.Add(this.facilitycb);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -227,6 +243,7 @@ namespace Function_Hall_Reservation_System.WorkingStudent
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ComboBox facilitycb;
     }
 }
 
