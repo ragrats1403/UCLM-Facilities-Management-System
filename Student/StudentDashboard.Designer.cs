@@ -141,7 +141,7 @@ namespace Function_Hall_Reservation_System.Student
             // lblreservationcount
             // 
             this.lblreservationcount.AutoSize = true;
-            this.lblreservationcount.Location = new System.Drawing.Point(454, 60);
+            this.lblreservationcount.Location = new System.Drawing.Point(529, 59);
             this.lblreservationcount.Name = "lblreservationcount";
             this.lblreservationcount.Size = new System.Drawing.Size(35, 13);
             this.lblreservationcount.TabIndex = 4;
