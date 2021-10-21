@@ -142,6 +142,7 @@ namespace Function_Hall_Reservation_System.Student
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.Menu;
             this.label3.Location = new System.Drawing.Point(222, 59);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(313, 39);
@@ -255,9 +256,9 @@ namespace Function_Hall_Reservation_System.Student
             // 
             this.tabPage2.Controls.Add(this.comboBox1);
             this.tabPage2.Controls.Add(this.dataGridView1);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Location = new System.Drawing.Point(4, 26);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Size = new System.Drawing.Size(807, 272);
+            this.tabPage2.Size = new System.Drawing.Size(807, 268);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "My Reservation";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -288,6 +289,7 @@ namespace Function_Hall_Reservation_System.Student
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
             this.ClientSize = new System.Drawing.Size(1049, 415);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.label3);
