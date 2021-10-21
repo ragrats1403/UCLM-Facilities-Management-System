@@ -203,6 +203,7 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             this.facilitycb.Size = new System.Drawing.Size(121, 21);
             this.facilitycb.TabIndex = 6;
             this.facilitycb.Text = "Select Facility";
+            this.facilitycb.SelectedIndexChanged += new System.EventHandler(this.facilitycb_SelectedIndexChanged);
             // 
             // CalendarOfActivities
             // 
