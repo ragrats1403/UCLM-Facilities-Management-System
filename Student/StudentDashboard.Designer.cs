@@ -75,11 +75,11 @@ namespace Function_Hall_Reservation_System.Student
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(3, 272);
+            this.button3.Location = new System.Drawing.Point(4, 171);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(208, 37);
             this.button3.TabIndex = 7;
-            this.button3.Text = "Check Reservation Status";
+            this.button3.Text = "Dashboard";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
@@ -95,17 +95,17 @@ namespace Function_Hall_Reservation_System.Student
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(3, 229);
+            this.button2.Location = new System.Drawing.Point(3, 257);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(208, 37);
             this.button2.TabIndex = 4;
-            this.button2.Text = "Facilities";
+            this.button2.Text = "Reservation";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(3, 186);
+            this.button1.Location = new System.Drawing.Point(4, 214);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(208, 37);
             this.button1.TabIndex = 3;
