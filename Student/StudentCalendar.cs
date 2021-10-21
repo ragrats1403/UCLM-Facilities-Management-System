@@ -80,5 +80,12 @@ namespace Function_Hall_Reservation_System.Student
             this.Close();
             form.Show();
         }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            StudentDashboard sd = new StudentDashboard();
+            this.Close();
+            sd.Show();
+        }
     }
 }

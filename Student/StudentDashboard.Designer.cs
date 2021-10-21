@@ -39,6 +39,7 @@ namespace Function_Hall_Reservation_System.Student
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
+            this.lblreservationcount = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -137,11 +138,21 @@ namespace Function_Hall_Reservation_System.Student
             this.label3.TabIndex = 3;
             this.label3.Text = "Welcome, Student!";
             // 
+            // lblreservationcount
+            // 
+            this.lblreservationcount.AutoSize = true;
+            this.lblreservationcount.Location = new System.Drawing.Point(454, 60);
+            this.lblreservationcount.Name = "lblreservationcount";
+            this.lblreservationcount.Size = new System.Drawing.Size(35, 13);
+            this.lblreservationcount.TabIndex = 4;
+            this.lblreservationcount.Text = "label1";
+            // 
             // StudentDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblreservationcount);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
@@ -170,5 +181,6 @@ namespace Function_Hall_Reservation_System.Student
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label lblreservationcount;
     }
 }

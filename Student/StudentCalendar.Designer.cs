@@ -38,6 +38,7 @@ namespace Function_Hall_Reservation_System.Student
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -46,6 +47,7 @@ namespace Function_Hall_Reservation_System.Student
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
@@ -126,6 +128,16 @@ namespace Function_Hall_Reservation_System.Student
             this.label3.TabIndex = 3;
             this.label3.Text = "Calendar Of Activities";
             // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(3, 272);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(208, 37);
+            this.button4.TabIndex = 8;
+            this.button4.Text = "Dashboard Test";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click_1);
+            // 
             // StudentCalendar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -158,5 +170,6 @@ namespace Function_Hall_Reservation_System.Student
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
     }
 }

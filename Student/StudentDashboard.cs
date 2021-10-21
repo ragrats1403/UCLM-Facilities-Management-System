@@ -13,6 +13,7 @@ namespace Function_Hall_Reservation_System.Student
 {
     public partial class StudentDashboard : Form
     {
+        private static int count = 0;
         public StudentDashboard()
         {
             InitializeComponent();
@@ -20,9 +21,23 @@ namespace Function_Hall_Reservation_System.Student
 
         private void StudentDashboard_Load(object sender, EventArgs e)
         {
-            filldata();
+            //filldata();
+            countreservation();
         }
 
+        public void countreservation()
+        {
+            Connection.Connection.DB();
+            Functions.Functions.gen = "select count(*) from fhreservation";
+            Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
+            Functions.Functions.reader = Functions.Functions.command.ExecuteReader();
+            while (Functions.Functions.reader.Read())
+            {
+                count = Functions.Functions.reader.GetInt32(0);
+                lblreservationcount.Text = count.ToString();
+            }
+            Connection.Connection.conn.Close();
+        }
         private void button3_Click(object sender, EventArgs e)
         {
 
@@ -47,7 +62,7 @@ namespace Function_Hall_Reservation_System.Student
 
         }
 
-        public void filldata()
+      /*  public void filldata()
         {
             lblfullname.Text = Form1.setfullname;   
            // dataGridView1.Columns[2].Width = 108;
@@ -58,7 +73,7 @@ namespace Function_Hall_Reservation_System.Student
             dataGridView1.Columns[1].Width = 110;
             dataGridView1.Columns[2].Width = 110;
             dataGridView1.Columns[3].Width = 110;
-        }
+        }*/
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
