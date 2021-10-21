@@ -307,5 +307,18 @@ namespace Function_Hall_Reservation_System.Student
             }
 
         }
-    }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            StudentDashboard sd = new StudentDashboard();
+            this.Visible = false;
+            sd.Show();
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            Reservation re = new Reservation();
+            this.Visible = false;
+            re.Show();
+        }
 }
