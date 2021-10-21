@@ -87,8 +87,9 @@ namespace Function_Hall_Reservation_System.Student
 
         private void button2_Click(object sender, EventArgs e)
         {
-            
-
+            Reservation reserve = new Reservation();
+            this.Visible = false;
+            reserve.Show();
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -124,7 +125,9 @@ namespace Function_Hall_Reservation_System.Student
 
         private void button3_Click_1(object sender, EventArgs e)
         {
-
+            StudentDashboard sd = new StudentDashboard();
+            this.Visible = false;
+            sd.Show();
         }
 
         private void facilitycb_SelectedIndexChanged(object sender, EventArgs e)
@@ -176,6 +179,13 @@ namespace Function_Hall_Reservation_System.Student
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            StudentCalendar calendar = new StudentCalendar();
+            this.Visible = false;
+            calendar.Show();
         }
     }
     }

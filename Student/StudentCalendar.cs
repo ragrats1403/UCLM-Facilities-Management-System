@@ -70,7 +70,9 @@ namespace Function_Hall_Reservation_System.Student
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            StudentCalendar calendar = new StudentCalendar();
+            this.Visible = false;
+            calendar.Show();
         }
 
         private void button3_Click_1(object sender, EventArgs e)

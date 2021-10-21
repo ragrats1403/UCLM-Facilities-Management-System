@@ -32,12 +32,14 @@ namespace Function_Hall_Reservation_System.Student
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Reservation));
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.lblfullname = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.facilitycb = new System.Windows.Forms.ComboBox();
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
             this.label10 = new System.Windows.Forms.Label();
@@ -56,8 +58,6 @@ namespace Function_Hall_Reservation_System.Student
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.facilitycb = new System.Windows.Forms.ComboBox();
-            this.button4 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPage2.SuspendLayout();
@@ -92,6 +92,16 @@ namespace Function_Hall_Reservation_System.Student
             this.panel1.TabIndex = 4;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(0, 202);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(219, 37);
+            this.button4.TabIndex = 8;
+            this.button4.Text = "Dashboard";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click_1);
+            // 
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(0, 454);
@@ -110,6 +120,7 @@ namespace Function_Hall_Reservation_System.Student
             this.button2.TabIndex = 4;
             this.button2.Text = "Reservation";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // button1
             // 
@@ -168,6 +179,21 @@ namespace Function_Hall_Reservation_System.Student
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Request Reservation";
             this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
+            // 
+            // facilitycb
+            // 
+            this.facilitycb.FormattingEnabled = true;
+            this.facilitycb.Items.AddRange(new object[] {
+            "Function Hall",
+            "Old AVR",
+            "New AVR",
+            "Auditorium"});
+            this.facilitycb.Location = new System.Drawing.Point(25, 6);
+            this.facilitycb.Name = "facilitycb";
+            this.facilitycb.Size = new System.Drawing.Size(121, 21);
+            this.facilitycb.TabIndex = 8;
+            this.facilitycb.Text = "Select Facility";
+            this.facilitycb.SelectedIndexChanged += new System.EventHandler(this.facilitycb_SelectedIndexChanged);
             // 
             // checkedListBox1
             // 
@@ -342,30 +368,6 @@ namespace Function_Hall_Reservation_System.Student
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(771, 359);
             this.tabControl1.TabIndex = 7;
-            // 
-            // facilitycb
-            // 
-            this.facilitycb.FormattingEnabled = true;
-            this.facilitycb.Items.AddRange(new object[] {
-            "Function Hall",
-            "Old AVR",
-            "New AVR",
-            "Auditorium"});
-            this.facilitycb.Location = new System.Drawing.Point(25, 6);
-            this.facilitycb.Name = "facilitycb";
-            this.facilitycb.Size = new System.Drawing.Size(121, 21);
-            this.facilitycb.TabIndex = 8;
-            this.facilitycb.Text = "Select Facility";
-            this.facilitycb.SelectedIndexChanged += new System.EventHandler(this.facilitycb_SelectedIndexChanged);
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(0, 202);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(219, 37);
-            this.button4.TabIndex = 8;
-            this.button4.Text = "Dashboard";
-            this.button4.UseVisualStyleBackColor = true;
             // 
             // Reservation
             // 

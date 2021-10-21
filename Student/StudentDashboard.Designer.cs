@@ -48,8 +48,8 @@ namespace Function_Hall_Reservation_System.Student
             this.facilitycb = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -111,6 +111,7 @@ namespace Function_Hall_Reservation_System.Student
             this.button1.TabIndex = 3;
             this.button1.Text = "Calendar Of Activities";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // lblfullname
             // 
@@ -256,14 +257,6 @@ namespace Function_Hall_Reservation_System.Student
             this.tabPage2.Text = "My Reservation";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 30);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(801, 267);
-            this.dataGridView1.TabIndex = 0;
-            // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
@@ -277,6 +270,14 @@ namespace Function_Hall_Reservation_System.Student
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 6;
             this.comboBox1.Text = "Select Facility";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(3, 30);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(801, 267);
+            this.dataGridView1.TabIndex = 0;
             // 
             // StudentDashboard
             // 
