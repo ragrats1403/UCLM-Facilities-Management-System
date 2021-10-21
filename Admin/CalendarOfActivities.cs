@@ -12,11 +12,42 @@ namespace Function_Hall_Reservation_System.Admin
 {
     public partial class CalendarOfActivities : Form
     {
+        public static string idname;
+        public string loadedid;
         public CalendarOfActivities()
         {
             InitializeComponent();
+            cbstyleset();
         }
 
+        public void cbstyleset()
+        {
+            facilitycb.DropDownStyle = ComboBoxStyle.DropDownList;
+        }
+        public void Fillfhreservationsdata()
+        {
+            idname = "fhereservation";
+            Functions.Functions.gen = "Select * from fhreservation";
+            Functions.Functions.fill(Functions.Functions.gen, dataGridView1);
+        }
+        public void Fillaudreservationsdata()
+        {
+            idname = "audreservations";
+            Functions.Functions.gen = "Select * from audreservations";
+            Functions.Functions.fill(Functions.Functions.gen, dataGridView1);
+        }
+        public void Fillnareservationsdata()
+        {
+            idname = "nareservations";
+            Functions.Functions.gen = "Select * from nareservations";
+            Functions.Functions.fill(Functions.Functions.gen, dataGridView1);
+        }
+        public void Filloareservationsdata()
+        {
+            idname = "oareservations";
+            Functions.Functions.gen = "Select * from oareservations";
+            Functions.Functions.fill(Functions.Functions.gen, dataGridView1);
+        }
         private void button5_Click(object sender, EventArgs e)
         {
 
@@ -116,6 +147,44 @@ namespace Function_Hall_Reservation_System.Admin
         private void label3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void facilitycb_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (facilitycb.SelectedItem.ToString() == "Function Hall")
+                {
+                    //MessageBox.Show("Debug Line for Functionhall selection Executed");
+                    Fillfhreservationsdata();
+                    loadedid = idname;
+                }
+                else if (facilitycb.SelectedItem.ToString() == "Auditorium")
+                {
+
+                    //MessageBox.Show("Debug Line for Auditorium Executed");
+                    Fillaudreservationsdata();
+                    loadedid = idname;
+                }
+                else if (facilitycb.SelectedItem.ToString() == "New AVR")
+                {
+                    //MessageBox.Show("Debug Line for New AVR Executed");
+                    Fillnareservationsdata();
+                    loadedid = idname;
+                }
+
+                else if (facilitycb.SelectedItem.ToString() == "Old AVR")
+                {
+
+                    //MessageBox.Show("Debug Line for Old AVR Executed");
+                    Filloareservationsdata();
+                    loadedid = idname;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }
