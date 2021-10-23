@@ -35,6 +35,7 @@ namespace Function_Hall_Reservation_System.Student
             date();
             lblfullname.Text = Form1.setfullname;
             chkboxfill();
+            cbstyleset();
         }
         public void chkboxfill()
         {
@@ -267,6 +268,13 @@ namespace Function_Hall_Reservation_System.Student
             Form1 form = new Form1();
             this.Close();
             form.Show();
+        }
+        public void cbstyleset()
+        {
+
+            facilitycb.DropDownStyle = ComboBoxStyle.DropDownList;
+            facilitycb2.DropDownStyle = ComboBoxStyle.DropDownList;
+
         }
         private void facilitycb_SelectedIndexChanged(object sender, EventArgs e)
         {
