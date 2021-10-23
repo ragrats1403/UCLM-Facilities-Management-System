@@ -134,10 +134,7 @@ namespace Function_Hall_Reservation_System.Student
 
         }
 
-        private void checkBox3_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void btnrequest_Click(object sender, EventArgs e)
         {
