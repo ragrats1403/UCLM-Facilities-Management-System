@@ -354,7 +354,7 @@ namespace Function_Hall_Reservation_System.Student
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(760, 325);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "View Reservations";
+            this.tabPage1.Text = "My Reservations";
             // 
             // dataGridView1
             // 
