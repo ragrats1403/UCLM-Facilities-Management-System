@@ -184,7 +184,7 @@ namespace Function_Hall_Reservation_System.Student
 
 
                 Connection.Connection.DB();
-                Functions.Functions.gen = "Insert Into "+loadedid+"(eventname,reservedby,reservationstatus,datereserved,checkedby,studentid,studentname,reservedequipments,approvedby,timestart,month,timeend,reserveddate)values('" + txtEventname.Text + "','" + name + "','Pending','" + DateTime.Now.ToString() + "','N/A','" + txtStudentid.Text + "','" + txtStudentName.Text + "','" + allequip + "','N/A','" + timestart + "','" + month + " ','" + timeend + "','" + dateval + "')";
+                Functions.Functions.gen = "Insert Into " + loadedid + "(eventname,reservedby,reservationstatus,datereserved,checkedby,studentid,studentname,reservedequipments,approvedby,timestart,month,timeend,reserveddate)values('" + txtEventname.Text + "','" + name + "','Pending','" + DateTime.Now.ToString() + "','N/A','" + txtStudentid.Text + "','" + txtStudentName.Text + "','" + allequip + "','N/A','" + timestart + "','" + month + " ','" + timeend + "','" + dateval + "')";
                 Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
 
                 Functions.Functions.command.ExecuteNonQuery();
@@ -276,7 +276,7 @@ namespace Function_Hall_Reservation_System.Student
                 {
                     //MessageBox.Show("Debug Line for Functionhall selection Executed");|
                     loadedid = "fhreservation";
-                    
+
                 }
                 else if (facilitycb.SelectedItem.ToString() == "Auditorium")
                 {
@@ -321,4 +321,6 @@ namespace Function_Hall_Reservation_System.Student
             this.Visible = false;
             re.Show();
         }
+    }
+
 }
