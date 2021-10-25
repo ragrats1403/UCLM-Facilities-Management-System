@@ -20,6 +20,9 @@ namespace Function_Hall_Reservation_System.Student
         public static string temptimeend = "";
         public int count = 0;
         private String loadedid;
+        public static int availableqty;
+        public static string loadedeqid = "";
+        public String loadedeq;
 
         public Reservation()
         {
@@ -36,28 +39,13 @@ namespace Function_Hall_Reservation_System.Student
                 Functions.Functions.reader = Functions.Functions.command.ExecuteReader();
                 while (Functions.Functions.reader.Read())
                 {
-                     count = Functions.Functions.reader.GetInt32(0);
-                    
+                    count = Functions.Functions.reader.GetInt32(0);
+
                 }
 
 
                 Connection.Connection.conn.Close();
-                int txtno = count; 
-                int pointX = 1;
-                int pointY = 5;
-                panel2.Controls.Clear();
-                for (int i = 0; i < txtno; i++)
-                {
-                    TextBox a = new TextBox();
-                    a.Text = (i + 1).ToString();
-                    a.Location = new Point(pointX, pointY);
-                    a.Name = "txtbox" + i;
-                    testlbl.Text = a.Name.ToString();
-                    
-                    panel2.Controls.Add(a);
-                    panel2.Show();
-                    pointY += 20;
-                }
+
             }
             catch (Exception ex)
             {
@@ -74,25 +62,88 @@ namespace Function_Hall_Reservation_System.Student
             timeend();
             date();
             lblfullname.Text = Form1.setfullname;
-            chkboxfill();
+            //chkboxfill();
             cbstyleset();
             filltxtbox();
+            dateTimePicker1.Format = DateTimePickerFormat.Time;
+            dateTimePicker2.Format = DateTimePickerFormat.Time;
+
         }
-        public void chkboxfill()
+        public void eqfill(String id)
         {
-            Connection.Connection.DB();
-            Functions.Functions.gen = "Select equipmentname from fhequipments where equipmentstatus = 'Available'";
-            Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
-            Functions.Functions.reader = Functions.Functions.command.ExecuteReader();
-            while (Functions.Functions.reader.Read())
+            int eqid;
+            try
             {
-                string fill = Functions.Functions.reader.GetString(0);
-                checkedListBox1.Items.Add(fill);
+                Connection.Connection.DB();
+                Functions.Functions.gen = "Select " + loadedeq + ".equipmentname from " + loadedeq + "";
+                Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
+                Functions.Functions.reader = Functions.Functions.command.ExecuteReader();
+
+                while (Functions.Functions.reader.Read())
+                {
+                    cmbeq1.Items.Add(Functions.Functions.reader["equipmentname"]).ToString();
+                    cmbeq2.Items.Add(Functions.Functions.reader["equipmentname"]).ToString();
+                    cmbeq3.Items.Add(Functions.Functions.reader["equipmentname"]).ToString();
+                    cmbeq4.Items.Add(Functions.Functions.reader["equipmentname"]).ToString();
+                    cmbeq5.Items.Add(Functions.Functions.reader["equipmentname"]).ToString();
+                    cmbeq6.Items.Add(Functions.Functions.reader["equipmentname"]).ToString();
+
+
+                }
+                if (cmbeq1.Items.Count <= 6)
+                {
+                    cmbeq7.Visible = false;
+                    cmbeq8.Visible = false;
+                    cmbeq9.Visible = false;
+                    cmbeq10.Visible = false;
+                    cmbeq11.Visible = false;
+                    cmbeq12.Visible = false;
+                    lbleq7.Visible = false;
+                    lbleq8.Visible = false;
+                    lbleq9.Visible = false;
+                    lbleq10.Visible = false;
+                    lbleq11.Visible = false;
+                    lbleq12.Visible = false;
+
+                }
+                else
+                {
+                    cmbeq7.Visible = true;
+                    cmbeq8.Visible = true;
+                    cmbeq9.Visible = true;
+                    cmbeq10.Visible = true;
+                    cmbeq11.Visible = true;
+                    cmbeq12.Visible = true;
+                    lbleq7.Visible = true;
+                    lbleq8.Visible = true;
+                    lbleq9.Visible = true;
+                    lbleq10.Visible = true;
+                    lbleq11.Visible = true;
+                    lbleq12.Visible = true;
+                }
+
+                Connection.Connection.conn.Close();
             }
-
-
-            Connection.Connection.conn.Close();
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
+        /* public void chkboxfill()
+         {
+             Connection.Connection.DB();
+             Functions.Functions.gen = "Select equipmentname from fhequipments where equipmentstatus = 'Available'";
+             Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
+             Functions.Functions.reader = Functions.Functions.command.ExecuteReader();
+             while (Functions.Functions.reader.Read())
+             {
+                 string fill = Functions.Functions.reader.GetString(0);
+                 checkedListBox1.Items.Add(fill);
+             }
+
+
+             Connection.Connection.conn.Close();
+         }*/
         public void timestart()
         {
             dateTimePicker1.Format = DateTimePickerFormat.Time;
@@ -175,10 +226,23 @@ namespace Function_Hall_Reservation_System.Student
 
         }
 
-        
+        public void CheckConflict()
+        {
+
+            
+            
+            
+            Functions.Functions.gen = "Select * FROM reservation WHERE timestart >= '" + dateTimePicker1.Value + "' AND timeend <= '" + dateTimePicker2.Value + "'";
+            Functions.Functions.fill(Functions.Functions.gen, dataGridView2);
+
+        }
+
+
 
         private void btnrequest_Click(object sender, EventArgs e)
         {
+
+            
             var name = Form1.setfirstname + " " + Form1.setlastname;
 
             string month = "";
@@ -187,15 +251,27 @@ namespace Function_Hall_Reservation_System.Student
 
             string timestart = "";
             string timeend = "";
-
+            string eqres1 = cmbeq1.Text.ToString() + "-" + lbleq1.Text.ToString();
+            string eqres2 = cmbeq2.Text.ToString() + "-" + lbleq2.Text.ToString();
+            string eqres3 = cmbeq3.Text.ToString() + "-" + lbleq3.Text.ToString();
+            string eqres4 = cmbeq4.Text.ToString() + "-" + lbleq4.Text.ToString();
+            string eqres5 = cmbeq5.Text.ToString() + "-" + lbleq5.Text.ToString();
+            string eqres6 = cmbeq6.Text.ToString() + "-" + lbleq6.Text.ToString();
+            dateTimePicker1 = new DateTimePicker();
+            dateTimePicker1.Format = DateTimePickerFormat.Time;
+            dateTimePicker1.ShowUpDown = true;
             var selectedequip = new List<string>();
             try
             {
 
-                foreach (var sel in checkedListBox1.CheckedItems)
-                {
-                    selectedequip.Add(sel.ToString());
-                }
+
+                selectedequip.Add(eqres1);
+                selectedequip.Add(eqres2);
+                selectedequip.Add(eqres3);
+                selectedequip.Add(eqres4);
+                selectedequip.Add(eqres5);
+                selectedequip.Add(eqres6);
+
                 string allequip = string.Join(", ", selectedequip);
                 month = dateTimePicker2.Value.ToString("MMMM");
 
@@ -210,6 +286,7 @@ namespace Function_Hall_Reservation_System.Student
                     dateval = dateTimePicker2.Value.ToString("MM/dd/yyyy");
                     timestart = dateTimePicker1.Value.ToString("hh:mm:tt");
                     timeend = dateTimePicker3.Value.ToString("hh:mm:tt");
+                    
                     Connection.Connection.conn.Close();
 
                 }
@@ -223,7 +300,7 @@ namespace Function_Hall_Reservation_System.Student
 
 
                 Connection.Connection.DB();
-                Functions.Functions.gen = "Insert Into " + loadedid + "(eventname,reservedby,reservationstatus,datereserved,checkedby,studentid,studentname,reservedequipments,approvedby,timestart,month,timeend,reserveddate)values('" + txtEventname.Text + "','" + name + "','Pending','" + DateTime.Now.ToString() + "','N/A','" + txtStudentid.Text + "','" + txtStudentName.Text + "','" + allequip + "','N/A','" + timestart + "','" + month + " ','" + timeend + "','" + dateval + "')";
+                Functions.Functions.gen = "Insert Into " + loadedid + "(eventname,reservedby,reservationstatus,datereserved,checkedby,studentid,studentname,reservedequipments,approvedby,timestart,month,timeend,reserveddate,facilityname)values('" + txtEventname.Text + "','" + name + "','Pending','" + DateTime.Now.ToString() + "','N/A','" + txtStudentid.Text + "','" + txtStudentName.Text + "','" + allequip + "','N/A','" +dateTimePicker1.Value+ "','" + month + " ','" + dateTimePicker2.Value + "','" + dateval + "','" + facilitycb.SelectedItem.ToString() + "')";
                 Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
 
                 Functions.Functions.command.ExecuteNonQuery();
@@ -312,6 +389,12 @@ namespace Function_Hall_Reservation_System.Student
 
             facilitycb.DropDownStyle = ComboBoxStyle.DropDownList;
             facilitycb2.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbeq1.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbeq2.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbeq3.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbeq4.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbeq5.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbeq6.DropDownStyle = ComboBoxStyle.DropDownList;
 
         }
         private void facilitycb_SelectedIndexChanged(object sender, EventArgs e)
@@ -322,6 +405,33 @@ namespace Function_Hall_Reservation_System.Student
                 {
                     //MessageBox.Show("Debug Line for Functionhall selection Executed");|
                     loadedid = "fhreservation";
+                    loadedeq = "fhequipments";
+                    cmbeq1.Items.Clear();
+                    cmbeq2.Items.Clear();
+                    cmbeq3.Items.Clear();
+                    cmbeq4.Items.Clear();
+                    cmbeq5.Items.Clear();
+                    cmbeq6.Items.Clear();
+                    cmbeq7.Items.Clear();
+                    cmbeq8.Items.Clear();
+                    cmbeq9.Items.Clear();
+                    cmbeq10.Items.Clear();
+                    cmbeq11.Items.Clear();
+                    cmbeq12.Items.Clear();
+
+                    eqfill(loadedeq);
+                    lbleq1.Text = "";
+                    lbleq2.Text = "";
+                    lbleq3.Text = "";
+                    lbleq4.Text = "";
+                    lbleq5.Text = "";
+                    lbleq6.Text = "";
+                    lbleq7.Text = "";
+                    lbleq8.Text = "";
+                    lbleq9.Text = "";
+                    lbleq10.Text = "";
+                    lbleq11.Text = "";
+                    lbleq12.Text = "";
 
                 }
                 else if (facilitycb.SelectedItem.ToString() == "Auditorium")
@@ -329,12 +439,40 @@ namespace Function_Hall_Reservation_System.Student
 
                     //MessageBox.Show("Debug Line for Auditorium Executed");
                     loadedid = "audreservations";
+                    loadedeq = "audequipments";
+                    cmbeq1.Items.Clear();
+                    cmbeq2.Items.Clear();
+                    cmbeq3.Items.Clear();
+                    cmbeq4.Items.Clear();
+                    cmbeq5.Items.Clear();
+                    cmbeq6.Items.Clear();
+                    eqfill(loadedeq);
+                    lbleq1.Text = "";
+                    lbleq2.Text = "";
+                    lbleq3.Text = "";
+                    lbleq4.Text = "";
+                    lbleq5.Text = "";
+                    lbleq6.Text = "";
 
                 }
                 else if (facilitycb.SelectedItem.ToString() == "New AVR")
                 {
                     //MessageBox.Show("Debug Line for New AVR Executed");
                     loadedid = "nareservations";
+                    loadedeq = "naequipments";
+                    cmbeq1.Items.Clear();
+                    cmbeq2.Items.Clear();
+                    cmbeq3.Items.Clear();
+                    cmbeq4.Items.Clear();
+                    cmbeq5.Items.Clear();
+                    cmbeq6.Items.Clear();
+                    eqfill(loadedeq);
+                    lbleq1.Text = "";
+                    lbleq2.Text = "";
+                    lbleq3.Text = "";
+                    lbleq4.Text = "";
+                    lbleq5.Text = "";
+                    lbleq6.Text = "";
 
                 }
 
@@ -343,6 +481,20 @@ namespace Function_Hall_Reservation_System.Student
 
                     //MessageBox.Show("Debug Line for Old AVR Executed");
                     loadedid = "oareservations";
+                    loadedeq = "oaequipments";
+                    cmbeq1.Items.Clear();
+                    cmbeq2.Items.Clear();
+                    cmbeq3.Items.Clear();
+                    cmbeq4.Items.Clear();
+                    cmbeq5.Items.Clear();
+                    cmbeq6.Items.Clear();
+                    eqfill(loadedeq);
+                    lbleq1.Text = "";
+                    lbleq2.Text = "";
+                    lbleq3.Text = "";
+                    lbleq4.Text = "";
+                    lbleq5.Text = "";
+                    lbleq6.Text = "";
 
 
                 }
@@ -366,6 +518,347 @@ namespace Function_Hall_Reservation_System.Student
             Reservation re = new Reservation();
             this.Visible = false;
             re.Show();
+        }
+
+        private void cmbeq1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int eqhandler;
+            try
+            {
+                loadedeqid = cmbeq1.SelectedItem.ToString();
+                Connection.Connection.DB();
+                Functions.Functions.gen = "Select " + loadedeq + ".availableqty from " + loadedeq + " where equipmentname = '" + loadedeqid + "'";
+                Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
+                Functions.Functions.reader = Functions.Functions.command.ExecuteReader();
+                while (Functions.Functions.reader.Read())
+                {
+                    eqhandler = Functions.Functions.reader.GetInt32(0);
+                    lbleq1.Text = eqhandler.ToString();
+
+                }
+
+                
+
+
+                Connection.Connection.conn.Close();
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void cmbeq2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int eqhandler;
+            try
+            {
+                loadedeqid = cmbeq2.SelectedItem.ToString();
+                Connection.Connection.DB();
+                Functions.Functions.gen = "Select " + loadedeq + ".availableqty from " + loadedeq + " where equipmentname = '" + loadedeqid + "'";
+                Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
+                Functions.Functions.reader = Functions.Functions.command.ExecuteReader();
+                while (Functions.Functions.reader.Read())
+                {
+                    eqhandler = Functions.Functions.reader.GetInt32(0);
+                    lbleq2.Text = eqhandler.ToString();
+
+                }
+
+
+                Connection.Connection.conn.Close();
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void cmbeq3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int eqhandler;
+            try
+            {
+                loadedeqid = cmbeq3.SelectedItem.ToString();
+                Connection.Connection.DB();
+                Functions.Functions.gen = "Select " + loadedeq + ".availableqty from " + loadedeq + " where equipmentname = '" + loadedeqid + "'";
+                Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
+                Functions.Functions.reader = Functions.Functions.command.ExecuteReader();
+                while (Functions.Functions.reader.Read())
+                {
+                    eqhandler = Functions.Functions.reader.GetInt32(0);
+                    lbleq3.Text = eqhandler.ToString();
+
+                }
+
+
+                Connection.Connection.conn.Close();
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+
+
+        private void cmbeq5_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int eqhandler;
+            try
+            {
+                loadedeqid = cmbeq5.SelectedItem.ToString();
+                Connection.Connection.DB();
+                Functions.Functions.gen = "Select " + loadedeq + ".availableqty from " + loadedeq + " where equipmentname = '" + loadedeqid + "'";
+                Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
+                Functions.Functions.reader = Functions.Functions.command.ExecuteReader();
+                while (Functions.Functions.reader.Read())
+                {
+                    eqhandler = Functions.Functions.reader.GetInt32(0);
+                    lbleq5.Text = eqhandler.ToString();
+
+                }
+
+
+                Connection.Connection.conn.Close();
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void cmbeq4_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            int eqhandler;
+            try
+            {
+                loadedeqid = cmbeq4.SelectedItem.ToString();
+                Connection.Connection.DB();
+                Functions.Functions.gen = "Select " + loadedeq + ".availableqty from " + loadedeq + " where equipmentname = '" + loadedeqid + "'";
+                Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
+                Functions.Functions.reader = Functions.Functions.command.ExecuteReader();
+                while (Functions.Functions.reader.Read())
+                {
+                    eqhandler = Functions.Functions.reader.GetInt32(0);
+                    lbleq4.Text = eqhandler.ToString();
+
+                }
+
+
+                Connection.Connection.conn.Close();
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void cmbeq6_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int eqhandler;
+            try
+            {
+                loadedeqid = cmbeq6.SelectedItem.ToString();
+                Connection.Connection.DB();
+                Functions.Functions.gen = "Select " + loadedeq + ".availableqty from " + loadedeq + " where equipmentname = '" + loadedeqid + "'";
+                Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
+                Functions.Functions.reader = Functions.Functions.command.ExecuteReader();
+                while (Functions.Functions.reader.Read())
+                {
+                    eqhandler = Functions.Functions.reader.GetInt32(0);
+                    lbleq6.Text = eqhandler.ToString();
+
+                }
+
+
+                Connection.Connection.conn.Close();
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        private void cmbeq7_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int eqhandler;
+            try
+            {
+                loadedeqid = cmbeq7.SelectedItem.ToString();
+                Connection.Connection.DB();
+                Functions.Functions.gen = "Select " + loadedeq + ".availableqty from " + loadedeq + " where equipmentname = '" + loadedeqid + "'";
+                Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
+                Functions.Functions.reader = Functions.Functions.command.ExecuteReader();
+                while (Functions.Functions.reader.Read())
+                {
+                    eqhandler = Functions.Functions.reader.GetInt32(0);
+                    lbleq7.Text = eqhandler.ToString();
+
+                }
+
+
+                Connection.Connection.conn.Close();
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        private void cmbeq8_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int eqhandler;
+            try
+            {
+                loadedeqid = cmbeq8.SelectedItem.ToString();
+                Connection.Connection.DB();
+                Functions.Functions.gen = "Select " + loadedeq + ".availableqty from " + loadedeq + " where equipmentname = '" + loadedeqid + "'";
+                Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
+                Functions.Functions.reader = Functions.Functions.command.ExecuteReader();
+                while (Functions.Functions.reader.Read())
+                {
+                    eqhandler = Functions.Functions.reader.GetInt32(0);
+                    lbleq8.Text = eqhandler.ToString();
+
+                }
+
+
+                Connection.Connection.conn.Close();
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        private void cmbeq9_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int eqhandler;
+            try
+            {
+                loadedeqid = cmbeq9.SelectedItem.ToString();
+                Connection.Connection.DB();
+                Functions.Functions.gen = "Select " + loadedeq + ".availableqty from " + loadedeq + " where equipmentname = '" + loadedeqid + "'";
+                Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
+                Functions.Functions.reader = Functions.Functions.command.ExecuteReader();
+                while (Functions.Functions.reader.Read())
+                {
+                    eqhandler = Functions.Functions.reader.GetInt32(0);
+                    lbleq9.Text = eqhandler.ToString();
+
+                }
+
+
+                Connection.Connection.conn.Close();
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        private void cmbeq10_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int eqhandler;
+            try
+            {
+                loadedeqid = cmbeq10.SelectedItem.ToString();
+                Connection.Connection.DB();
+                Functions.Functions.gen = "Select " + loadedeq + ".availableqty from " + loadedeq + " where equipmentname = '" + loadedeqid + "'";
+                Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
+                Functions.Functions.reader = Functions.Functions.command.ExecuteReader();
+                while (Functions.Functions.reader.Read())
+                {
+                    eqhandler = Functions.Functions.reader.GetInt32(0);
+                    lbleq10.Text = eqhandler.ToString();
+
+                }
+
+
+                Connection.Connection.conn.Close();
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        private void cmbeq11_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int eqhandler;
+            try
+            {
+                loadedeqid = cmbeq11.SelectedItem.ToString();
+                Connection.Connection.DB();
+                Functions.Functions.gen = "Select " + loadedeq + ".availableqty from " + loadedeq + " where equipmentname = '" + loadedeqid + "'";
+                Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
+                Functions.Functions.reader = Functions.Functions.command.ExecuteReader();
+                while (Functions.Functions.reader.Read())
+                {
+                    eqhandler = Functions.Functions.reader.GetInt32(0);
+                    lbleq11.Text = eqhandler.ToString();
+
+                }
+
+
+                Connection.Connection.conn.Close();
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        private void cmbeq12_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int eqhandler;
+            try
+            {
+                loadedeqid = cmbeq12.SelectedItem.ToString();
+                Connection.Connection.DB();
+                Functions.Functions.gen = "Select " + loadedeq + ".availableqty from " + loadedeq + " where equipmentname = '" + loadedeqid + "'";
+                Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
+                Functions.Functions.reader = Functions.Functions.command.ExecuteReader();
+                while (Functions.Functions.reader.Read())
+                {
+                    eqhandler = Functions.Functions.reader.GetInt32(0);
+                    lbleq12.Text = eqhandler.ToString();
+
+                }
+
+
+                Connection.Connection.conn.Close();
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Functions.Functions.gen = "Select * FROM fhreservation WHERE timestart >= '" + dateTimePicker1.Value + "' AND timeend <= '" + dateTimePicker2.Value + "'";
+            Functions.Functions.fill(Functions.Functions.gen, dataGridView2);
         }
     }
 
