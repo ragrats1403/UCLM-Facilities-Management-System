@@ -23,7 +23,9 @@ namespace Function_Hall_Reservation_System.Student
         public static int availableqty;
         public static string loadedeqid = "";
         public String loadedeq;
-
+        public string dateval = "";
+        public int loadedcount = 0;
+        public string newval = "";
         public Reservation()
         {
             InitializeComponent();
@@ -66,7 +68,7 @@ namespace Function_Hall_Reservation_System.Student
             cbstyleset();
             filltxtbox();
             dateTimePicker1.Format = DateTimePickerFormat.Time;
-            dateTimePicker2.Format = DateTimePickerFormat.Time;
+            dateTimePicker3.Format = DateTimePickerFormat.Time;
 
         }
         public void eqfill(String id)
@@ -232,7 +234,7 @@ namespace Function_Hall_Reservation_System.Student
             
             
             
-            Functions.Functions.gen = "Select * FROM reservation WHERE timestart >= '" + dateTimePicker1.Value + "' AND timeend <= '" + dateTimePicker2.Value + "'";
+            Functions.Functions.gen = "Select * FROM reservation WHERE timestart >= '" + dateTimePicker1.Value + "' AND timeend <= '" + dateTimePicker3.Value + "'";
             Functions.Functions.fill(Functions.Functions.gen, dataGridView2);
 
         }
@@ -242,13 +244,13 @@ namespace Function_Hall_Reservation_System.Student
         private void btnrequest_Click(object sender, EventArgs e)
         {
 
-            
+            var list = new List<String>();
             var name = Form1.setfirstname + " " + Form1.setlastname;
 
             string month = "";
-            string dateval = "";
 
 
+            string loadedstr = "";
             string timestart = "";
             string timeend = "";
             string eqres1 = cmbeq1.Text.ToString() + "-" + lbleq1.Text.ToString();
@@ -257,9 +259,7 @@ namespace Function_Hall_Reservation_System.Student
             string eqres4 = cmbeq4.Text.ToString() + "-" + lbleq4.Text.ToString();
             string eqres5 = cmbeq5.Text.ToString() + "-" + lbleq5.Text.ToString();
             string eqres6 = cmbeq6.Text.ToString() + "-" + lbleq6.Text.ToString();
-            dateTimePicker1 = new DateTimePicker();
-            dateTimePicker1.Format = DateTimePickerFormat.Time;
-            dateTimePicker1.ShowUpDown = true;
+            
             var selectedequip = new List<string>();
             try
             {
@@ -274,20 +274,88 @@ namespace Function_Hall_Reservation_System.Student
 
                 string allequip = string.Join(", ", selectedequip);
                 month = dateTimePicker2.Value.ToString("MMMM");
+                dateval = dateTimePicker2.Value.ToString("MM/dd/yyyy");
+                MessageBox.Show("First Line Executed");
 
                 try
                 {
                     Connection.Connection.DB();
-                    Functions.Functions.gen = "Select * from fhreservation";
+                    Functions.Functions.gen = "select " + loadedid + ".reserveddate from "+loadedid+"";
                     Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
                     Functions.Functions.reader = Functions.Functions.command.ExecuteReader();
                     Functions.Functions.reader.Read();
+                   
+                   while(Functions.Functions.reader.Read())
+                    {
+                        loadedstr = Functions.Functions.reader.GetString(0);
+                        list.Add(loadedstr);
+                    }
 
-                    dateval = dateTimePicker2.Value.ToString("MM/dd/yyyy");
-                    timestart = dateTimePicker1.Value.ToString("hh:mm:tt");
-                    timeend = dateTimePicker3.Value.ToString("hh:mm:tt");
-                    
                     Connection.Connection.conn.Close();
+
+                       
+                       
+                    foreach (var item in list)
+                    {
+                        if (item.Equals(dateval))
+                        {
+                            newval = item;
+                        }
+                    }
+                    
+                    //Connection.Connection.conn.Close();
+                    MessageBox.Show(loadedstr);
+                    MessageBox.Show("Second Line Executed");
+                    if (newval.Equals(dateval))
+                    {
+                        MessageBox.Show("Third Line Executed");
+                        Connection.Connection.DB();
+                        Functions.Functions.gen = "Select count(*) from "+loadedid+" where '" + dateTimePicker1.Value + "' between timestart and timestart or '" + dateTimePicker3.Value + "' between timestart and timeend  or timestart between '" + dateTimePicker1.Value + "' and '" + dateTimePicker3.Value + "'or timeend between '" + dateTimePicker1.Value + "' and '" + dateTimePicker3.Value + "'"; Functions.Functions.gen = "Select * from "+loadedid+" where '" + dateTimePicker1.Value + "' between timestart and timestart or '" + dateTimePicker3.Value + "' between timestart and timeend  or timestart between '" + dateTimePicker1.Value + "' and '" + dateTimePicker3.Value + "'or timeend between '" + dateTimePicker1.Value + "' and '" + dateTimePicker3.Value + "'";
+                        Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
+                        Functions.Functions.reader = Functions.Functions.command.ExecuteReader();
+                        Functions.Functions.reader.Read();
+                        
+                            loadedcount = Functions.Functions.reader.GetInt32(0);
+                            MessageBox.Show("Fourth Line Executed");
+                        
+                        Connection.Connection.conn.Close();
+                        if (loadedcount > 0)
+                        {
+                            MessageBox.Show("Fifth Line Executed");
+                            MessageBox.Show("Someone is using the facility within that time! Number of Conflicts: " + loadedcount);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Reserving..");
+                            Connection.Connection.DB();
+                            Functions.Functions.gen = "Insert Into " + loadedid + "(eventname,reservedby,reservationstatus,datereserved,checkedby,studentid,studentname,reservedequipments,approvedby,timestart,month,timeend,reserveddate,facilityname)values('" + txtEventname.Text + "','" + name + "','Pending','" + DateTime.Now.ToString() + "','N/A','" + txtStudentid.Text + "','" + txtStudentName.Text + "','" + allequip + "','N/A','" + dateTimePicker1.Value + "','" + month + " ','" + dateTimePicker3.Value + "','" + dateval + "','" + facilitycb.SelectedItem.ToString() + "')";
+                            Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
+
+                            Functions.Functions.command.ExecuteNonQuery();
+                            MessageBox.Show("Successfully Requested for Reservation!", "reservation", MessageBoxButtons.OK);
+
+                            Connection.Connection.conn.Close();
+                            Reservation res = new Reservation();
+                            this.Close();
+                            res.Show();
+                        }
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Reserving..");
+                        Connection.Connection.DB();
+                        Functions.Functions.gen = "Insert Into " + loadedid + "(eventname,reservedby,reservationstatus,datereserved,checkedby,studentid,studentname,reservedequipments,approvedby,timestart,month,timeend,reserveddate,facilityname)values('" + txtEventname.Text + "','" + name + "','Pending','" + DateTime.Now.ToString() + "','N/A','" + txtStudentid.Text + "','" + txtStudentName.Text + "','" + allequip + "','N/A','" + dateTimePicker1.Value + "','" + month + " ','" + dateTimePicker3.Value + "','" + dateval + "','" + facilitycb.SelectedItem.ToString() + "')";
+                        Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
+
+                        Functions.Functions.command.ExecuteNonQuery();
+                        MessageBox.Show("Successfully Requested for Reservation!", "reservation", MessageBoxButtons.OK);
+
+                        Connection.Connection.conn.Close();
+                        Reservation res = new Reservation();
+                        this.Close();
+                        res.Show();
+                    }
 
                 }
                 catch (Exception ex)
@@ -299,17 +367,7 @@ namespace Function_Hall_Reservation_System.Student
 
 
 
-                Connection.Connection.DB();
-                Functions.Functions.gen = "Insert Into " + loadedid + "(eventname,reservedby,reservationstatus,datereserved,checkedby,studentid,studentname,reservedequipments,approvedby,timestart,month,timeend,reserveddate,facilityname)values('" + txtEventname.Text + "','" + name + "','Pending','" + DateTime.Now.ToString() + "','N/A','" + txtStudentid.Text + "','" + txtStudentName.Text + "','" + allequip + "','N/A','" +dateTimePicker1.Value+ "','" + month + " ','" + dateTimePicker2.Value + "','" + dateval + "','" + facilitycb.SelectedItem.ToString() + "')";
-                Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
-
-                Functions.Functions.command.ExecuteNonQuery();
-                MessageBox.Show("Successfully Requested for Reservation!", "reservation", MessageBoxButtons.OK);
-
-                Connection.Connection.conn.Close();
-                Reservation res = new Reservation();
-                this.Close();
-                res.Show();
+                
 
 
 
@@ -855,10 +913,83 @@ namespace Function_Hall_Reservation_System.Student
             }
         }
 
+        public void checkconflictevent()
+        {
+            
+
+
+        }
         private void button5_Click(object sender, EventArgs e)
         {
-            Functions.Functions.gen = "Select * FROM fhreservation WHERE timestart >= '" + dateTimePicker1.Value + "' AND timeend <= '" + dateTimePicker2.Value + "'";
+            Functions.Functions.gen = "Select * from fhreservation where '"+dateTimePicker1.Value+"' between timestart and timestart or '"+dateTimePicker3.Value+"' between timestart and timeend  or timestart between '"+dateTimePicker1.Value+"' and '"+dateTimePicker3.Value+"'or timeend between '"+dateTimePicker1.Value+"' and '"+dateTimePicker3.Value+"'";
             Functions.Functions.fill(Functions.Functions.gen, dataGridView2);
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+          
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+            
+        }
+
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void textBox3_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void textBox4_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void textBox5_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void textBox6_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void textBox12_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void textBox11_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void textBox10_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void textBox9_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void textBox8_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void textBox7_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 

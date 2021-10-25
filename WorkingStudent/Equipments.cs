@@ -169,10 +169,10 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             try
             {
                 Connection.Connection.DB();
-                Functions.Functions.gen = "UPDATE fhequipments SET equipmentstatus='"+cmbstatus.Text+"' WHERE equipmentname='"+txtequipmentname.Text+"'";
+                Functions.Functions.gen = "UPDATE "+loadedid+" SET availableqty = "+txtquantity.Text+", totalqty = "+txtquantity.Text+" where equipmentname = '"+txtequipmentname.Text+"'";
                 Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
                 Functions.Functions.command.ExecuteNonQuery();
-                MessageBox.Show("Successfully Updated Equipments Status!", "fhequipments", MessageBoxButtons.OK);
+                MessageBox.Show("Successfully Updated Equipments Status!", "equipments", MessageBoxButtons.OK);
 
                 Connection.Connection.conn.Close();
                 this.Close();
@@ -238,7 +238,7 @@ namespace Function_Hall_Reservation_System.WorkingStudent
                 {
 
                     Connection.Connection.DB();
-                    Functions.Functions.gen = "Insert Into "+loadedid+"(equipmentname,equipmentstatus,equipmentquantity)values('" + txtequipmentname.Text + "','" + cmbstatus.Text + "','"+ txtquantity+"')";
+                    Functions.Functions.gen = "Insert Into "+loadedid+"(equipmentname,equipmentstatus,availableqty,defectiveqty,totalqty)values('" + txtequipmentname.Text + "','" + cmbstatus.Text + "','"+ txtquantity.Text+"','0','"+txtquantity.Text+"')";
                     Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
 
                     Functions.Functions.command.ExecuteNonQuery();

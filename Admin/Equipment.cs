@@ -144,7 +144,7 @@ namespace Function_Hall_Reservation_System.Admin
             try
             {
                 Connection.Connection.DB();
-                Functions.Functions.gen = "UPDATE fhequipments SET equipmentstatus='" + cmbstatus.Text + "' WHERE equipmentname='" + txtequipmentname.Text + "'";
+                Functions.Functions.gen = "UPDATE " + loadedid + " SET availableqty = " + txtquantity.Text + ", totalqty = " + txtquantity.Text + " where equipmentname = '" + txtequipmentname.Text + "'";
                 Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
                 Functions.Functions.command.ExecuteNonQuery();
                 MessageBox.Show("Successfully Updated Equipments Status!", "Equipments", MessageBoxButtons.OK);
@@ -203,7 +203,7 @@ namespace Function_Hall_Reservation_System.Admin
                 {
 
                     Connection.Connection.DB();
-                    Functions.Functions.gen = "Insert Into fhequipments(equipmentname,equipmentstatus,equipmentquantity)values('" + txtequipmentname.Text + "','" + cmbstatus.Text + "','" + txtquantity + "')";
+                    Functions.Functions.gen = "Insert Into " + loadedid + "(equipmentname,equipmentstatus,availableqty,defectiveqty,totalqty)values('" + txtequipmentname.Text + "','" + cmbstatus.Text + "','" + txtquantity.Text + "','0','" + txtquantity.Text + "')";
                     Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
 
                     Functions.Functions.command.ExecuteNonQuery();
@@ -230,7 +230,7 @@ namespace Function_Hall_Reservation_System.Admin
                 var gen = MessageBox.Show("Are you sure you want to delete this Equipment?", "Delete equipment", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (gen == DialogResult.Yes)
                 {
-                    Functions.Functions.gen = "Delete from fhequipments where equipmentname ='" + txtequipmentname.Text + "'";
+                    Functions.Functions.gen = "Delete from " + loadedid + " where equipmentname ='" + txtequipmentname.Text + "'";
                     Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
                     Functions.Functions.command.ExecuteNonQuery();
                     Connection.Connection.conn.Close();

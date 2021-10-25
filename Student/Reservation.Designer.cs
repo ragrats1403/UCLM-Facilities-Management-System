@@ -39,6 +39,7 @@ namespace Function_Hall_Reservation_System.Student
             this.lblfullname = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.button5 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lbleq12 = new System.Windows.Forms.Label();
             this.lbleq11 = new System.Windows.Forms.Label();
@@ -101,7 +102,6 @@ namespace Function_Hall_Reservation_System.Student
             this.facilitycb2 = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.button5 = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -231,6 +231,16 @@ namespace Function_Hall_Reservation_System.Student
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Request Reservation";
             this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(638, 214);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.TabIndex = 23;
+            this.button5.Text = "button5";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // panel2
             // 
@@ -432,6 +442,7 @@ namespace Function_Hall_Reservation_System.Student
             this.textBox7.Size = new System.Drawing.Size(74, 22);
             this.textBox7.TabIndex = 44;
             this.textBox7.Visible = false;
+            this.textBox7.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox7_KeyPress);
             // 
             // textBox8
             // 
@@ -440,6 +451,7 @@ namespace Function_Hall_Reservation_System.Student
             this.textBox8.Size = new System.Drawing.Size(74, 22);
             this.textBox8.TabIndex = 43;
             this.textBox8.Visible = false;
+            this.textBox8.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox8_KeyPress);
             // 
             // textBox9
             // 
@@ -448,6 +460,7 @@ namespace Function_Hall_Reservation_System.Student
             this.textBox9.Size = new System.Drawing.Size(74, 22);
             this.textBox9.TabIndex = 42;
             this.textBox9.Visible = false;
+            this.textBox9.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox9_KeyPress);
             // 
             // textBox10
             // 
@@ -456,6 +469,7 @@ namespace Function_Hall_Reservation_System.Student
             this.textBox10.Size = new System.Drawing.Size(74, 22);
             this.textBox10.TabIndex = 41;
             this.textBox10.Visible = false;
+            this.textBox10.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox10_KeyPress);
             // 
             // textBox11
             // 
@@ -464,6 +478,7 @@ namespace Function_Hall_Reservation_System.Student
             this.textBox11.Size = new System.Drawing.Size(74, 22);
             this.textBox11.TabIndex = 40;
             this.textBox11.Visible = false;
+            this.textBox11.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox11_KeyPress);
             // 
             // textBox12
             // 
@@ -472,6 +487,7 @@ namespace Function_Hall_Reservation_System.Student
             this.textBox12.Size = new System.Drawing.Size(74, 22);
             this.textBox12.TabIndex = 39;
             this.textBox12.Visible = false;
+            this.textBox12.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox12_KeyPress);
             // 
             // lbleq6
             // 
@@ -608,6 +624,7 @@ namespace Function_Hall_Reservation_System.Student
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(74, 22);
             this.textBox6.TabIndex = 23;
+            this.textBox6.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox6_KeyPress);
             // 
             // textBox5
             // 
@@ -615,6 +632,7 @@ namespace Function_Hall_Reservation_System.Student
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(74, 22);
             this.textBox5.TabIndex = 4;
+            this.textBox5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox5_KeyPress);
             // 
             // textBox4
             // 
@@ -622,6 +640,7 @@ namespace Function_Hall_Reservation_System.Student
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(74, 22);
             this.textBox4.TabIndex = 3;
+            this.textBox4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox4_KeyPress);
             // 
             // textBox3
             // 
@@ -629,6 +648,7 @@ namespace Function_Hall_Reservation_System.Student
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(74, 22);
             this.textBox3.TabIndex = 2;
+            this.textBox3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox3_KeyPress);
             // 
             // textBox2
             // 
@@ -636,6 +656,7 @@ namespace Function_Hall_Reservation_System.Student
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(74, 22);
             this.textBox2.TabIndex = 1;
+            this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
             // 
             // textBox1
             // 
@@ -643,6 +664,8 @@ namespace Function_Hall_Reservation_System.Student
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(74, 22);
             this.textBox1.TabIndex = 0;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // facilitycb
             // 
@@ -839,16 +862,6 @@ namespace Function_Hall_Reservation_System.Student
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(768, 355);
             this.tabControl1.TabIndex = 7;
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(638, 214);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 23;
-            this.button5.Text = "button5";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // dataGridView2
             // 
