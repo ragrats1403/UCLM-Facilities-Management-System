@@ -25,18 +25,7 @@ namespace Function_Hall_Reservation_System.Student
         {
             //filldata();
         }
-        public void filldata(String idname)
-        {
-            lblfullname.Text = Form1.setfullname;
-            // dataGridView1.Columns[2].Width = 108;
-            Functions.Functions.gen = "Select "+idname+ ".eventname as [Event Name]," + idname + ".reserveddate as [Date],fhreservation.timestart as [Time Start], fhreservation.timeend as [Time End] from fhreservation where fhreservation.reservedby = '" + lblfullname.Text+"'";
-            Functions.Functions.fill(Functions.Functions.gen, dataGridView1);
-
-            dataGridView1.Columns[0].Width = 200;
-            dataGridView1.Columns[1].Width = 110;
-            dataGridView1.Columns[2].Width = 110;
-            dataGridView1.Columns[3].Width = 110;
-        }
+        
 
         public void reservationtotalcount(String idname)
         {

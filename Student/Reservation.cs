@@ -18,11 +18,51 @@ namespace Function_Hall_Reservation_System.Student
         public static string tempdate = "";
         public static string temptimestart = "";
         public static string temptimeend = "";
+        public int count = 0;
         private String loadedid;
 
         public Reservation()
         {
             InitializeComponent();
+        }
+
+        public void filltxtbox()
+        {
+            try
+            {
+                Connection.Connection.DB();
+                Functions.Functions.gen = "Select count(*) from fhequipments";
+                Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
+                Functions.Functions.reader = Functions.Functions.command.ExecuteReader();
+                while (Functions.Functions.reader.Read())
+                {
+                     count = Functions.Functions.reader.GetInt32(0);
+                    
+                }
+
+
+                Connection.Connection.conn.Close();
+                int txtno = count; 
+                int pointX = 1;
+                int pointY = 5;
+                panel2.Controls.Clear();
+                for (int i = 0; i < txtno; i++)
+                {
+                    TextBox a = new TextBox();
+                    a.Text = (i + 1).ToString();
+                    a.Location = new Point(pointX, pointY);
+                    a.Name = "txtbox" + i;
+                    testlbl.Text = a.Name.ToString();
+                    
+                    panel2.Controls.Add(a);
+                    panel2.Show();
+                    pointY += 20;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void Reservation_Load(object sender, EventArgs e)
@@ -35,6 +75,8 @@ namespace Function_Hall_Reservation_System.Student
             date();
             lblfullname.Text = Form1.setfullname;
             chkboxfill();
+            cbstyleset();
+            filltxtbox();
         }
         public void chkboxfill()
         {
@@ -133,10 +175,7 @@ namespace Function_Hall_Reservation_System.Student
 
         }
 
-        private void checkBox3_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void btnrequest_Click(object sender, EventArgs e)
         {
@@ -184,7 +223,7 @@ namespace Function_Hall_Reservation_System.Student
 
 
                 Connection.Connection.DB();
-                Functions.Functions.gen = "Insert Into "+loadedid+"(eventname,reservedby,reservationstatus,datereserved,checkedby,studentid,studentname,reservedequipments,approvedby,timestart,month,timeend,reserveddate)values('" + txtEventname.Text + "','" + name + "','Pending','" + DateTime.Now.ToString() + "','N/A','" + txtStudentid.Text + "','" + txtStudentName.Text + "','" + allequip + "','N/A','" + timestart + "','" + month + " ','" + timeend + "','" + dateval + "')";
+                Functions.Functions.gen = "Insert Into " + loadedid + "(eventname,reservedby,reservationstatus,datereserved,checkedby,studentid,studentname,reservedequipments,approvedby,timestart,month,timeend,reserveddate)values('" + txtEventname.Text + "','" + name + "','Pending','" + DateTime.Now.ToString() + "','N/A','" + txtStudentid.Text + "','" + txtStudentName.Text + "','" + allequip + "','N/A','" + timestart + "','" + month + " ','" + timeend + "','" + dateval + "')";
                 Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
 
                 Functions.Functions.command.ExecuteNonQuery();
@@ -268,6 +307,13 @@ namespace Function_Hall_Reservation_System.Student
             this.Close();
             form.Show();
         }
+        public void cbstyleset()
+        {
+
+            facilitycb.DropDownStyle = ComboBoxStyle.DropDownList;
+            facilitycb2.DropDownStyle = ComboBoxStyle.DropDownList;
+
+        }
         private void facilitycb_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
@@ -321,4 +367,6 @@ namespace Function_Hall_Reservation_System.Student
             this.Visible = false;
             re.Show();
         }
+    }
+
 }
