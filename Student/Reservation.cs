@@ -276,7 +276,7 @@ namespace Function_Hall_Reservation_System.Student
                 {
                     //MessageBox.Show("Debug Line for Functionhall selection Executed");|
                     loadedid = "fhreservation";
-                    
+
                 }
                 else if (facilitycb.SelectedItem.ToString() == "Auditorium")
                 {
