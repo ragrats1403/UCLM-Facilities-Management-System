@@ -18,11 +18,51 @@ namespace Function_Hall_Reservation_System.Student
         public static string tempdate = "";
         public static string temptimestart = "";
         public static string temptimeend = "";
+        public int count = 0;
         private String loadedid;
 
         public Reservation()
         {
             InitializeComponent();
+        }
+
+        public void filltxtbox()
+        {
+            try
+            {
+                Connection.Connection.DB();
+                Functions.Functions.gen = "Select count(*) from fhequipments";
+                Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
+                Functions.Functions.reader = Functions.Functions.command.ExecuteReader();
+                while (Functions.Functions.reader.Read())
+                {
+                     count = Functions.Functions.reader.GetInt32(0);
+                    
+                }
+
+
+                Connection.Connection.conn.Close();
+                int txtno = count; 
+                int pointX = 1;
+                int pointY = 5;
+                panel2.Controls.Clear();
+                for (int i = 0; i < txtno; i++)
+                {
+                    TextBox a = new TextBox();
+                    a.Text = (i + 1).ToString();
+                    a.Location = new Point(pointX, pointY);
+                    a.Name = "txtbox" + i;
+                    testlbl.Text = a.Name.ToString();
+                    
+                    panel2.Controls.Add(a);
+                    panel2.Show();
+                    pointY += 20;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void Reservation_Load(object sender, EventArgs e)
@@ -36,6 +76,7 @@ namespace Function_Hall_Reservation_System.Student
             lblfullname.Text = Form1.setfullname;
             chkboxfill();
             cbstyleset();
+            filltxtbox();
         }
         public void chkboxfill()
         {

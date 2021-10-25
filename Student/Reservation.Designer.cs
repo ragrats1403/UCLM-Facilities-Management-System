@@ -56,9 +56,11 @@ namespace Function_Hall_Reservation_System.Student
             this.label4 = new System.Windows.Forms.Label();
             this.btnrequest = new System.Windows.Forms.Button();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.facilitycb2 = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.facilitycb2 = new System.Windows.Forms.ComboBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.testlbl = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPage2.SuspendLayout();
@@ -161,6 +163,8 @@ namespace Function_Hall_Reservation_System.Student
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.LemonChiffon;
+            this.tabPage2.Controls.Add(this.testlbl);
+            this.tabPage2.Controls.Add(this.panel2);
             this.tabPage2.Controls.Add(this.facilitycb);
             this.tabPage2.Controls.Add(this.checkedListBox1);
             this.tabPage2.Controls.Add(this.dateTimePicker3);
@@ -205,7 +209,7 @@ namespace Function_Hall_Reservation_System.Student
             this.checkedListBox1.FormattingEnabled = true;
             this.checkedListBox1.Location = new System.Drawing.Point(25, 166);
             this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(319, 72);
+            this.checkedListBox1.Size = new System.Drawing.Size(190, 72);
             this.checkedListBox1.TabIndex = 21;
             this.checkedListBox1.SelectedIndexChanged += new System.EventHandler(this.checkedListBox1_SelectedIndexChanged_1);
             // 
@@ -356,6 +360,20 @@ namespace Function_Hall_Reservation_System.Student
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "My Reservations";
             // 
+            // facilitycb2
+            // 
+            this.facilitycb2.FormattingEnabled = true;
+            this.facilitycb2.Items.AddRange(new object[] {
+            "Function Hall",
+            "Old AVR",
+            "New AVR",
+            "Auditorium"});
+            this.facilitycb2.Location = new System.Drawing.Point(3, 6);
+            this.facilitycb2.Name = "facilitycb2";
+            this.facilitycb2.Size = new System.Drawing.Size(121, 25);
+            this.facilitycb2.TabIndex = 1;
+            this.facilitycb2.Text = "Select Facility";
+            // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -376,19 +394,21 @@ namespace Function_Hall_Reservation_System.Student
             this.tabControl1.Size = new System.Drawing.Size(768, 355);
             this.tabControl1.TabIndex = 7;
             // 
-            // facilitycb2
+            // panel2
             // 
-            this.facilitycb2.FormattingEnabled = true;
-            this.facilitycb2.Items.AddRange(new object[] {
-            "Function Hall",
-            "Old AVR",
-            "New AVR",
-            "Auditorium"});
-            this.facilitycb2.Location = new System.Drawing.Point(3, 6);
-            this.facilitycb2.Name = "facilitycb2";
-            this.facilitycb2.Size = new System.Drawing.Size(121, 25);
-            this.facilitycb2.TabIndex = 1;
-            this.facilitycb2.Text = "Select Facility";
+            this.panel2.Location = new System.Drawing.Point(221, 166);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(183, 152);
+            this.panel2.TabIndex = 22;
+            // 
+            // testlbl
+            // 
+            this.testlbl.AutoSize = true;
+            this.testlbl.Location = new System.Drawing.Point(485, 184);
+            this.testlbl.Name = "testlbl";
+            this.testlbl.Size = new System.Drawing.Size(45, 17);
+            this.testlbl.TabIndex = 23;
+            this.testlbl.Text = "label1";
             // 
             // Reservation
             // 
@@ -448,5 +468,7 @@ namespace Function_Hall_Reservation_System.Student
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.ComboBox facilitycb2;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label testlbl;
     }
 }
