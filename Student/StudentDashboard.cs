@@ -176,6 +176,13 @@ namespace Function_Hall_Reservation_System.Student
             this.Visible = false;
             calendar.Show();
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            StudentCalendar calendar = new StudentCalendar();
+            this.Visible = false;
+            calendar.Show();
+        }
     }
     }
 

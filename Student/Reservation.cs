@@ -1029,6 +1029,20 @@ namespace Function_Hall_Reservation_System.Student
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void button2_Click_2(object sender, EventArgs e)
+        {
+            Reservation reserve = new Reservation();
+            this.Visible = false;
+            reserve.Show();
+        }
+
+        private void button4_Click_2(object sender, EventArgs e)
+        {
+            StudentDashboard sd = new StudentDashboard();
+            this.Close();
+            sd.Show();
+        }
     }
    }
 
