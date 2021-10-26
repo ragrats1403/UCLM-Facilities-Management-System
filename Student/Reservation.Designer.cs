@@ -828,6 +828,7 @@ namespace Function_Hall_Reservation_System.Student
             this.facilitycb2.Size = new System.Drawing.Size(121, 25);
             this.facilitycb2.TabIndex = 1;
             this.facilitycb2.Text = "Select Facility";
+            this.facilitycb2.SelectedIndexChanged += new System.EventHandler(this.facilitycb2_SelectedIndexChanged);
             // 
             // dataGridView1
             // 

@@ -26,6 +26,7 @@ namespace Function_Hall_Reservation_System.Student
         public string dateval = "";
         public int loadedcount = 0;
         public string newval = "";
+        public string cbval = "";
         public Reservation()
         {
             InitializeComponent();
@@ -59,7 +60,7 @@ namespace Function_Hall_Reservation_System.Student
         {
 
             fillstudnameid();
-            filldata();
+            
             timestart();
             timeend();
             date();
@@ -309,7 +310,7 @@ namespace Function_Hall_Reservation_System.Student
                     MessageBox.Show("Third Line Executed");
                     if (newval.Equals(dateval))
                     {
-                       
+                        MessageBox.Show("Fourth Line Executed");
                         Connection.Connection.DB();
                         Functions.Functions.gen = "Select count(*) from "+loadedid+" where '" + dateTimePicker1.Value + "' between timestart and timestart or '" + dateTimePicker3.Value + "' between timestart and timeend  or timestart between '" + dateTimePicker1.Value + "' and '" + dateTimePicker3.Value + "'or timeend between '" + dateTimePicker1.Value + "' and '" + dateTimePicker3.Value + "'"; Functions.Functions.gen = "Select * from "+loadedid+" where '" + dateTimePicker1.Value + "' between timestart and timestart or '" + dateTimePicker3.Value + "' between timestart and timeend  or timestart between '" + dateTimePicker1.Value + "' and '" + dateTimePicker3.Value + "'or timeend between '" + dateTimePicker1.Value + "' and '" + dateTimePicker3.Value + "'";
                         Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
@@ -317,8 +318,8 @@ namespace Function_Hall_Reservation_System.Student
                         Functions.Functions.reader.Read();
                         
                             loadedcount = Functions.Functions.reader.GetInt32(0);
-                           
-                        
+
+                        MessageBox.Show("Fifth Line Executed");
                         Connection.Connection.conn.Close();
                         if (loadedcount > 0)
                         {
@@ -378,11 +379,12 @@ namespace Function_Hall_Reservation_System.Student
                 MessageBox.Show(ex.Message);
             }
         }
-        public void filldata()
+        public void filldata(String id)
         {
-            Functions.Functions.gen = "Select * from fhreservation where studentid = '" + Form1.setstudentid + "'";
+            Functions.Functions.gen = "Select * from " + id + " where studentid = '" + Form1.setstudentid + "'";
             Functions.Functions.fill(Functions.Functions.gen, dataGridView1);
         }
+        
 
         public void fillstudnameid()
         {
@@ -988,6 +990,46 @@ namespace Function_Hall_Reservation_System.Student
         {
             
         }
-    }
 
-}
+        private void facilitycb2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (facilitycb2.SelectedItem.ToString() == "Function Hall")
+                {
+                    //MessageBox.Show("Debug Line for Functionhall selection Executed");
+
+                    loadedid = "fhreservation";
+                    filldata(loadedid);
+                }
+                else if (facilitycb2.SelectedItem.ToString() == "Auditorium")
+                {
+
+                    //MessageBox.Show("Debug Line for Auditorium Executed");
+                    cbval = "audreservations";
+                    filldata(cbval);
+                }
+                else if (facilitycb2.SelectedItem.ToString() == "New AVR")
+                {
+                    //MessageBox.Show("Debug Line for New AVR Executed");
+                    cbval = "nareservations";
+                    filldata(cbval);
+                }
+
+                else if (facilitycb2.SelectedItem.ToString() == "Old AVR")
+                {
+
+                    //MessageBox.Show("Debug Line for Old AVR Executed");
+                    cbval = "oareservations";
+                    filldata(cbval);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+    }
+   }
+
+
