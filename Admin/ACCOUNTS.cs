@@ -85,7 +85,7 @@ namespace Function_Hall_Reservation_System.Admin
                 txtlastname.Text = dataGridView1[2, e.RowIndex].Value.ToString();
                 
                 cmbstatus.Text = dataGridView1[4, e.RowIndex].Value.ToString();
-                dateTimePicker1.Value = Convert.ToDateTime(dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString());
+                
                 txtstudentid.Text = dataGridView1[6, e.RowIndex].Value.ToString();
                 txtpassword.Text = dataGridView1[7, e.RowIndex].Value.ToString();
                 txtroleid.Text = dataGridView1[8, e.RowIndex].Value.ToString();
@@ -102,10 +102,10 @@ namespace Function_Hall_Reservation_System.Admin
                 //btnRegister.Enabled = false;
                 //btnUpdate.Enabled = true;
                 //btnDelete.Enabled = true;
-                lbldate.Visible = true;
+              
                 //lblroleid.Visible = true;
                 txtroleid.Visible = true;
-                dateTimePicker1.Visible = true;
+              
                 this.tabControl1.SelectedIndex = 1;
                 button8.Visible = true;
 

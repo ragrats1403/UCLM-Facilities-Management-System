@@ -152,6 +152,7 @@ namespace Function_Hall_Reservation_System.WorkingStudent
                 txtequipmentname.Enabled = false;
                 button8.Visible = true;
                 button9.Visible = true;
+                button7.Visible = false;
             }
             catch (Exception ex)
             {

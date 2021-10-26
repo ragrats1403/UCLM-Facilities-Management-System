@@ -1,4 +1,4 @@
-﻿using System;
+﻿    using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,7 +13,8 @@ namespace Function_Hall_Reservation_System.Connection
     class Connection
     {
         public static SqlConnection conn;
-        private static string dbconnect = "Data Source=DAREDEV1L;Initial Catalog=uclmfacilitiesdatabase;Integrated Security=True";
+        private static string dbconnect = "Data Source=DESKTOP-7V8P92N\\SQLEXPRESS;Initial Catalog=uclmfacilitiesdatabase;Integrated Security=True";
+
 
         public static void DB()
         {
