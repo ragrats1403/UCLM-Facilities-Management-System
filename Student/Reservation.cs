@@ -279,6 +279,7 @@ namespace Function_Hall_Reservation_System.Student
 
                 try
                 {
+                    MessageBox.Show("First Line Executed");
                     Connection.Connection.DB();
                     Functions.Functions.gen = "select " + loadedid + ".reserveddate from "+loadedid+"";
                     Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
@@ -289,6 +290,7 @@ namespace Function_Hall_Reservation_System.Student
                     {
                         loadedstr = Functions.Functions.reader.GetString(0);
                         list.Add(loadedstr);
+                        MessageBox.Show("Second Line Executed");
                     }
 
                     Connection.Connection.conn.Close();
@@ -302,9 +304,9 @@ namespace Function_Hall_Reservation_System.Student
                             newval = item;
                         }
                     }
-                    
+
                     //Connection.Connection.conn.Close();
-                    
+                    MessageBox.Show("Third Line Executed");
                     if (newval.Equals(dateval))
                     {
                        

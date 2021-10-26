@@ -73,7 +73,7 @@ namespace Function_Hall_Reservation_System.Registration
             this.groupBox1.ForeColor = System.Drawing.SystemColors.Menu;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(655, 466);
+            this.groupBox1.Size = new System.Drawing.Size(655, 505);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Registration";
@@ -84,9 +84,9 @@ namespace Function_Hall_Reservation_System.Registration
             this.btnRegister.BackColor = System.Drawing.Color.Transparent;
             this.btnRegister.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegister.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnRegister.Location = new System.Drawing.Point(394, 385);
+            this.btnRegister.Location = new System.Drawing.Point(394, 417);
             this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(100, 43);
+            this.btnRegister.Size = new System.Drawing.Size(100, 47);
             this.btnRegister.TabIndex = 35;
             this.btnRegister.Text = "Save";
             this.btnRegister.UseVisualStyleBackColor = false;
@@ -95,10 +95,10 @@ namespace Function_Hall_Reservation_System.Registration
             // txtPassword
             // 
             this.txtPassword.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(312, 286);
+            this.txtPassword.Location = new System.Drawing.Point(312, 310);
             this.txtPassword.Multiline = true;
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(223, 29);
+            this.txtPassword.Size = new System.Drawing.Size(223, 31);
             this.txtPassword.TabIndex = 34;
             // 
             // label8
@@ -107,7 +107,7 @@ namespace Function_Hall_Reservation_System.Registration
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.Menu;
-            this.label8.Location = new System.Drawing.Point(86, 330);
+            this.label8.Location = new System.Drawing.Point(86, 358);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(165, 24);
             this.label8.TabIndex = 33;
@@ -123,7 +123,7 @@ namespace Function_Hall_Reservation_System.Registration
             "Single",
             "Married",
             "Divorced"});
-            this.cmbStatus.Location = new System.Drawing.Point(312, 209);
+            this.cmbStatus.Location = new System.Drawing.Point(312, 226);
             this.cmbStatus.Name = "cmbStatus";
             this.cmbStatus.Size = new System.Drawing.Size(223, 32);
             this.cmbStatus.TabIndex = 32;
@@ -134,11 +134,10 @@ namespace Function_Hall_Reservation_System.Registration
             this.rdbFemale.BackColor = System.Drawing.Color.Transparent;
             this.rdbFemale.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdbFemale.ForeColor = System.Drawing.SystemColors.Menu;
-            this.rdbFemale.Location = new System.Drawing.Point(394, 170);
+            this.rdbFemale.Location = new System.Drawing.Point(394, 184);
             this.rdbFemale.Name = "rdbFemale";
             this.rdbFemale.Size = new System.Drawing.Size(106, 28);
             this.rdbFemale.TabIndex = 31;
-            this.rdbFemale.TabStop = true;
             this.rdbFemale.Text = "Female";
             this.rdbFemale.UseVisualStyleBackColor = false;
             // 
@@ -146,10 +145,11 @@ namespace Function_Hall_Reservation_System.Registration
             // 
             this.rdbMale.AutoSize = true;
             this.rdbMale.BackColor = System.Drawing.Color.Transparent;
+            this.rdbMale.Checked = true;
             this.rdbMale.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rdbMale.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdbMale.ForeColor = System.Drawing.SystemColors.Menu;
-            this.rdbMale.Location = new System.Drawing.Point(312, 170);
+            this.rdbMale.Location = new System.Drawing.Point(312, 182);
             this.rdbMale.Name = "rdbMale";
             this.rdbMale.Size = new System.Drawing.Size(79, 28);
             this.rdbMale.TabIndex = 30;
@@ -160,28 +160,28 @@ namespace Function_Hall_Reservation_System.Registration
             // txtUsername
             // 
             this.txtUsername.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsername.Location = new System.Drawing.Point(312, 248);
+            this.txtUsername.Location = new System.Drawing.Point(312, 269);
             this.txtUsername.Multiline = true;
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(223, 29);
+            this.txtUsername.Size = new System.Drawing.Size(223, 31);
             this.txtUsername.TabIndex = 29;
             // 
             // txtLastname
             // 
             this.txtLastname.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLastname.Location = new System.Drawing.Point(312, 122);
+            this.txtLastname.Location = new System.Drawing.Point(312, 132);
             this.txtLastname.Multiline = true;
             this.txtLastname.Name = "txtLastname";
-            this.txtLastname.Size = new System.Drawing.Size(223, 29);
+            this.txtLastname.Size = new System.Drawing.Size(223, 31);
             this.txtLastname.TabIndex = 27;
             // 
             // txtFirstname
             // 
             this.txtFirstname.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFirstname.Location = new System.Drawing.Point(312, 82);
+            this.txtFirstname.Location = new System.Drawing.Point(312, 89);
             this.txtFirstname.Multiline = true;
             this.txtFirstname.Name = "txtFirstname";
-            this.txtFirstname.Size = new System.Drawing.Size(223, 29);
+            this.txtFirstname.Size = new System.Drawing.Size(223, 31);
             this.txtFirstname.TabIndex = 26;
             // 
             // label7
@@ -190,7 +190,7 @@ namespace Function_Hall_Reservation_System.Registration
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.Menu;
-            this.label7.Location = new System.Drawing.Point(86, 286);
+            this.label7.Location = new System.Drawing.Point(86, 310);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(109, 24);
             this.label7.TabIndex = 25;
@@ -203,7 +203,7 @@ namespace Function_Hall_Reservation_System.Registration
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.Menu;
-            this.label6.Location = new System.Drawing.Point(86, 251);
+            this.label6.Location = new System.Drawing.Point(86, 272);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(120, 24);
             this.label6.TabIndex = 24;
@@ -216,7 +216,7 @@ namespace Function_Hall_Reservation_System.Registration
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.Menu;
-            this.label5.Location = new System.Drawing.Point(86, 209);
+            this.label5.Location = new System.Drawing.Point(86, 226);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(74, 24);
             this.label5.TabIndex = 23;
@@ -229,7 +229,7 @@ namespace Function_Hall_Reservation_System.Registration
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.Menu;
-            this.label4.Location = new System.Drawing.Point(86, 170);
+            this.label4.Location = new System.Drawing.Point(86, 184);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(89, 24);
             this.label4.TabIndex = 22;
@@ -242,7 +242,7 @@ namespace Function_Hall_Reservation_System.Registration
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.Menu;
-            this.label2.Location = new System.Drawing.Point(91, 122);
+            this.label2.Location = new System.Drawing.Point(91, 132);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(120, 24);
             this.label2.TabIndex = 20;
@@ -255,7 +255,7 @@ namespace Function_Hall_Reservation_System.Registration
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Menu;
-            this.label1.Location = new System.Drawing.Point(89, 82);
+            this.label1.Location = new System.Drawing.Point(89, 89);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(115, 24);
             this.label1.TabIndex = 19;
@@ -267,9 +267,9 @@ namespace Function_Hall_Reservation_System.Registration
             this.btnBack.BackColor = System.Drawing.Color.Transparent;
             this.btnBack.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnBack.Location = new System.Drawing.Point(255, 385);
+            this.btnBack.Location = new System.Drawing.Point(255, 417);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(100, 43);
+            this.btnBack.Size = new System.Drawing.Size(100, 47);
             this.btnBack.TabIndex = 18;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = false;
@@ -277,9 +277,9 @@ namespace Function_Hall_Reservation_System.Registration
             // 
             // Registration
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(656, 466);
+            this.ClientSize = new System.Drawing.Size(656, 505);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Registration";
