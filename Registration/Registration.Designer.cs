@@ -134,7 +134,7 @@ namespace Function_Hall_Reservation_System.Registration
             this.rdbFemale.BackColor = System.Drawing.Color.Transparent;
             this.rdbFemale.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdbFemale.ForeColor = System.Drawing.SystemColors.Menu;
-            this.rdbFemale.Location = new System.Drawing.Point(394, 184);
+            this.rdbFemale.Location = new System.Drawing.Point(398, 184);
             this.rdbFemale.Name = "rdbFemale";
             this.rdbFemale.Size = new System.Drawing.Size(106, 28);
             this.rdbFemale.TabIndex = 31;
@@ -146,12 +146,11 @@ namespace Function_Hall_Reservation_System.Registration
             this.rdbMale.AutoSize = true;
             this.rdbMale.BackColor = System.Drawing.Color.Transparent;
             this.rdbMale.Checked = true;
-            this.rdbMale.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rdbMale.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdbMale.ForeColor = System.Drawing.SystemColors.Menu;
             this.rdbMale.Location = new System.Drawing.Point(312, 182);
             this.rdbMale.Name = "rdbMale";
-            this.rdbMale.Size = new System.Drawing.Size(79, 28);
+            this.rdbMale.Size = new System.Drawing.Size(80, 28);
             this.rdbMale.TabIndex = 30;
             this.rdbMale.TabStop = true;
             this.rdbMale.Text = "Male";
