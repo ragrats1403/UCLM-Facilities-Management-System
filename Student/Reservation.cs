@@ -228,7 +228,7 @@ namespace Function_Hall_Reservation_System.Student
 
         }
 
-        public void CheckConflict()
+       /* public void CheckConflict()
         {
 
             
@@ -239,7 +239,7 @@ namespace Function_Hall_Reservation_System.Student
 
         }
 
-
+        */
 
         private void btnrequest_Click(object sender, EventArgs e)
         {
@@ -275,7 +275,7 @@ namespace Function_Hall_Reservation_System.Student
                 string allequip = string.Join(", ", selectedequip);
                 month = dateTimePicker2.Value.ToString("MMMM");
                 dateval = dateTimePicker2.Value.ToString("MM/dd/yyyy");
-                MessageBox.Show("First Line Executed");
+                
 
                 try
                 {
@@ -304,11 +304,10 @@ namespace Function_Hall_Reservation_System.Student
                     }
                     
                     //Connection.Connection.conn.Close();
-                    MessageBox.Show(loadedstr);
-                    MessageBox.Show("Second Line Executed");
+                    
                     if (newval.Equals(dateval))
                     {
-                        MessageBox.Show("Third Line Executed");
+                       
                         Connection.Connection.DB();
                         Functions.Functions.gen = "Select count(*) from "+loadedid+" where '" + dateTimePicker1.Value + "' between timestart and timestart or '" + dateTimePicker3.Value + "' between timestart and timeend  or timestart between '" + dateTimePicker1.Value + "' and '" + dateTimePicker3.Value + "'or timeend between '" + dateTimePicker1.Value + "' and '" + dateTimePicker3.Value + "'"; Functions.Functions.gen = "Select * from "+loadedid+" where '" + dateTimePicker1.Value + "' between timestart and timestart or '" + dateTimePicker3.Value + "' between timestart and timeend  or timestart between '" + dateTimePicker1.Value + "' and '" + dateTimePicker3.Value + "'or timeend between '" + dateTimePicker1.Value + "' and '" + dateTimePicker3.Value + "'";
                         Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
@@ -316,12 +315,12 @@ namespace Function_Hall_Reservation_System.Student
                         Functions.Functions.reader.Read();
                         
                             loadedcount = Functions.Functions.reader.GetInt32(0);
-                            MessageBox.Show("Fourth Line Executed");
+                           
                         
                         Connection.Connection.conn.Close();
                         if (loadedcount > 0)
                         {
-                            MessageBox.Show("Fifth Line Executed");
+                           
                             MessageBox.Show("Someone is using the facility within that time! Number of Conflicts: " + loadedcount);
                         }
                         else
@@ -919,11 +918,7 @@ namespace Function_Hall_Reservation_System.Student
 
 
         }
-        private void button5_Click(object sender, EventArgs e)
-        {
-            Functions.Functions.gen = "Select * from fhreservation where '"+dateTimePicker1.Value+"' between timestart and timestart or '"+dateTimePicker3.Value+"' between timestart and timeend  or timestart between '"+dateTimePicker1.Value+"' and '"+dateTimePicker3.Value+"'or timeend between '"+dateTimePicker1.Value+"' and '"+dateTimePicker3.Value+"'";
-            Functions.Functions.fill(Functions.Functions.gen, dataGridView2);
-        }
+        
 
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {

@@ -39,7 +39,6 @@ namespace Function_Hall_Reservation_System.Student
             this.lblfullname = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.button5 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lbleq12 = new System.Windows.Forms.Label();
             this.lbleq11 = new System.Windows.Forms.Label();
@@ -102,7 +101,6 @@ namespace Function_Hall_Reservation_System.Student
             this.facilitycb2 = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPage2.SuspendLayout();
@@ -110,7 +108,6 @@ namespace Function_Hall_Reservation_System.Student
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
@@ -207,7 +204,6 @@ namespace Function_Hall_Reservation_System.Student
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.LemonChiffon;
-            this.tabPage2.Controls.Add(this.button5);
             this.tabPage2.Controls.Add(this.panel2);
             this.tabPage2.Controls.Add(this.facilitycb);
             this.tabPage2.Controls.Add(this.dateTimePicker3);
@@ -231,16 +227,6 @@ namespace Function_Hall_Reservation_System.Student
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Request Reservation";
             this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(638, 214);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 23;
-            this.button5.Text = "button5";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // panel2
             // 
@@ -863,21 +849,12 @@ namespace Function_Hall_Reservation_System.Student
             this.tabControl1.Size = new System.Drawing.Size(768, 355);
             this.tabControl1.TabIndex = 7;
             // 
-            // dataGridView2
-            // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(543, 6);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(410, 150);
-            this.dataGridView2.TabIndex = 8;
-            // 
             // Reservation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
             this.ClientSize = new System.Drawing.Size(990, 503);
-            this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel1);
@@ -896,7 +873,6 @@ namespace Function_Hall_Reservation_System.Student
             this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -975,7 +951,5 @@ namespace Function_Hall_Reservation_System.Student
         private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.TextBox textBox11;
         private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.DataGridView dataGridView2;
     }
 }
