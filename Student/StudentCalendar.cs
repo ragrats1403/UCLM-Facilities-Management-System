@@ -89,5 +89,10 @@ namespace Function_Hall_Reservation_System.Student
             this.Close();
             sd.Show();
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

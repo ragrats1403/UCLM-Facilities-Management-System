@@ -146,6 +146,7 @@ namespace Function_Hall_Reservation_System.Student
             this.button4.TabIndex = 8;
             this.button4.Text = "Dashboard";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click_2);
             // 
             // button3
             // 
@@ -161,17 +162,18 @@ namespace Function_Hall_Reservation_System.Student
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(0, 247);
+            this.button2.Location = new System.Drawing.Point(0, 288);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(219, 37);
             this.button2.TabIndex = 4;
             this.button2.Text = "Reservation";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_2);
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(0, 290);
+            this.button1.Location = new System.Drawing.Point(0, 245);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(219, 37);
             this.button1.TabIndex = 3;
