@@ -280,7 +280,7 @@ namespace Function_Hall_Reservation_System.Student
 
                 try
                 {
-                    MessageBox.Show("First Line Executed");
+                    
                     Connection.Connection.DB();
                     Functions.Functions.gen = "select " + loadedid + ".reserveddate from "+loadedid+"";
                     Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
@@ -291,7 +291,7 @@ namespace Function_Hall_Reservation_System.Student
                     {
                         loadedstr = Functions.Functions.reader.GetString(0);
                         list.Add(loadedstr);
-                        MessageBox.Show("Second Line Executed");
+                        
                     }
 
                     Connection.Connection.conn.Close();
@@ -307,10 +307,10 @@ namespace Function_Hall_Reservation_System.Student
                     }
 
                     //Connection.Connection.conn.Close();
-                    MessageBox.Show("Third Line Executed");
+                    
                     if (newval.Equals(dateval))
                     {
-                        MessageBox.Show("Fourth Line Executed");
+                        
                         Connection.Connection.DB();
                         Functions.Functions.gen = "Select count(*) from "+loadedid+" where '" + dateTimePicker1.Value + "' between timestart and timestart or '" + dateTimePicker3.Value + "' between timestart and timeend  or timestart between '" + dateTimePicker1.Value + "' and '" + dateTimePicker3.Value + "'or timeend between '" + dateTimePicker1.Value + "' and '" + dateTimePicker3.Value + "'"; Functions.Functions.gen = "Select * from "+loadedid+" where '" + dateTimePicker1.Value + "' between timestart and timestart or '" + dateTimePicker3.Value + "' between timestart and timeend  or timestart between '" + dateTimePicker1.Value + "' and '" + dateTimePicker3.Value + "'or timeend between '" + dateTimePicker1.Value + "' and '" + dateTimePicker3.Value + "'";
                         Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
@@ -319,7 +319,7 @@ namespace Function_Hall_Reservation_System.Student
                         
                             loadedcount = Functions.Functions.reader.GetInt32(0);
 
-                        MessageBox.Show("Fifth Line Executed");
+                        
                         Connection.Connection.conn.Close();
                         if (loadedcount > 0)
                         {
