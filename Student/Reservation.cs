@@ -286,7 +286,7 @@ namespace Function_Hall_Reservation_System.Student
                 
                 if (ComputeDifference() <= 3)
                 {
-                    MessageBox.Show("Please Note that you need to reserve 3 days before the desired reservation day\nReservation Day Count:" + ComputeDifference());
+                    MessageBox.Show("Please Note that you need to reserve 3 days before the desired reservation day\nReservation Day Count: " + ComputeDifference()+" Days Away.");
                 }
                 try
                 {
