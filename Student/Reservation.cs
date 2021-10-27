@@ -362,7 +362,7 @@ namespace Function_Hall_Reservation_System.Student
                             this.Close();
                             res.Show();
                         }
-                        MessageBox.Show("Line4");
+                        
                     }
                     else
                     {
