@@ -108,8 +108,8 @@ namespace Function_Hall_Reservation_System.Admin
                 txtdatereserved.Text = dataGridView1[4, e.RowIndex].Value.ToString();
                 txtcheckedby.Text = dataGridView1[5, e.RowIndex].Value.ToString();
                 txtapprovedby.Text = dataGridView1[6, e.RowIndex].Value.ToString();
-                txtstudentid.Text = dataGridView1[7, e.RowIndex].Value.ToString();
-                txtstudentname.Text = dataGridView1[8, e.RowIndex].Value.ToString();
+                //txtstudentid.Text = dataGridView1[7, e.RowIndex].Value.ToString();
+                //txtstudentname.Text = dataGridView1[8, e.RowIndex].Value.ToString();
                 txtreservedequipments.Text = dataGridView1[9, e.RowIndex].Value.ToString();
                 //txtreservedate.Text = dataGridView1[10, e.RowIndex].Value.ToString();
                 txttimestart.Text = dataGridView1[10, e.RowIndex].Value.ToString();
@@ -159,6 +159,11 @@ namespace Function_Hall_Reservation_System.Admin
         }
 
         private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage2_Click(object sender, EventArgs e)
         {
 
         }

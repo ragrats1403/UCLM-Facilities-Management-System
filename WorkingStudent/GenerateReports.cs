@@ -25,7 +25,7 @@ namespace Function_Hall_Reservation_System.WorkingStudent
         }
         public void Filldata()
         {
-            Functions.Functions.gen = "Select * from users inner join fhreservation on fhreservation.studentid = users.studentid where fhreservation.reservationstatus = 'Approved'";
+            //Functions.Functions.gen = "Select * from users inner join fhreservation on fhreservation.studentid = users.studentid where fhreservation.reservationstatus = 'Approved'";
             Functions.Functions.fill(Functions.Functions.gen, dataGridView1);
         }
        
