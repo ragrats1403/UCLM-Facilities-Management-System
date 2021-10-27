@@ -27,6 +27,10 @@ namespace Function_Hall_Reservation_System.Student
         }
         
 
+        public void notificationtab()
+        {
+
+        }
         public void reservationtotalcount(String idname)
         {
             

@@ -94,10 +94,16 @@ namespace Function_Hall_Reservation_System.Student
                     cmbeq4.Items.Add(Functions.Functions.reader["equipmentname"]).ToString();
                     cmbeq5.Items.Add(Functions.Functions.reader["equipmentname"]).ToString();
                     cmbeq6.Items.Add(Functions.Functions.reader["equipmentname"]).ToString();
+                    cmbeq7.Items.Add(Functions.Functions.reader["equipmentname"]).ToString();
+                    cmbeq8.Items.Add(Functions.Functions.reader["equipmentname"]).ToString();
+                    cmbeq9.Items.Add(Functions.Functions.reader["equipmentname"]).ToString();
+                    cmbeq10.Items.Add(Functions.Functions.reader["equipmentname"]).ToString();
+                    cmbeq11.Items.Add(Functions.Functions.reader["equipmentname"]).ToString();
+                    cmbeq12.Items.Add(Functions.Functions.reader["equipmentname"]).ToString();
 
 
                 }
-                if (cmbeq1.Items.Count <= 6)
+                if (cmbeq1.Items.Count < 6)
                 {
                     cmbeq7.Visible = false;
                     cmbeq8.Visible = false;
@@ -233,25 +239,15 @@ namespace Function_Hall_Reservation_System.Student
 
         }
 
-        /* public void CheckConflict()
-         {
-
-
-
-
-             Functions.Functions.gen = "Select * FROM reservation WHERE timestart >= '" + dateTimePicker1.Value + "' AND timeend <= '" + dateTimePicker3.Value + "'";
-             Functions.Functions.fill(Functions.Functions.gen, dataGridView2);
-
-         }
-
-         */
+        
         
 
-        public void ComputeDifference()
+        public int ComputeDifference()
         {
             TimeSpan diff = DateTime.Now - dateTimePicker2.Value;
-            int days = diff.Days;
-            MessageBox.Show("Total Days:" + days);
+            int temp = diff.Days -1;
+            int days = temp * -1;
+            return days;
         }
         private void btnrequest_Click(object sender, EventArgs e)
         {
@@ -276,7 +272,7 @@ namespace Function_Hall_Reservation_System.Student
             try
             {
 
-                ComputeDifference();
+                
                 selectedequip.Add(eqres1);
                 selectedequip.Add(eqres2);
                 selectedequip.Add(eqres3);
@@ -288,11 +284,14 @@ namespace Function_Hall_Reservation_System.Student
                 month = dateTimePicker2.Value.ToString("MMMM");
                 dateval = dateTimePicker2.Value.ToString("MM/dd/yyyy");
                 
-
+                if (ComputeDifference() <= 3)
+                {
+                    MessageBox.Show("Please Note that you need to reserve 3 days before the desired reservation day\nReservation Day Count:" + ComputeDifference());
+                }
                 try
                 {
                     
-                    Connection.Connection.DB();
+                   /* Connection.Connection.DB();
                     Functions.Functions.gen = "select " + loadedid + ".reserveddate from "+loadedid+"";
                     Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
                     Functions.Functions.reader = Functions.Functions.command.ExecuteReader();
@@ -315,15 +314,16 @@ namespace Function_Hall_Reservation_System.Student
                         {
                             newval = item;
                         }
-                    }
+                    */
 
                     //Connection.Connection.conn.Close();
                     
-                    if (newval.Equals(dateval))
+                    if (DateTime.Now.Equals(dateTimePicker2.Value))
                     {
                         
                         Connection.Connection.DB();
-                        Functions.Functions.gen = "Select count(*) from "+loadedid+" where '" + dateTimePicker1.Value + "' between timestart and timestart or '" + dateTimePicker3.Value + "' between timestart and timeend  or timestart between '" + dateTimePicker1.Value + "' and '" + dateTimePicker3.Value + "'or timeend between '" + dateTimePicker1.Value + "' and '" + dateTimePicker3.Value + "'"; Functions.Functions.gen = "Select * from "+loadedid+" where '" + dateTimePicker1.Value + "' between timestart and timestart or '" + dateTimePicker3.Value + "' between timestart and timeend  or timestart between '" + dateTimePicker1.Value + "' and '" + dateTimePicker3.Value + "'or timeend between '" + dateTimePicker1.Value + "' and '" + dateTimePicker3.Value + "'";
+                        Functions.Functions.gen = "Select count(*) from "+loadedid+" where '" + dateTimePicker1.Value + "' between timestart and timestart and reservationstatus = 'Approved' or '" + dateTimePicker3.Value + "' between timestart and timeend and reservationstatus = 'Approved'and reservationstatus = 'Approved' or timestart between '" + dateTimePicker1.Value + "' and '" + dateTimePicker3.Value + "' and reservationstatus = 'Approved' or timeend between '" + dateTimePicker1.Value + "' and '" + dateTimePicker3.Value + "' and reservationstatus = 'Approved'";
+                            
                         Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
                         Functions.Functions.reader = Functions.Functions.command.ExecuteReader();
                         Functions.Functions.reader.Read();
