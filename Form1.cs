@@ -118,5 +118,12 @@ namespace Function_Hall_Reservation_System
             this.Close();
             MessageBox.Show("See you next time!");
         }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Guest.StudentCalendar guest = new Guest.StudentCalendar();
+            this.Visible = false;
+            guest.Show();
+        }
     }
     }

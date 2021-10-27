@@ -37,12 +37,14 @@ namespace Function_Hall_Reservation_System
             this.btnlogin = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.SteelBlue;
+            this.groupBox1.Controls.Add(this.linkLabel2);
             this.groupBox1.Controls.Add(this.btnExit);
             this.groupBox1.Controls.Add(this.txtpassword);
             this.groupBox1.Controls.Add(this.linkLabel1);
@@ -61,7 +63,7 @@ namespace Function_Hall_Reservation_System
             // btnExit
             // 
             this.btnExit.BackColor = System.Drawing.Color.Transparent;
-            this.btnExit.Location = new System.Drawing.Point(205, 256);
+            this.btnExit.Location = new System.Drawing.Point(218, 256);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(75, 41);
             this.btnExit.TabIndex = 14;
@@ -72,7 +74,7 @@ namespace Function_Hall_Reservation_System
             // txtpassword
             // 
             this.txtpassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtpassword.Location = new System.Drawing.Point(218, 112);
+            this.txtpassword.Location = new System.Drawing.Point(179, 94);
             this.txtpassword.Multiline = true;
             this.txtpassword.Name = "txtpassword";
             this.txtpassword.PasswordChar = '*';
@@ -86,7 +88,7 @@ namespace Function_Hall_Reservation_System
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel1.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.linkLabel1.Location = new System.Drawing.Point(224, 227);
+            this.linkLabel1.Location = new System.Drawing.Point(114, 223);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(135, 13);
             this.linkLabel1.TabIndex = 13;
@@ -97,7 +99,7 @@ namespace Function_Hall_Reservation_System
             // txtusername
             // 
             this.txtusername.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtusername.Location = new System.Drawing.Point(218, 43);
+            this.txtusername.Location = new System.Drawing.Point(179, 39);
             this.txtusername.Multiline = true;
             this.txtusername.Name = "txtusername";
             this.txtusername.Size = new System.Drawing.Size(171, 49);
@@ -108,7 +110,7 @@ namespace Function_Hall_Reservation_System
             this.btnlogin.BackColor = System.Drawing.Color.White;
             this.btnlogin.FlatAppearance.BorderSize = 0;
             this.btnlogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnlogin.Location = new System.Drawing.Point(218, 164);
+            this.btnlogin.Location = new System.Drawing.Point(179, 160);
             this.btnlogin.Name = "btnlogin";
             this.btnlogin.Size = new System.Drawing.Size(171, 60);
             this.btnlogin.TabIndex = 11;
@@ -122,7 +124,7 @@ namespace Function_Hall_Reservation_System
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.Info;
-            this.label3.Location = new System.Drawing.Point(82, 112);
+            this.label3.Location = new System.Drawing.Point(43, 108);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(78, 20);
             this.label3.TabIndex = 12;
@@ -134,11 +136,25 @@ namespace Function_Hall_Reservation_System
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Info;
-            this.label1.Location = new System.Drawing.Point(81, 43);
+            this.label1.Location = new System.Drawing.Point(42, 39);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(83, 20);
             this.label1.TabIndex = 10;
             this.label1.Text = "Username";
+            // 
+            // linkLabel2
+            // 
+            this.linkLabel2.ActiveLinkColor = System.Drawing.Color.LightSalmon;
+            this.linkLabel2.AutoSize = true;
+            this.linkLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.linkLabel2.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.linkLabel2.Location = new System.Drawing.Point(291, 223);
+            this.linkLabel2.Name = "linkLabel2";
+            this.linkLabel2.Size = new System.Drawing.Size(81, 13);
+            this.linkLabel2.TabIndex = 15;
+            this.linkLabel2.TabStop = true;
+            this.linkLabel2.Text = "Log in as Guest";
+            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             // 
             // Form1
             // 
@@ -165,6 +181,7 @@ namespace Function_Hall_Reservation_System
         private System.Windows.Forms.Button btnlogin;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.LinkLabel linkLabel2;
     }
 }
 
