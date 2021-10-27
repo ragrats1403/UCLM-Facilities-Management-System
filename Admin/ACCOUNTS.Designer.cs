@@ -37,23 +37,6 @@ namespace Function_Hall_Reservation_System.Admin
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.button8 = new System.Windows.Forms.Button();
-            this.txtlastname = new System.Windows.Forms.TextBox();
-            this.rdbfemale = new System.Windows.Forms.RadioButton();
-            this.label8 = new System.Windows.Forms.Label();
-            this.rdbmale = new System.Windows.Forms.RadioButton();
-            this.txtfirstname = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.cmbstatus = new System.Windows.Forms.ComboBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtroleid = new System.Windows.Forms.TextBox();
-            this.txtpassword = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.txtstudentid = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.lblfullname = new System.Windows.Forms.Label();
@@ -63,13 +46,25 @@ namespace Function_Hall_Reservation_System.Admin
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.tabPage2.SuspendLayout();
+            this.txtstudentid = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.txtroleid = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtfirstname = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtlastname = new System.Windows.Forms.TextBox();
+            this.button8 = new System.Windows.Forms.Button();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.txtdateregistered = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.tabControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
             this.SuspendLayout();
             // 
             // button7
@@ -148,212 +143,6 @@ namespace Function_Hall_Reservation_System.Admin
             this.label3.Size = new System.Drawing.Size(126, 30);
             this.label3.TabIndex = 14;
             this.label3.Text = "Accounts";
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.button8);
-            this.tabPage2.Controls.Add(this.txtlastname);
-            this.tabPage2.Controls.Add(this.rdbfemale);
-            this.tabPage2.Controls.Add(this.label8);
-            this.tabPage2.Controls.Add(this.rdbmale);
-            this.tabPage2.Controls.Add(this.txtfirstname);
-            this.tabPage2.Controls.Add(this.label5);
-            this.tabPage2.Controls.Add(this.cmbstatus);
-            this.tabPage2.Controls.Add(this.label10);
-            this.tabPage2.Controls.Add(this.label11);
-            this.tabPage2.Controls.Add(this.label7);
-            this.tabPage2.Controls.Add(this.txtroleid);
-            this.tabPage2.Controls.Add(this.txtpassword);
-            this.tabPage2.Controls.Add(this.label13);
-            this.tabPage2.Controls.Add(this.label12);
-            this.tabPage2.Controls.Add(this.txtstudentid);
-            this.tabPage2.Location = new System.Drawing.Point(4, 26);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Size = new System.Drawing.Size(710, 320);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Update accounts";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
-            // 
-            // button8
-            // 
-            this.button8.Location = new System.Drawing.Point(491, 217);
-            this.button8.Margin = new System.Windows.Forms.Padding(2);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(84, 41);
-            this.button8.TabIndex = 42;
-            this.button8.Text = "UPDATE";
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Visible = false;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
-            // 
-            // txtlastname
-            // 
-            this.txtlastname.Enabled = false;
-            this.txtlastname.Location = new System.Drawing.Point(175, 85);
-            this.txtlastname.Margin = new System.Windows.Forms.Padding(2);
-            this.txtlastname.Multiline = true;
-            this.txtlastname.Name = "txtlastname";
-            this.txtlastname.Size = new System.Drawing.Size(133, 28);
-            this.txtlastname.TabIndex = 26;
-            // 
-            // rdbfemale
-            // 
-            this.rdbfemale.AutoSize = true;
-            this.rdbfemale.Enabled = false;
-            this.rdbfemale.Location = new System.Drawing.Point(607, 170);
-            this.rdbfemale.Margin = new System.Windows.Forms.Padding(2);
-            this.rdbfemale.Name = "rdbfemale";
-            this.rdbfemale.Size = new System.Drawing.Size(70, 21);
-            this.rdbfemale.TabIndex = 41;
-            this.rdbfemale.TabStop = true;
-            this.rdbfemale.Text = "Female";
-            this.rdbfemale.UseVisualStyleBackColor = true;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(28, 47);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(101, 22);
-            this.label8.TabIndex = 23;
-            this.label8.Text = "First name";
-            // 
-            // rdbmale
-            // 
-            this.rdbmale.AutoSize = true;
-            this.rdbmale.Enabled = false;
-            this.rdbmale.Location = new System.Drawing.Point(531, 170);
-            this.rdbmale.Margin = new System.Windows.Forms.Padding(2);
-            this.rdbmale.Name = "rdbmale";
-            this.rdbmale.Size = new System.Drawing.Size(56, 21);
-            this.rdbmale.TabIndex = 40;
-            this.rdbmale.TabStop = true;
-            this.rdbmale.Text = "Male";
-            this.rdbmale.UseVisualStyleBackColor = true;
-            // 
-            // txtfirstname
-            // 
-            this.txtfirstname.Enabled = false;
-            this.txtfirstname.Location = new System.Drawing.Point(175, 47);
-            this.txtfirstname.Margin = new System.Windows.Forms.Padding(2);
-            this.txtfirstname.Multiline = true;
-            this.txtfirstname.Name = "txtfirstname";
-            this.txtfirstname.Size = new System.Drawing.Size(133, 28);
-            this.txtfirstname.TabIndex = 24;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(28, 85);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(105, 22);
-            this.label5.TabIndex = 25;
-            this.label5.Text = "Last name";
-            // 
-            // cmbstatus
-            // 
-            this.cmbstatus.Enabled = false;
-            this.cmbstatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbstatus.FormattingEnabled = true;
-            this.cmbstatus.Items.AddRange(new object[] {
-            "Single",
-            "Divorced",
-            "Married"});
-            this.cmbstatus.Location = new System.Drawing.Point(176, 121);
-            this.cmbstatus.Margin = new System.Windows.Forms.Padding(2);
-            this.cmbstatus.Name = "cmbstatus";
-            this.cmbstatus.Size = new System.Drawing.Size(133, 28);
-            this.cmbstatus.TabIndex = 38;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(385, 163);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(82, 22);
-            this.label10.TabIndex = 37;
-            this.label10.Text = "Gender";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(385, 124);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(73, 22);
-            this.label11.TabIndex = 36;
-            this.label11.Text = "Role ID";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(29, 121);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(65, 22);
-            this.label7.TabIndex = 29;
-            this.label7.Text = "Status";
-            // 
-            // txtroleid
-            // 
-            this.txtroleid.Location = new System.Drawing.Point(531, 124);
-            this.txtroleid.Margin = new System.Windows.Forms.Padding(2);
-            this.txtroleid.Multiline = true;
-            this.txtroleid.Name = "txtroleid";
-            this.txtroleid.Size = new System.Drawing.Size(133, 28);
-            this.txtroleid.TabIndex = 35;
-            // 
-            // txtpassword
-            // 
-            this.txtpassword.Enabled = false;
-            this.txtpassword.Location = new System.Drawing.Point(531, 85);
-            this.txtpassword.Margin = new System.Windows.Forms.Padding(2);
-            this.txtpassword.Multiline = true;
-            this.txtpassword.Name = "txtpassword";
-            this.txtpassword.Size = new System.Drawing.Size(133, 28);
-            this.txtpassword.TabIndex = 34;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(385, 47);
-            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(106, 22);
-            this.label13.TabIndex = 31;
-            this.label13.Text = "Student ID";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(385, 85);
-            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(95, 22);
-            this.label12.TabIndex = 33;
-            this.label12.Text = "Password";
-            // 
-            // txtstudentid
-            // 
-            this.txtstudentid.Enabled = false;
-            this.txtstudentid.Location = new System.Drawing.Point(531, 47);
-            this.txtstudentid.Margin = new System.Windows.Forms.Padding(2);
-            this.txtstudentid.Multiline = true;
-            this.txtstudentid.Name = "txtstudentid";
-            this.txtstudentid.Size = new System.Drawing.Size(133, 28);
-            this.txtstudentid.TabIndex = 32;
             // 
             // textBox1
             // 
@@ -465,6 +254,144 @@ namespace Function_Hall_Reservation_System.Admin
             this.panel1.Size = new System.Drawing.Size(211, 450);
             this.panel1.TabIndex = 11;
             // 
+            // txtstudentid
+            // 
+            this.txtstudentid.Enabled = false;
+            this.txtstudentid.Location = new System.Drawing.Point(531, 47);
+            this.txtstudentid.Margin = new System.Windows.Forms.Padding(2);
+            this.txtstudentid.Multiline = true;
+            this.txtstudentid.Name = "txtstudentid";
+            this.txtstudentid.Size = new System.Drawing.Size(133, 28);
+            this.txtstudentid.TabIndex = 32;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(400, 47);
+            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(106, 22);
+            this.label13.TabIndex = 31;
+            this.label13.Text = "Student ID";
+            // 
+            // txtroleid
+            // 
+            this.txtroleid.Location = new System.Drawing.Point(531, 87);
+            this.txtroleid.Margin = new System.Windows.Forms.Padding(2);
+            this.txtroleid.Multiline = true;
+            this.txtroleid.Name = "txtroleid";
+            this.txtroleid.Size = new System.Drawing.Size(133, 28);
+            this.txtroleid.TabIndex = 35;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(400, 87);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(73, 22);
+            this.label11.TabIndex = 36;
+            this.label11.Text = "Role ID";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(28, 85);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(105, 22);
+            this.label5.TabIndex = 25;
+            this.label5.Text = "Last name";
+            // 
+            // txtfirstname
+            // 
+            this.txtfirstname.Enabled = false;
+            this.txtfirstname.Location = new System.Drawing.Point(189, 43);
+            this.txtfirstname.Margin = new System.Windows.Forms.Padding(2);
+            this.txtfirstname.Multiline = true;
+            this.txtfirstname.Name = "txtfirstname";
+            this.txtfirstname.Size = new System.Drawing.Size(133, 28);
+            this.txtfirstname.TabIndex = 24;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(28, 47);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(101, 22);
+            this.label8.TabIndex = 23;
+            this.label8.Text = "First name";
+            // 
+            // txtlastname
+            // 
+            this.txtlastname.Enabled = false;
+            this.txtlastname.Location = new System.Drawing.Point(189, 81);
+            this.txtlastname.Margin = new System.Windows.Forms.Padding(2);
+            this.txtlastname.Multiline = true;
+            this.txtlastname.Name = "txtlastname";
+            this.txtlastname.Size = new System.Drawing.Size(133, 28);
+            this.txtlastname.TabIndex = 26;
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(307, 233);
+            this.button8.Margin = new System.Windows.Forms.Padding(2);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(84, 41);
+            this.button8.TabIndex = 42;
+            this.button8.Text = "UPDATE";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Visible = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.txtdateregistered);
+            this.tabPage2.Controls.Add(this.label1);
+            this.tabPage2.Controls.Add(this.button8);
+            this.tabPage2.Controls.Add(this.txtlastname);
+            this.tabPage2.Controls.Add(this.label8);
+            this.tabPage2.Controls.Add(this.txtfirstname);
+            this.tabPage2.Controls.Add(this.label5);
+            this.tabPage2.Controls.Add(this.label11);
+            this.tabPage2.Controls.Add(this.txtroleid);
+            this.tabPage2.Controls.Add(this.label13);
+            this.tabPage2.Controls.Add(this.txtstudentid);
+            this.tabPage2.Location = new System.Drawing.Point(4, 26);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Size = new System.Drawing.Size(710, 320);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Update accounts";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
+            // 
+            // txtdateregistered
+            // 
+            this.txtdateregistered.Enabled = false;
+            this.txtdateregistered.Location = new System.Drawing.Point(188, 117);
+            this.txtdateregistered.Margin = new System.Windows.Forms.Padding(2);
+            this.txtdateregistered.Multiline = true;
+            this.txtdateregistered.Name = "txtdateregistered";
+            this.txtdateregistered.Size = new System.Drawing.Size(133, 28);
+            this.txtdateregistered.TabIndex = 44;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(27, 121);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(152, 22);
+            this.label1.TabIndex = 43;
+            this.label1.Text = "Date registered";
+            // 
             // ACCOUNTS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -480,8 +407,6 @@ namespace Function_Hall_Reservation_System.Admin
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Accounts";
             this.Load += new System.EventHandler(this.ACCOUNTS_Load);
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -490,6 +415,8 @@ namespace Function_Hall_Reservation_System.Admin
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -503,7 +430,6 @@ namespace Function_Hall_Reservation_System.Admin
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label lblfullname;
@@ -513,21 +439,17 @@ namespace Function_Hall_Reservation_System.Admin
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.TextBox txtlastname;
-        private System.Windows.Forms.RadioButton rdbfemale;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.RadioButton rdbmale;
         private System.Windows.Forms.TextBox txtfirstname;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox cmbstatus;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtroleid;
-        private System.Windows.Forms.TextBox txtpassword;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txtstudentid;
+        private System.Windows.Forms.TextBox txtdateregistered;
+        private System.Windows.Forms.Label label1;
     }
 }

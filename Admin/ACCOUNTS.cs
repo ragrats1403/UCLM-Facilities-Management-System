@@ -81,24 +81,11 @@ namespace Function_Hall_Reservation_System.Admin
         {
             try
             {
-                txtfirstname.Text = dataGridView1[1, e.RowIndex].Value.ToString();
-                txtlastname.Text = dataGridView1[2, e.RowIndex].Value.ToString();
-                
-                cmbstatus.Text = dataGridView1[4, e.RowIndex].Value.ToString();
-                
-                txtstudentid.Text = dataGridView1[6, e.RowIndex].Value.ToString();
-                txtpassword.Text = dataGridView1[7, e.RowIndex].Value.ToString();
-                txtroleid.Text = dataGridView1[8, e.RowIndex].Value.ToString();
-                if (dataGridView1.CurrentRow.Cells[9].FormattedValue.Equals("Male"))
-                {
-                    rdbmale.Checked = true;
-                    rdbfemale.Checked = false;
-                }
-                else
-                {
-                    rdbmale.Checked = false;
-                    rdbfemale.Checked = true;
-                }
+                txtfirstname.Text = dataGridView1[0, e.RowIndex].Value.ToString();
+                txtlastname.Text = dataGridView1[1, e.RowIndex].Value.ToString();
+                txtdateregistered.Text = dataGridView1[2, e.RowIndex].Value.ToString();
+                txtstudentid.Text = dataGridView1[3, e.RowIndex].Value.ToString();
+                txtroleid.Text = dataGridView1[4, e.RowIndex].Value.ToString();
                 //btnRegister.Enabled = false;
                 //btnUpdate.Enabled = true;
                 //btnDelete.Enabled = true;
