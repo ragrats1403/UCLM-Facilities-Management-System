@@ -246,5 +246,115 @@ namespace Function_Hall_Reservation_System.Admin
         {
 
         }
+
+        private void reservedequipmentsTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txttimestart_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txttimeend_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtreservedate_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void datereserved_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void reservationidLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void reservationidTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void eventnameLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void eventnameTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void reservedbyLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void reservedbyTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void reservationstatusLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void reservationstatusTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void datereservedLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkedbyLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkedbyTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void approvedbyLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void approvedbyTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void reservedequipmentsLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -261,5 +261,15 @@ namespace Function_Hall_Reservation_System.WorkingStudent
         {
 
         }
+
+        private void eventnameLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void reservedbyLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
