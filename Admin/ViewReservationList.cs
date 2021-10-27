@@ -105,12 +105,7 @@ namespace Function_Hall_Reservation_System.Admin
         {
             
         }
-        public void Filldata()
-        {
-            
-            Functions.Functions.gen = "Select * from fhreservation";
-            Functions.Functions.fill(Functions.Functions.gen, dataGridView1);
-        }
+       
 
         private void textBox5_TextChanged(object sender, EventArgs e)
         {
@@ -199,7 +194,7 @@ namespace Function_Hall_Reservation_System.Admin
         private void ViewReservationList_Load(object sender, EventArgs e)
         {
             lblfullname.Text = Form1.setfullname;
-            Filldata();
+            
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
