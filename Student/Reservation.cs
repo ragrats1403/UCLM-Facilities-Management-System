@@ -341,7 +341,7 @@ namespace Function_Hall_Reservation_System.Student
 
 
                         Connection.Connection.conn.Close();
-                        if (loadedcount > 0)
+                        if (loadedcount >= 0)
                         {
                             MessageBox.Show("Line3");
 
