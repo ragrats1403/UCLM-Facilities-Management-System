@@ -36,29 +36,43 @@ namespace Function_Hall_Reservation_System.Student
             InitializeComponent();
         }
 
-        /* public void filltxtbox()
-         {
-             try
-             {
-                 Connection.Connection.DB();
-                 Functions.Functions.gen = "Select count(*) from fhequipments";
-                 Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
-                 Functions.Functions.reader = Functions.Functions.command.ExecuteReader();
-                 while (Functions.Functions.reader.Read())
-                 {
-                     count = Functions.Functions.reader.GetInt32(0);
+         public Boolean checkdateconflict(DateTime dt)
+        {
+            int count = 0;
+            bool confirm = false;
+            try
+            {
+                Connection.Connection.DB();
+                Functions.Functions.gen = "Select count("+loadedid+".reserveddate) from "+loadedid+" where reserveddate = '" + dt + "' and reservationstatus = 'Approved'";
+                Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
+                Functions.Functions.reader = Functions.Functions.command.ExecuteReader();
+                while (Functions.Functions.reader.Read())
+                {
+                    count = Functions.Functions.reader.GetInt32(0);
 
-                 }
+                }
+                if (count == 0)
+                {
+                    confirm = false;
+                }
+                else
+                {
+                    confirm = true;
+                }
 
 
-                 Connection.Connection.conn.Close();
 
-             }
-             catch (Exception ex)
-             {
-                 MessageBox.Show(ex.Message);
-             }
-         }*/
+                Connection.Connection.conn.Close();
+
+
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            return confirm;
+        }
 
         private void Reservation_Load(object sender, EventArgs e)
         {
@@ -72,8 +86,8 @@ namespace Function_Hall_Reservation_System.Student
             //chkboxfill();
             cbstyleset();
             //filltxtbox();
-            dateTimePicker1.Format = DateTimePickerFormat.Time;
-            dateTimePicker3.Format = DateTimePickerFormat.Time;
+            //dateTimePicker1.CustomFormat = "YYYY-MM-DD hh:mm:ss";
+            //dateTimePicker3.Format = DateTimePickerFormat.Time;
             Checkapprove();
 
 
@@ -242,7 +256,7 @@ namespace Function_Hall_Reservation_System.Student
         }
 
 
-
+        
 
         public int ComputeDifference()
         {
@@ -256,7 +270,8 @@ namespace Function_Hall_Reservation_System.Student
 
             var list = new List<String>();
             var name = Form1.setfirstname + " " + Form1.setlastname;
-
+            DateTime datestart = dateTimePicker2.Value.Date + dateTimePicker1.Value.TimeOfDay;
+            DateTime dateend = dateTimePicker2.Value.Date + dateTimePicker3.Value.TimeOfDay;
             string month = "";
 
 
@@ -299,64 +314,44 @@ namespace Function_Hall_Reservation_System.Student
                 month = dateTimePicker2.Value.ToString("MMMM");
                 dateval = dateTimePicker2.Value.ToString("MM/dd/yyyy");
 
-                if (ComputeDifference() <= 3)
+                if (ComputeDifference() <=4)
                 {
                     MessageBox.Show("Please Note that you need to reserve 3 days before the desired reservation day\nReservation Day Count: " + ComputeDifference() + " Days Away.");
+                }
+                else
+                {
+                    MessageBox.Show("Schedule is open");
                 }
                 try
                 {
 
-                    /* Connection.Connection.DB();
-                     Functions.Functions.gen = "select " + loadedid + ".reserveddate from "+loadedid+"";
-                     Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
-                     Functions.Functions.reader = Functions.Functions.command.ExecuteReader();
-                     Functions.Functions.reader.Read();
+                    
 
-                    while(Functions.Functions.reader.Read())
-                     {
-                         loadedstr = Functions.Functions.reader.GetString(0);
-                         list.Add(loadedstr);
-
-                     }
-
-                     Connection.Connection.conn.Close();
-
-
-
-                     foreach (var item in list)
-                     {
-                         if (item.Equals(dateval))
-                         {
-                             newval = item;
-                         }
-                     */
-
-                    //Connection.Connection.conn.Close();
-
-                    if (DateTime.Now.Equals(dateTimePicker2.Value))
+                    if (checkdateconflict(dateTimePicker2.Value.Date) == true)
                     {
-
+                        MessageBox.Show("Line1");
                         Connection.Connection.DB();
-                        Functions.Functions.gen = "Select count(*) from " + loadedid + " where '" + dateTimePicker1.Value + "' between timestart and timestart and reservationstatus = 'Approved' or '" + dateTimePicker3.Value + "' between timestart and timeend and reservationstatus = 'Approved'and reservationstatus = 'Approved' or timestart between '" + dateTimePicker1.Value + "' and '" + dateTimePicker3.Value + "' and reservationstatus = 'Approved' or timeend between '" + dateTimePicker1.Value + "' and '" + dateTimePicker3.Value + "' and reservationstatus = 'Approved'";
+                        Functions.Functions.gen = "Select count(*) from " + loadedid + " where '" + dateTimePicker1.Value + "' between timestart and timestart and reservationstatus = 'Approved' or '" + dateTimePicker3.Value + "' between timestart and timeend and reservationstatus = 'Approved'and reservationstatus = 'Approved' or timestart between '" + datestart + "' and '" + dateend + "' and reservationstatus = 'Approved' or timeend between '" + dateTimePicker1.Value + "' and '" + dateTimePicker3.Value + "' and reservationstatus = 'Approved'";
 
                         Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
                         Functions.Functions.reader = Functions.Functions.command.ExecuteReader();
                         Functions.Functions.reader.Read();
-
+                        MessageBox.Show("Line2");
                         loadedcount = Functions.Functions.reader.GetInt32(0);
 
 
                         Connection.Connection.conn.Close();
                         if (loadedcount > 0)
                         {
+                            MessageBox.Show("Line3");
 
                             MessageBox.Show("Someone is using the facility within that time! \nCheck Calendar of Activities for approved schedules. ");
                         }
                         else
                         {
-
+                            MessageBox.Show("Line4");
                             Connection.Connection.DB();
-                            Functions.Functions.gen = "Insert Into " + loadedid + "(eventname,reservedby,reservationstatus,datereserved,checkedby,reservedequipments,approvedby,timestart,month,timeend,reserveddate,facilityname,readstatus,facilityid)values('" + txtEventname.Text + "','" + name + "','Pending','" + DateTime.Now.ToString() + "','N/A','" + allequip + "','N/A','" + dateTimePicker1.Value + "','" + month + " ','" + dateTimePicker3.Value + "','" + dateval + "','" + facilitycb.SelectedItem.ToString() + "',0,'"+loadedid+"')";
+                            Functions.Functions.gen = "Insert Into " + loadedid + "(eventname,reservedby,reservationstatus,datereserved,checkedby,reservedequipments,approvedby,timestart,month,timeend,reserveddate,facilityname,readstatus,facilityid)values('" + txtEventname.Text + "','" + name + "','Pending','" + DateTime.Now.ToShortDateString() + "','N/A','" + allequip + "','N/A','" + datestart + "','" + month + " ','" + dateend + "','" + dateTimePicker2.Value.Date + "','" + facilitycb.SelectedItem.ToString() + "',0,'"+loadedid+"')";
                             Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
 
                             Functions.Functions.command.ExecuteNonQuery();
@@ -367,13 +362,14 @@ namespace Function_Hall_Reservation_System.Student
                             this.Close();
                             res.Show();
                         }
-
+                        MessageBox.Show("Line4");
                     }
                     else
                     {
+                        MessageBox.Show("Line5");
                         MessageBox.Show("Reserving..");
                         Connection.Connection.DB();
-                        Functions.Functions.gen = "Insert Into " + loadedid + "(eventname,reservedby,reservationstatus,datereserved,checkedby,reservedequipments,approvedby,timestart,month,timeend,reserveddate,facilityname,readstatus,facilityid)values('" + txtEventname.Text + "','" + name + "','Pending','" + DateTime.Now.ToString() + "','N/A','" + allequip + "','N/A','" + dateTimePicker1.Value + "','" + month + " ','" + dateTimePicker3.Value + "','" + dateval + "','" + facilitycb.SelectedItem.ToString() +"',0,'"+loadedid+"')";
+                        Functions.Functions.gen = "Insert Into " + loadedid + "(eventname,reservedby,reservationstatus,datereserved,checkedby,reservedequipments,approvedby,timestart,month,timeend,reserveddate,facilityname,readstatus,facilityid)values('" + txtEventname.Text + "','" + name + "','Pending','" + DateTime.Now.ToShortDateString() + "','N/A','" + allequip + "','N/A','" + datestart + "','" + month + " ','" + dateend + "','" + dateTimePicker2.Value.Date + "','" + facilitycb.SelectedItem.ToString() +"',0,'"+loadedid+"')";
                         Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
 
                         Functions.Functions.command.ExecuteNonQuery();
@@ -407,7 +403,7 @@ namespace Function_Hall_Reservation_System.Student
         }
         public void filldata(String id)
         {
-            Functions.Functions.gen = "Select * from " + id + " where studentid = '" + Form1.setstudentid + "'";
+            Functions.Functions.gen = "Select * from " + id + " where reservedby = '" +name + "'";
             Functions.Functions.fill(Functions.Functions.gen, dataGridView1);
         }
 
