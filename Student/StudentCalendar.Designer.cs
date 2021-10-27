@@ -39,14 +39,20 @@ namespace Function_Hall_Reservation_System.Student
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
+            this.pbnotif = new System.Windows.Forms.PictureBox();
+            this.pbapprovenotif = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbnotif)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbapprovenotif)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.Controls.Add(this.pbapprovenotif);
+            this.panel1.Controls.Add(this.pbnotif);
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button2);
@@ -145,6 +151,28 @@ namespace Function_Hall_Reservation_System.Student
             this.label3.TabIndex = 3;
             this.label3.Text = "Calendar Of Activities";
             // 
+            // pbnotif
+            // 
+            this.pbnotif.Image = ((System.Drawing.Image)(resources.GetObject("pbnotif.Image")));
+            this.pbnotif.Location = new System.Drawing.Point(177, 85);
+            this.pbnotif.Name = "pbnotif";
+            this.pbnotif.Size = new System.Drawing.Size(39, 41);
+            this.pbnotif.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbnotif.TabIndex = 9;
+            this.pbnotif.TabStop = false;
+            // 
+            // pbapprovenotif
+            // 
+            this.pbapprovenotif.Image = ((System.Drawing.Image)(resources.GetObject("pbapprovenotif.Image")));
+            this.pbapprovenotif.Location = new System.Drawing.Point(177, 85);
+            this.pbapprovenotif.Name = "pbapprovenotif";
+            this.pbapprovenotif.Size = new System.Drawing.Size(39, 41);
+            this.pbapprovenotif.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbapprovenotif.TabIndex = 25;
+            this.pbapprovenotif.TabStop = false;
+            this.pbapprovenotif.Visible = false;
+            this.pbapprovenotif.Click += new System.EventHandler(this.pbapprovenotif_Click);
+            // 
             // StudentCalendar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -163,6 +191,8 @@ namespace Function_Hall_Reservation_System.Student
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbnotif)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbapprovenotif)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -179,5 +209,7 @@ namespace Function_Hall_Reservation_System.Student
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.PictureBox pbnotif;
+        private System.Windows.Forms.PictureBox pbapprovenotif;
     }
 }

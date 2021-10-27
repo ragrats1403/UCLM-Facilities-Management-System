@@ -48,16 +48,19 @@ namespace Function_Hall_Reservation_System.Student
             this.lblapprovedcount = new System.Windows.Forms.Label();
             this.facilitycb = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.pbapprovenotif = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbnotif)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbapprovenotif)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.Controls.Add(this.pbapprovenotif);
             this.panel1.Controls.Add(this.pbnotif);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button4);
@@ -260,6 +263,18 @@ namespace Function_Hall_Reservation_System.Student
             this.label1.TabIndex = 5;
             this.label1.Text = "Total Reservations";
             // 
+            // pbapprovenotif
+            // 
+            this.pbapprovenotif.Image = ((System.Drawing.Image)(resources.GetObject("pbapprovenotif.Image")));
+            this.pbapprovenotif.Location = new System.Drawing.Point(173, 85);
+            this.pbapprovenotif.Name = "pbapprovenotif";
+            this.pbapprovenotif.Size = new System.Drawing.Size(39, 41);
+            this.pbapprovenotif.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbapprovenotif.TabIndex = 25;
+            this.pbapprovenotif.TabStop = false;
+            this.pbapprovenotif.Visible = false;
+            this.pbapprovenotif.Click += new System.EventHandler(this.pbapprovenotif_Click);
+            // 
             // StudentDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -281,6 +296,7 @@ namespace Function_Hall_Reservation_System.Student
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbapprovenotif)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -306,5 +322,6 @@ namespace Function_Hall_Reservation_System.Student
         private System.Windows.Forms.Label lblapprovedcount;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pbnotif;
+        private System.Windows.Forms.PictureBox pbapprovenotif;
     }
 }

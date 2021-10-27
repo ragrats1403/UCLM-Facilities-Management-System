@@ -139,7 +139,7 @@ namespace Function_Hall_Reservation_System.WorkingStudent
                 richTextBox1.AppendText("\n");
                 richTextBox1.AppendText("\n");
 
-
+/*
                 richTextBox1.AppendText("       " + " Student Details " + "\n");
                 richTextBox1.AppendText("    ⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻" + "\n");
                 richTextBox1.AppendText("\n");
@@ -158,7 +158,7 @@ namespace Function_Hall_Reservation_System.WorkingStudent
                 richTextBox1.AppendText("\n");
                 richTextBox1.AppendText("\n");
                 richTextBox1.AppendText("\n");
-                richTextBox1.AppendText("\n");
+                richTextBox1.AppendText("\n");*/
                 richTextBox1.AppendText("       " + "Reservation Details" + "\n");
                 richTextBox1.AppendText("    ⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻" + "\n");
                 richTextBox1.AppendText("\n");
@@ -202,6 +202,7 @@ namespace Function_Hall_Reservation_System.WorkingStudent
         {
             try
             {
+                /*
                 useridTextBox.Text = dataGridView1[0, e.RowIndex].Value.ToString();
                 firstnameTextBox.Text = dataGridView1[1, e.RowIndex].Value.ToString();
                 lastnameTextBox.Text = dataGridView1[2, e.RowIndex].Value.ToString();
@@ -226,7 +227,7 @@ namespace Function_Hall_Reservation_System.WorkingStudent
                 txttimeend.Text = dataGridView1[22, e.RowIndex].Value.ToString();
                 txtreservedate.Text = dataGridView1[23, e.RowIndex].Value.ToString();
 
-
+                */
 
 
             }

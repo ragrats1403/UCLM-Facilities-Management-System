@@ -101,6 +101,8 @@ namespace Function_Hall_Reservation_System.Student
             this.facilitycb2 = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.pbnotif = new System.Windows.Forms.PictureBox();
+            this.pbapprovenotif = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPage2.SuspendLayout();
@@ -108,6 +110,8 @@ namespace Function_Hall_Reservation_System.Student
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbnotif)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbapprovenotif)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
@@ -125,6 +129,8 @@ namespace Function_Hall_Reservation_System.Student
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.Controls.Add(this.pbapprovenotif);
+            this.panel1.Controls.Add(this.pbnotif);
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button2);
@@ -852,6 +858,29 @@ namespace Function_Hall_Reservation_System.Student
             this.tabControl1.Size = new System.Drawing.Size(768, 355);
             this.tabControl1.TabIndex = 7;
             // 
+            // pbnotif
+            // 
+            this.pbnotif.Enabled = false;
+            this.pbnotif.Image = ((System.Drawing.Image)(resources.GetObject("pbnotif.Image")));
+            this.pbnotif.Location = new System.Drawing.Point(177, 85);
+            this.pbnotif.Name = "pbnotif";
+            this.pbnotif.Size = new System.Drawing.Size(39, 41);
+            this.pbnotif.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbnotif.TabIndex = 23;
+            this.pbnotif.TabStop = false;
+            // 
+            // pbapprovenotif
+            // 
+            this.pbapprovenotif.Image = ((System.Drawing.Image)(resources.GetObject("pbapprovenotif.Image")));
+            this.pbapprovenotif.Location = new System.Drawing.Point(177, 85);
+            this.pbapprovenotif.Name = "pbapprovenotif";
+            this.pbapprovenotif.Size = new System.Drawing.Size(39, 41);
+            this.pbapprovenotif.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbapprovenotif.TabIndex = 24;
+            this.pbapprovenotif.TabStop = false;
+            this.pbapprovenotif.Visible = false;
+            this.pbapprovenotif.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
             // Reservation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -876,6 +905,8 @@ namespace Function_Hall_Reservation_System.Student
             this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbnotif)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbapprovenotif)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -954,5 +985,7 @@ namespace Function_Hall_Reservation_System.Student
         private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.TextBox textBox11;
         private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.PictureBox pbnotif;
+        private System.Windows.Forms.PictureBox pbapprovenotif;
     }
 }
