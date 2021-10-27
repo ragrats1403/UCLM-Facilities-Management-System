@@ -45,7 +45,7 @@ namespace Function_Hall_Reservation_System.Student
         {
 
             Connection.Connection.DB();
-            Functions.Functions.gen = "select count(*) from "+idname+" where fhreservation.reservationstatus = 'Pending'";
+            Functions.Functions.gen = "select count(*) from "+idname+" where "+idname+".reservationstatus = 'Pending'";
             Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
             Functions.Functions.reader = Functions.Functions.command.ExecuteReader();
             while (Functions.Functions.reader.Read())
@@ -59,7 +59,7 @@ namespace Function_Hall_Reservation_System.Student
         {
 
             Connection.Connection.DB();
-            Functions.Functions.gen = "select count(*) from "+idname+" where fhreservation.reservationstatus = 'Approved'";
+            Functions.Functions.gen = "select count(*) from "+idname+" where "+idname+".reservationstatus = 'Approved'";
             Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
             Functions.Functions.reader = Functions.Functions.command.ExecuteReader();
             while (Functions.Functions.reader.Read())

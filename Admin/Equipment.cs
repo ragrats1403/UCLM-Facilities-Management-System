@@ -294,5 +294,10 @@ namespace Function_Hall_Reservation_System.Admin
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

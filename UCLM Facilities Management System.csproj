@@ -133,12 +133,6 @@
     <Compile Include="Student\StudentCalendar.Designer.cs">
       <DependentUpon>StudentCalendar.cs</DependentUpon>
     </Compile>
-    <Compile Include="WorkingStudent\Accounts.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="WorkingStudent\Accounts.Designer.cs">
-      <DependentUpon>Accounts.cs</DependentUpon>
-    </Compile>
     <Compile Include="WorkingStudent\CalendarOfActivities.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -201,9 +195,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Student\StudentCalendar.resx">
       <DependentUpon>StudentCalendar.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="WorkingStudent\Accounts.resx">
-      <DependentUpon>Accounts.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WorkingStudent\CalendarOfActivities.resx">
       <DependentUpon>CalendarOfActivities.cs</DependentUpon>

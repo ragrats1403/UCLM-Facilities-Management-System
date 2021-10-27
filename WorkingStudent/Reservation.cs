@@ -111,12 +111,7 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             reservation.Show();
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            Accounts accounts = new Accounts();
-            this.Visible = false;
-            accounts.Show();
-        }
+        
 
         private void button4_Click(object sender, EventArgs e)
         {
