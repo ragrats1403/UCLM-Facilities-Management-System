@@ -137,9 +137,22 @@ namespace Function_Hall_Reservation_System.WorkingStudent
         {
             try
             {
-                txtequipmentid.Text = dataGridView1[0, e.RowIndex].Value.ToString();
+                /*txtequipmentid.Text = dataGridView1[0, e.RowIndex].Value.ToString();
                 txtequipmentname.Text = dataGridView1[1, e.RowIndex].Value.ToString();
                 //cmbstatus.Text = dataGridView1[2, e.RowIndex].Value.ToString();
+                this.tabControl1.SelectedIndex = 1;
+                label13.Visible = true;
+                txtequipmentid.Visible = true;
+                txtequipmentid.Enabled = false;
+                txtequipmentname.Enabled = false;
+                button8.Visible = true;
+                button9.Visible = true;
+                button7.Visible = false;*/
+                txtequipmentid.Text = dataGridView1[0, e.RowIndex].Value.ToString();
+                txtequipmentname.Text = dataGridView1[1, e.RowIndex].Value.ToString();
+                txtquantity.Text = dataGridView1[2, e.RowIndex].Value.ToString();
+                txtDefective.Text = dataGridView1[3, e.RowIndex].Value.ToString();
+                txttotalqty.Text = dataGridView1[4, e.RowIndex].Value.ToString();
                 this.tabControl1.SelectedIndex = 1;
                 label13.Visible = true;
                 txtequipmentid.Visible = true;
@@ -163,7 +176,7 @@ namespace Function_Hall_Reservation_System.WorkingStudent
         private void button8_Click(object sender, EventArgs e)
         {
             string defect = txtDefective.Text;
-            string total = txtTotal.Text;
+            string total = txttotalqty.Text;
             string avail = txtquantity.Text;
             int def = Int32.Parse(defect);
             int to = Int32.Parse(total);
@@ -346,6 +359,11 @@ namespace Function_Hall_Reservation_System.WorkingStudent
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void txttotalqty_TextChanged(object sender, EventArgs e)
         {
 
         }

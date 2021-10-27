@@ -109,12 +109,25 @@ namespace Function_Hall_Reservation_System.Admin
                 txtcheckedby.Text = dataGridView1[5, e.RowIndex].Value.ToString();
                 txtapprovedby.Text = dataGridView1[6, e.RowIndex].Value.ToString();
                 //txtstudentid.Text = dataGridView1[7, e.RowIndex].Value.ToString();
+                // txtstudentname.Text = dataGridView1[8, e.RowIndex].Value.ToString();
+                txtreservedequipments.Text = dataGridView1[7, e.RowIndex].Value.ToString();
+                txttimestart.Text = dataGridView1[8, e.RowIndex].Value.ToString();
+                txtreservedate.Text = dataGridView1[9, e.RowIndex].Value.ToString();
+                txttimeend.Text = dataGridView1[10, e.RowIndex].Value.ToString();
+                /*txtreservationid.Text = dataGridView1[0, e.RowIndex].Value.ToString();
+                txteventname.Text = dataGridView1[1, e.RowIndex].Value.ToString();
+                txtreservedby.Text = dataGridView1[2, e.RowIndex].Value.ToString();
+                cmbstatus.Text = dataGridView1[3, e.RowIndex].Value.ToString();
+                txtdatereserved.Text = dataGridView1[4, e.RowIndex].Value.ToString();
+                txtcheckedby.Text = dataGridView1[5, e.RowIndex].Value.ToString();
+                txtapprovedby.Text = dataGridView1[6, e.RowIndex].Value.ToString();
+                //txtstudentid.Text = dataGridView1[7, e.RowIndex].Value.ToString();
                 //txtstudentname.Text = dataGridView1[8, e.RowIndex].Value.ToString();
                 txtreservedequipments.Text = dataGridView1[9, e.RowIndex].Value.ToString();
                 //txtreservedate.Text = dataGridView1[10, e.RowIndex].Value.ToString();
                 txttimestart.Text = dataGridView1[10, e.RowIndex].Value.ToString();
                 txttimeend.Text = dataGridView1[12, e.RowIndex].Value.ToString();
-                txtreservedate.Text = dataGridView1[13, e.RowIndex].Value.ToString();
+                txtreservedate.Text = dataGridView1[13, e.RowIndex].Value.ToString();*/
 
                 this.tabControl1.SelectedIndex = 1;
 
@@ -130,7 +143,8 @@ namespace Function_Hall_Reservation_System.Admin
             try
             {
                 Connection.Connection.DB();
-                Functions.Functions.gen = "UPDATE fhreservation SET fhreservationstatus='" + cmbstatus.Text + "',approvedby = '"+Form1.setfullname+"' where reservationid= '"+txtreservationid.Text+"'";
+                Functions.Functions.gen = "UPDATE " + loadedid + " SET reservationstatus='" + cmbstatus.Text + "',checkedby='" + Form1.setfullname + "' where reservationid = '" + txtreservationid.Text + "'";
+                /*Functions.Functions.gen = "UPDATE fhreservation SET fhreservationstatus='" + cmbstatus.Text + "',approvedby = '"+Form1.setfullname+"' where reservationid= '"+txtreservationid.Text+"'";*/
                 Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
                 Functions.Functions.command.ExecuteNonQuery();
                 MessageBox.Show("Successfully Updated!", "fhreservation", MessageBoxButtons.OK);
@@ -164,6 +178,11 @@ namespace Function_Hall_Reservation_System.Admin
         }
 
         private void tabPage2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void facilitycb_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

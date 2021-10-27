@@ -350,5 +350,10 @@ namespace Function_Hall_Reservation_System.Admin
         {
 
         }
+
+        private void txttotalqty_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -295,6 +295,7 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             this.txttimerend.Name = "txttimerend";
             this.txttimerend.Size = new System.Drawing.Size(133, 28);
             this.txttimerend.TabIndex = 51;
+            this.txttimerend.TextChanged += new System.EventHandler(this.txttimerend_TextChanged);
             // 
             // label15
             // 

@@ -155,7 +155,7 @@ namespace Function_Hall_Reservation_System.Admin
             this.txttotalqty.Name = "txttotalqty";
             this.txttotalqty.Size = new System.Drawing.Size(133, 28);
             this.txttotalqty.TabIndex = 34;
-            this.txttotalqty.Visible = false;
+            this.txttotalqty.TextChanged += new System.EventHandler(this.txttotalqty_TextChanged);
             // 
             // label1
             // 
@@ -199,7 +199,6 @@ namespace Function_Hall_Reservation_System.Admin
             this.label69.Size = new System.Drawing.Size(124, 24);
             this.label69.TabIndex = 30;
             this.label69.Text = "Total Quantity";
-            this.label69.Visible = false;
             this.label69.Click += new System.EventHandler(this.txtquatity_Click);
             // 
             // button9

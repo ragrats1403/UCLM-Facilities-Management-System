@@ -177,13 +177,13 @@ namespace Function_Hall_Reservation_System.WorkingStudent
                 cmbstatus.Text = dataGridView1[3, e.RowIndex].Value.ToString();
                 txtdatereserved.Text = dataGridView1[4, e.RowIndex].Value.ToString();
                 txtcheckedby.Text = dataGridView1[5, e.RowIndex].Value.ToString();
-                txtapprovedby.Text = dataGridView1[6, e.RowIndex].Value.ToString(); 
+                txtapprovedby.Text = dataGridView1[6, e.RowIndex].Value.ToString();
                 //txtstudentid.Text = dataGridView1[7, e.RowIndex].Value.ToString();
                // txtstudentname.Text = dataGridView1[8, e.RowIndex].Value.ToString();
-                txtreservedequipments.Text = dataGridView1[9, e.RowIndex].Value.ToString();
-                txtreservedate.Text = dataGridView1[10, e.RowIndex].Value.ToString();
-                txttimestart.Text = dataGridView1[11, e.RowIndex].Value.ToString();
-                txttimerend.Text = dataGridView1[12, e.RowIndex].Value.ToString();
+                txtreservedequipments.Text = dataGridView1[7, e.RowIndex].Value.ToString();
+                txttimestart.Text = dataGridView1[8, e.RowIndex].Value.ToString();
+                txtreservedate.Text = dataGridView1[9, e.RowIndex].Value.ToString();
+                txttimerend.Text = dataGridView1[10, e.RowIndex].Value.ToString();
 
                 //btnRegister.Enabled = false;
                 //btnUpdate.Enabled = true;
@@ -270,6 +270,11 @@ namespace Function_Hall_Reservation_System.WorkingStudent
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void txttimerend_TextChanged(object sender, EventArgs e)
         {
 
         }
