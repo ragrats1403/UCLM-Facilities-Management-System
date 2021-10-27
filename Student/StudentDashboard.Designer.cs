@@ -57,6 +57,7 @@ namespace Function_Hall_Reservation_System.Student
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.button2);
@@ -250,12 +251,13 @@ namespace Function_Hall_Reservation_System.Student
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(232, 39);
+            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button5.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.button5.Location = new System.Drawing.Point(172, 104);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(16, 22);
+            this.button5.Size = new System.Drawing.Size(40, 22);
             this.button5.TabIndex = 6;
-            this.button5.Text = "button5";
-            this.button5.UseVisualStyleBackColor = true;
+            this.button5.UseVisualStyleBackColor = false;
             // 
             // StudentDashboard
             // 
@@ -263,7 +265,6 @@ namespace Function_Hall_Reservation_System.Student
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
             this.ClientSize = new System.Drawing.Size(1049, 450);
-            this.Controls.Add(this.button5);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel1);

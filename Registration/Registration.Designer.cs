@@ -98,6 +98,7 @@ namespace Function_Hall_Reservation_System.Registration
             this.txtPassword.Location = new System.Drawing.Point(312, 310);
             this.txtPassword.Multiline = true;
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(223, 31);
             this.txtPassword.TabIndex = 34;
             // 

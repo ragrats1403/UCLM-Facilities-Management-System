@@ -27,6 +27,7 @@ namespace Function_Hall_Reservation_System.Student
         public int loadedcount = 0;
         public string newval = "";
         public string cbval = "";
+        
         public Reservation()
         {
             InitializeComponent();
