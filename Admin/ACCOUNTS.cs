@@ -29,7 +29,7 @@ namespace Function_Hall_Reservation_System.Admin
         }
         public void Filldata()
         {
-            Functions.Functions.gen = "Select * from users";
+            Functions.Functions.gen = "Select firstname AS [First Name], lastname AS [Last Name], dateregistered as [Date Registered], studentid as [Student ID], roleid AS [Role ID] from users";
             Functions.Functions.fill(Functions.Functions.gen, dataGridView1);
         }
        
