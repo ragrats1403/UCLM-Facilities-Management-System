@@ -119,7 +119,7 @@ namespace Function_Hall_Reservation_System.Student
 
 
                 }
-                if (cmbeq1.Items.Count < 6)
+                if (cmbeq1.Items.Count <6)
                 {
                     cmbeq7.Visible = false;
                     cmbeq8.Visible = false;
@@ -133,6 +133,12 @@ namespace Function_Hall_Reservation_System.Student
                     lbleq10.Visible = false;
                     lbleq11.Visible = false;
                     lbleq12.Visible = false;
+                    textBox12.Visible = false;
+                    textBox11.Visible = false;
+                    textBox10.Visible = false;
+                    textBox9.Visible = false;
+                    textBox8.Visible = false;
+                    textBox7.Visible = false;
 
                 }
                 else
@@ -149,6 +155,12 @@ namespace Function_Hall_Reservation_System.Student
                     lbleq10.Visible = true;
                     lbleq11.Visible = true;
                     lbleq12.Visible = true;
+                    textBox12.Visible = true;
+                    textBox11.Visible = true;
+                    textBox10.Visible = true;
+                    textBox9.Visible = true;
+                    textBox8.Visible = true;
+                    textBox7.Visible = true;
                 }
 
                 Connection.Connection.conn.Close();
@@ -478,6 +490,13 @@ namespace Function_Hall_Reservation_System.Student
             cmbeq4.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbeq5.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbeq6.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbeq7.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbeq8.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbeq9.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbeq10.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbeq11.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbeq12.DropDownStyle = ComboBoxStyle.DropDownList;
+
 
         }
         private void facilitycb_SelectedIndexChanged(object sender, EventArgs e)

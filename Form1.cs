@@ -63,9 +63,9 @@ namespace Function_Hall_Reservation_System
                             var name = setfirstname + " " + setlastname;
                             setfullname = name;
                             //open the next form
-                            Student.StudentCalendar student = new Student.StudentCalendar();
+                            Student.StudentDashboard db = new Student.StudentDashboard();
                             this.Visible = false;//closing the form
-                            student.Show();//shows the next form
+                            db.Show();//shows the next form
 
                         }
                         else if (roleid == 2)

@@ -26,8 +26,9 @@ namespace Function_Hall_Reservation_System.Student
         {
             //filldata();
             Checkapprove();
+            lblfullname.Text = name;
         }
-        
+
 
         public void notificationtab()
         {
