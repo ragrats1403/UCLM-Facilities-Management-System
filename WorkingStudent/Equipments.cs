@@ -139,7 +139,7 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             {
                 txtequipmentid.Text = dataGridView1[0, e.RowIndex].Value.ToString();
                 txtequipmentname.Text = dataGridView1[1, e.RowIndex].Value.ToString();
-                cmbstatus.Text = dataGridView1[2, e.RowIndex].Value.ToString();
+                //cmbstatus.Text = dataGridView1[2, e.RowIndex].Value.ToString();
                 this.tabControl1.SelectedIndex = 1;
                 label13.Visible = true;
                 txtequipmentid.Visible = true;
@@ -234,7 +234,7 @@ namespace Function_Hall_Reservation_System.WorkingStudent
                 {
 
                     Connection.Connection.DB();
-                    Functions.Functions.gen = "Insert Into "+loadedid+"(equipmentname,equipmentstatus,availableqty,defectiveqty,totalqty)values('" + txtequipmentname.Text + "','" + cmbstatus.Text + "','"+ txtquantity.Text+"','0','"+txtquantity.Text+"')";
+                    Functions.Functions.gen = "Insert Into "+loadedid+ "(equipmentname,defectiveqty,availableqty,totalqty)values('" + txtequipmentname.Text + "','" + txtDefective.Text + "','"+ txtquantity.Text+"','0','"+txtquantity.Text+"')";
                     Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
 
                     Functions.Functions.command.ExecuteNonQuery();
