@@ -124,7 +124,7 @@ namespace Function_Hall_Reservation_System.Admin
             {
                 txtequipmentid.Text = dataGridView1[0, e.RowIndex].Value.ToString();
                 txtequipmentname.Text = dataGridView1[1, e.RowIndex].Value.ToString();
-                cmbstatus.Text = dataGridView1[2, e.RowIndex].Value.ToString();
+                //cmbstatus.Text = dataGridView1[2, e.RowIndex].Value.ToString();
                 this.tabControl1.SelectedIndex = 1;
                 label13.Visible = true;
                 txtequipmentid.Visible = true;
@@ -132,6 +132,7 @@ namespace Function_Hall_Reservation_System.Admin
                 txtequipmentname.Enabled = false;
                 button8.Visible = true;
                 button9.Visible = true;
+                button5.Visible = false;
             }
             catch (Exception ex)
             {
@@ -203,7 +204,7 @@ namespace Function_Hall_Reservation_System.Admin
                 {
 
                     Connection.Connection.DB();
-                    Functions.Functions.gen = "Insert Into " + loadedid + "(equipmentname,equipmentstatus,availableqty,defectiveqty,totalqty)values('" + txtequipmentname.Text + "','" + cmbstatus.Text + "','" + txtquantity.Text + "','0','" + txtquantity.Text + "')";
+                    Functions.Functions.gen = "Insert Into " + loadedid + "(equipmentname,defectiveqty,availableqty,totalqty)values('" + txtequipmentname.Text + "','" + txtDefective.Text + "','" + txtquantity.Text + "','0','" + txtquantity.Text + "')";
                     Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
 
                     Functions.Functions.command.ExecuteNonQuery();
@@ -293,6 +294,31 @@ namespace Function_Hall_Reservation_System.Admin
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void txt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void cmbstatus_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtequipmentname_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtquantity_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
