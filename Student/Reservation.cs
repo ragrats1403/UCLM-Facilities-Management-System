@@ -28,6 +28,8 @@ namespace Function_Hall_Reservation_System.Student
         public string newval = "";
         public string cbval = "";
         
+        
+
         public Reservation()
         {
             InitializeComponent();
@@ -71,6 +73,7 @@ namespace Function_Hall_Reservation_System.Student
             filltxtbox();
             dateTimePicker1.Format = DateTimePickerFormat.Time;
             dateTimePicker3.Format = DateTimePickerFormat.Time;
+            
 
         }
         public void eqfill(String id)
@@ -230,19 +233,26 @@ namespace Function_Hall_Reservation_System.Student
 
         }
 
-       /* public void CheckConflict()
+        /* public void CheckConflict()
+         {
+
+
+
+
+             Functions.Functions.gen = "Select * FROM reservation WHERE timestart >= '" + dateTimePicker1.Value + "' AND timeend <= '" + dateTimePicker3.Value + "'";
+             Functions.Functions.fill(Functions.Functions.gen, dataGridView2);
+
+         }
+
+         */
+        
+
+        public void ComputeDifference()
         {
-
-            
-            
-            
-            Functions.Functions.gen = "Select * FROM reservation WHERE timestart >= '" + dateTimePicker1.Value + "' AND timeend <= '" + dateTimePicker3.Value + "'";
-            Functions.Functions.fill(Functions.Functions.gen, dataGridView2);
-
+            TimeSpan diff = DateTime.Now - dateTimePicker2.Value;
+            int days = diff.Days;
+            MessageBox.Show("Total Days:" + days);
         }
-
-        */
-
         private void btnrequest_Click(object sender, EventArgs e)
         {
 
@@ -266,7 +276,7 @@ namespace Function_Hall_Reservation_System.Student
             try
             {
 
-
+                ComputeDifference();
                 selectedequip.Add(eqres1);
                 selectedequip.Add(eqres2);
                 selectedequip.Add(eqres3);
@@ -325,13 +335,13 @@ namespace Function_Hall_Reservation_System.Student
                         if (loadedcount > 0)
                         {
                            
-                            MessageBox.Show("Someone is using the facility within that time! Number of Conflicts: " + loadedcount);
+                            MessageBox.Show("Someone is using the facility within that time! \nCheck Calendar of Activities for approved schedules. ");
                         }
                         else
                         {
-                            MessageBox.Show("Reserving..");
+                            
                             Connection.Connection.DB();
-                            Functions.Functions.gen = "Insert Into " + loadedid + "(eventname,reservedby,reservationstatus,datereserved,checkedby,studentid,studentname,reservedequipments,approvedby,timestart,month,timeend,reserveddate,facilityname)values('" + txtEventname.Text + "','" + name + "','Pending','" + DateTime.Now.ToString() + "','N/A','" + txtStudentid.Text + "','" + txtStudentName.Text + "','" + allequip + "','N/A','" + dateTimePicker1.Value + "','" + month + " ','" + dateTimePicker3.Value + "','" + dateval + "','" + facilitycb.SelectedItem.ToString() + "')";
+                            Functions.Functions.gen = "Insert Into " + loadedid + "(eventname,reservedby,reservationstatus,datereserved,checkedby,reservedequipments,approvedby,timestart,month,timeend,reserveddate,facilityname)values('" + txtEventname.Text + "','" + name + "','Pending','" + DateTime.Now.ToString() + "','N/A','" + allequip + "','N/A','" + dateTimePicker1.Value + "','" + month + " ','" + dateTimePicker3.Value + "','" + dateval + "','" + facilitycb.SelectedItem.ToString() + "')";
                             Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
 
                             Functions.Functions.command.ExecuteNonQuery();

@@ -14,6 +14,7 @@ namespace Function_Hall_Reservation_System.Admin
     {
         public static string idname;
         public string loadedid;
+        public string loadedeq;
 
         public Equipment()
         {
@@ -104,14 +105,10 @@ namespace Function_Hall_Reservation_System.Admin
 
         private void Equipment_Load(object sender, EventArgs e)
         {
-            Filldata();
+            
             lblfullname.Text = Form1.setfullname;
         }
-        public void Filldata()
-        {
-            Functions.Functions.gen = "Select * from fhequipments";
-            Functions.Functions.fill(Functions.Functions.gen, dataGridView1);
-        }
+        
 
         private void label3_Click(object sender, EventArgs e)
         {
@@ -124,7 +121,9 @@ namespace Function_Hall_Reservation_System.Admin
             {
                 txtequipmentid.Text = dataGridView1[0, e.RowIndex].Value.ToString();
                 txtequipmentname.Text = dataGridView1[1, e.RowIndex].Value.ToString();
-                //cmbstatus.Text = dataGridView1[2, e.RowIndex].Value.ToString();
+                txtquantity.Text = dataGridView1[2, e.RowIndex].Value.ToString();
+                txtDefective.Text = dataGridView1[3, e.RowIndex].Value.ToString();
+                txttotalqty.Text = dataGridView1[4, e.RowIndex].Value.ToString();
                 this.tabControl1.SelectedIndex = 1;
                 label13.Visible = true;
                 txtequipmentid.Visible = true;
@@ -133,6 +132,7 @@ namespace Function_Hall_Reservation_System.Admin
                 button8.Visible = true;
                 button9.Visible = true;
                 button5.Visible = false;
+                
             }
             catch (Exception ex)
             {
@@ -142,10 +142,18 @@ namespace Function_Hall_Reservation_System.Admin
 
         private void button8_Click(object sender, EventArgs e)
         {
+            string eq = txtequipmentname.Text;
+            string defect = txtDefective.Text;
+            string total = txttotalqty.Text;
+            string avail = txtquantity.Text;
+            int def = Int32.Parse(defect);
+            int to = Int32.Parse(total);
+
+            int av = Int32.Parse(avail);
             try
             {
-                Connection.Connection.DB();
-                Functions.Functions.gen = "UPDATE " + loadedid + " SET availableqty = " + txtquantity.Text + ", totalqty = " + txtquantity.Text + " where equipmentname = '" + txtequipmentname.Text + "'";
+                Connection.Connection.DB(); 
+                Functions.Functions.gen = "UPDATE " + loadedeq + " SET availableqty = " + av + ", totalqty = " + totalqty(av,def) + ",defectiveqty = "+Int32.Parse(txtDefective.Text)+" where equipmentname = '" + txtequipmentname.Text + "'";
                 Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
                 Functions.Functions.command.ExecuteNonQuery();
                 MessageBox.Show("Successfully Updated Equipments Status!", "Equipments", MessageBoxButtons.OK);
@@ -170,7 +178,7 @@ namespace Function_Hall_Reservation_System.Admin
             // Connection.Connection.conn.Open();
             if (Connection.Connection.conn.State == System.Data.ConnectionState.Open)
             {
-                Functions.Functions.gen = "Select * from fhequipments where equipmentname='" + txtequipmentname.Text + "'";
+                Functions.Functions.gen = "Select * from "+loadedeq +" where equipmentname='" + txtequipmentname.Text + "'";
                 Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
                 Functions.Functions.command.Connection = Connection.Connection.conn;
                 Functions.Functions.command.CommandType = System.Data.CommandType.Text;
@@ -185,16 +193,31 @@ namespace Function_Hall_Reservation_System.Admin
 
             return false;
         }
+        public int subtractqty(int total, int defect)
+        {
+
+            return total - defect;
+        }
+
+        public int totalqty(int avail, int defect)
+        {
+
+            return avail + defect;
+        }
         private void button5_Click(object sender, EventArgs e)
         {
             string eq = txtequipmentname.Text;
+           
             try
             {
-
+                
+                
+                
 
                 if (chkdup(eq))
                 {
-                    MessageBox.Show("Equipment already exists with Equipment Name: " + txtequipmentname.Text, "fhequipments", MessageBoxButtons.OK);
+                   
+                    MessageBox.Show("Equipment already exists with Equipment Name: " + txtequipmentname.Text, "" + loadedeq, MessageBoxButtons.OK);
                     this.Close();
                     Equipment equ = new Equipment();
                     equ.Show();
@@ -202,9 +225,9 @@ namespace Function_Hall_Reservation_System.Admin
                 }
                 else
                 {
-
+                    
                     Connection.Connection.DB();
-                    Functions.Functions.gen = "Insert Into " + loadedid + "(equipmentname,defectiveqty,availableqty,totalqty)values('" + txtequipmentname.Text + "','" + txtDefective.Text + "','" + txtquantity.Text + "','0','" + txtquantity.Text + "')";
+                    Functions.Functions.gen = "Insert Into " + loadedeq + "(equipmentname,defectiveqty,availableqty,totalqty)values('" + txtequipmentname.Text + "'," +Int32.Parse(txtDefective.Text)+ ","+Int32.Parse(txtquantity.Text)+"," + totalqty(Int32.Parse(txtquantity.Text),Int32.Parse(txtDefective.Text)) + ")";
                     Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
 
                     Functions.Functions.command.ExecuteNonQuery();
@@ -222,16 +245,18 @@ namespace Function_Hall_Reservation_System.Admin
                 MessageBox.Show(ex.Message);
             }
         }
+        
 
         private void button9_Click(object sender, EventArgs e)
         {
+
             try
             {
                 Connection.Connection.DB();
                 var gen = MessageBox.Show("Are you sure you want to delete this Equipment?", "Delete equipment", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (gen == DialogResult.Yes)
                 {
-                    Functions.Functions.gen = "Delete from " + loadedid + " where equipmentname ='" + txtequipmentname.Text + "'";
+                    Functions.Functions.gen = "Delete from " + loadedeq + " where equipmentname ='" + txtequipmentname.Text + "'";
                     Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
                     Functions.Functions.command.ExecuteNonQuery();
                     Connection.Connection.conn.Close();
@@ -267,6 +292,7 @@ namespace Function_Hall_Reservation_System.Admin
                     //MessageBox.Show("Debug Line for Functionhall selection Executed");
                     Fillfhequipmentdata();
                     loadedid = idname;
+                    loadedeq = "fhequipments";
                 }
                 else if (facilitycb.SelectedItem.ToString() == "Auditorium")
                 {
@@ -274,12 +300,15 @@ namespace Function_Hall_Reservation_System.Admin
                     //MessageBox.Show("Debug Line for Auditorium Executed");
                     Fillaudequipmentdata();
                     loadedid = idname;
+                    loadedeq = "audequipments";
                 }
                 else if (facilitycb.SelectedItem.ToString() == "New AVR")
                 {
                     //MessageBox.Show("Debug Line for New AVR Executed");
                     Fillnaequipmentdata();
                     loadedid = idname;
+
+                    loadedeq = "naequipments";
                 }
 
                 else if (facilitycb.SelectedItem.ToString() == "Old AVR")
@@ -288,6 +317,7 @@ namespace Function_Hall_Reservation_System.Admin
                     //MessageBox.Show("Debug Line for Old AVR Executed");
                     Filloaequipmentdata();
                     loadedid = idname;
+                    loadedeq = "oaequipments";
                 }
             }
             catch (Exception ex)

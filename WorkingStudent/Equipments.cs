@@ -162,10 +162,17 @@ namespace Function_Hall_Reservation_System.WorkingStudent
 
         private void button8_Click(object sender, EventArgs e)
         {
+            string defect = txtDefective.Text;
+            string total = txtTotal.Text;
+            string avail = txtquantity.Text;
+            int def = Int32.Parse(defect);
+            int to = Int32.Parse(total);
+
+            int av = Int32.Parse(avail);
             try
             {
                 Connection.Connection.DB();
-                Functions.Functions.gen = "UPDATE "+loadedid+" SET availableqty = "+txtquantity.Text+", totalqty = "+txtquantity.Text+" where equipmentname = '"+txtequipmentname.Text+"'";
+                Functions.Functions.gen = "UPDATE " + loadedid + " SET availableqty = " + av + ", totalqty = " + totalqty(av, def) + ",defectiveqty = " + Int32.Parse(txtDefective.Text) + " where equipmentname = '" + txtequipmentname.Text + "'";
                 Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
                 Functions.Functions.command.ExecuteNonQuery();
                 MessageBox.Show("Successfully Updated Equipments Status!", "equipments", MessageBoxButtons.OK);
@@ -192,13 +199,13 @@ namespace Function_Hall_Reservation_System.WorkingStudent
 
         public bool chkdup(string eqname)
         {
-           
+
             int dupcount = 0;
             Connection.Connection.DB();
-           // Connection.Connection.conn.Open();
+            // Connection.Connection.conn.Open();
             if (Connection.Connection.conn.State == System.Data.ConnectionState.Open)
             {
-                Functions.Functions.gen = "Select * from "+loadedid+" where equipmentname='" + txtequipmentname.Text + "'";
+                Functions.Functions.gen = "Select * from " + loadedid + " where equipmentname='" + txtequipmentname.Text + "'";
                 Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
                 Functions.Functions.command.Connection = Connection.Connection.conn;
                 Functions.Functions.command.CommandType = System.Data.CommandType.Text;
@@ -210,8 +217,19 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             if (dupcount > 0)
                 return true;
 
-          
+
             return false;
+        }
+        public int subtractqty(int total, int defect)
+        {
+
+            return total - defect;
+        }
+
+        public int totalqty(int avail, int defect)
+        {
+
+            return avail + defect;
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -234,7 +252,7 @@ namespace Function_Hall_Reservation_System.WorkingStudent
                 {
 
                     Connection.Connection.DB();
-                    Functions.Functions.gen = "Insert Into "+loadedid+ "(equipmentname,defectiveqty,availableqty,totalqty)values('" + txtequipmentname.Text + "','" + txtDefective.Text + "','"+ txtquantity.Text+"','0','"+txtquantity.Text+"')";
+                    Functions.Functions.gen = "Insert Into " + loadedid + "(equipmentname,defectiveqty,availableqty,totalqty)values('" + txtequipmentname.Text + "'," + Int32.Parse(txtDefective.Text) + "," + Int32.Parse(txtquantity.Text) + "," + totalqty(Int32.Parse(txtquantity.Text), Int32.Parse(txtDefective.Text)) + ")";
                     Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
 
                     Functions.Functions.command.ExecuteNonQuery();
@@ -261,7 +279,7 @@ namespace Function_Hall_Reservation_System.WorkingStudent
                 var gen = MessageBox.Show("Are you sure you want to delete this Equipment?", "Delete equipment", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (gen == DialogResult.Yes)
                 {
-                    Functions.Functions.gen = "Delete from "+loadedid+" where equipmentname ='" + txtequipmentname.Text + "'";
+                    Functions.Functions.gen = "Delete from " + loadedid + " where equipmentname ='" + txtequipmentname.Text + "'";
                     Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
                     Functions.Functions.command.ExecuteNonQuery();
                     Connection.Connection.conn.Close();
