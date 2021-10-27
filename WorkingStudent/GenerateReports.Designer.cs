@@ -33,7 +33,6 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             System.Windows.Forms.Label approvedbyLabel;
             System.Windows.Forms.Label checkedbyLabel;
             System.Windows.Forms.Label datereservedLabel;
-            System.Windows.Forms.Label reservationstatusLabel;
             System.Windows.Forms.Label reservedbyLabel;
             System.Windows.Forms.Label eventnameLabel;
             System.Windows.Forms.Label reservationidLabel;
@@ -41,6 +40,7 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             System.Windows.Forms.Label label5;
             System.Windows.Forms.Label label4;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GenerateReports));
+            System.Windows.Forms.Label label1;
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button6 = new System.Windows.Forms.Button();
@@ -60,7 +60,6 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             this.reservationidTextBox = new System.Windows.Forms.TextBox();
             this.eventnameTextBox = new System.Windows.Forms.TextBox();
             this.reservedbyTextBox = new System.Windows.Forms.TextBox();
-            this.reservationstatusTextBox = new System.Windows.Forms.TextBox();
             this.checkedbyTextBox = new System.Windows.Forms.TextBox();
             this.approvedbyTextBox = new System.Windows.Forms.TextBox();
             this.reservedequipmentsTextBox = new System.Windows.Forms.TextBox();
@@ -70,17 +69,18 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.txtFacility = new System.Windows.Forms.TextBox();
             reservedequipmentsLabel = new System.Windows.Forms.Label();
             approvedbyLabel = new System.Windows.Forms.Label();
             checkedbyLabel = new System.Windows.Forms.Label();
             datereservedLabel = new System.Windows.Forms.Label();
-            reservationstatusLabel = new System.Windows.Forms.Label();
             reservedbyLabel = new System.Windows.Forms.Label();
             eventnameLabel = new System.Windows.Forms.Label();
             reservationidLabel = new System.Windows.Forms.Label();
             label6 = new System.Windows.Forms.Label();
             label5 = new System.Windows.Forms.Label();
             label4 = new System.Windows.Forms.Label();
+            label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -91,7 +91,7 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             // reservedequipmentsLabel
             // 
             reservedequipmentsLabel.AutoSize = true;
-            reservedequipmentsLabel.Location = new System.Drawing.Point(325, 253);
+            reservedequipmentsLabel.Location = new System.Drawing.Point(6, 355);
             reservedequipmentsLabel.Name = "reservedequipmentsLabel";
             reservedequipmentsLabel.Size = new System.Drawing.Size(138, 17);
             reservedequipmentsLabel.TabIndex = 104;
@@ -100,7 +100,7 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             // approvedbyLabel
             // 
             approvedbyLabel.AutoSize = true;
-            approvedbyLabel.Location = new System.Drawing.Point(325, 222);
+            approvedbyLabel.Location = new System.Drawing.Point(6, 328);
             approvedbyLabel.Name = "approvedbyLabel";
             approvedbyLabel.Size = new System.Drawing.Size(89, 17);
             approvedbyLabel.TabIndex = 98;
@@ -109,7 +109,7 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             // checkedbyLabel
             // 
             checkedbyLabel.AutoSize = true;
-            checkedbyLabel.Location = new System.Drawing.Point(17, 360);
+            checkedbyLabel.Location = new System.Drawing.Point(6, 297);
             checkedbyLabel.Name = "checkedbyLabel";
             checkedbyLabel.Size = new System.Drawing.Size(82, 17);
             checkedbyLabel.TabIndex = 96;
@@ -118,25 +118,16 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             // datereservedLabel
             // 
             datereservedLabel.AutoSize = true;
-            datereservedLabel.Location = new System.Drawing.Point(17, 333);
+            datereservedLabel.Location = new System.Drawing.Point(343, 220);
             datereservedLabel.Name = "datereservedLabel";
             datereservedLabel.Size = new System.Drawing.Size(97, 17);
             datereservedLabel.TabIndex = 94;
             datereservedLabel.Text = "Date reserved:";
             // 
-            // reservationstatusLabel
-            // 
-            reservationstatusLabel.AutoSize = true;
-            reservationstatusLabel.Location = new System.Drawing.Point(17, 306);
-            reservationstatusLabel.Name = "reservationstatusLabel";
-            reservationstatusLabel.Size = new System.Drawing.Size(122, 17);
-            reservationstatusLabel.TabIndex = 92;
-            reservationstatusLabel.Text = "Reservation Status:";
-            // 
             // reservedbyLabel
             // 
             reservedbyLabel.AutoSize = true;
-            reservedbyLabel.Location = new System.Drawing.Point(17, 273);
+            reservedbyLabel.Location = new System.Drawing.Point(6, 271);
             reservedbyLabel.Name = "reservedbyLabel";
             reservedbyLabel.Size = new System.Drawing.Size(84, 17);
             reservedbyLabel.TabIndex = 88;
@@ -146,7 +137,7 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             // eventnameLabel
             // 
             eventnameLabel.AutoSize = true;
-            eventnameLabel.Location = new System.Drawing.Point(17, 248);
+            eventnameLabel.Location = new System.Drawing.Point(6, 246);
             eventnameLabel.Name = "eventnameLabel";
             eventnameLabel.Size = new System.Drawing.Size(84, 17);
             eventnameLabel.TabIndex = 86;
@@ -156,7 +147,7 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             // reservationidLabel
             // 
             reservationidLabel.AutoSize = true;
-            reservationidLabel.Location = new System.Drawing.Point(17, 223);
+            reservationidLabel.Location = new System.Drawing.Point(6, 221);
             reservationidLabel.Name = "reservationidLabel";
             reservationidLabel.Size = new System.Drawing.Size(94, 17);
             reservationidLabel.TabIndex = 84;
@@ -165,7 +156,7 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new System.Drawing.Point(324, 335);
+            label6.Location = new System.Drawing.Point(343, 246);
             label6.Name = "label6";
             label6.Size = new System.Drawing.Size(88, 17);
             label6.TabIndex = 112;
@@ -174,7 +165,7 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new System.Drawing.Point(324, 307);
+            label5.Location = new System.Drawing.Point(343, 302);
             label5.Name = "label5";
             label5.Size = new System.Drawing.Size(61, 17);
             label5.TabIndex = 110;
@@ -183,7 +174,7 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new System.Drawing.Point(324, 280);
+            label4.Location = new System.Drawing.Point(343, 275);
             label4.Name = "label4";
             label4.Size = new System.Drawing.Size(65, 17);
             label4.TabIndex = 108;
@@ -323,6 +314,8 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(label1);
+            this.tabPage1.Controls.Add(this.txtFacility);
             this.tabPage1.Controls.Add(label4);
             this.tabPage1.Controls.Add(this.txttimestart);
             this.tabPage1.Controls.Add(label5);
@@ -336,8 +329,6 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             this.tabPage1.Controls.Add(this.eventnameTextBox);
             this.tabPage1.Controls.Add(reservedbyLabel);
             this.tabPage1.Controls.Add(this.reservedbyTextBox);
-            this.tabPage1.Controls.Add(reservationstatusLabel);
-            this.tabPage1.Controls.Add(this.reservationstatusTextBox);
             this.tabPage1.Controls.Add(datereservedLabel);
             this.tabPage1.Controls.Add(checkedbyLabel);
             this.tabPage1.Controls.Add(this.checkedbyTextBox);
@@ -361,7 +352,7 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             // txttimestart
             // 
             this.txttimestart.Enabled = false;
-            this.txttimestart.Location = new System.Drawing.Point(478, 277);
+            this.txttimestart.Location = new System.Drawing.Point(468, 275);
             this.txttimestart.Name = "txttimestart";
             this.txttimestart.Size = new System.Drawing.Size(180, 22);
             this.txttimestart.TabIndex = 109;
@@ -369,7 +360,7 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             // txttimeend
             // 
             this.txttimeend.Enabled = false;
-            this.txttimeend.Location = new System.Drawing.Point(478, 304);
+            this.txttimeend.Location = new System.Drawing.Point(468, 302);
             this.txttimeend.Name = "txttimeend";
             this.txttimeend.Size = new System.Drawing.Size(180, 22);
             this.txttimeend.TabIndex = 111;
@@ -377,7 +368,7 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             // txtreservedate
             // 
             this.txtreservedate.Enabled = false;
-            this.txtreservedate.Location = new System.Drawing.Point(478, 332);
+            this.txtreservedate.Location = new System.Drawing.Point(468, 246);
             this.txtreservedate.Name = "txtreservedate";
             this.txtreservedate.Size = new System.Drawing.Size(180, 22);
             this.txtreservedate.TabIndex = 113;
@@ -385,9 +376,9 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             // datereserved
             // 
             this.datereserved.Enabled = false;
-            this.datereserved.Location = new System.Drawing.Point(146, 335);
+            this.datereserved.Location = new System.Drawing.Point(468, 220);
             this.datereserved.Name = "datereserved";
-            this.datereserved.Size = new System.Drawing.Size(172, 22);
+            this.datereserved.Size = new System.Drawing.Size(180, 22);
             this.datereserved.TabIndex = 106;
             // 
             // reservationidTextBox
@@ -414,18 +405,10 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             this.reservedbyTextBox.Size = new System.Drawing.Size(172, 22);
             this.reservedbyTextBox.TabIndex = 89;
             // 
-            // reservationstatusTextBox
-            // 
-            this.reservationstatusTextBox.Enabled = false;
-            this.reservationstatusTextBox.Location = new System.Drawing.Point(146, 306);
-            this.reservationstatusTextBox.Name = "reservationstatusTextBox";
-            this.reservationstatusTextBox.Size = new System.Drawing.Size(172, 22);
-            this.reservationstatusTextBox.TabIndex = 93;
-            // 
             // checkedbyTextBox
             // 
             this.checkedbyTextBox.Enabled = false;
-            this.checkedbyTextBox.Location = new System.Drawing.Point(146, 363);
+            this.checkedbyTextBox.Location = new System.Drawing.Point(146, 302);
             this.checkedbyTextBox.Name = "checkedbyTextBox";
             this.checkedbyTextBox.Size = new System.Drawing.Size(172, 22);
             this.checkedbyTextBox.TabIndex = 97;
@@ -433,17 +416,17 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             // approvedbyTextBox
             // 
             this.approvedbyTextBox.Enabled = false;
-            this.approvedbyTextBox.Location = new System.Drawing.Point(479, 222);
+            this.approvedbyTextBox.Location = new System.Drawing.Point(146, 330);
             this.approvedbyTextBox.Name = "approvedbyTextBox";
-            this.approvedbyTextBox.Size = new System.Drawing.Size(180, 22);
+            this.approvedbyTextBox.Size = new System.Drawing.Size(172, 22);
             this.approvedbyTextBox.TabIndex = 99;
             // 
             // reservedequipmentsTextBox
             // 
             this.reservedequipmentsTextBox.Enabled = false;
-            this.reservedequipmentsTextBox.Location = new System.Drawing.Point(479, 250);
+            this.reservedequipmentsTextBox.Location = new System.Drawing.Point(146, 355);
             this.reservedequipmentsTextBox.Name = "reservedequipmentsTextBox";
-            this.reservedequipmentsTextBox.Size = new System.Drawing.Size(180, 22);
+            this.reservedequipmentsTextBox.Size = new System.Drawing.Size(172, 22);
             this.reservedequipmentsTextBox.TabIndex = 105;
             // 
             // button11
@@ -504,6 +487,23 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             this.printPreviewDialog1.Visible = false;
             this.printPreviewDialog1.Load += new System.EventHandler(this.printPreviewDialog1_Load);
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new System.Drawing.Point(343, 330);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(87, 17);
+            label1.TabIndex = 114;
+            label1.Text = "Facility name";
+            // 
+            // txtFacility
+            // 
+            this.txtFacility.Enabled = false;
+            this.txtFacility.Location = new System.Drawing.Point(468, 330);
+            this.txtFacility.Name = "txtFacility";
+            this.txtFacility.Size = new System.Drawing.Size(180, 22);
+            this.txtFacility.TabIndex = 115;
+            // 
             // GenerateReports
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -555,7 +555,6 @@ namespace Function_Hall_Reservation_System.WorkingStudent
         private System.Windows.Forms.TextBox reservationidTextBox;
         private System.Windows.Forms.TextBox eventnameTextBox;
         private System.Windows.Forms.TextBox reservedbyTextBox;
-        private System.Windows.Forms.TextBox reservationstatusTextBox;
         private System.Windows.Forms.TextBox checkedbyTextBox;
         private System.Windows.Forms.TextBox approvedbyTextBox;
         private System.Windows.Forms.TextBox reservedequipmentsTextBox;
@@ -563,6 +562,7 @@ namespace Function_Hall_Reservation_System.WorkingStudent
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox txtFacility;
     }
 }
 
