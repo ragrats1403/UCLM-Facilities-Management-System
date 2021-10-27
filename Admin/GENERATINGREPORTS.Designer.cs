@@ -30,7 +30,6 @@ namespace Function_Hall_Reservation_System.Admin
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GENERATINGREPORTS));
             System.Windows.Forms.Label reservationidLabel;
             System.Windows.Forms.Label eventnameLabel;
             System.Windows.Forms.Label reservedbyLabel;
@@ -42,6 +41,7 @@ namespace Function_Hall_Reservation_System.Admin
             System.Windows.Forms.Label label6;
             System.Windows.Forms.Label approvedbyLabel;
             System.Windows.Forms.Label reservedequipmentsLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GENERATINGREPORTS));
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -111,6 +111,105 @@ namespace Function_Hall_Reservation_System.Admin
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1BindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // reservationidLabel
+            // 
+            reservationidLabel.AutoSize = true;
+            reservationidLabel.Location = new System.Drawing.Point(11, 218);
+            reservationidLabel.Name = "reservationidLabel";
+            reservationidLabel.Size = new System.Drawing.Size(94, 17);
+            reservationidLabel.TabIndex = 164;
+            reservationidLabel.Text = "Reservation ID";
+            // 
+            // eventnameLabel
+            // 
+            eventnameLabel.AutoSize = true;
+            eventnameLabel.Location = new System.Drawing.Point(13, 248);
+            eventnameLabel.Name = "eventnameLabel";
+            eventnameLabel.Size = new System.Drawing.Size(84, 17);
+            eventnameLabel.TabIndex = 165;
+            eventnameLabel.Text = "Event Name:";
+            // 
+            // reservedbyLabel
+            // 
+            reservedbyLabel.AutoSize = true;
+            reservedbyLabel.Location = new System.Drawing.Point(11, 273);
+            reservedbyLabel.Name = "reservedbyLabel";
+            reservedbyLabel.Size = new System.Drawing.Size(84, 17);
+            reservedbyLabel.TabIndex = 166;
+            reservedbyLabel.Text = "Reserved by:";
+            // 
+            // reservationstatusLabel
+            // 
+            reservationstatusLabel.AutoSize = true;
+            reservationstatusLabel.Location = new System.Drawing.Point(11, 306);
+            reservationstatusLabel.Name = "reservationstatusLabel";
+            reservationstatusLabel.Size = new System.Drawing.Size(122, 17);
+            reservationstatusLabel.TabIndex = 167;
+            reservationstatusLabel.Text = "Reservation Status:";
+            // 
+            // datereservedLabel
+            // 
+            datereservedLabel.AutoSize = true;
+            datereservedLabel.Location = new System.Drawing.Point(11, 334);
+            datereservedLabel.Name = "datereservedLabel";
+            datereservedLabel.Size = new System.Drawing.Size(97, 17);
+            datereservedLabel.TabIndex = 168;
+            datereservedLabel.Text = "Date reserved:";
+            // 
+            // checkedbyLabel
+            // 
+            checkedbyLabel.AutoSize = true;
+            checkedbyLabel.Location = new System.Drawing.Point(11, 360);
+            checkedbyLabel.Name = "checkedbyLabel";
+            checkedbyLabel.Size = new System.Drawing.Size(82, 17);
+            checkedbyLabel.TabIndex = 169;
+            checkedbyLabel.Text = "Checked by:";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new System.Drawing.Point(325, 277);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(65, 17);
+            label1.TabIndex = 172;
+            label1.Text = "Time start";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new System.Drawing.Point(325, 304);
+            label5.Name = "label5";
+            label5.Size = new System.Drawing.Size(61, 17);
+            label5.TabIndex = 173;
+            label5.Text = "Time end";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new System.Drawing.Point(325, 332);
+            label6.Name = "label6";
+            label6.Size = new System.Drawing.Size(88, 17);
+            label6.TabIndex = 174;
+            label6.Text = "Reserve date";
+            // 
+            // approvedbyLabel
+            // 
+            approvedbyLabel.AutoSize = true;
+            approvedbyLabel.Location = new System.Drawing.Point(326, 219);
+            approvedbyLabel.Name = "approvedbyLabel";
+            approvedbyLabel.Size = new System.Drawing.Size(89, 17);
+            approvedbyLabel.TabIndex = 170;
+            approvedbyLabel.Text = "Approved by:";
+            // 
+            // reservedequipmentsLabel
+            // 
+            reservedequipmentsLabel.AutoSize = true;
+            reservedequipmentsLabel.Location = new System.Drawing.Point(326, 250);
+            reservedequipmentsLabel.Name = "reservedequipmentsLabel";
+            reservedequipmentsLabel.Size = new System.Drawing.Size(138, 17);
+            reservedequipmentsLabel.TabIndex = 171;
+            reservedequipmentsLabel.Text = "Reserved Equipments:";
             // 
             // button7
             // 
@@ -286,7 +385,7 @@ namespace Function_Hall_Reservation_System.Admin
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage1.Size = new System.Drawing.Size(999, 437);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Print Student & Reservation Details";
+            this.tabPage1.Text = "Print Reservation Details";
             this.tabPage1.UseVisualStyleBackColor = true;
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
@@ -521,105 +620,6 @@ namespace Function_Hall_Reservation_System.Admin
             this.printPreviewDialog2.Name = "printPreviewDialog2";
             this.printPreviewDialog2.Visible = false;
             this.printPreviewDialog2.Load += new System.EventHandler(this.printPreviewDialog2_Load);
-            // 
-            // reservationidLabel
-            // 
-            reservationidLabel.AutoSize = true;
-            reservationidLabel.Location = new System.Drawing.Point(11, 218);
-            reservationidLabel.Name = "reservationidLabel";
-            reservationidLabel.Size = new System.Drawing.Size(94, 17);
-            reservationidLabel.TabIndex = 164;
-            reservationidLabel.Text = "Reservation ID";
-            // 
-            // eventnameLabel
-            // 
-            eventnameLabel.AutoSize = true;
-            eventnameLabel.Location = new System.Drawing.Point(13, 248);
-            eventnameLabel.Name = "eventnameLabel";
-            eventnameLabel.Size = new System.Drawing.Size(84, 17);
-            eventnameLabel.TabIndex = 165;
-            eventnameLabel.Text = "Event Name:";
-            // 
-            // reservedbyLabel
-            // 
-            reservedbyLabel.AutoSize = true;
-            reservedbyLabel.Location = new System.Drawing.Point(11, 273);
-            reservedbyLabel.Name = "reservedbyLabel";
-            reservedbyLabel.Size = new System.Drawing.Size(84, 17);
-            reservedbyLabel.TabIndex = 166;
-            reservedbyLabel.Text = "Reserved by:";
-            // 
-            // reservationstatusLabel
-            // 
-            reservationstatusLabel.AutoSize = true;
-            reservationstatusLabel.Location = new System.Drawing.Point(11, 306);
-            reservationstatusLabel.Name = "reservationstatusLabel";
-            reservationstatusLabel.Size = new System.Drawing.Size(122, 17);
-            reservationstatusLabel.TabIndex = 167;
-            reservationstatusLabel.Text = "Reservation Status:";
-            // 
-            // datereservedLabel
-            // 
-            datereservedLabel.AutoSize = true;
-            datereservedLabel.Location = new System.Drawing.Point(11, 334);
-            datereservedLabel.Name = "datereservedLabel";
-            datereservedLabel.Size = new System.Drawing.Size(97, 17);
-            datereservedLabel.TabIndex = 168;
-            datereservedLabel.Text = "Date reserved:";
-            // 
-            // checkedbyLabel
-            // 
-            checkedbyLabel.AutoSize = true;
-            checkedbyLabel.Location = new System.Drawing.Point(11, 360);
-            checkedbyLabel.Name = "checkedbyLabel";
-            checkedbyLabel.Size = new System.Drawing.Size(82, 17);
-            checkedbyLabel.TabIndex = 169;
-            checkedbyLabel.Text = "Checked by:";
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new System.Drawing.Point(325, 277);
-            label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(65, 17);
-            label1.TabIndex = 172;
-            label1.Text = "Time start";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Location = new System.Drawing.Point(325, 304);
-            label5.Name = "label5";
-            label5.Size = new System.Drawing.Size(61, 17);
-            label5.TabIndex = 173;
-            label5.Text = "Time end";
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Location = new System.Drawing.Point(325, 332);
-            label6.Name = "label6";
-            label6.Size = new System.Drawing.Size(88, 17);
-            label6.TabIndex = 174;
-            label6.Text = "Reserve date";
-            // 
-            // approvedbyLabel
-            // 
-            approvedbyLabel.AutoSize = true;
-            approvedbyLabel.Location = new System.Drawing.Point(326, 219);
-            approvedbyLabel.Name = "approvedbyLabel";
-            approvedbyLabel.Size = new System.Drawing.Size(89, 17);
-            approvedbyLabel.TabIndex = 170;
-            approvedbyLabel.Text = "Approved by:";
-            // 
-            // reservedequipmentsLabel
-            // 
-            reservedequipmentsLabel.AutoSize = true;
-            reservedequipmentsLabel.Location = new System.Drawing.Point(326, 250);
-            reservedequipmentsLabel.Name = "reservedequipmentsLabel";
-            reservedequipmentsLabel.Size = new System.Drawing.Size(138, 17);
-            reservedequipmentsLabel.TabIndex = 171;
-            reservedequipmentsLabel.Text = "Reserved Equipments:";
             // 
             // GENERATINGREPORTS
             // 

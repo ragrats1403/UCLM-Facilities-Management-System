@@ -29,7 +29,6 @@ namespace Function_Hall_Reservation_System.WorkingStudent
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GenerateReports));
             System.Windows.Forms.Label reservedequipmentsLabel;
             System.Windows.Forms.Label approvedbyLabel;
             System.Windows.Forms.Label checkedbyLabel;
@@ -41,6 +40,7 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             System.Windows.Forms.Label label6;
             System.Windows.Forms.Label label5;
             System.Windows.Forms.Label label4;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GenerateReports));
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button6 = new System.Windows.Forms.Button();
@@ -52,24 +52,24 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.txttimestart = new System.Windows.Forms.TextBox();
+            this.txttimeend = new System.Windows.Forms.TextBox();
+            this.txtreservedate = new System.Windows.Forms.TextBox();
+            this.datereserved = new System.Windows.Forms.TextBox();
+            this.reservationidTextBox = new System.Windows.Forms.TextBox();
+            this.eventnameTextBox = new System.Windows.Forms.TextBox();
+            this.reservedbyTextBox = new System.Windows.Forms.TextBox();
+            this.reservationstatusTextBox = new System.Windows.Forms.TextBox();
+            this.checkedbyTextBox = new System.Windows.Forms.TextBox();
+            this.approvedbyTextBox = new System.Windows.Forms.TextBox();
+            this.reservedequipmentsTextBox = new System.Windows.Forms.TextBox();
+            this.button11 = new System.Windows.Forms.Button();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.button10 = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button10 = new System.Windows.Forms.Button();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.button11 = new System.Windows.Forms.Button();
-            this.reservedequipmentsTextBox = new System.Windows.Forms.TextBox();
-            this.approvedbyTextBox = new System.Windows.Forms.TextBox();
-            this.checkedbyTextBox = new System.Windows.Forms.TextBox();
-            this.reservationstatusTextBox = new System.Windows.Forms.TextBox();
-            this.reservedbyTextBox = new System.Windows.Forms.TextBox();
-            this.eventnameTextBox = new System.Windows.Forms.TextBox();
-            this.reservationidTextBox = new System.Windows.Forms.TextBox();
-            this.datereserved = new System.Windows.Forms.TextBox();
-            this.txtreservedate = new System.Windows.Forms.TextBox();
-            this.txttimeend = new System.Windows.Forms.TextBox();
-            this.txttimestart = new System.Windows.Forms.TextBox();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
             reservedequipmentsLabel = new System.Windows.Forms.Label();
             approvedbyLabel = new System.Windows.Forms.Label();
             checkedbyLabel = new System.Windows.Forms.Label();
@@ -84,9 +84,110 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // reservedequipmentsLabel
+            // 
+            reservedequipmentsLabel.AutoSize = true;
+            reservedequipmentsLabel.Location = new System.Drawing.Point(325, 253);
+            reservedequipmentsLabel.Name = "reservedequipmentsLabel";
+            reservedequipmentsLabel.Size = new System.Drawing.Size(138, 17);
+            reservedequipmentsLabel.TabIndex = 104;
+            reservedequipmentsLabel.Text = "Reserved Equipments:";
+            // 
+            // approvedbyLabel
+            // 
+            approvedbyLabel.AutoSize = true;
+            approvedbyLabel.Location = new System.Drawing.Point(325, 222);
+            approvedbyLabel.Name = "approvedbyLabel";
+            approvedbyLabel.Size = new System.Drawing.Size(89, 17);
+            approvedbyLabel.TabIndex = 98;
+            approvedbyLabel.Text = "Approved by:";
+            // 
+            // checkedbyLabel
+            // 
+            checkedbyLabel.AutoSize = true;
+            checkedbyLabel.Location = new System.Drawing.Point(17, 360);
+            checkedbyLabel.Name = "checkedbyLabel";
+            checkedbyLabel.Size = new System.Drawing.Size(82, 17);
+            checkedbyLabel.TabIndex = 96;
+            checkedbyLabel.Text = "Checked by:";
+            // 
+            // datereservedLabel
+            // 
+            datereservedLabel.AutoSize = true;
+            datereservedLabel.Location = new System.Drawing.Point(17, 333);
+            datereservedLabel.Name = "datereservedLabel";
+            datereservedLabel.Size = new System.Drawing.Size(97, 17);
+            datereservedLabel.TabIndex = 94;
+            datereservedLabel.Text = "Date reserved:";
+            // 
+            // reservationstatusLabel
+            // 
+            reservationstatusLabel.AutoSize = true;
+            reservationstatusLabel.Location = new System.Drawing.Point(17, 306);
+            reservationstatusLabel.Name = "reservationstatusLabel";
+            reservationstatusLabel.Size = new System.Drawing.Size(122, 17);
+            reservationstatusLabel.TabIndex = 92;
+            reservationstatusLabel.Text = "Reservation Status:";
+            // 
+            // reservedbyLabel
+            // 
+            reservedbyLabel.AutoSize = true;
+            reservedbyLabel.Location = new System.Drawing.Point(17, 273);
+            reservedbyLabel.Name = "reservedbyLabel";
+            reservedbyLabel.Size = new System.Drawing.Size(84, 17);
+            reservedbyLabel.TabIndex = 88;
+            reservedbyLabel.Text = "Reserved by:";
+            reservedbyLabel.Click += new System.EventHandler(this.reservedbyLabel_Click);
+            // 
+            // eventnameLabel
+            // 
+            eventnameLabel.AutoSize = true;
+            eventnameLabel.Location = new System.Drawing.Point(17, 248);
+            eventnameLabel.Name = "eventnameLabel";
+            eventnameLabel.Size = new System.Drawing.Size(84, 17);
+            eventnameLabel.TabIndex = 86;
+            eventnameLabel.Text = "Event Name:";
+            eventnameLabel.Click += new System.EventHandler(this.eventnameLabel_Click);
+            // 
+            // reservationidLabel
+            // 
+            reservationidLabel.AutoSize = true;
+            reservationidLabel.Location = new System.Drawing.Point(17, 223);
+            reservationidLabel.Name = "reservationidLabel";
+            reservationidLabel.Size = new System.Drawing.Size(94, 17);
+            reservationidLabel.TabIndex = 84;
+            reservationidLabel.Text = "Reservation ID";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new System.Drawing.Point(324, 335);
+            label6.Name = "label6";
+            label6.Size = new System.Drawing.Size(88, 17);
+            label6.TabIndex = 112;
+            label6.Text = "Reserve date";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new System.Drawing.Point(324, 307);
+            label5.Name = "label5";
+            label5.Size = new System.Drawing.Size(61, 17);
+            label5.TabIndex = 110;
+            label5.Text = "Time end";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new System.Drawing.Point(324, 280);
+            label4.Name = "label4";
+            label4.Size = new System.Drawing.Size(65, 17);
+            label4.TabIndex = 108;
+            label4.Text = "Time start";
             // 
             // panel1
             // 
@@ -220,253 +321,6 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             this.tabControl1.Size = new System.Drawing.Size(1007, 467);
             this.tabControl1.TabIndex = 4;
             // 
-            // printDocument1
-            // 
-            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
-            // 
-            // printPreviewDialog1
-            // 
-            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
-            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
-            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
-            this.printPreviewDialog1.Document = this.printDocument1;
-            this.printPreviewDialog1.Enabled = true;
-            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
-            this.printPreviewDialog1.Name = "printPreviewDialog1";
-            this.printPreviewDialog1.Visible = false;
-            this.printPreviewDialog1.Load += new System.EventHandler(this.printPreviewDialog1_Load);
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 5);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(652, 202);
-            this.dataGridView1.TabIndex = 55;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            this.dataGridView1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseClick);
-            // 
-            // button10
-            // 
-            this.button10.Location = new System.Drawing.Point(339, 400);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(163, 30);
-            this.button10.TabIndex = 60;
-            this.button10.Text = "Print";
-            this.button10.UseVisualStyleBackColor = true;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Location = new System.Drawing.Point(664, 6);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(329, 425);
-            this.richTextBox1.TabIndex = 61;
-            this.richTextBox1.Text = "";
-            this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
-            // 
-            // button11
-            // 
-            this.button11.Location = new System.Drawing.Point(169, 400);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(163, 30);
-            this.button11.TabIndex = 62;
-            this.button11.Text = "Records";
-            this.button11.UseVisualStyleBackColor = true;
-            this.button11.Click += new System.EventHandler(this.button11_Click);
-            // 
-            // reservedequipmentsTextBox
-            // 
-            this.reservedequipmentsTextBox.Enabled = false;
-            this.reservedequipmentsTextBox.Location = new System.Drawing.Point(479, 250);
-            this.reservedequipmentsTextBox.Name = "reservedequipmentsTextBox";
-            this.reservedequipmentsTextBox.Size = new System.Drawing.Size(180, 22);
-            this.reservedequipmentsTextBox.TabIndex = 105;
-            // 
-            // reservedequipmentsLabel
-            // 
-            reservedequipmentsLabel.AutoSize = true;
-            reservedequipmentsLabel.Location = new System.Drawing.Point(325, 253);
-            reservedequipmentsLabel.Name = "reservedequipmentsLabel";
-            reservedequipmentsLabel.Size = new System.Drawing.Size(138, 17);
-            reservedequipmentsLabel.TabIndex = 104;
-            reservedequipmentsLabel.Text = "Reserved Equipments:";
-            // 
-            // approvedbyTextBox
-            // 
-            this.approvedbyTextBox.Enabled = false;
-            this.approvedbyTextBox.Location = new System.Drawing.Point(479, 222);
-            this.approvedbyTextBox.Name = "approvedbyTextBox";
-            this.approvedbyTextBox.Size = new System.Drawing.Size(180, 22);
-            this.approvedbyTextBox.TabIndex = 99;
-            // 
-            // approvedbyLabel
-            // 
-            approvedbyLabel.AutoSize = true;
-            approvedbyLabel.Location = new System.Drawing.Point(325, 222);
-            approvedbyLabel.Name = "approvedbyLabel";
-            approvedbyLabel.Size = new System.Drawing.Size(89, 17);
-            approvedbyLabel.TabIndex = 98;
-            approvedbyLabel.Text = "Approved by:";
-            // 
-            // checkedbyTextBox
-            // 
-            this.checkedbyTextBox.Enabled = false;
-            this.checkedbyTextBox.Location = new System.Drawing.Point(146, 363);
-            this.checkedbyTextBox.Name = "checkedbyTextBox";
-            this.checkedbyTextBox.Size = new System.Drawing.Size(172, 22);
-            this.checkedbyTextBox.TabIndex = 97;
-            // 
-            // checkedbyLabel
-            // 
-            checkedbyLabel.AutoSize = true;
-            checkedbyLabel.Location = new System.Drawing.Point(17, 360);
-            checkedbyLabel.Name = "checkedbyLabel";
-            checkedbyLabel.Size = new System.Drawing.Size(82, 17);
-            checkedbyLabel.TabIndex = 96;
-            checkedbyLabel.Text = "Checked by:";
-            // 
-            // datereservedLabel
-            // 
-            datereservedLabel.AutoSize = true;
-            datereservedLabel.Location = new System.Drawing.Point(17, 333);
-            datereservedLabel.Name = "datereservedLabel";
-            datereservedLabel.Size = new System.Drawing.Size(97, 17);
-            datereservedLabel.TabIndex = 94;
-            datereservedLabel.Text = "Date reserved:";
-            // 
-            // reservationstatusTextBox
-            // 
-            this.reservationstatusTextBox.Enabled = false;
-            this.reservationstatusTextBox.Location = new System.Drawing.Point(146, 306);
-            this.reservationstatusTextBox.Name = "reservationstatusTextBox";
-            this.reservationstatusTextBox.Size = new System.Drawing.Size(172, 22);
-            this.reservationstatusTextBox.TabIndex = 93;
-            // 
-            // reservationstatusLabel
-            // 
-            reservationstatusLabel.AutoSize = true;
-            reservationstatusLabel.Location = new System.Drawing.Point(17, 306);
-            reservationstatusLabel.Name = "reservationstatusLabel";
-            reservationstatusLabel.Size = new System.Drawing.Size(122, 17);
-            reservationstatusLabel.TabIndex = 92;
-            reservationstatusLabel.Text = "Reservation Status:";
-            // 
-            // reservedbyTextBox
-            // 
-            this.reservedbyTextBox.Enabled = false;
-            this.reservedbyTextBox.Location = new System.Drawing.Point(146, 274);
-            this.reservedbyTextBox.Name = "reservedbyTextBox";
-            this.reservedbyTextBox.Size = new System.Drawing.Size(172, 22);
-            this.reservedbyTextBox.TabIndex = 89;
-            // 
-            // reservedbyLabel
-            // 
-            reservedbyLabel.AutoSize = true;
-            reservedbyLabel.Location = new System.Drawing.Point(17, 273);
-            reservedbyLabel.Name = "reservedbyLabel";
-            reservedbyLabel.Size = new System.Drawing.Size(84, 17);
-            reservedbyLabel.TabIndex = 88;
-            reservedbyLabel.Text = "Reserved by:";
-            reservedbyLabel.Click += new System.EventHandler(this.reservedbyLabel_Click);
-            // 
-            // eventnameTextBox
-            // 
-            this.eventnameTextBox.Enabled = false;
-            this.eventnameTextBox.Location = new System.Drawing.Point(146, 247);
-            this.eventnameTextBox.Name = "eventnameTextBox";
-            this.eventnameTextBox.Size = new System.Drawing.Size(172, 22);
-            this.eventnameTextBox.TabIndex = 87;
-            // 
-            // eventnameLabel
-            // 
-            eventnameLabel.AutoSize = true;
-            eventnameLabel.Location = new System.Drawing.Point(17, 248);
-            eventnameLabel.Name = "eventnameLabel";
-            eventnameLabel.Size = new System.Drawing.Size(84, 17);
-            eventnameLabel.TabIndex = 86;
-            eventnameLabel.Text = "Event Name:";
-            eventnameLabel.Click += new System.EventHandler(this.eventnameLabel_Click);
-            // 
-            // reservationidTextBox
-            // 
-            this.reservationidTextBox.Enabled = false;
-            this.reservationidTextBox.Location = new System.Drawing.Point(146, 220);
-            this.reservationidTextBox.Name = "reservationidTextBox";
-            this.reservationidTextBox.Size = new System.Drawing.Size(172, 22);
-            this.reservationidTextBox.TabIndex = 85;
-            // 
-            // reservationidLabel
-            // 
-            reservationidLabel.AutoSize = true;
-            reservationidLabel.Location = new System.Drawing.Point(17, 223);
-            reservationidLabel.Name = "reservationidLabel";
-            reservationidLabel.Size = new System.Drawing.Size(94, 17);
-            reservationidLabel.TabIndex = 84;
-            reservationidLabel.Text = "Reservation ID";
-            // 
-            // datereserved
-            // 
-            this.datereserved.Enabled = false;
-            this.datereserved.Location = new System.Drawing.Point(146, 335);
-            this.datereserved.Name = "datereserved";
-            this.datereserved.Size = new System.Drawing.Size(172, 22);
-            this.datereserved.TabIndex = 106;
-            // 
-            // txtreservedate
-            // 
-            this.txtreservedate.Enabled = false;
-            this.txtreservedate.Location = new System.Drawing.Point(478, 332);
-            this.txtreservedate.Name = "txtreservedate";
-            this.txtreservedate.Size = new System.Drawing.Size(180, 22);
-            this.txtreservedate.TabIndex = 113;
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Location = new System.Drawing.Point(324, 335);
-            label6.Name = "label6";
-            label6.Size = new System.Drawing.Size(88, 17);
-            label6.TabIndex = 112;
-            label6.Text = "Reserve date";
-            // 
-            // txttimeend
-            // 
-            this.txttimeend.Enabled = false;
-            this.txttimeend.Location = new System.Drawing.Point(478, 304);
-            this.txttimeend.Name = "txttimeend";
-            this.txttimeend.Size = new System.Drawing.Size(180, 22);
-            this.txttimeend.TabIndex = 111;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Location = new System.Drawing.Point(324, 307);
-            label5.Name = "label5";
-            label5.Size = new System.Drawing.Size(61, 17);
-            label5.TabIndex = 110;
-            label5.Text = "Time end";
-            // 
-            // txttimestart
-            // 
-            this.txttimestart.Enabled = false;
-            this.txttimestart.Location = new System.Drawing.Point(478, 277);
-            this.txttimestart.Name = "txttimestart";
-            this.txttimestart.Size = new System.Drawing.Size(180, 22);
-            this.txttimestart.TabIndex = 109;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new System.Drawing.Point(324, 280);
-            label4.Name = "label4";
-            label4.Size = new System.Drawing.Size(65, 17);
-            label4.TabIndex = 108;
-            label4.Text = "Time start";
-            // 
             // tabPage1
             // 
             this.tabPage1.Controls.Add(label4);
@@ -504,6 +358,152 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             this.tabPage1.UseVisualStyleBackColor = true;
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click_1);
             // 
+            // txttimestart
+            // 
+            this.txttimestart.Enabled = false;
+            this.txttimestart.Location = new System.Drawing.Point(478, 277);
+            this.txttimestart.Name = "txttimestart";
+            this.txttimestart.Size = new System.Drawing.Size(180, 22);
+            this.txttimestart.TabIndex = 109;
+            // 
+            // txttimeend
+            // 
+            this.txttimeend.Enabled = false;
+            this.txttimeend.Location = new System.Drawing.Point(478, 304);
+            this.txttimeend.Name = "txttimeend";
+            this.txttimeend.Size = new System.Drawing.Size(180, 22);
+            this.txttimeend.TabIndex = 111;
+            // 
+            // txtreservedate
+            // 
+            this.txtreservedate.Enabled = false;
+            this.txtreservedate.Location = new System.Drawing.Point(478, 332);
+            this.txtreservedate.Name = "txtreservedate";
+            this.txtreservedate.Size = new System.Drawing.Size(180, 22);
+            this.txtreservedate.TabIndex = 113;
+            // 
+            // datereserved
+            // 
+            this.datereserved.Enabled = false;
+            this.datereserved.Location = new System.Drawing.Point(146, 335);
+            this.datereserved.Name = "datereserved";
+            this.datereserved.Size = new System.Drawing.Size(172, 22);
+            this.datereserved.TabIndex = 106;
+            // 
+            // reservationidTextBox
+            // 
+            this.reservationidTextBox.Enabled = false;
+            this.reservationidTextBox.Location = new System.Drawing.Point(146, 220);
+            this.reservationidTextBox.Name = "reservationidTextBox";
+            this.reservationidTextBox.Size = new System.Drawing.Size(172, 22);
+            this.reservationidTextBox.TabIndex = 85;
+            // 
+            // eventnameTextBox
+            // 
+            this.eventnameTextBox.Enabled = false;
+            this.eventnameTextBox.Location = new System.Drawing.Point(146, 247);
+            this.eventnameTextBox.Name = "eventnameTextBox";
+            this.eventnameTextBox.Size = new System.Drawing.Size(172, 22);
+            this.eventnameTextBox.TabIndex = 87;
+            // 
+            // reservedbyTextBox
+            // 
+            this.reservedbyTextBox.Enabled = false;
+            this.reservedbyTextBox.Location = new System.Drawing.Point(146, 274);
+            this.reservedbyTextBox.Name = "reservedbyTextBox";
+            this.reservedbyTextBox.Size = new System.Drawing.Size(172, 22);
+            this.reservedbyTextBox.TabIndex = 89;
+            // 
+            // reservationstatusTextBox
+            // 
+            this.reservationstatusTextBox.Enabled = false;
+            this.reservationstatusTextBox.Location = new System.Drawing.Point(146, 306);
+            this.reservationstatusTextBox.Name = "reservationstatusTextBox";
+            this.reservationstatusTextBox.Size = new System.Drawing.Size(172, 22);
+            this.reservationstatusTextBox.TabIndex = 93;
+            // 
+            // checkedbyTextBox
+            // 
+            this.checkedbyTextBox.Enabled = false;
+            this.checkedbyTextBox.Location = new System.Drawing.Point(146, 363);
+            this.checkedbyTextBox.Name = "checkedbyTextBox";
+            this.checkedbyTextBox.Size = new System.Drawing.Size(172, 22);
+            this.checkedbyTextBox.TabIndex = 97;
+            // 
+            // approvedbyTextBox
+            // 
+            this.approvedbyTextBox.Enabled = false;
+            this.approvedbyTextBox.Location = new System.Drawing.Point(479, 222);
+            this.approvedbyTextBox.Name = "approvedbyTextBox";
+            this.approvedbyTextBox.Size = new System.Drawing.Size(180, 22);
+            this.approvedbyTextBox.TabIndex = 99;
+            // 
+            // reservedequipmentsTextBox
+            // 
+            this.reservedequipmentsTextBox.Enabled = false;
+            this.reservedequipmentsTextBox.Location = new System.Drawing.Point(479, 250);
+            this.reservedequipmentsTextBox.Name = "reservedequipmentsTextBox";
+            this.reservedequipmentsTextBox.Size = new System.Drawing.Size(180, 22);
+            this.reservedequipmentsTextBox.TabIndex = 105;
+            // 
+            // button11
+            // 
+            this.button11.Location = new System.Drawing.Point(169, 400);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(163, 30);
+            this.button11.TabIndex = 62;
+            this.button11.Text = "Records";
+            this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(664, 6);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(329, 425);
+            this.richTextBox1.TabIndex = 61;
+            this.richTextBox1.Text = "";
+            this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
+            // 
+            // button10
+            // 
+            this.button10.Location = new System.Drawing.Point(339, 400);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(163, 30);
+            this.button10.TabIndex = 60;
+            this.button10.Text = "Print";
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(6, 5);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 29;
+            this.dataGridView1.Size = new System.Drawing.Size(652, 202);
+            this.dataGridView1.TabIndex = 55;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseClick);
+            // 
+            // printDocument1
+            // 
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
+            // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Document = this.printDocument1;
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
+            this.printPreviewDialog1.Load += new System.EventHandler(this.printPreviewDialog1_Load);
+            // 
             // GenerateReports
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -524,9 +524,9 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
