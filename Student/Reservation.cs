@@ -326,9 +326,9 @@ namespace Function_Hall_Reservation_System.Student
                 month = dateTimePicker2.Value.ToString("MMMM");
                 dateval = dateTimePicker2.Value.ToString("MM/dd/yyyy");
 
-                if (ComputeDifference() <=4)
+                if (ComputeDifference() < 4)
                 {
-                    MessageBox.Show("Please Note that you need to reserve 3 days before the desired reservation day\nReservation Day Count: " + ComputeDifference() + " Days Away.");
+                    MessageBox.Show("Please Note that you need to reserve 3 days before the desired reservation day\nReservation Day Count: " + ComputeDifference() + " Day(s) Away.");
                 }
                 else
                 {
