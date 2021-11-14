@@ -30,7 +30,6 @@ namespace Function_Hall_Reservation_System.Admin
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewReservationList));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.lblfullname = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -62,6 +61,7 @@ namespace Function_Hall_Reservation_System.Admin
             this.txtreservationid = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -70,28 +70,18 @@ namespace Function_Hall_Reservation_System.Admin
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.facilitycb = new System.Windows.Forms.ComboBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabPage1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(208, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(628, 126);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // dataGridView1
             // 
@@ -101,7 +91,7 @@ namespace Function_Hall_Reservation_System.Admin
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(608, 267);
+            this.dataGridView1.Size = new System.Drawing.Size(749, 288);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseClick);
             // 
@@ -122,7 +112,7 @@ namespace Function_Hall_Reservation_System.Admin
             this.tabPage1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage1.Size = new System.Drawing.Size(614, 265);
+            this.tabPage1.Size = new System.Drawing.Size(739, 290);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "View reservation list";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -131,14 +121,14 @@ namespace Function_Hall_Reservation_System.Admin
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.label3.Location = new System.Drawing.Point(425, 130);
+            this.label3.Location = new System.Drawing.Point(437, 122);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(195, 30);
+            this.label3.Size = new System.Drawing.Size(311, 41);
             this.label3.TabIndex = 8;
-            this.label3.Text = "Reservation List";
+            this.label3.Text = "RESERVATION LIST";
             // 
             // label4
             // 
@@ -157,11 +147,11 @@ namespace Function_Hall_Reservation_System.Admin
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl1.Location = new System.Drawing.Point(213, 204);
+            this.tabControl1.Location = new System.Drawing.Point(211, 203);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(622, 295);
+            this.tabControl1.Size = new System.Drawing.Size(747, 320);
             this.tabControl1.TabIndex = 5;
             // 
             // tabPage2
@@ -193,7 +183,7 @@ namespace Function_Hall_Reservation_System.Admin
             this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage2.Size = new System.Drawing.Size(716, 310);
+            this.tabPage2.Size = new System.Drawing.Size(739, 290);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Update reservation list ";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -213,7 +203,7 @@ namespace Function_Hall_Reservation_System.Admin
             // txttimeend
             // 
             this.txttimeend.Enabled = false;
-            this.txttimeend.Location = new System.Drawing.Point(203, 258);
+            this.txttimeend.Location = new System.Drawing.Point(202, 252);
             this.txttimeend.Margin = new System.Windows.Forms.Padding(2);
             this.txttimeend.Multiline = true;
             this.txttimeend.Name = "txttimeend";
@@ -224,7 +214,7 @@ namespace Function_Hall_Reservation_System.Admin
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(21, 256);
+            this.label15.Location = new System.Drawing.Point(20, 250);
             this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(91, 24);
@@ -234,7 +224,7 @@ namespace Function_Hall_Reservation_System.Admin
             // txttimestart
             // 
             this.txttimestart.Enabled = false;
-            this.txttimestart.Location = new System.Drawing.Point(203, 216);
+            this.txttimestart.Location = new System.Drawing.Point(202, 211);
             this.txttimestart.Margin = new System.Windows.Forms.Padding(2);
             this.txttimestart.Multiline = true;
             this.txttimestart.Name = "txttimestart";
@@ -245,7 +235,7 @@ namespace Function_Hall_Reservation_System.Admin
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(21, 215);
+            this.label14.Location = new System.Drawing.Point(20, 209);
             this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(91, 24);
@@ -331,7 +321,7 @@ namespace Function_Hall_Reservation_System.Admin
             // txtcheckedby
             // 
             this.txtcheckedby.Enabled = false;
-            this.txtcheckedby.Location = new System.Drawing.Point(203, 178);
+            this.txtcheckedby.Location = new System.Drawing.Point(202, 172);
             this.txtcheckedby.Margin = new System.Windows.Forms.Padding(2);
             this.txtcheckedby.Multiline = true;
             this.txtcheckedby.Name = "txtcheckedby";
@@ -342,7 +332,7 @@ namespace Function_Hall_Reservation_System.Admin
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(21, 176);
+            this.label12.Location = new System.Drawing.Point(20, 170);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(111, 24);
@@ -352,7 +342,7 @@ namespace Function_Hall_Reservation_System.Admin
             // txtdatereserved
             // 
             this.txtdatereserved.Enabled = false;
-            this.txtdatereserved.Location = new System.Drawing.Point(203, 132);
+            this.txtdatereserved.Location = new System.Drawing.Point(202, 132);
             this.txtdatereserved.Margin = new System.Windows.Forms.Padding(2);
             this.txtdatereserved.Multiline = true;
             this.txtdatereserved.Name = "txtdatereserved";
@@ -363,7 +353,7 @@ namespace Function_Hall_Reservation_System.Admin
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(22, 132);
+            this.label13.Location = new System.Drawing.Point(20, 130);
             this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(127, 24);
@@ -385,7 +375,7 @@ namespace Function_Hall_Reservation_System.Admin
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(20, 96);
+            this.label6.Location = new System.Drawing.Point(20, 94);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(116, 24);
@@ -446,7 +436,7 @@ namespace Function_Hall_Reservation_System.Admin
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.panel1.BackColor = System.Drawing.SystemColors.Highlight;
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.button7);
             this.panel1.Controls.Add(this.label4);
@@ -458,8 +448,20 @@ namespace Function_Hall_Reservation_System.Admin
             this.panel1.Controls.Add(this.lblfullname);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(211, 499);
+            this.panel1.Size = new System.Drawing.Size(211, 528);
             this.panel1.TabIndex = 1;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(211, 126);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 17;
+            this.pictureBox2.TabStop = false;
             // 
             // button7
             // 
@@ -529,15 +531,15 @@ namespace Function_Hall_Reservation_System.Admin
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.groupBox1.Controls.Add(this.facilitycb);
+            this.groupBox1.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.groupBox1.Controls.Add(this.panel2);
             this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.facilitycb);
             this.groupBox1.Controls.Add(this.tabControl1);
             this.groupBox1.Controls.Add(this.panel1);
-            this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(835, 498);
+            this.groupBox1.Size = new System.Drawing.Size(963, 528);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
@@ -552,36 +554,46 @@ namespace Function_Hall_Reservation_System.Admin
             "Old AVR",
             "New AVR",
             "Auditorium"});
-            this.facilitycb.Location = new System.Drawing.Point(217, 168);
+            this.facilitycb.Location = new System.Drawing.Point(217, 173);
             this.facilitycb.Name = "facilitycb";
-            this.facilitycb.Size = new System.Drawing.Size(121, 25);
+            this.facilitycb.Size = new System.Drawing.Size(118, 25);
             this.facilitycb.TabIndex = 80;
             this.facilitycb.Text = "Select Facility";
             this.facilitycb.SelectedIndexChanged += new System.EventHandler(this.facilitycb_SelectedIndexChanged);
             // 
-            // pictureBox2
+            // pictureBox3
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(211, 126);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 17;
-            this.pictureBox2.TabStop = false;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(26, 0);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(719, 117);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 18;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.pictureBox3);
+            this.panel2.Location = new System.Drawing.Point(211, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(752, 117);
+            this.panel2.TabIndex = 18;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // ViewReservationList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(832, 497);
+            this.ClientSize = new System.Drawing.Size(963, 526);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ViewReservationList";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ViewReservationList";
             this.Load += new System.EventHandler(this.ViewReservationList_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabPage1.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
@@ -589,15 +601,16 @@ namespace Function_Hall_Reservation_System.Admin
             this.tabPage2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label lblfullname;
         private System.Windows.Forms.TabPage tabPage1;
@@ -638,5 +651,7 @@ namespace Function_Hall_Reservation_System.Admin
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.ComboBox facilitycb;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Panel panel2;
     }
 }
