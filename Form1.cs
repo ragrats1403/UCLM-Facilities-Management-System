@@ -125,5 +125,15 @@ namespace Function_Hall_Reservation_System
             this.Visible = false;
             guest.Show();
         }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtusername_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
     }
