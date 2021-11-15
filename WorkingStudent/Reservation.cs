@@ -367,21 +367,21 @@ namespace Function_Hall_Reservation_System.WorkingStudent
 
                     if (checkdateconflict(dtpReservedDate.Value.Date) == true)
                     {
-                        MessageBox.Show("Line1");
+                        
                         Connection.Connection.DB();
                         Functions.Functions.gen = "Select count(*) from " + loadedid + " where '" + dtpTimeStart.Value + "' between timestart and timestart and reservationstatus = 'Approved' or '" + dtpTimeEnd.Value + "' between timestart and timeend and reservationstatus = 'Approved'and reservationstatus = 'Approved' or timestart between '" + datestart + "' and '" + dateend + "' and reservationstatus = 'Approved' or timeend between '" + dtpTimeStart.Value + "' and '" + dtpTimeEnd.Value + "' and reservationstatus = 'Approved'";
 
                         Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
                         Functions.Functions.reader = Functions.Functions.command.ExecuteReader();
                         Functions.Functions.reader.Read();
-                        MessageBox.Show("Line2");
+                        
                         loadedcount = Functions.Functions.reader.GetInt32(0);
 
 
                         Connection.Connection.conn.Close();
                         if (loadedcount > 0)
                         {
-                            MessageBox.Show("Line3");
+                           
 
                             MessageBox.Show("Someone is using the facility within that time! \nCheck Calendar of Activities for approved schedules. ");
                         }
