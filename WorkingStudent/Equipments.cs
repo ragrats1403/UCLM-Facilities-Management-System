@@ -367,5 +367,10 @@ namespace Function_Hall_Reservation_System.WorkingStudent
         {
 
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

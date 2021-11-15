@@ -100,6 +100,9 @@ namespace Function_Hall_Reservation_System.WorkingStudent
 
         }
 
-        
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
