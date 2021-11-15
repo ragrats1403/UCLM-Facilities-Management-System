@@ -388,7 +388,7 @@ namespace Function_Hall_Reservation_System.WorkingStudent
                         }
                         else
                         {
-                            
+                            MessageBox.Show("No Conflits Found!");
                         }
 
                     }
