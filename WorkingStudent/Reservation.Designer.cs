@@ -69,6 +69,7 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             this.dtpTimeStart = new System.Windows.Forms.DateTimePicker();
             this.dtpTimeEnd = new System.Windows.Forms.DateTimePicker();
             this.dtpReservedDate = new System.Windows.Forms.DateTimePicker();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -542,12 +543,23 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             this.dtpReservedDate.Size = new System.Drawing.Size(135, 22);
             this.dtpReservedDate.TabIndex = 55;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(819, 79);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(107, 20);
+            this.label2.TabIndex = 84;
+            this.label2.Text = "Select Facility";
+            // 
             // Reservation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(956, 455);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.facilitycb);
@@ -614,6 +626,7 @@ namespace Function_Hall_Reservation_System.WorkingStudent
         private System.Windows.Forms.DateTimePicker dtpTimeStart;
         private System.Windows.Forms.DateTimePicker dtpReservedDate;
         private System.Windows.Forms.DateTimePicker dtpTimeEnd;
+        private System.Windows.Forms.Label label2;
     }
 }
 
