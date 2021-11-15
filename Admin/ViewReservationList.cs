@@ -15,6 +15,7 @@ namespace Function_Hall_Reservation_System.Admin
     {
         public static string idname;
         public string loadedid;
+        public static int loadedcount = 0;
         public ViewReservationList()
         {
             InitializeComponent();
@@ -129,6 +130,9 @@ namespace Function_Hall_Reservation_System.Admin
 
         private void dataGridView1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
+            string timestart = "";
+            string timeend = "";
+            string reserveddate = "";
             try
             {
                 txtreservationid.Text = dataGridView1[0, e.RowIndex].Value.ToString();
@@ -138,26 +142,18 @@ namespace Function_Hall_Reservation_System.Admin
                 txtdatereserved.Text = dataGridView1[4, e.RowIndex].Value.ToString();
                 txtcheckedby.Text = dataGridView1[5, e.RowIndex].Value.ToString();
                 txtapprovedby.Text = dataGridView1[6, e.RowIndex].Value.ToString();
-                //txtstudentid.Text = dataGridView1[7, e.RowIndex].Value.ToString();
-                // txtstudentname.Text = dataGridView1[8, e.RowIndex].Value.ToString();
+                
                 txtreservedequipments.Text = dataGridView1[7, e.RowIndex].Value.ToString();
-                txttimestart.Text = dataGridView1[8, e.RowIndex].Value.ToString();
-                txtreservedate.Text = dataGridView1[9, e.RowIndex].Value.ToString();
-                txttimeend.Text = dataGridView1[10, e.RowIndex].Value.ToString();
-                /*txtreservationid.Text = dataGridView1[0, e.RowIndex].Value.ToString();
-                txteventname.Text = dataGridView1[1, e.RowIndex].Value.ToString();
-                txtreservedby.Text = dataGridView1[2, e.RowIndex].Value.ToString();
-                cmbstatus.Text = dataGridView1[3, e.RowIndex].Value.ToString();
-                txtdatereserved.Text = dataGridView1[4, e.RowIndex].Value.ToString();
-                txtcheckedby.Text = dataGridView1[5, e.RowIndex].Value.ToString();
-                txtapprovedby.Text = dataGridView1[6, e.RowIndex].Value.ToString();
-                //txtstudentid.Text = dataGridView1[7, e.RowIndex].Value.ToString();
-                //txtstudentname.Text = dataGridView1[8, e.RowIndex].Value.ToString();
-                txtreservedequipments.Text = dataGridView1[9, e.RowIndex].Value.ToString();
-                //txtreservedate.Text = dataGridView1[10, e.RowIndex].Value.ToString();
-                txttimestart.Text = dataGridView1[10, e.RowIndex].Value.ToString();
-                txttimeend.Text = dataGridView1[12, e.RowIndex].Value.ToString();
-                txtreservedate.Text = dataGridView1[13, e.RowIndex].Value.ToString();*/
+                timestart = dataGridView1[8, e.RowIndex].Value.ToString();
+                dtpTimeStart.Format = DateTimePickerFormat.Time;
+                dtpTimeStart.Value = Convert.ToDateTime(timestart);
+
+                reserveddate = dataGridView1[11, e.RowIndex].Value.ToString();
+                dtpReservedDate.Format = DateTimePickerFormat.Short;
+                dtpReservedDate.Value = Convert.ToDateTime(reserveddate);
+                timeend = dataGridView1[10, e.RowIndex].Value.ToString();
+                dtpTimeEnd.Format = DateTimePickerFormat.Time;
+                dtpTimeEnd.Value = Convert.ToDateTime(timeend);
 
                 this.tabControl1.SelectedIndex = 1;
 
@@ -274,5 +270,101 @@ namespace Function_Hall_Reservation_System.Admin
         {
 
         }
+        public Boolean checkdateconflict(DateTime dt)
+        {
+            int count = 0;
+            bool confirm = false;
+            try
+            {
+                Connection.Connection.DB();
+                Functions.Functions.gen = "Select count(" + loadedid + ".reserveddate) from " + loadedid + " where reserveddate = '" + dt + "' and reservationstatus = 'Approved'";
+                Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
+                Functions.Functions.reader = Functions.Functions.command.ExecuteReader();
+                while (Functions.Functions.reader.Read())
+                {
+                    count = Functions.Functions.reader.GetInt32(0);
+
+                }
+                if (count == 0)
+                {
+                    confirm = false;
+                }
+                else
+                {
+                    confirm = true;
+                }
+
+
+
+                Connection.Connection.conn.Close();
+
+
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            return confirm;
+        }
+
+        private void cmbstatus_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+                DateTime datestart = dtpReservedDate.Value.Date + dtpTimeStart.Value.TimeOfDay;
+                DateTime dateend = dtpReservedDate.Value.Date + dtpTimeEnd.Value.TimeOfDay;
+
+                if (cmbstatus.Text == "Approved")
+                {
+                    try
+                    {
+
+
+
+                        if (checkdateconflict(dtpReservedDate.Value.Date) == true)
+                        {
+
+                            Connection.Connection.DB();
+                            Functions.Functions.gen = "Select count(*) from " + loadedid + " where '" + dtpTimeStart.Value + "' between timestart and timestart and reservationstatus = 'Approved' or '" + dtpTimeEnd.Value + "' between timestart and timeend and reservationstatus = 'Approved'and reservationstatus = 'Approved' or timestart between '" + datestart + "' and '" + dateend + "' and reservationstatus = 'Approved' or timeend between '" + dtpTimeStart.Value + "' and '" + dtpTimeEnd.Value + "' and reservationstatus = 'Approved'";
+
+                            Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
+                            Functions.Functions.reader = Functions.Functions.command.ExecuteReader();
+                            Functions.Functions.reader.Read();
+
+                            loadedcount = Functions.Functions.reader.GetInt32(0);
+
+
+                            Connection.Connection.conn.Close();
+                            if (loadedcount > 0)
+                            {
+
+
+                                MessageBox.Show("Someone is using the facility within that time! \nCheck Calendar of Activities for approved schedules. ");
+
+                            }
+                            else
+                            {
+                                MessageBox.Show("No Conflits Found!");
+                            }
+
+                        }
+                        else
+                        {
+
+                        }
+
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                }
+                else if (cmbstatus.Text == "Declined")
+                {
+
+                }
+            }
+        }
     }
-}
+
+
