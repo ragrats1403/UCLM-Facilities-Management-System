@@ -24,7 +24,7 @@ namespace Function_Hall_Reservation_System.Student
         public static string loadedeqid = "";
         public String loadedeq;
         public string dateval = "";
-        public int loadedcount = 0;
+        public static int loadedcount = 0;
         public string newval = "";
         public string cbval = "";
         public string name = Form1.setfirstname + " " + Form1.setlastname;
@@ -373,8 +373,9 @@ namespace Function_Hall_Reservation_System.Student
                             Reservation res = new Reservation();
                             this.Close();
                             res.Show();
+                            
                         }
-                        
+
                     }
                     else
                     {
@@ -391,6 +392,7 @@ namespace Function_Hall_Reservation_System.Student
                         Reservation res = new Reservation();
                         this.Close();
                         res.Show();
+                        
                     }
 
                 }

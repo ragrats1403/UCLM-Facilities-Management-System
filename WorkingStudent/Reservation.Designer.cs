@@ -44,11 +44,8 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.button7 = new System.Windows.Forms.Button();
-            this.txttimerend = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.txttimestart = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.txtreservedate = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtreservedequipments = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -69,6 +66,9 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             this.facilitycb = new System.Windows.Forms.ComboBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.dtpTimeStart = new System.Windows.Forms.DateTimePicker();
+            this.dtpTimeEnd = new System.Windows.Forms.DateTimePicker();
+            this.dtpReservedDate = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -229,12 +229,12 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.dtpReservedDate);
+            this.tabPage2.Controls.Add(this.dtpTimeEnd);
+            this.tabPage2.Controls.Add(this.dtpTimeStart);
             this.tabPage2.Controls.Add(this.button7);
-            this.tabPage2.Controls.Add(this.txttimerend);
             this.tabPage2.Controls.Add(this.label15);
-            this.tabPage2.Controls.Add(this.txttimestart);
             this.tabPage2.Controls.Add(this.label14);
-            this.tabPage2.Controls.Add(this.txtreservedate);
             this.tabPage2.Controls.Add(this.label7);
             this.tabPage2.Controls.Add(this.txtreservedequipments);
             this.tabPage2.Controls.Add(this.label8);
@@ -273,17 +273,6 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
-            // txttimerend
-            // 
-            this.txttimerend.Enabled = false;
-            this.txttimerend.Location = new System.Drawing.Point(208, 250);
-            this.txttimerend.Margin = new System.Windows.Forms.Padding(2);
-            this.txttimerend.Multiline = true;
-            this.txttimerend.Name = "txttimerend";
-            this.txttimerend.Size = new System.Drawing.Size(133, 28);
-            this.txttimerend.TabIndex = 51;
-            this.txttimerend.TextChanged += new System.EventHandler(this.txttimerend_TextChanged);
-            // 
             // label15
             // 
             this.label15.AutoSize = true;
@@ -295,16 +284,6 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             this.label15.TabIndex = 50;
             this.label15.Text = "Time end";
             // 
-            // txttimestart
-            // 
-            this.txttimestart.Enabled = false;
-            this.txttimestart.Location = new System.Drawing.Point(208, 209);
-            this.txttimestart.Margin = new System.Windows.Forms.Padding(2);
-            this.txttimestart.Multiline = true;
-            this.txttimestart.Name = "txttimestart";
-            this.txttimestart.Size = new System.Drawing.Size(133, 28);
-            this.txttimestart.TabIndex = 47;
-            // 
             // label14
             // 
             this.label14.AutoSize = true;
@@ -315,17 +294,6 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             this.label14.Size = new System.Drawing.Size(91, 24);
             this.label14.TabIndex = 46;
             this.label14.Text = "Time start";
-            // 
-            // txtreservedate
-            // 
-            this.txtreservedate.Enabled = false;
-            this.txtreservedate.Location = new System.Drawing.Point(585, 49);
-            this.txtreservedate.Margin = new System.Windows.Forms.Padding(2);
-            this.txtreservedate.Multiline = true;
-            this.txtreservedate.Name = "txtreservedate";
-            this.txtreservedate.Size = new System.Drawing.Size(133, 28);
-            this.txtreservedate.TabIndex = 45;
-            this.txtreservedate.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // label7
             // 
@@ -372,6 +340,7 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             this.cmbstatus.Name = "cmbstatus";
             this.cmbstatus.Size = new System.Drawing.Size(133, 28);
             this.cmbstatus.TabIndex = 37;
+            this.cmbstatus.SelectedIndexChanged += new System.EventHandler(this.cmbstatus_SelectedIndexChanged);
             // 
             // label11
             // 
@@ -549,6 +518,30 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             this.label3.TabIndex = 83;
             this.label3.Text = "RESERVATION LIST";
             // 
+            // dtpTimeStart
+            // 
+            this.dtpTimeStart.Enabled = false;
+            this.dtpTimeStart.Location = new System.Drawing.Point(208, 216);
+            this.dtpTimeStart.Name = "dtpTimeStart";
+            this.dtpTimeStart.Size = new System.Drawing.Size(133, 22);
+            this.dtpTimeStart.TabIndex = 53;
+            // 
+            // dtpTimeEnd
+            // 
+            this.dtpTimeEnd.Enabled = false;
+            this.dtpTimeEnd.Location = new System.Drawing.Point(208, 249);
+            this.dtpTimeEnd.Name = "dtpTimeEnd";
+            this.dtpTimeEnd.Size = new System.Drawing.Size(133, 22);
+            this.dtpTimeEnd.TabIndex = 54;
+            // 
+            // dtpReservedDate
+            // 
+            this.dtpReservedDate.Enabled = false;
+            this.dtpReservedDate.Location = new System.Drawing.Point(583, 55);
+            this.dtpReservedDate.Name = "dtpReservedDate";
+            this.dtpReservedDate.Size = new System.Drawing.Size(135, 22);
+            this.dtpReservedDate.TabIndex = 55;
+            // 
             // Reservation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -604,11 +597,8 @@ namespace Function_Hall_Reservation_System.WorkingStudent
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtreservationid;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtreservedate;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txttimerend;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox txttimestart;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -621,6 +611,9 @@ namespace Function_Hall_Reservation_System.WorkingStudent
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DateTimePicker dtpTimeStart;
+        private System.Windows.Forms.DateTimePicker dtpReservedDate;
+        private System.Windows.Forms.DateTimePicker dtpTimeEnd;
     }
 }
 

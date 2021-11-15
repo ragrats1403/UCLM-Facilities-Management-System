@@ -15,6 +15,7 @@ namespace Function_Hall_Reservation_System.WorkingStudent
     {
         public static string idname;
         public string loadedid;
+        public static int loadedcount = 0;
 
         public Reservation()
         {
@@ -169,6 +170,9 @@ namespace Function_Hall_Reservation_System.WorkingStudent
 
         private void dataGridView1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
+            string timestart = "";
+            string timeend = "";
+            string reserveddate = "";
             try
             {
                 txtreservationid.Text = dataGridView1[0, e.RowIndex].Value.ToString();
@@ -178,12 +182,21 @@ namespace Function_Hall_Reservation_System.WorkingStudent
                 txtdatereserved.Text = dataGridView1[4, e.RowIndex].Value.ToString();
                 txtcheckedby.Text = dataGridView1[5, e.RowIndex].Value.ToString();
                 txtapprovedby.Text = dataGridView1[6, e.RowIndex].Value.ToString();
-                //txtstudentid.Text = dataGridView1[7, e.RowIndex].Value.ToString();
-               // txtstudentname.Text = dataGridView1[8, e.RowIndex].Value.ToString();
+               
                 txtreservedequipments.Text = dataGridView1[7, e.RowIndex].Value.ToString();
-                txttimestart.Text = dataGridView1[8, e.RowIndex].Value.ToString();
-                txtreservedate.Text = dataGridView1[9, e.RowIndex].Value.ToString();
-                txttimerend.Text = dataGridView1[10, e.RowIndex].Value.ToString();
+               
+                timestart = dataGridView1[8, e.RowIndex].Value.ToString();
+                dtpTimeStart.Format = DateTimePickerFormat.Time;
+                dtpTimeStart.Value = Convert.ToDateTime(timestart);
+
+                reserveddate = dataGridView1[11, e.RowIndex].Value.ToString();
+                dtpReservedDate.Format = DateTimePickerFormat.Short;
+                dtpReservedDate.Value = Convert.ToDateTime(reserveddate);
+                timeend = dataGridView1[10, e.RowIndex].Value.ToString();
+                dtpTimeEnd.Format = DateTimePickerFormat.Time;
+                dtpTimeEnd.Value = Convert.ToDateTime(timeend);
+               
+                
 
                 //btnRegister.Enabled = false;
                 //btnUpdate.Enabled = true;
@@ -200,7 +213,7 @@ namespace Function_Hall_Reservation_System.WorkingStudent
                 MessageBox.Show(ex.Message);
             }
         }
-        
+
         private void facilitycb_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -239,8 +252,45 @@ namespace Function_Hall_Reservation_System.WorkingStudent
                 MessageBox.Show(ex.Message);
             }
         }
+        public Boolean checkdateconflict(DateTime dt)
+        {
+            int count = 0;
+            bool confirm = false;
+            try
+            {
+                Connection.Connection.DB();
+                Functions.Functions.gen = "Select count(" + loadedid + ".reserveddate) from " + loadedid + " where reserveddate = '" + dt + "' and reservationstatus = 'Approved'";
+                Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
+                Functions.Functions.reader = Functions.Functions.command.ExecuteReader();
+                while (Functions.Functions.reader.Read())
+                {
+                    count = Functions.Functions.reader.GetInt32(0);
 
-            private void button7_Click(object sender, EventArgs e)
+                }
+                if (count == 0)
+                {
+                    confirm = false;
+                }
+                else
+                {
+                    confirm = true;
+                }
+
+
+
+                Connection.Connection.conn.Close();
+
+
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            return confirm;
+        }
+
+        private void button7_Click(object sender, EventArgs e)
         {
             try
             {
@@ -301,6 +351,61 @@ namespace Function_Hall_Reservation_System.WorkingStudent
         private void pictureBox3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void cmbstatus_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DateTime datestart = dtpReservedDate.Value.Date + dtpTimeStart.Value.TimeOfDay;
+            DateTime dateend = dtpReservedDate.Value.Date + dtpTimeEnd.Value.TimeOfDay;
+           
+            if (cmbstatus.Text == "Verified")
+            {
+                try
+                {
+
+
+
+                    if (checkdateconflict(dtpReservedDate.Value.Date) == true)
+                    {
+                        MessageBox.Show("Line1");
+                        Connection.Connection.DB();
+                        Functions.Functions.gen = "Select count(*) from " + loadedid + " where '" + dtpTimeStart.Value + "' between timestart and timestart and reservationstatus = 'Approved' or '" + dtpTimeEnd.Value + "' between timestart and timeend and reservationstatus = 'Approved'and reservationstatus = 'Approved' or timestart between '" + datestart + "' and '" + dateend + "' and reservationstatus = 'Approved' or timeend between '" + dtpTimeStart.Value + "' and '" + dtpTimeEnd.Value + "' and reservationstatus = 'Approved'";
+
+                        Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
+                        Functions.Functions.reader = Functions.Functions.command.ExecuteReader();
+                        Functions.Functions.reader.Read();
+                        MessageBox.Show("Line2");
+                        loadedcount = Functions.Functions.reader.GetInt32(0);
+
+
+                        Connection.Connection.conn.Close();
+                        if (loadedcount > 0)
+                        {
+                            MessageBox.Show("Line3");
+
+                            MessageBox.Show("Someone is using the facility within that time! \nCheck Calendar of Activities for approved schedules. ");
+                        }
+                        else
+                        {
+                            
+                        }
+
+                    }
+                    else
+                    {
+                       
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            else if (cmbstatus.Text == "Declined")
+            {
+
+            }
         }
     }
 }
