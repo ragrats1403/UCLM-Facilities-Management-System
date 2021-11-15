@@ -381,9 +381,10 @@ namespace Function_Hall_Reservation_System.WorkingStudent
                         Connection.Connection.conn.Close();
                         if (loadedcount > 0)
                         {
-                           
+
 
                             MessageBox.Show("Someone is using the facility within that time! \nCheck Calendar of Activities for approved schedules. ");
+                            
                         }
                         else
                         {
