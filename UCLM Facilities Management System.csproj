@@ -192,6 +192,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Registration\Registration.resx">
       <DependentUpon>Registration.cs</DependentUpon>
@@ -274,6 +275,14 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\pw logo 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UCLM-LOGO.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user logo 1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

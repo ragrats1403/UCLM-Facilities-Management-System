@@ -58,9 +58,9 @@ namespace Function_Hall_Reservation_System
             this.groupBox1.Controls.Add(this.linkLabel1);
             this.groupBox1.Controls.Add(this.txtusername);
             this.groupBox1.Controls.Add(this.btnlogin);
-            this.groupBox1.Location = new System.Drawing.Point(0, 182);
+            this.groupBox1.Location = new System.Drawing.Point(0, 168);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(396, 307);
+            this.groupBox1.Size = new System.Drawing.Size(396, 283);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
@@ -68,9 +68,9 @@ namespace Function_Hall_Reservation_System
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(93, 95);
+            this.pictureBox3.Location = new System.Drawing.Point(93, 88);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(38, 29);
+            this.pictureBox3.Size = new System.Drawing.Size(38, 27);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 18;
             this.pictureBox3.TabStop = false;
@@ -78,9 +78,9 @@ namespace Function_Hall_Reservation_System
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(93, 60);
+            this.pictureBox2.Location = new System.Drawing.Point(93, 55);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(38, 29);
+            this.pictureBox2.Size = new System.Drawing.Size(38, 27);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 17;
             this.pictureBox2.TabStop = false;
@@ -90,11 +90,11 @@ namespace Function_Hall_Reservation_System
             this.linkLabel2.ActiveLinkColor = System.Drawing.Color.LightSalmon;
             this.linkLabel2.AutoSize = true;
             this.linkLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.linkLabel2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel2.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.linkLabel2.Location = new System.Drawing.Point(148, 202);
+            this.linkLabel2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel2.LinkColor = System.Drawing.Color.DarkOrange;
+            this.linkLabel2.Location = new System.Drawing.Point(148, 186);
             this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(97, 17);
+            this.linkLabel2.Size = new System.Drawing.Size(94, 16);
             this.linkLabel2.TabIndex = 15;
             this.linkLabel2.TabStop = true;
             this.linkLabel2.Text = "Log in as Guest";
@@ -103,11 +103,11 @@ namespace Function_Hall_Reservation_System
             // btnExit
             // 
             this.btnExit.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnExit.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnExit.Location = new System.Drawing.Point(203, 130);
+            this.btnExit.Location = new System.Drawing.Point(203, 120);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(104, 41);
+            this.btnExit.Size = new System.Drawing.Size(104, 38);
             this.btnExit.TabIndex = 14;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = false;
@@ -118,12 +118,12 @@ namespace Function_Hall_Reservation_System
             this.txtpassword.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.txtpassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtpassword.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtpassword.Location = new System.Drawing.Point(137, 95);
+            this.txtpassword.Location = new System.Drawing.Point(137, 88);
             this.txtpassword.Multiline = true;
             this.txtpassword.Name = "txtpassword";
             this.txtpassword.PasswordChar = '*';
             this.txtpassword.ShortcutsEnabled = false;
-            this.txtpassword.Size = new System.Drawing.Size(171, 29);
+            this.txtpassword.Size = new System.Drawing.Size(171, 27);
             this.txtpassword.TabIndex = 9;
             // 
             // linkLabel1
@@ -131,11 +131,11 @@ namespace Function_Hall_Reservation_System
             this.linkLabel1.ActiveLinkColor = System.Drawing.Color.LightSalmon;
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.linkLabel1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.linkLabel1.Location = new System.Drawing.Point(116, 174);
+            this.linkLabel1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel1.LinkColor = System.Drawing.Color.DarkOrange;
+            this.linkLabel1.Location = new System.Drawing.Point(116, 161);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(165, 17);
+            this.linkLabel1.Size = new System.Drawing.Size(162, 16);
             this.linkLabel1.TabIndex = 13;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "No account? Sign up here!";
@@ -146,10 +146,10 @@ namespace Function_Hall_Reservation_System
             this.txtusername.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.txtusername.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtusername.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtusername.Location = new System.Drawing.Point(137, 60);
+            this.txtusername.Location = new System.Drawing.Point(137, 55);
             this.txtusername.Multiline = true;
             this.txtusername.Name = "txtusername";
-            this.txtusername.Size = new System.Drawing.Size(171, 29);
+            this.txtusername.Size = new System.Drawing.Size(171, 27);
             this.txtusername.TabIndex = 8;
             this.txtusername.TextChanged += new System.EventHandler(this.txtusername_TextChanged);
             // 
@@ -157,11 +157,11 @@ namespace Function_Hall_Reservation_System
             // 
             this.btnlogin.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnlogin.FlatAppearance.BorderSize = 0;
-            this.btnlogin.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnlogin.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnlogin.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnlogin.Location = new System.Drawing.Point(93, 130);
+            this.btnlogin.Location = new System.Drawing.Point(93, 120);
             this.btnlogin.Name = "btnlogin";
-            this.btnlogin.Size = new System.Drawing.Size(104, 38);
+            this.btnlogin.Size = new System.Drawing.Size(104, 35);
             this.btnlogin.TabIndex = 11;
             this.btnlogin.Text = "Login";
             this.btnlogin.UseVisualStyleBackColor = false;
@@ -172,7 +172,7 @@ namespace Function_Hall_Reservation_System
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, -3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(396, 130);
+            this.pictureBox1.Size = new System.Drawing.Size(396, 120);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
@@ -181,7 +181,7 @@ namespace Function_Hall_Reservation_System
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(12, 142);
+            this.label4.Location = new System.Drawing.Point(12, 131);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(359, 23);
             this.label4.TabIndex = 4;
@@ -190,10 +190,10 @@ namespace Function_Hall_Reservation_System
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Highlight;
-            this.ClientSize = new System.Drawing.Size(396, 486);
+            this.ClientSize = new System.Drawing.Size(396, 449);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox1);
