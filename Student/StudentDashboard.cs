@@ -76,10 +76,6 @@ namespace Function_Hall_Reservation_System.Student
             }
             Connection.Connection.conn.Close();
         }
-        private void button3_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void button2_Click(object sender, EventArgs e)
         {

@@ -31,6 +31,7 @@ namespace Function_Hall_Reservation_System.WorkingStudent
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CalendarOfActivities));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label12 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -42,7 +43,6 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             this.label3 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label12 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -67,6 +67,18 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Century Gothic", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.SystemColors.Menu;
+            this.label12.Location = new System.Drawing.Point(47, 137);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(129, 18);
+            this.label12.TabIndex = 83;
+            this.label12.Text = "Working Student";
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -82,10 +94,10 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             // button6
             // 
             this.button6.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(0, 300);
+            this.button6.Location = new System.Drawing.Point(0, 318);
             this.button6.Margin = new System.Windows.Forms.Padding(2);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(202, 26);
+            this.button6.Size = new System.Drawing.Size(202, 34);
             this.button6.TabIndex = 6;
             this.button6.Text = "LOG OUT";
             this.button6.UseVisualStyleBackColor = true;
@@ -94,10 +106,10 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             // button5
             // 
             this.button5.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(0, 270);
+            this.button5.Location = new System.Drawing.Point(0, 280);
             this.button5.Margin = new System.Windows.Forms.Padding(2);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(202, 26);
+            this.button5.Size = new System.Drawing.Size(202, 34);
             this.button5.TabIndex = 5;
             this.button5.Text = "GENERATE REPORT";
             this.button5.UseVisualStyleBackColor = true;
@@ -106,10 +118,10 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(0, 241);
+            this.button4.Location = new System.Drawing.Point(0, 242);
             this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(202, 26);
+            this.button4.Size = new System.Drawing.Size(202, 34);
             this.button4.TabIndex = 4;
             this.button4.Text = "EQUIPMENTS";
             this.button4.UseVisualStyleBackColor = true;
@@ -118,10 +130,10 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(0, 211);
+            this.button2.Location = new System.Drawing.Point(0, 204);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(202, 26);
+            this.button2.Size = new System.Drawing.Size(202, 34);
             this.button2.TabIndex = 2;
             this.button2.Text = "RESERVATION";
             this.button2.UseVisualStyleBackColor = true;
@@ -130,10 +142,10 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(0, 182);
+            this.button1.Location = new System.Drawing.Point(0, 166);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(202, 26);
+            this.button1.Size = new System.Drawing.Size(202, 34);
             this.button1.TabIndex = 1;
             this.button1.Text = "CALENDAR OF ACTIVITIES";
             this.button1.UseVisualStyleBackColor = true;
@@ -196,18 +208,6 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             this.pictureBox2.Size = new System.Drawing.Size(150, 99);
             this.pictureBox2.TabIndex = 82;
             this.pictureBox2.TabStop = false;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Century Gothic", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.SystemColors.Menu;
-            this.label12.Location = new System.Drawing.Point(47, 137);
-            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(129, 18);
-            this.label12.TabIndex = 83;
-            this.label12.Text = "Working Student";
             // 
             // CalendarOfActivities
             // 
