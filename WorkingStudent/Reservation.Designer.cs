@@ -264,7 +264,7 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(501, 209);
+            this.button7.Location = new System.Drawing.Point(495, 209);
             this.button7.Margin = new System.Windows.Forms.Padding(2);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(113, 41);
