@@ -193,7 +193,9 @@ namespace Function_Hall_Reservation_System.Student
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-
+            Reservation reserve = new Reservation();
+            this.Visible = false;
+            reserve.Show();
         }
 
         private void button1_Click_1(object sender, EventArgs e)
