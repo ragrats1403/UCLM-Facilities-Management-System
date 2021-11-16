@@ -88,6 +88,7 @@ namespace Function_Hall_Reservation_System.Student
             this.button4.TabIndex = 87;
             this.button4.Text = "Dashboard";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click_1);
             // 
             // button3
             // 
@@ -98,6 +99,7 @@ namespace Function_Hall_Reservation_System.Student
             this.button3.TabIndex = 86;
             this.button3.Text = "Logout";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -108,6 +110,7 @@ namespace Function_Hall_Reservation_System.Student
             this.button2.TabIndex = 85;
             this.button2.Text = "Reservation";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // button1
             // 
@@ -118,6 +121,7 @@ namespace Function_Hall_Reservation_System.Student
             this.button1.TabIndex = 84;
             this.button1.Text = "Calendar Of Activities";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_2);
             // 
             // label12
             // 

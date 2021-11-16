@@ -182,5 +182,32 @@ namespace Function_Hall_Reservation_System.Student
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Successfully Logged out!", "Logout", MessageBoxButtons.OK);
+            Form1 form = new Form1();
+            this.Close();
+            form.Show();
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            StudentCalendar calendar = new StudentCalendar();
+            this.Visible = false;
+            calendar.Show();
+        }
+
+        private void button4_Click_2(object sender, EventArgs e)
+        {
+            StudentDashboard sd = new StudentDashboard();
+            this.Close();
+            sd.Show();
+        }
     }
 }
