@@ -341,27 +341,27 @@ namespace Function_Hall_Reservation_System.Student
 
                     if (checkdateconflict(dateTimePicker2.Value.Date) == true)
                     {
-                        MessageBox.Show("Line1");
+                        
                         Connection.Connection.DB();
                         Functions.Functions.gen = "Select count(*) from " + loadedid + " where '" + dateTimePicker1.Value + "' between timestart and timestart and reservationstatus = 'Approved' or '" + dateTimePicker3.Value + "' between timestart and timeend and reservationstatus = 'Approved'and reservationstatus = 'Approved' or timestart between '" + datestart + "' and '" + dateend + "' and reservationstatus = 'Approved' or timeend between '" + dateTimePicker1.Value + "' and '" + dateTimePicker3.Value + "' and reservationstatus = 'Approved'";
 
                         Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
                         Functions.Functions.reader = Functions.Functions.command.ExecuteReader();
                         Functions.Functions.reader.Read();
-                        MessageBox.Show("Line2");
+                       
                         loadedcount = Functions.Functions.reader.GetInt32(0);
 
 
                         Connection.Connection.conn.Close();
                         if (loadedcount > 0)
                         {
-                            MessageBox.Show("Line3");
+                            
 
                             MessageBox.Show("Someone is using the facility within that time! \nCheck Calendar of Activities for approved schedules. ");
                         }
                         else
                         {
-                            MessageBox.Show("Line4");
+                           
                             Connection.Connection.DB();
                             Functions.Functions.gen = "Insert Into " + loadedid + "(eventname,reservedby,reservationstatus,datereserved,checkedby,reservedequipments,approvedby,timestart,month,timeend,reserveddate,facilityname,readstatus,facilityid)values('" + txtEventname.Text + "','" + name + "','Pending','" + DateTime.Now.ToShortDateString() + "','N/A','" + allequip + "','N/A','" + datestart + "','" + month + " ','" + dateend + "','" + dateTimePicker2.Value.Date + "','" + facilitycb.SelectedItem.ToString() + "',0,'"+loadedid+"')";
                             Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
@@ -379,7 +379,7 @@ namespace Function_Hall_Reservation_System.Student
                     }
                     else
                     {
-                        MessageBox.Show("Line5");
+                        
                         MessageBox.Show("Reserving..");
                         Connection.Connection.DB();
                         Functions.Functions.gen = "Insert Into " + loadedid + "(eventname,reservedby,reservationstatus,datereserved,checkedby,reservedequipments,approvedby,timestart,month,timeend,reserveddate,facilityname,readstatus,facilityid)values('" + txtEventname.Text + "','" + name + "','Pending','" + DateTime.Now.ToShortDateString() + "','N/A','" + allequip + "','N/A','" + datestart + "','" + month + " ','" + dateend + "','" + dateTimePicker2.Value.Date + "','" + facilitycb.SelectedItem.ToString() +"',0,'"+loadedid+"')";
