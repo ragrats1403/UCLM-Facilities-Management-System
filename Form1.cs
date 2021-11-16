@@ -52,7 +52,7 @@ namespace Function_Hall_Reservation_System
 
                 }
                 Connection.Connection.conn.Close();
-                lbltest.Text = count.ToString();
+               
                 if (count.Equals(0))
                 {
                     MessageBox.Show("User ID does not exist in database!\nPlease Register!");
