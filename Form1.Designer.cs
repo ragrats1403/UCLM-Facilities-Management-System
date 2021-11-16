@@ -152,6 +152,7 @@ namespace Function_Hall_Reservation_System
             this.txtusername.Size = new System.Drawing.Size(171, 29);
             this.txtusername.TabIndex = 8;
             this.txtusername.TextChanged += new System.EventHandler(this.txtusername_TextChanged);
+            this.txtusername.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtusername_KeyPress);
             // 
             // btnlogin
             // 

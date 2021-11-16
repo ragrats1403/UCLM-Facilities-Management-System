@@ -52,7 +52,7 @@ namespace Function_Hall_Reservation_System
 
                 }
                 Connection.Connection.conn.Close();
-               
+
                 if (count.Equals(0))
                 {
                     MessageBox.Show("User ID does not exist in database!\nPlease Register!");
@@ -79,7 +79,7 @@ namespace Function_Hall_Reservation_System
 
 
 
-                    
+
 
 
                     if (pw.Equals(txtpassword.Text))
@@ -141,7 +141,7 @@ namespace Function_Hall_Reservation_System
                         }
 
                     }
-                    
+
 
                     else
                     {
@@ -181,5 +181,15 @@ namespace Function_Hall_Reservation_System
         {
 
         }
+
+        private void txtusername_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+        }
     }
-    }
+}
