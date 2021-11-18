@@ -219,6 +219,7 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             this.button6.TabIndex = 89;
             this.button6.Text = "LOG OUT";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click_1);
             // 
             // button5
             // 
@@ -230,6 +231,7 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             this.button5.TabIndex = 88;
             this.button5.Text = "GENERATE REPORT";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click_1);
             // 
             // button4
             // 
@@ -241,6 +243,7 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             this.button4.TabIndex = 87;
             this.button4.Text = "EQUIPMENTS";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button2
             // 
@@ -252,6 +255,7 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             this.button2.TabIndex = 86;
             this.button2.Text = "RESERVATION";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -263,6 +267,7 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             this.button1.TabIndex = 85;
             this.button1.Text = "CALENDAR OF ACTIVITIES";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // label12
             // 

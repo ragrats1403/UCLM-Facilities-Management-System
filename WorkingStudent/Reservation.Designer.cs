@@ -43,6 +43,9 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.dtpReservedDate = new System.Windows.Forms.DateTimePicker();
+            this.dtpTimeEnd = new System.Windows.Forms.DateTimePicker();
+            this.dtpTimeStart = new System.Windows.Forms.DateTimePicker();
             this.button7 = new System.Windows.Forms.Button();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -66,9 +69,6 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             this.facilitycb = new System.Windows.Forms.ComboBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.dtpTimeStart = new System.Windows.Forms.DateTimePicker();
-            this.dtpTimeEnd = new System.Windows.Forms.DateTimePicker();
-            this.dtpReservedDate = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -107,6 +107,7 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             this.button6.TabIndex = 89;
             this.button6.Text = "LOG OUT";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click_1);
             // 
             // button5
             // 
@@ -118,6 +119,7 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             this.button5.TabIndex = 88;
             this.button5.Text = "GENERATE REPORT";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click_1);
             // 
             // button4
             // 
@@ -129,6 +131,7 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             this.button4.TabIndex = 87;
             this.button4.Text = "EQUIPMENTS";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click_1);
             // 
             // button2
             // 
@@ -140,6 +143,7 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             this.button2.TabIndex = 86;
             this.button2.Text = "RESERVATION";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // button1
             // 
@@ -151,6 +155,7 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             this.button1.TabIndex = 85;
             this.button1.Text = "CALENDAR OF ACTIVITIES";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // label1
             // 
@@ -262,6 +267,30 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             this.tabPage2.Text = "Update reservation list";
             this.tabPage2.UseVisualStyleBackColor = true;
             this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
+            // 
+            // dtpReservedDate
+            // 
+            this.dtpReservedDate.Enabled = false;
+            this.dtpReservedDate.Location = new System.Drawing.Point(583, 55);
+            this.dtpReservedDate.Name = "dtpReservedDate";
+            this.dtpReservedDate.Size = new System.Drawing.Size(135, 22);
+            this.dtpReservedDate.TabIndex = 55;
+            // 
+            // dtpTimeEnd
+            // 
+            this.dtpTimeEnd.Enabled = false;
+            this.dtpTimeEnd.Location = new System.Drawing.Point(208, 249);
+            this.dtpTimeEnd.Name = "dtpTimeEnd";
+            this.dtpTimeEnd.Size = new System.Drawing.Size(133, 22);
+            this.dtpTimeEnd.TabIndex = 54;
+            // 
+            // dtpTimeStart
+            // 
+            this.dtpTimeStart.Enabled = false;
+            this.dtpTimeStart.Location = new System.Drawing.Point(208, 216);
+            this.dtpTimeStart.Name = "dtpTimeStart";
+            this.dtpTimeStart.Size = new System.Drawing.Size(133, 22);
+            this.dtpTimeStart.TabIndex = 53;
             // 
             // button7
             // 
@@ -518,30 +547,6 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             this.label3.Size = new System.Drawing.Size(310, 42);
             this.label3.TabIndex = 83;
             this.label3.Text = "RESERVATION LIST";
-            // 
-            // dtpTimeStart
-            // 
-            this.dtpTimeStart.Enabled = false;
-            this.dtpTimeStart.Location = new System.Drawing.Point(208, 216);
-            this.dtpTimeStart.Name = "dtpTimeStart";
-            this.dtpTimeStart.Size = new System.Drawing.Size(133, 22);
-            this.dtpTimeStart.TabIndex = 53;
-            // 
-            // dtpTimeEnd
-            // 
-            this.dtpTimeEnd.Enabled = false;
-            this.dtpTimeEnd.Location = new System.Drawing.Point(208, 249);
-            this.dtpTimeEnd.Name = "dtpTimeEnd";
-            this.dtpTimeEnd.Size = new System.Drawing.Size(133, 22);
-            this.dtpTimeEnd.TabIndex = 54;
-            // 
-            // dtpReservedDate
-            // 
-            this.dtpReservedDate.Enabled = false;
-            this.dtpReservedDate.Location = new System.Drawing.Point(583, 55);
-            this.dtpReservedDate.Name = "dtpReservedDate";
-            this.dtpReservedDate.Size = new System.Drawing.Size(135, 22);
-            this.dtpReservedDate.TabIndex = 55;
             // 
             // label2
             // 
