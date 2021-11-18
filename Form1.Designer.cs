@@ -119,11 +119,10 @@ namespace Function_Hall_Reservation_System
             this.txtpassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtpassword.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtpassword.Location = new System.Drawing.Point(137, 95);
-            this.txtpassword.Multiline = true;
             this.txtpassword.Name = "txtpassword";
             this.txtpassword.PasswordChar = '*';
             this.txtpassword.ShortcutsEnabled = false;
-            this.txtpassword.Size = new System.Drawing.Size(171, 29);
+            this.txtpassword.Size = new System.Drawing.Size(171, 30);
             this.txtpassword.TabIndex = 9;
             // 
             // linkLabel1
@@ -147,9 +146,8 @@ namespace Function_Hall_Reservation_System
             this.txtusername.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtusername.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtusername.Location = new System.Drawing.Point(137, 60);
-            this.txtusername.Multiline = true;
             this.txtusername.Name = "txtusername";
-            this.txtusername.Size = new System.Drawing.Size(171, 29);
+            this.txtusername.Size = new System.Drawing.Size(171, 30);
             this.txtusername.TabIndex = 8;
             this.txtusername.TextChanged += new System.EventHandler(this.txtusername_TextChanged);
             this.txtusername.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtusername_KeyPress);
