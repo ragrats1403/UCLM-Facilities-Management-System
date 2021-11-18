@@ -862,6 +862,7 @@ namespace Function_Hall_Reservation_System.Student
             this.tabPage1.BackColor = System.Drawing.SystemColors.Menu;
             this.tabPage1.Controls.Add(this.facilitycb2);
             this.tabPage1.Controls.Add(this.dataGridView1);
+            this.tabPage1.ForeColor = System.Drawing.SystemColors.Desktop;
             this.tabPage1.Location = new System.Drawing.Point(4, 26);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -871,6 +872,7 @@ namespace Function_Hall_Reservation_System.Student
             // 
             // facilitycb2
             // 
+            this.facilitycb2.ForeColor = System.Drawing.SystemColors.WindowText;
             this.facilitycb2.FormattingEnabled = true;
             this.facilitycb2.Items.AddRange(new object[] {
             "Function Hall",
@@ -886,7 +888,9 @@ namespace Function_Hall_Reservation_System.Student
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.WindowFrame;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.dataGridView1.Location = new System.Drawing.Point(3, 33);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(754, 295);
