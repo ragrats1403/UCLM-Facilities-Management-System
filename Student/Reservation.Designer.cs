@@ -222,7 +222,7 @@ namespace Function_Hall_Reservation_System.Student
             // 
             this.lblfullname.AutoSize = true;
             this.lblfullname.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblfullname.Location = new System.Drawing.Point(40, 139);
+            this.lblfullname.Location = new System.Drawing.Point(53, 139);
             this.lblfullname.Name = "lblfullname";
             this.lblfullname.Size = new System.Drawing.Size(45, 17);
             this.lblfullname.TabIndex = 1;

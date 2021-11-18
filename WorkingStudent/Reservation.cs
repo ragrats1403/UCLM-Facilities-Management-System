@@ -383,7 +383,7 @@ namespace Function_Hall_Reservation_System.WorkingStudent
                         {
 
 
-                            MessageBox.Show("Someone is using the facility within that time! \nCheck Calendar of Activities for approved schedules. ");
+                            MessageBox.Show("The Facility is reserved within that time! \nCheck Calendar of Activities for approved schedules. ");
                             
                         }
                         else
