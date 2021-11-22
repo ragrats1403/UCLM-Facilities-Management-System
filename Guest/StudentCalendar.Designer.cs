@@ -34,7 +34,6 @@ namespace Function_Hall_Reservation_System.Guest
             this.label2 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.lblfullname = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
@@ -52,7 +51,6 @@ namespace Function_Hall_Reservation_System.Guest
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.lblfullname);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(0, -1);
             this.panel1.Name = "panel1";
@@ -65,7 +63,7 @@ namespace Function_Hall_Reservation_System.Guest
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(64, 133);
+            this.label2.Location = new System.Drawing.Point(65, 133);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(83, 30);
@@ -93,17 +91,6 @@ namespace Function_Hall_Reservation_System.Guest
             this.button1.Text = "Calendar Of Activities";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // lblfullname
-            // 
-            this.lblfullname.AutoSize = true;
-            this.lblfullname.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblfullname.Location = new System.Drawing.Point(83, 133);
-            this.lblfullname.Name = "lblfullname";
-            this.lblfullname.Size = new System.Drawing.Size(43, 17);
-            this.lblfullname.TabIndex = 1;
-            this.lblfullname.Text = "Guest";
-            this.lblfullname.Click += new System.EventHandler(this.lblfullname_Click);
             // 
             // pictureBox1
             // 
@@ -193,7 +180,6 @@ namespace Function_Hall_Reservation_System.Guest
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lblfullname;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label3;
