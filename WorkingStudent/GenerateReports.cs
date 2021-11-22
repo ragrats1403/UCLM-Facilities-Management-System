@@ -293,5 +293,41 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             this.Close();
             form.Show();
         }
+
+        private void button5_Click_2(object sender, EventArgs e)
+        {
+            GenerateReports report = new GenerateReports();
+            this.Visible = false;
+            report.Show();
+        }
+
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+            CalendarOfActivities calendar = new CalendarOfActivities();
+            this.Visible = false;
+            calendar.Show();
+        }
+
+        private void button2_Click_2(object sender, EventArgs e)
+        {
+            Reservation reservation = new Reservation();
+            this.Visible = false;
+            reservation.Show();
+        }
+
+        private void button4_Click_2(object sender, EventArgs e)
+        {
+            Equipments equipments = new Equipments();
+            this.Visible = false;
+            equipments.Show();
+        }
+
+        private void button6_Click_2(object sender, EventArgs e)
+        {
+            MessageBox.Show("Successfully Logged out!", "Logout", MessageBoxButtons.OK);
+            Form1 form = new Form1();
+            this.Close();
+            form.Show();
+        }
     }
 }

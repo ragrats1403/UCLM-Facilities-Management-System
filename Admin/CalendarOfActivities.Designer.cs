@@ -73,7 +73,7 @@ namespace Function_Hall_Reservation_System.Admin
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(732, 325);
+            this.dataGridView1.Size = new System.Drawing.Size(803, 361);
             this.dataGridView1.TabIndex = 11;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseClick);
@@ -89,7 +89,7 @@ namespace Function_Hall_Reservation_System.Admin
             this.groupBox1.Controls.Add(this.panel1);
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1058, 485);
+            this.groupBox1.Size = new System.Drawing.Size(1124, 520);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
@@ -98,7 +98,7 @@ namespace Function_Hall_Reservation_System.Admin
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(321, 13);
+            this.pictureBox2.Location = new System.Drawing.Point(329, 13);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(150, 107);
             this.pictureBox2.TabIndex = 82;
@@ -109,7 +109,7 @@ namespace Function_Hall_Reservation_System.Admin
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label7.Location = new System.Drawing.Point(522, 51);
+            this.label7.Location = new System.Drawing.Point(555, 59);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(441, 41);
@@ -125,7 +125,7 @@ namespace Function_Hall_Reservation_System.Admin
             "Old AVR",
             "New AVR",
             "Auditorium"});
-            this.facilitycb.Location = new System.Drawing.Point(321, 126);
+            this.facilitycb.Location = new System.Drawing.Point(329, 126);
             this.facilitycb.Name = "facilitycb";
             this.facilitycb.Size = new System.Drawing.Size(121, 25);
             this.facilitycb.TabIndex = 22;
@@ -219,7 +219,7 @@ namespace Function_Hall_Reservation_System.Admin
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(4, 13);
+            this.pictureBox1.Location = new System.Drawing.Point(15, 13);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(91, 89);
@@ -232,7 +232,7 @@ namespace Function_Hall_Reservation_System.Admin
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.Menu;
-            this.label4.Location = new System.Drawing.Point(102, 59);
+            this.label4.Location = new System.Drawing.Point(113, 59);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(107, 18);
@@ -340,7 +340,7 @@ namespace Function_Hall_Reservation_System.Admin
             this.lblfullname.AutoSize = true;
             this.lblfullname.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblfullname.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblfullname.Location = new System.Drawing.Point(102, 40);
+            this.lblfullname.Location = new System.Drawing.Point(113, 40);
             this.lblfullname.Name = "lblfullname";
             this.lblfullname.Size = new System.Drawing.Size(45, 17);
             this.lblfullname.TabIndex = 1;
@@ -350,7 +350,7 @@ namespace Function_Hall_Reservation_System.Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1058, 485);
+            this.ClientSize = new System.Drawing.Size(1124, 520);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CalendarOfActivities";

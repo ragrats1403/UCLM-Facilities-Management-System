@@ -211,5 +211,10 @@ namespace Function_Hall_Reservation_System.Student
             this.Close();
             sd.Show();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

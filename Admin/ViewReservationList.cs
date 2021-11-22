@@ -268,8 +268,7 @@ namespace Function_Hall_Reservation_System.Admin
 
         private void label3_Click(object sender, EventArgs e)
         {
-
-        }
+                    }
         public Boolean checkdateconflict(DateTime dt)
         {
             int count = 0;
@@ -364,7 +363,17 @@ namespace Function_Hall_Reservation_System.Admin
 
                 }
             }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
     }
 
 
