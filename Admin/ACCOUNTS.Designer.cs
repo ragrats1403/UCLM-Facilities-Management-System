@@ -98,17 +98,18 @@ namespace Function_Hall_Reservation_System.Admin
             // 
             // button6
             // 
+            this.button6.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.button6.FlatAppearance.BorderSize = 0;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button6.ForeColor = System.Drawing.Color.MediumPurple;
             this.button6.Location = new System.Drawing.Point(63, 239);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(211, 37);
+            this.button6.Size = new System.Drawing.Size(266, 37);
             this.button6.TabIndex = 8;
             this.button6.Text = "ACCOUNTS";
             this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.UseVisualStyleBackColor = true;
+            this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button4
@@ -217,7 +218,7 @@ namespace Function_Hall_Reservation_System.Admin
             this.tabPage1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage1.Size = new System.Drawing.Size(718, 303);
+            this.tabPage1.Size = new System.Drawing.Size(729, 303);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "View Student accounts";
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
@@ -238,11 +239,11 @@ namespace Function_Hall_Reservation_System.Admin
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl1.Location = new System.Drawing.Point(329, 153);
+            this.tabControl1.Location = new System.Drawing.Point(318, 153);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(726, 333);
+            this.tabControl1.Size = new System.Drawing.Size(737, 333);
             this.tabControl1.TabIndex = 15;
             // 
             // tabPage2
@@ -416,6 +417,7 @@ namespace Function_Hall_Reservation_System.Admin
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(325, 486);
             this.panel1.TabIndex = 11;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label4
             // 

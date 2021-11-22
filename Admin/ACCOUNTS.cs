@@ -149,5 +149,10 @@ namespace Function_Hall_Reservation_System.Admin
         {
 
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
