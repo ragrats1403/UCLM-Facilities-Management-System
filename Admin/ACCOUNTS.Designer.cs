@@ -192,7 +192,7 @@ namespace Function_Hall_Reservation_System.Admin
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(747, 264);
+            this.dataGridView1.Size = new System.Drawing.Size(790, 296);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseClick);
@@ -218,7 +218,7 @@ namespace Function_Hall_Reservation_System.Admin
             this.tabPage1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage1.Size = new System.Drawing.Size(722, 303);
+            this.tabPage1.Size = new System.Drawing.Size(790, 335);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "View Student accounts";
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
@@ -291,7 +291,7 @@ namespace Function_Hall_Reservation_System.Admin
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(311, 193);
+            this.button8.Location = new System.Drawing.Point(353, 230);
             this.button8.Margin = new System.Windows.Forms.Padding(2);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(103, 49);
@@ -497,7 +497,7 @@ namespace Function_Hall_Reservation_System.Admin
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label7.Location = new System.Drawing.Point(601, 60);
+            this.label7.Location = new System.Drawing.Point(639, 61);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(208, 41);

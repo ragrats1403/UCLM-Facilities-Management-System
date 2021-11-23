@@ -74,9 +74,9 @@ namespace Function_Hall_Reservation_System.Admin
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.facilitycb = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabPage1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -101,7 +101,7 @@ namespace Function_Hall_Reservation_System.Admin
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(743, 334);
+            this.dataGridView1.Size = new System.Drawing.Size(783, 334);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseClick);
@@ -124,7 +124,7 @@ namespace Function_Hall_Reservation_System.Admin
             this.tabPage1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage1.Size = new System.Drawing.Size(748, 336);
+            this.tabPage1.Size = new System.Drawing.Size(786, 336);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "View reservation list";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -632,6 +632,19 @@ namespace Function_Hall_Reservation_System.Admin
             this.groupBox1.Text = "groupBox1";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label1.Location = new System.Drawing.Point(645, 61);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(243, 41);
+            this.label1.TabIndex = 83;
+            this.label1.Text = "RESERVATION";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
             // pictureBox3
             // 
             this.pictureBox3.Image = global::Function_Hall_Reservation_System.Properties.Resources.UCLM_LOGO;
@@ -656,19 +669,6 @@ namespace Function_Hall_Reservation_System.Admin
             this.facilitycb.TabIndex = 80;
             this.facilitycb.Text = "Select Facility";
             this.facilitycb.SelectedIndexChanged += new System.EventHandler(this.facilitycb_SelectedIndexChanged);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(645, 61);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(243, 41);
-            this.label1.TabIndex = 83;
-            this.label1.Text = "RESERVATION";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // ViewReservationList
             // 
