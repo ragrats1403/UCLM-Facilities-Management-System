@@ -94,7 +94,7 @@ namespace Function_Hall_Reservation_System.Student
         }
         public void eqfill(String id)
         {
-            int eqid;
+            
             try
             {
                 Connection.Connection.DB();
@@ -287,9 +287,7 @@ namespace Function_Hall_Reservation_System.Student
             string month = "";
 
 
-            string loadedstr = "";
-            string timestart = "";
-            string timeend = "";
+            
             string eqres1 = cmbeq1.Text.ToString() + "-" + lbleq1.Text.ToString();
             string eqres2 = cmbeq2.Text.ToString() + "-" + lbleq2.Text.ToString();
             string eqres3 = cmbeq3.Text.ToString() + "-" + lbleq3.Text.ToString();
