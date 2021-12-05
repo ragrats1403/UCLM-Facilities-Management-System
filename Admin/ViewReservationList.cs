@@ -214,20 +214,20 @@ namespace Function_Hall_Reservation_System.Admin
             {
                 if (facilitycb.SelectedItem.ToString() == "Function Hall")
                 {
-                    //MessageBox.Show("Debug Line for Functionhall selection Executed");
+                    
                     Fillfhreservationdata();
                     loadedid = idname;
                 }
                 else if (facilitycb.SelectedItem.ToString() == "Auditorium")
                 {
 
-                    //MessageBox.Show("Debug Line for Auditorium Executed");
+                    
                     Fillaudreservationdata();
                     loadedid = idname;
                 }
                 else if (facilitycb.SelectedItem.ToString() == "New AVR")
                 {
-                    //MessageBox.Show("Debug Line for New AVR Executed");
+                    
                     Fillnareservationdata();
                     loadedid = idname;
                 }
@@ -235,7 +235,7 @@ namespace Function_Hall_Reservation_System.Admin
                 else if (facilitycb.SelectedItem.ToString() == "Old AVR")
                 {
 
-                    //MessageBox.Show("Debug Line for Old AVR Executed");
+                   
                     Filloareservationdata();
                     loadedid = idname;
                 }
