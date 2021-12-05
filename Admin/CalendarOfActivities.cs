@@ -17,37 +17,23 @@ namespace Function_Hall_Reservation_System.Admin
         public CalendarOfActivities()
         {
             InitializeComponent();
-            cbstyleset();
+            
+            
         }
 
-        public void cbstyleset()
+        public void filldata()
         {
-            facilitycb.DropDownStyle = ComboBoxStyle.DropDownList;
-        }
-        public void Fillfhreservationsdata()
-        {
-            idname = "fhereservation";
-            Functions.Functions.gen = "Select * from fhreservation";
+            lblfullname.Text = Form1.setfullname;
+            // dataGridView1.Columns[2].Width = 108;
+            Functions.Functions.gen = "Select fhreservation.eventname AS [Event Name], Convert(varchar(20), CAST(fhreservation.timestart AS time ),0) AS [Time Start],Convert(varchar(20), CAST(fhreservation.timeend AS time ),0)AS [Time End], fhreservation.facilityname AS [Facility] from fhreservation where fhreservation.reservationstatus = 'Approved' UNION ALL SELECT nareservations.eventname AS [Event Name],Convert(varchar(20), CAST(nareservations.timestart AS time ),0) AS [Time Start],Convert(varchar(20), CAST(nareservations.timeend AS time ),0)AS [Time End], nareservations.facilityname AS [Facility] from nareservations where nareservations.reservationstatus = 'Approved' UNION ALL Select oareservations.eventname AS [Event Name],Convert(varchar(20), CAST(oareservations.timestart AS time ),0) AS [Time Start],Convert(varchar(20), CAST(oareservations.timeend AS time ),0)AS [Time End], oareservations.facilityname AS [Facility] from oareservations where oareservations.reservationstatus = 'Approved' UNION ALL Select audreservations.eventname AS [Event Name],Convert(varchar(20), CAST(audreservations.timestart AS time ),0) AS [Time Start],Convert(varchar(20), CAST(audreservations.timeend AS time ),0)AS [Time End], audreservations.facilityname AS [Facility] from audreservations where audreservations.reservationstatus = 'Approved'";
             Functions.Functions.fill(Functions.Functions.gen, dataGridView1);
+
+            dataGridView1.Columns[0].Width = 200;
+            dataGridView1.Columns[1].Width = 110;
+            dataGridView1.Columns[2].Width = 110;
+            dataGridView1.Columns[3].Width = 110;
         }
-        public void Fillaudreservationsdata()
-        {
-            idname = "audreservations";
-            Functions.Functions.gen = "Select * from audreservations";
-            Functions.Functions.fill(Functions.Functions.gen, dataGridView1);
-        }
-        public void Fillnareservationsdata()
-        {
-            idname = "nareservations";
-            Functions.Functions.gen = "Select * from nareservations";
-            Functions.Functions.fill(Functions.Functions.gen, dataGridView1);
-        }
-        public void Filloareservationsdata()
-        {
-            idname = "oareservations";
-            Functions.Functions.gen = "Select * from oareservations";
-            Functions.Functions.fill(Functions.Functions.gen, dataGridView1);
-        }
+
         private void button5_Click(object sender, EventArgs e)
         {
 
@@ -110,18 +96,7 @@ namespace Function_Hall_Reservation_System.Admin
         {
 
         }
-        public void filldata()
-        {
-
-            // dataGridView1.Columns[2].Width = 108;
-            Functions.Functions.gen = "Select fhreservation.eventname as [Event Name],fhreservation.reserveddate as [Date],fhreservation.timestart as [Time Start], fhreservation.timeend as [Time End] from fhreservation where fhreservation.reservationstatus = 'Approved'";
-            Functions.Functions.fill(Functions.Functions.gen, dataGridView1);
-
-            dataGridView1.Columns[0].Width = 200;
-            dataGridView1.Columns[1].Width = 130;
-            dataGridView1.Columns[2].Width = 150;
-            dataGridView1.Columns[3].Width = 150;
-        }
+        
 
         private void CalendarOfActivities_Load(object sender, EventArgs e)
         {
@@ -149,43 +124,7 @@ namespace Function_Hall_Reservation_System.Admin
 
         }
 
-        private void facilitycb_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                if (facilitycb.SelectedItem.ToString() == "Function Hall")
-                {
-                    //MessageBox.Show("Debug Line for Functionhall selection Executed");
-                    Fillfhreservationsdata();
-                    loadedid = idname;
-                }
-                else if (facilitycb.SelectedItem.ToString() == "Auditorium")
-                {
-
-                    //MessageBox.Show("Debug Line for Auditorium Executed");
-                    Fillaudreservationsdata();
-                    loadedid = idname;
-                }
-                else if (facilitycb.SelectedItem.ToString() == "New AVR")
-                {
-                    //MessageBox.Show("Debug Line for New AVR Executed");
-                    Fillnareservationsdata();
-                    loadedid = idname;
-                }
-
-                else if (facilitycb.SelectedItem.ToString() == "Old AVR")
-                {
-
-                    //MessageBox.Show("Debug Line for Old AVR Executed");
-                    Filloareservationsdata();
-                    loadedid = idname;
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
+        
 
         private void label7_Click(object sender, EventArgs e)
         {

@@ -34,7 +34,6 @@ namespace Function_Hall_Reservation_System.Admin
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.facilitycb = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
@@ -84,7 +83,6 @@ namespace Function_Hall_Reservation_System.Admin
             this.groupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.groupBox1.Controls.Add(this.pictureBox2);
             this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.facilitycb);
             this.groupBox1.Controls.Add(this.dataGridView1);
             this.groupBox1.Controls.Add(this.panel1);
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
@@ -116,22 +114,6 @@ namespace Function_Hall_Reservation_System.Admin
             this.label7.TabIndex = 23;
             this.label7.Text = "CALENDAR OF ACTIVITIES";
             this.label7.Click += new System.EventHandler(this.label7_Click);
-            // 
-            // facilitycb
-            // 
-            this.facilitycb.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.facilitycb.FormattingEnabled = true;
-            this.facilitycb.Items.AddRange(new object[] {
-            "Function Hall",
-            "Old AVR",
-            "New AVR",
-            "Auditorium"});
-            this.facilitycb.Location = new System.Drawing.Point(329, 126);
-            this.facilitycb.Name = "facilitycb";
-            this.facilitycb.Size = new System.Drawing.Size(121, 25);
-            this.facilitycb.TabIndex = 22;
-            this.facilitycb.Text = "Select Facility";
-            this.facilitycb.SelectedIndexChanged += new System.EventHandler(this.facilitycb_SelectedIndexChanged);
             // 
             // panel1
             // 
@@ -387,7 +369,6 @@ namespace Function_Hall_Reservation_System.Admin
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox facilitycb;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox2;
