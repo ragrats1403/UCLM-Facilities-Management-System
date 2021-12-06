@@ -163,7 +163,7 @@ namespace Function_Hall_Reservation_System.WorkingStudent
                 richTextBox1.AppendText("       " + "Reservation Details" + "\n");
                 richTextBox1.AppendText("    ⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻⎻" + "\n");
                 richTextBox1.AppendText("\n");
-                richTextBox1.AppendText("    Event Name:" + "\t" + "\t" + "\t" + "\t" + "\t" + eventnameTextBox.Text + "\n");
+                /*richTextBox1.AppendText("    Event Name:" + "\t" + "\t" + "\t" + "\t" + "\t" + eventnameTextBox.Text + "\n");
                 richTextBox1.AppendText("    Time Start:" + "\t" + "\t" + "\t" + "\t" + "\t" + txttimestart.Text + "\n");
                 richTextBox1.AppendText("    Time End:" + "\t" + "\t" + "\t" + "\t" + "\t" + txttimeend.Text + "\n");
                 richTextBox1.AppendText("    Reserved By:" + "\t" + "\t" + "\t" + "\t" + "\t" + reservedbyTextBox.Text + "\n");
@@ -171,7 +171,7 @@ namespace Function_Hall_Reservation_System.WorkingStudent
                 richTextBox1.AppendText("    Reserved Date:" + "\t" + "\t" + "\t" + "\t" + txtreservedate.Text + "\n");
                 richTextBox1.AppendText("    Reserved Equipments:" + "\t" + "\t" + "\t" + "\t" + reservedequipmentsTextBox.Text + "\n");
                 richTextBox1.AppendText("    Checked By:" + "\t" + "\t" + "\t" + "\t" + "\t" + checkedbyTextBox.Text + "\n");
-                richTextBox1.AppendText("    Approved By:" + "\t" + "\t" + "\t" + "\t" + "\t" + approvedbyTextBox.Text + "\n");
+                richTextBox1.AppendText("    Approved By:" + "\t" + "\t" + "\t" + "\t" + "\t" + approvedbyTextBox.Text + "\n");*/
             }
 
             catch (Exception ex)
@@ -209,10 +209,10 @@ namespace Function_Hall_Reservation_System.WorkingStudent
                 checkedbyTextBox.Text = dataGridView1[3, e.RowIndex].Value.ToString();
                 approvedbyTextBox.Text = dataGridView1[4, e.RowIndex].Value.ToString();
                 reservedequipmentsTextBox.Text = dataGridView1[5, e.RowIndex].Value.ToString();
-                datereserved.Text = dataGridView1[6, e.RowIndex].Value.ToString();
-                txtreservedate.Text = dataGridView1[7, e.RowIndex].Value.ToString();
-                txttimestart.Text = dataGridView1[8, e.RowIndex].Value.ToString();
-                txttimeend.Text = dataGridView1[9, e.RowIndex].Value.ToString();
+                //datereserved.Text = dataGridView1[6, e.RowIndex].Value.ToString();
+                //txtreservedate.Text = dataGridView1[7, e.RowIndex].Value.ToString();
+                //txttimestart.Text = dataGridView1[8, e.RowIndex].Value.ToString();
+                //txttimeend.Text = dataGridView1[9, e.RowIndex].Value.ToString();
                 txtFacility.Text = dataGridView1[10, e.RowIndex].Value.ToString();
 
             }
