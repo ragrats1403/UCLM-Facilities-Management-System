@@ -288,18 +288,18 @@ namespace Function_Hall_Reservation_System.Student
 
 
             
-            string eqres1 = cmbeq1.Text.ToString() + "-" + lbleq1.Text.ToString();
-            string eqres2 = cmbeq2.Text.ToString() + "-" + lbleq2.Text.ToString();
-            string eqres3 = cmbeq3.Text.ToString() + "-" + lbleq3.Text.ToString();
-            string eqres4 = cmbeq4.Text.ToString() + "-" + lbleq4.Text.ToString();
-            string eqres5 = cmbeq5.Text.ToString() + "-" + lbleq5.Text.ToString();
-            string eqres6 = cmbeq6.Text.ToString() + "-" + lbleq6.Text.ToString();
-            string eqres7 = cmbeq7.Text.ToString() + "-" + lbleq7.Text.ToString();
-            string eqres8 = cmbeq8.Text.ToString() + "-" + lbleq8.Text.ToString();
-            string eqres9 = cmbeq9.Text.ToString() + "-" + lbleq9.Text.ToString();
-            string eqres10 = cmbeq10.Text.ToString() + "-" + lbleq10.Text.ToString();
-            string eqres11 = cmbeq11.Text.ToString() + "-" + lbleq11.Text.ToString();
-            string eqres12 = cmbeq12.Text.ToString() + "-" + lbleq12.Text.ToString();
+            string eqres1 = cmbeq1.Text.ToString() + "(" + textBox1.Text.ToString()+")";
+            string eqres2 = cmbeq2.Text.ToString() + "(" + textBox2.Text.ToString() + ")";
+            string eqres3 = cmbeq3.Text.ToString() + "(" + textBox3.Text.ToString() + ")";
+            string eqres4 = cmbeq4.Text.ToString() + "(" + textBox4.Text.ToString() + ")";
+            string eqres5 = cmbeq5.Text.ToString() + "(" + textBox5.Text.ToString() + ")";
+            string eqres6 = cmbeq6.Text.ToString() + "(" + textBox6.Text.ToString() + ")";
+            string eqres7 = cmbeq7.Text.ToString() + "(" + textBox12.Text.ToString() + ")";
+            string eqres8 = cmbeq8.Text.ToString() + "(" + textBox11.Text.ToString() + ")";
+            string eqres9 = cmbeq9.Text.ToString() + "(" + textBox10.Text.ToString() + ")";
+            string eqres10 = cmbeq10.Text.ToString() + "(" + textBox9.Text.ToString() + ")";
+            string eqres11 = cmbeq11.Text.ToString() + "(" + textBox8.Text.ToString() + ")";
+            string eqres12 = cmbeq12.Text.ToString() + "(" + textBox7.Text.ToString() + ")";
 
 
             var selectedequip = new List<string>();
