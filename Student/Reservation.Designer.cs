@@ -31,6 +31,7 @@ namespace Function_Hall_Reservation_System.Student
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Reservation));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -108,8 +109,8 @@ namespace Function_Hall_Reservation_System.Student
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -122,7 +123,6 @@ namespace Function_Hall_Reservation_System.Student
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -147,6 +147,17 @@ namespace Function_Hall_Reservation_System.Student
             this.panel1.Size = new System.Drawing.Size(325, 488);
             this.panel1.TabIndex = 4;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(14, 157);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(43, 37);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 89;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click_1);
             // 
             // pictureBox9
             // 
@@ -375,6 +386,7 @@ namespace Function_Hall_Reservation_System.Student
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(581, 194);
             this.panel2.TabIndex = 22;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // lbleq12
             // 
@@ -530,6 +542,7 @@ namespace Function_Hall_Reservation_System.Student
             this.textBox7.Size = new System.Drawing.Size(74, 22);
             this.textBox7.TabIndex = 44;
             this.textBox7.Visible = false;
+            this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
             this.textBox7.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox7_KeyPress);
             // 
             // textBox8
@@ -539,6 +552,7 @@ namespace Function_Hall_Reservation_System.Student
             this.textBox8.Size = new System.Drawing.Size(74, 22);
             this.textBox8.TabIndex = 43;
             this.textBox8.Visible = false;
+            this.textBox8.TextChanged += new System.EventHandler(this.textBox8_TextChanged);
             this.textBox8.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox8_KeyPress);
             // 
             // textBox9
@@ -548,6 +562,7 @@ namespace Function_Hall_Reservation_System.Student
             this.textBox9.Size = new System.Drawing.Size(74, 22);
             this.textBox9.TabIndex = 42;
             this.textBox9.Visible = false;
+            this.textBox9.TextChanged += new System.EventHandler(this.textBox9_TextChanged);
             this.textBox9.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox9_KeyPress);
             // 
             // textBox10
@@ -557,6 +572,7 @@ namespace Function_Hall_Reservation_System.Student
             this.textBox10.Size = new System.Drawing.Size(74, 22);
             this.textBox10.TabIndex = 41;
             this.textBox10.Visible = false;
+            this.textBox10.TextChanged += new System.EventHandler(this.textBox10_TextChanged);
             this.textBox10.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox10_KeyPress);
             // 
             // textBox11
@@ -566,6 +582,7 @@ namespace Function_Hall_Reservation_System.Student
             this.textBox11.Size = new System.Drawing.Size(74, 22);
             this.textBox11.TabIndex = 40;
             this.textBox11.Visible = false;
+            this.textBox11.TextChanged += new System.EventHandler(this.textBox11_TextChanged);
             this.textBox11.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox11_KeyPress);
             // 
             // textBox12
@@ -575,6 +592,7 @@ namespace Function_Hall_Reservation_System.Student
             this.textBox12.Size = new System.Drawing.Size(74, 22);
             this.textBox12.TabIndex = 39;
             this.textBox12.Visible = false;
+            this.textBox12.TextChanged += new System.EventHandler(this.textBox12_TextChanged);
             this.textBox12.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox12_KeyPress);
             // 
             // lbleq6
@@ -715,6 +733,7 @@ namespace Function_Hall_Reservation_System.Student
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(74, 22);
             this.textBox6.TabIndex = 23;
+            this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             this.textBox6.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox6_KeyPress);
             // 
             // textBox5
@@ -723,6 +742,7 @@ namespace Function_Hall_Reservation_System.Student
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(74, 22);
             this.textBox5.TabIndex = 4;
+            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             this.textBox5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox5_KeyPress);
             // 
             // textBox4
@@ -731,6 +751,7 @@ namespace Function_Hall_Reservation_System.Student
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(74, 22);
             this.textBox4.TabIndex = 3;
+            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             this.textBox4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox4_KeyPress);
             // 
             // textBox3
@@ -739,6 +760,7 @@ namespace Function_Hall_Reservation_System.Student
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(74, 22);
             this.textBox3.TabIndex = 2;
+            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             this.textBox3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox3_KeyPress);
             // 
             // textBox2
@@ -747,6 +769,7 @@ namespace Function_Hall_Reservation_System.Student
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(74, 22);
             this.textBox2.TabIndex = 1;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged_1);
             this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
             // 
             // textBox1
@@ -988,17 +1011,6 @@ namespace Function_Hall_Reservation_System.Student
             this.label3.TabIndex = 84;
             this.label3.Text = "RESERVATION";
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(14, 157);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(43, 37);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 89;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click_1);
-            // 
             // Reservation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1017,6 +1029,7 @@ namespace Function_Hall_Reservation_System.Student
             this.Load += new System.EventHandler(this.Reservation_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -1031,7 +1044,6 @@ namespace Function_Hall_Reservation_System.Student
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

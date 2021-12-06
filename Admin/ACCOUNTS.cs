@@ -154,5 +154,11 @@ namespace Function_Hall_Reservation_System.Admin
         {
 
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            Functions.Functions.gen = "Select * from users where studentid LIKE '"+textBox1.Text+ "%' OR firstname LIKE '" + textBox1.Text + "%' OR lastname LIKE '" + textBox1.Text + "%'";
+            Functions.Functions.fill(Functions.Functions.gen, dataGridView1);
+        }
     }
 }
