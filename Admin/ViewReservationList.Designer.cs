@@ -215,7 +215,7 @@ namespace Function_Hall_Reservation_System.Admin
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(596, 233);
+            this.button8.Location = new System.Drawing.Point(507, 233);
             this.button8.Margin = new System.Windows.Forms.Padding(2);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(113, 41);
