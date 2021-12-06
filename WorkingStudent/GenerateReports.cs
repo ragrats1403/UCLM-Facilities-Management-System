@@ -205,7 +205,7 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             string timeend = "";
             string reserveddate = "";
             string datereserved = "";
-
+            richTextBox1.Clear();
             try
             {
 
