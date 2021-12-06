@@ -549,12 +549,13 @@ namespace Function_Hall_Reservation_System.Admin
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(133, 30);
             this.button11.TabIndex = 122;
-            this.button11.Text = "Generate";
+            this.button11.Text = "Preview";
             this.button11.UseVisualStyleBackColor = true;
             this.button11.Click += new System.EventHandler(this.button11_Click_1);
             // 
             // richTextBox1
             // 
+            this.richTextBox1.Font = new System.Drawing.Font("Century Gothic", 5.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox1.Location = new System.Drawing.Point(664, 7);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.ReadOnly = true;

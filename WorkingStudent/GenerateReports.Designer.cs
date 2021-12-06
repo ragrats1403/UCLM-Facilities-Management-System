@@ -374,7 +374,7 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(133, 30);
             this.button11.TabIndex = 62;
-            this.button11.Text = "Generate";
+            this.button11.Text = "Preview";
             this.button11.UseVisualStyleBackColor = true;
             this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
