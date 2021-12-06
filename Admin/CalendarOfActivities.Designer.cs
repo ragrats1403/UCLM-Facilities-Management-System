@@ -98,7 +98,7 @@ namespace Function_Hall_Reservation_System.Admin
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(329, 13);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(150, 107);
+            this.pictureBox2.Size = new System.Drawing.Size(153, 107);
             this.pictureBox2.TabIndex = 82;
             this.pictureBox2.TabStop = false;
             // 
