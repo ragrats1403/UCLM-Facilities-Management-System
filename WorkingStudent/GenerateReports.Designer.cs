@@ -72,10 +72,10 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             this.reservationidTextBox = new System.Windows.Forms.TextBox();
             this.txtFacility = new System.Windows.Forms.TextBox();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
+            this.dtpdatereserved = new System.Windows.Forms.DateTimePicker();
+            this.dtpreserveddate = new System.Windows.Forms.DateTimePicker();
+            this.dtptimestart = new System.Windows.Forms.DateTimePicker();
+            this.dtptimeend = new System.Windows.Forms.DateTimePicker();
             reservedequipmentsLabel = new System.Windows.Forms.Label();
             approvedbyLabel = new System.Windows.Forms.Label();
             checkedbyLabel = new System.Windows.Forms.Label();
@@ -537,10 +537,10 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.dateTimePicker4);
-            this.tabPage1.Controls.Add(this.dateTimePicker3);
-            this.tabPage1.Controls.Add(this.dateTimePicker2);
-            this.tabPage1.Controls.Add(this.dateTimePicker1);
+            this.tabPage1.Controls.Add(this.dtptimeend);
+            this.tabPage1.Controls.Add(this.dtptimestart);
+            this.tabPage1.Controls.Add(this.dtpreserveddate);
+            this.tabPage1.Controls.Add(this.dtpdatereserved);
             this.tabPage1.Controls.Add(label1);
             this.tabPage1.Controls.Add(this.txtFacility);
             this.tabPage1.Controls.Add(label4);
@@ -572,33 +572,37 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             this.tabPage1.UseVisualStyleBackColor = true;
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click_1);
             // 
-            // dateTimePicker1
+            // dtpdatereserved
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(448, 216);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
-            this.dateTimePicker1.TabIndex = 116;
+            this.dtpdatereserved.Enabled = false;
+            this.dtpdatereserved.Location = new System.Drawing.Point(448, 216);
+            this.dtpdatereserved.Name = "dtpdatereserved";
+            this.dtpdatereserved.Size = new System.Drawing.Size(200, 22);
+            this.dtpdatereserved.TabIndex = 116;
             // 
-            // dateTimePicker2
+            // dtpreserveddate
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(448, 247);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 22);
-            this.dateTimePicker2.TabIndex = 117;
+            this.dtpreserveddate.Enabled = false;
+            this.dtpreserveddate.Location = new System.Drawing.Point(448, 247);
+            this.dtpreserveddate.Name = "dtpreserveddate";
+            this.dtpreserveddate.Size = new System.Drawing.Size(200, 22);
+            this.dtpreserveddate.TabIndex = 117;
             // 
-            // dateTimePicker3
+            // dtptimestart
             // 
-            this.dateTimePicker3.Location = new System.Drawing.Point(448, 275);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(200, 22);
-            this.dateTimePicker3.TabIndex = 118;
+            this.dtptimestart.Enabled = false;
+            this.dtptimestart.Location = new System.Drawing.Point(448, 275);
+            this.dtptimestart.Name = "dtptimestart";
+            this.dtptimestart.Size = new System.Drawing.Size(200, 22);
+            this.dtptimestart.TabIndex = 118;
             // 
-            // dateTimePicker4
+            // dtptimeend
             // 
-            this.dateTimePicker4.Location = new System.Drawing.Point(448, 302);
-            this.dateTimePicker4.Name = "dateTimePicker4";
-            this.dateTimePicker4.Size = new System.Drawing.Size(200, 22);
-            this.dateTimePicker4.TabIndex = 119;
+            this.dtptimeend.Enabled = false;
+            this.dtptimeend.Location = new System.Drawing.Point(448, 302);
+            this.dtptimeend.Name = "dtptimeend";
+            this.dtptimeend.Size = new System.Drawing.Size(200, 22);
+            this.dtptimeend.TabIndex = 119;
             // 
             // GenerateReports
             // 
@@ -656,10 +660,10 @@ namespace Function_Hall_Reservation_System.WorkingStudent
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker4;
-        private System.Windows.Forms.DateTimePicker dateTimePicker3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtptimeend;
+        private System.Windows.Forms.DateTimePicker dtptimestart;
+        private System.Windows.Forms.DateTimePicker dtpreserveddate;
+        private System.Windows.Forms.DateTimePicker dtpdatereserved;
         private System.Windows.Forms.TextBox txtFacility;
         private System.Windows.Forms.TextBox reservationidTextBox;
         private System.Windows.Forms.TextBox eventnameTextBox;
