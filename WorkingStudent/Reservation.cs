@@ -56,7 +56,7 @@ namespace Function_Hall_Reservation_System.WorkingStudent
         public void Fillfhreservationdata()
         {
             idname = "fhreservation";
-            Functions.Functions.gen = "Select * from fhreservation";
+            Functions.Functions.gen = "Select * from fhreservation where reserveddate >= '" + DateTime.Now + "'";
             Functions.Functions.fill(Functions.Functions.gen, dataGridView1);
 
 
@@ -65,7 +65,7 @@ namespace Function_Hall_Reservation_System.WorkingStudent
         public void Fillaudreservationdata()
         {
             idname = "audreservation";
-            Functions.Functions.gen = "Select * from audreservations";
+            Functions.Functions.gen = "Select * from audreservations where reserveddate > '" + DateTime.Now + "'";
             Functions.Functions.fill(Functions.Functions.gen, dataGridView1);
 
 
@@ -74,7 +74,7 @@ namespace Function_Hall_Reservation_System.WorkingStudent
         public void Fillnareservationdata()
         {
             idname = "nareservations";
-            Functions.Functions.gen = "Select * from nareservations";
+            Functions.Functions.gen = "Select * from nareservations where reserveddate > '" + DateTime.Now + "'";
             Functions.Functions.fill(Functions.Functions.gen, dataGridView1);
 
 
@@ -83,7 +83,7 @@ namespace Function_Hall_Reservation_System.WorkingStudent
         public void Filloareservationdata()
         {
             idname = "oareservations";
-            Functions.Functions.gen = "Select * from oareservations";
+            Functions.Functions.gen = "Select * from oareservations where reserveddate > '" + DateTime.Now + "'";
             Functions.Functions.fill(Functions.Functions.gen, dataGridView1);
 
 

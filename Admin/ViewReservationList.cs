@@ -17,6 +17,8 @@ namespace Function_Hall_Reservation_System.Admin
         public static string idname;
         public string loadedid;
         public static int loadedcount = 0;
+        
+        
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
         (
@@ -27,6 +29,7 @@ namespace Function_Hall_Reservation_System.Admin
             int nWidthEllipse, // width of ellipse
             int nHeightEllipse // height of ellipse
         );
+
         public ViewReservationList()
         {
             InitializeComponent();
@@ -36,14 +39,16 @@ namespace Function_Hall_Reservation_System.Admin
 
         public void Fillfhreservationdata()
         {
+            
             idname = "fhreservation";
-            Functions.Functions.gen = "Select * from fhreservation";
+            Functions.Functions.gen = "Select * from fhreservation where reserveddate >= '"+ DateTime.Now+"'";
             Functions.Functions.fill(Functions.Functions.gen, dataGridView1);
         }
         public void Fillaudreservationdata()
         {
+            
             idname = "audreservation";
-            Functions.Functions.gen = "Select * from audreservations";
+            Functions.Functions.gen = "Select * from audreservations where reserveddate > '" + DateTime.Now + "'";
             Functions.Functions.fill(Functions.Functions.gen, dataGridView1);
 
 
@@ -51,8 +56,9 @@ namespace Function_Hall_Reservation_System.Admin
         }
         public void Fillnareservationdata()
         {
+            
             idname = "nareservations";
-            Functions.Functions.gen = "Select * from nareservations";
+            Functions.Functions.gen = "Select * from nareservations where reserveddate > '" + DateTime.Now + "'";
             Functions.Functions.fill(Functions.Functions.gen, dataGridView1);
 
 
@@ -60,8 +66,9 @@ namespace Function_Hall_Reservation_System.Admin
         }
         public void Filloareservationdata()
         {
+           
             idname = "oareservations";
-            Functions.Functions.gen = "Select * from oareservations";
+            Functions.Functions.gen = "Select * from oareservations where reserveddate > '" + DateTime.Now + "'";
             Functions.Functions.fill(Functions.Functions.gen, dataGridView1);
 
 
