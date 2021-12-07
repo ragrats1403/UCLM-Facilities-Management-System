@@ -128,52 +128,504 @@ namespace Function_Hall_Reservation_System.Student
                     cmbeq10.Items.Add(Functions.Functions.reader["equipmentname"]).ToString();
                     cmbeq11.Items.Add(Functions.Functions.reader["equipmentname"]).ToString();
                     cmbeq12.Items.Add(Functions.Functions.reader["equipmentname"]).ToString();
-
-
                 }
-                if (cmbeq1.Items.Count <6)
+                if (cmbeq1.Items.Count == 1)
                 {
+                    cmbeq1.Visible = true;
+                    cmbeq2.Visible = false;
+                    cmbeq3.Visible = false;
+                    cmbeq4.Visible = false;
+                    cmbeq5.Visible = false;
+                    cmbeq6.Visible = false;
                     cmbeq7.Visible = false;
                     cmbeq8.Visible = false;
                     cmbeq9.Visible = false;
                     cmbeq10.Visible = false;
                     cmbeq11.Visible = false;
                     cmbeq12.Visible = false;
+
+                    lbleq1.Visible = true;
+                    lbleq2.Visible = false;
+                    lbleq3.Visible = false;
+                    lbleq4.Visible = false;
+                    lbleq5.Visible = false;
+                    lbleq6.Visible = false;
                     lbleq7.Visible = false;
                     lbleq8.Visible = false;
                     lbleq9.Visible = false;
                     lbleq10.Visible = false;
                     lbleq11.Visible = false;
                     lbleq12.Visible = false;
+
                     textBox12.Visible = false;
                     textBox11.Visible = false;
                     textBox10.Visible = false;
                     textBox9.Visible = false;
                     textBox8.Visible = false;
                     textBox7.Visible = false;
+                    textBox6.Visible = false;
+                    textBox5.Visible = false;
+                    textBox4.Visible = false;
+                    textBox3.Visible = false;
+                    textBox2.Visible = false;
+                    textBox1.Visible = true;
 
                 }
-                else
+                if (cmbeq1.Items.Count == 2)
                 {
+                    cmbeq1.Visible = true;
+                    cmbeq2.Visible = true;
+                    cmbeq3.Visible = false;
+                    cmbeq4.Visible = false;
+                    cmbeq5.Visible = false;
+                    cmbeq6.Visible = false;
+                    cmbeq7.Visible = false;
+                    cmbeq8.Visible = false;
+                    cmbeq9.Visible = false;
+                    cmbeq10.Visible = false;
+                    cmbeq11.Visible = false;
+                    cmbeq12.Visible = false;
+
+                    lbleq1.Visible = true;
+                    lbleq2.Visible = true;
+                    lbleq3.Visible = false;
+                    lbleq4.Visible = false;
+                    lbleq5.Visible = false;
+                    lbleq6.Visible = false;
+                    lbleq7.Visible = false;
+                    lbleq8.Visible = false;
+                    lbleq9.Visible = false;
+                    lbleq10.Visible = false;
+                    lbleq11.Visible = false;
+                    lbleq12.Visible = false;
+
+                    textBox12.Visible = false;
+                    textBox11.Visible = false;
+                    textBox10.Visible = false;
+                    textBox9.Visible = false;
+                    textBox8.Visible = false;
+                    textBox7.Visible = false;
+                    textBox6.Visible = false;
+                    textBox5.Visible = false;
+                    textBox4.Visible = false;
+                    textBox3.Visible = false;
+                    textBox2.Visible = true;
+                    textBox1.Visible = true;
+
+                }
+                if (cmbeq1.Items.Count == 3)
+                {
+                    cmbeq1.Visible = true;
+                    cmbeq2.Visible = true;
+                    cmbeq3.Visible = true;
+                    cmbeq4.Visible = false;
+                    cmbeq5.Visible = false;
+                    cmbeq6.Visible = false;
+                    cmbeq7.Visible = false;
+                    cmbeq8.Visible = false;
+                    cmbeq9.Visible = false;
+                    cmbeq10.Visible = false;
+                    cmbeq11.Visible = false;
+                    cmbeq12.Visible = false;
+
+                    lbleq1.Visible = true;
+                    lbleq2.Visible = true;
+                    lbleq3.Visible = true;
+                    lbleq4.Visible = false;
+                    lbleq5.Visible = false;
+                    lbleq6.Visible = false;
+                    lbleq7.Visible = false;
+                    lbleq8.Visible = false;
+                    lbleq9.Visible = false;
+                    lbleq10.Visible = false;
+                    lbleq11.Visible = false;
+                    lbleq12.Visible = false;
+
+                    textBox12.Visible = false;
+                    textBox11.Visible = false;
+                    textBox10.Visible = false;
+                    textBox9.Visible = false;
+                    textBox8.Visible = false;
+                    textBox7.Visible = false;
+                    textBox6.Visible = false;
+                    textBox5.Visible = false;
+                    textBox4.Visible = false;
+                    textBox3.Visible = true;
+                    textBox2.Visible = true;
+                    textBox1.Visible = true;
+                }
+                if (cmbeq1.Items.Count == 4)
+                {
+                    cmbeq1.Visible = true;
+                    cmbeq2.Visible = true;
+                    cmbeq3.Visible = true;
+                    cmbeq4.Visible = true;
+                    cmbeq5.Visible = false;
+                    cmbeq6.Visible = false;
+                    cmbeq7.Visible = false;
+                    cmbeq8.Visible = false;
+                    cmbeq9.Visible = false;
+                    cmbeq10.Visible = false;
+                    cmbeq11.Visible = false;
+                    cmbeq12.Visible = false;
+
+                    lbleq1.Visible = true;
+                    lbleq2.Visible = true;
+                    lbleq3.Visible = true;
+                    lbleq4.Visible = true;
+                    lbleq5.Visible = false;
+                    lbleq6.Visible = false;
+                    lbleq7.Visible = false;
+                    lbleq8.Visible = false;
+                    lbleq9.Visible = false;
+                    lbleq10.Visible = false;
+                    lbleq11.Visible = false;
+                    lbleq12.Visible = false;
+
+                    textBox12.Visible = false;
+                    textBox11.Visible = false;
+                    textBox10.Visible = false;
+                    textBox9.Visible = false;
+                    textBox8.Visible = false;
+                    textBox7.Visible = false;
+                    textBox6.Visible = false;
+                    textBox5.Visible = false;
+                    textBox4.Visible = true;
+                    textBox3.Visible = true;
+                    textBox2.Visible = true;
+                    textBox1.Visible = true;
+                }
+                if (cmbeq1.Items.Count == 5)
+                {
+                    
+                        cmbeq1.Visible = true;
+                        cmbeq2.Visible = true;
+                        cmbeq3.Visible = true;
+                        cmbeq4.Visible = true;
+                        cmbeq5.Visible = true;
+                        cmbeq6.Visible = false;
+                        cmbeq7.Visible = false;
+                        cmbeq8.Visible = false;
+                        cmbeq9.Visible = false;
+                        cmbeq10.Visible = false;
+                        cmbeq11.Visible = false;
+                        cmbeq12.Visible = false;
+
+                        lbleq1.Visible = true;
+                        lbleq2.Visible = true;
+                        lbleq3.Visible = true;
+                        lbleq4.Visible = true;
+                        lbleq5.Visible = true;
+                        lbleq6.Visible = false;
+                        lbleq7.Visible = false;
+                        lbleq8.Visible = false;
+                        lbleq9.Visible = false;
+                        lbleq10.Visible = false;
+                        lbleq11.Visible = false;
+                        lbleq12.Visible = false;
+
+                        textBox12.Visible = false;
+                        textBox11.Visible = false;
+                        textBox10.Visible = false;
+                        textBox9.Visible = false;
+                        textBox8.Visible = false;
+                        textBox7.Visible = false;
+                        textBox6.Visible = false;
+                        textBox5.Visible = true;
+                        textBox4.Visible = true;
+                        textBox3.Visible = true;
+                        textBox2.Visible = true;
+                        textBox1.Visible = true;
+
+                }
+                if (cmbeq1.Items.Count == 6)
+                {
+                    cmbeq1.Visible = true;
+                    cmbeq2.Visible = true;
+                    cmbeq3.Visible = true;
+                    cmbeq4.Visible = true;
+                    cmbeq5.Visible = true;
+                    cmbeq6.Visible = true;
+                    cmbeq7.Visible = false;
+                    cmbeq8.Visible = false;
+                    cmbeq9.Visible = false;
+                    cmbeq10.Visible = false;
+                    cmbeq11.Visible = false;
+                    cmbeq12.Visible = false;
+
+                    lbleq1.Visible = true;
+                    lbleq2.Visible = true;
+                    lbleq3.Visible = true;
+                    lbleq4.Visible = true;
+                    lbleq5.Visible = true;
+                    lbleq6.Visible = true;
+                    lbleq7.Visible = false;
+                    lbleq8.Visible = false;
+                    lbleq9.Visible = false;
+                    lbleq10.Visible = false;
+                    lbleq11.Visible = false;
+                    lbleq12.Visible = false;
+
+                    textBox12.Visible = false;
+                    textBox11.Visible = false;
+                    textBox10.Visible = false;
+                    textBox9.Visible = false;
+                    textBox8.Visible = false;
+                    textBox7.Visible = false;
+                    textBox6.Visible = true;
+                    textBox5.Visible = true;
+                    textBox4.Visible = true;
+                    textBox3.Visible = true;
+                    textBox2.Visible = true;
+                    textBox1.Visible = true;
+                }
+                if (cmbeq1.Items.Count == 7)
+                {
+                    cmbeq1.Visible = true;
+                    cmbeq2.Visible = true;
+                    cmbeq3.Visible = true;
+                    cmbeq4.Visible = true;
+                    cmbeq5.Visible = true;
+                    cmbeq6.Visible = true;
+                    cmbeq7.Visible = true;
+                    cmbeq8.Visible = false;
+                    cmbeq9.Visible = false;
+                    cmbeq10.Visible = false;
+                    cmbeq11.Visible = false;
+                    cmbeq12.Visible = false;
+
+                    lbleq1.Visible = true;
+                    lbleq2.Visible = true;
+                    lbleq3.Visible = true;
+                    lbleq4.Visible = true;
+                    lbleq5.Visible = true;
+                    lbleq6.Visible = true;
+                    lbleq7.Visible = true;
+                    lbleq8.Visible = false;
+                    lbleq9.Visible = false;
+                    lbleq10.Visible = false;
+                    lbleq11.Visible = false;
+                    lbleq12.Visible = false;
+
+                    textBox12.Visible = true;
+                    textBox11.Visible = false;
+                    textBox10.Visible = false;
+                    textBox9.Visible = false;
+                    textBox8.Visible = false;
+                    textBox7.Visible = false;
+                    textBox6.Visible = true;
+                    textBox5.Visible = true;
+                    textBox4.Visible = true;
+                    textBox3.Visible = true;
+                    textBox2.Visible = true;
+                    textBox1.Visible = true;
+                }
+                if (cmbeq1.Items.Count == 8)
+                {
+                    cmbeq1.Visible = true;
+                    cmbeq2.Visible = true;
+                    cmbeq3.Visible = true;
+                    cmbeq4.Visible = true;
+                    cmbeq5.Visible = true;
+                    cmbeq6.Visible = true;
+                    cmbeq7.Visible = true;
+                    cmbeq8.Visible = true;
+                    cmbeq9.Visible = false;
+                    cmbeq10.Visible = false;
+                    cmbeq11.Visible = false;
+                    cmbeq12.Visible = false;
+
+                    lbleq1.Visible = true;
+                    lbleq2.Visible = true;
+                    lbleq3.Visible = true;
+                    lbleq4.Visible = true;
+                    lbleq5.Visible = true;
+                    lbleq6.Visible = true;
+                    lbleq7.Visible = true;
+                    lbleq8.Visible = true;
+                    lbleq9.Visible = false;
+                    lbleq10.Visible = false;
+                    lbleq11.Visible = false;
+                    lbleq12.Visible = false;
+
+                    textBox12.Visible = true;
+                    textBox11.Visible = true;
+                    textBox10.Visible = false;
+                    textBox9.Visible = false;
+                    textBox8.Visible = false;
+                    textBox7.Visible = false;
+                    textBox6.Visible = true;
+                    textBox5.Visible = true;
+                    textBox4.Visible = true;
+                    textBox3.Visible = true;
+                    textBox2.Visible = true;
+                    textBox1.Visible = true;
+                }
+                if (cmbeq1.Items.Count == 9)
+                {
+                    cmbeq1.Visible = true;
+                    cmbeq2.Visible = true;
+                    cmbeq3.Visible = true;
+                    cmbeq4.Visible = true;
+                    cmbeq5.Visible = true;
+                    cmbeq6.Visible = true;
+                    cmbeq7.Visible = true;
+                    cmbeq8.Visible = true;
+                    cmbeq9.Visible = true;
+                    cmbeq10.Visible = false;
+                    cmbeq11.Visible = false;
+                    cmbeq12.Visible = false;
+
+                    lbleq1.Visible = true;
+                    lbleq2.Visible = true;
+                    lbleq3.Visible = true;
+                    lbleq4.Visible = true;
+                    lbleq5.Visible = true;
+                    lbleq6.Visible = true;
+                    lbleq7.Visible = true;
+                    lbleq8.Visible = true;
+                    lbleq9.Visible = true;
+                    lbleq10.Visible = false;
+                    lbleq11.Visible = false;
+                    lbleq12.Visible = false;
+
+                    textBox12.Visible = true;
+                    textBox11.Visible = true;
+                    textBox10.Visible = true;
+                    textBox9.Visible = false;
+                    textBox8.Visible = false;
+                    textBox7.Visible = false;
+                    textBox6.Visible = true;
+                    textBox5.Visible = true;
+                    textBox4.Visible = true;
+                    textBox3.Visible = true;
+                    textBox2.Visible = true;
+                    textBox1.Visible = true;
+                }
+                if (cmbeq1.Items.Count == 10)
+                {
+                    cmbeq1.Visible = true;
+                    cmbeq2.Visible = true;
+                    cmbeq3.Visible = true;
+                    cmbeq4.Visible = true;
+                    cmbeq5.Visible = true;
+                    cmbeq6.Visible = true;
+                    cmbeq7.Visible = true;
+                    cmbeq8.Visible = true;
+                    cmbeq9.Visible = true;
+                    cmbeq10.Visible = true;
+                    cmbeq11.Visible = false;
+                    cmbeq12.Visible = false;
+
+                    lbleq1.Visible = true;
+                    lbleq2.Visible = true;
+                    lbleq3.Visible = true;
+                    lbleq4.Visible = true;
+                    lbleq5.Visible = true;
+                    lbleq6.Visible = true;
+                    lbleq7.Visible = true;
+                    lbleq8.Visible = true;
+                    lbleq9.Visible = true;
+                    lbleq10.Visible = true;
+                    lbleq11.Visible = false;
+                    lbleq12.Visible = false;
+
+                    textBox12.Visible = true;
+                    textBox11.Visible = true;
+                    textBox10.Visible = true;
+                    textBox9.Visible = true;
+                    textBox8.Visible = false;
+                    textBox7.Visible = false;
+                    textBox6.Visible = true;
+                    textBox5.Visible = true;
+                    textBox4.Visible = true;
+                    textBox3.Visible = true;
+                    textBox2.Visible = true;
+                    textBox1.Visible = true;
+                }
+                if (cmbeq1.Items.Count == 11)
+                {
+                    cmbeq1.Visible = true;
+                    cmbeq2.Visible = true;
+                    cmbeq3.Visible = true;
+                    cmbeq4.Visible = true;
+                    cmbeq5.Visible = true;
+                    cmbeq6.Visible = true;
+                    cmbeq7.Visible = true;
+                    cmbeq8.Visible = true;
+                    cmbeq9.Visible = true;
+                    cmbeq10.Visible = true;
+                    cmbeq11.Visible = true;
+                    cmbeq12.Visible = false;
+
+                    lbleq1.Visible = true;
+                    lbleq2.Visible = true;
+                    lbleq3.Visible = true;
+                    lbleq4.Visible = true;
+                    lbleq5.Visible = true;
+                    lbleq6.Visible = true;
+                    lbleq7.Visible = true;
+                    lbleq8.Visible = true;
+                    lbleq9.Visible = true;
+                    lbleq10.Visible = true;
+                    lbleq11.Visible = true;
+                    lbleq12.Visible = false;
+
+                    textBox12.Visible = true;
+                    textBox11.Visible = true;
+                    textBox10.Visible = true;
+                    textBox9.Visible = true;
+                    textBox8.Visible = true;
+                    textBox7.Visible = false;
+                    textBox6.Visible = true;
+                    textBox5.Visible = true;
+                    textBox4.Visible = true;
+                    textBox3.Visible = true;
+                    textBox2.Visible = true;
+                    textBox1.Visible = true;
+                }
+                if (cmbeq1.Items.Count == 11)
+                {
+                    cmbeq1.Visible = true;
+                    cmbeq2.Visible = true;
+                    cmbeq3.Visible = true;
+                    cmbeq4.Visible = true;
+                    cmbeq5.Visible = true;
+                    cmbeq6.Visible = true;
                     cmbeq7.Visible = true;
                     cmbeq8.Visible = true;
                     cmbeq9.Visible = true;
                     cmbeq10.Visible = true;
                     cmbeq11.Visible = true;
                     cmbeq12.Visible = true;
+
+                    lbleq1.Visible = true;
+                    lbleq2.Visible = true;
+                    lbleq3.Visible = true;
+                    lbleq4.Visible = true;
+                    lbleq5.Visible = true;
+                    lbleq6.Visible = true;
                     lbleq7.Visible = true;
                     lbleq8.Visible = true;
                     lbleq9.Visible = true;
                     lbleq10.Visible = true;
                     lbleq11.Visible = true;
                     lbleq12.Visible = true;
+
                     textBox12.Visible = true;
                     textBox11.Visible = true;
                     textBox10.Visible = true;
                     textBox9.Visible = true;
                     textBox8.Visible = true;
                     textBox7.Visible = true;
+                    textBox6.Visible = true;
+                    textBox5.Visible = true;
+                    textBox4.Visible = true;
+                    textBox3.Visible = true;
+                    textBox2.Visible = true;
+                    textBox1.Visible = true;
                 }
+
 
                 Connection.Connection.conn.Close();
             }
