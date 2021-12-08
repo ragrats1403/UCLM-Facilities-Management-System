@@ -680,6 +680,7 @@ namespace Function_Hall_Reservation_System.Student
             this.cmbeq6.Name = "cmbeq6";
             this.cmbeq6.Size = new System.Drawing.Size(121, 25);
             this.cmbeq6.TabIndex = 29;
+            this.cmbeq6.Visible = false;
             this.cmbeq6.SelectedIndexChanged += new System.EventHandler(this.cmbeq6_SelectedIndexChanged);
             // 
             // cmbeq5
@@ -689,6 +690,7 @@ namespace Function_Hall_Reservation_System.Student
             this.cmbeq5.Name = "cmbeq5";
             this.cmbeq5.Size = new System.Drawing.Size(121, 25);
             this.cmbeq5.TabIndex = 28;
+            this.cmbeq5.Visible = false;
             this.cmbeq5.SelectedIndexChanged += new System.EventHandler(this.cmbeq5_SelectedIndexChanged);
             // 
             // cmbeq4
@@ -698,6 +700,7 @@ namespace Function_Hall_Reservation_System.Student
             this.cmbeq4.Name = "cmbeq4";
             this.cmbeq4.Size = new System.Drawing.Size(121, 25);
             this.cmbeq4.TabIndex = 27;
+            this.cmbeq4.Visible = false;
             this.cmbeq4.SelectedIndexChanged += new System.EventHandler(this.cmbeq4_SelectedIndexChanged);
             // 
             // cmbeq3
@@ -707,6 +710,7 @@ namespace Function_Hall_Reservation_System.Student
             this.cmbeq3.Name = "cmbeq3";
             this.cmbeq3.Size = new System.Drawing.Size(121, 25);
             this.cmbeq3.TabIndex = 26;
+            this.cmbeq3.Visible = false;
             this.cmbeq3.SelectedIndexChanged += new System.EventHandler(this.cmbeq3_SelectedIndexChanged);
             // 
             // cmbeq2
@@ -716,6 +720,7 @@ namespace Function_Hall_Reservation_System.Student
             this.cmbeq2.Name = "cmbeq2";
             this.cmbeq2.Size = new System.Drawing.Size(121, 25);
             this.cmbeq2.TabIndex = 25;
+            this.cmbeq2.Visible = false;
             this.cmbeq2.SelectedValueChanged += new System.EventHandler(this.cmbeq2_SelectedIndexChanged);
             // 
             // cmbeq1
@@ -725,6 +730,7 @@ namespace Function_Hall_Reservation_System.Student
             this.cmbeq1.Name = "cmbeq1";
             this.cmbeq1.Size = new System.Drawing.Size(121, 25);
             this.cmbeq1.TabIndex = 24;
+            this.cmbeq1.Visible = false;
             this.cmbeq1.SelectedIndexChanged += new System.EventHandler(this.cmbeq1_SelectedIndexChanged);
             // 
             // textBox6
@@ -733,6 +739,7 @@ namespace Function_Hall_Reservation_System.Student
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(74, 22);
             this.textBox6.TabIndex = 23;
+            this.textBox6.Visible = false;
             this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             this.textBox6.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox6_KeyPress);
             // 
@@ -742,6 +749,7 @@ namespace Function_Hall_Reservation_System.Student
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(74, 22);
             this.textBox5.TabIndex = 4;
+            this.textBox5.Visible = false;
             this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             this.textBox5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox5_KeyPress);
             // 
@@ -751,6 +759,7 @@ namespace Function_Hall_Reservation_System.Student
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(74, 22);
             this.textBox4.TabIndex = 3;
+            this.textBox4.Visible = false;
             this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             this.textBox4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox4_KeyPress);
             // 
@@ -760,6 +769,7 @@ namespace Function_Hall_Reservation_System.Student
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(74, 22);
             this.textBox3.TabIndex = 2;
+            this.textBox3.Visible = false;
             this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             this.textBox3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox3_KeyPress);
             // 
@@ -769,6 +779,7 @@ namespace Function_Hall_Reservation_System.Student
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(74, 22);
             this.textBox2.TabIndex = 1;
+            this.textBox2.Visible = false;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged_1);
             this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
             // 
@@ -778,6 +789,7 @@ namespace Function_Hall_Reservation_System.Student
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(74, 22);
             this.textBox1.TabIndex = 0;
+            this.textBox1.Visible = false;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 

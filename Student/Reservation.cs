@@ -1531,8 +1531,18 @@ namespace Function_Hall_Reservation_System.Student
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            int txt1 = Int32.Parse(textBox1.Text);
-            int lbl1 = Int32.Parse(lbleq1.Text);
+            int txt1 = 0;
+            int lbl1 = 0;
+            if (textBox1.Text == "" && lbleq1.Text == "")
+            {
+
+            }
+            if(textBox1.Text != "" && lbleq1.Text != "")
+            {
+                txt1 = Int32.Parse(textBox1.Text);
+                lbl1 = Int32.Parse(lbleq1.Text);
+            }
+            
             if (txt1 > lbl1)
             {
                 MessageBox.Show("The quantity you're trying to input\nexceed the maximum amount of available equipment!");
@@ -1698,8 +1708,17 @@ namespace Function_Hall_Reservation_System.Student
 
         private void textBox2_TextChanged_1(object sender, EventArgs e)
         {
-            int txt = Int32.Parse(textBox2.Text);
-            int lbl = Int32.Parse(lbleq2.Text);
+            int txt = 0;
+            int lbl = 0;
+            if (textBox2.Text == "" && lbleq2.Text == "")
+            {
+
+            }
+            if (textBox2.Text != "" && lbleq2.Text != "")
+            {
+                txt = Int32.Parse(textBox2.Text);
+                lbl = Int32.Parse(lbleq2.Text);
+            }
             if (txt > lbl)
             {
                 MessageBox.Show("The quantity you're trying to input\nexceed the maximum amount of available equipment!");
@@ -1708,8 +1727,17 @@ namespace Function_Hall_Reservation_System.Student
 
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
-            int txt = Int32.Parse(textBox3.Text);
-            int lbl = Int32.Parse(lbleq3.Text);
+            int txt = 0;
+            int lbl = 0;
+            if (textBox3.Text == "" && lbleq3.Text == "")
+            {
+
+            }
+            if (textBox3.Text != "" && lbleq3.Text != "")
+            {
+                txt = Int32.Parse(textBox3.Text);
+                lbl = Int32.Parse(lbleq3.Text);
+            }
             if (txt > lbl)
             {
                 MessageBox.Show("The quantity you're trying to input\nexceed the maximum amount of available equipment!");
@@ -1718,8 +1746,17 @@ namespace Function_Hall_Reservation_System.Student
 
         private void textBox4_TextChanged(object sender, EventArgs e)
         {
-            int txt = Int32.Parse(textBox4.Text);
-            int lbl = Int32.Parse(lbleq4.Text);
+            int txt = 0;
+            int lbl = 0;
+            if (textBox4.Text == "" && lbleq4.Text == "")
+            {
+
+            }
+            if (textBox4.Text != "" && lbleq4.Text != "")
+            {
+                txt = Int32.Parse(textBox4.Text);
+                lbl = Int32.Parse(lbleq4.Text);
+            }
             if (txt > lbl)
             {
                 MessageBox.Show("The quantity you're trying to input\nexceed the maximum amount of available equipment!");
@@ -1728,8 +1765,17 @@ namespace Function_Hall_Reservation_System.Student
 
         private void textBox5_TextChanged(object sender, EventArgs e)
         {
-            int txt = Int32.Parse(textBox5.Text);
-            int lbl = Int32.Parse(lbleq5.Text);
+            int txt = 0;
+            int lbl = 0;
+            if (textBox5.Text == "" && lbleq5.Text == "")
+            {
+
+            }
+            if (textBox5.Text != "" && lbleq5.Text != "")
+            {
+                txt = Int32.Parse(textBox5.Text);
+                lbl = Int32.Parse(lbleq5.Text);
+            }
             if (txt > lbl)
             {
                 MessageBox.Show("The quantity you're trying to input\nexceed the maximum amount of available equipment!");
@@ -1738,8 +1784,17 @@ namespace Function_Hall_Reservation_System.Student
 
         private void textBox6_TextChanged(object sender, EventArgs e)
         {
-            int txt = Int32.Parse(textBox6.Text);
-            int lbl = Int32.Parse(lbleq6.Text);
+            int txt = 0;
+            int lbl = 0;
+            if (textBox6.Text == "" && lbleq6.Text == "")
+            {
+
+            }
+            if (textBox6.Text != "" && lbleq6.Text != "")
+            {
+                txt = Int32.Parse(textBox6.Text);
+                lbl = Int32.Parse(lbleq6.Text);
+            }
             if (txt > lbl)
             {
                 MessageBox.Show("The quantity you're trying to input\nexceed the maximum amount of available equipment!");
@@ -1753,8 +1808,18 @@ namespace Function_Hall_Reservation_System.Student
 
         private void textBox12_TextChanged(object sender, EventArgs e)
         {
-            int txt = Int32.Parse(textBox12.Text);
-            int lbl = Int32.Parse(lbleq7.Text);
+            int txt = 0;
+            int lbl = 0;
+            if (textBox12.Text == "" && lbleq7.Text == "")
+            {
+
+            }
+            if (textBox12.Text != "" && lbleq7.Text != "")
+            {
+                txt = Int32.Parse(textBox12.Text);
+                lbl = Int32.Parse(lbleq7.Text);
+            }
+            
             if (txt > lbl)
             {
                 MessageBox.Show("The quantity you're trying to input\nexceed the maximum amount of available equipment!");
@@ -1763,8 +1828,18 @@ namespace Function_Hall_Reservation_System.Student
 
         private void textBox11_TextChanged(object sender, EventArgs e)
         {
-            int txt = Int32.Parse(textBox11.Text);
-            int lbl = Int32.Parse(lbleq8.Text);
+            int txt = 0;
+            int lbl = 0;
+            if (textBox11.Text == "" && lbleq8.Text == "")
+            {
+
+            }
+            if (textBox11.Text != "" && lbleq8.Text != "")
+            {
+                txt = Int32.Parse(textBox11.Text);
+                lbl = Int32.Parse(lbleq8.Text);
+            }
+            
             if (txt > lbl)
             {
                 MessageBox.Show("The quantity you're trying to input\nexceed the maximum amount of available equipment!");
@@ -1773,8 +1848,18 @@ namespace Function_Hall_Reservation_System.Student
 
         private void textBox10_TextChanged(object sender, EventArgs e)
         {
-            int txt = Int32.Parse(textBox10.Text);
-            int lbl = Int32.Parse(lbleq9.Text);
+            int txt = 0;
+            int lbl = 0;
+            if (textBox10.Text == "" && lbleq9.Text == "")
+            {
+
+            }
+            if (textBox10.Text != "" && lbleq9.Text != "")
+            {
+                txt = Int32.Parse(textBox10.Text);
+                lbl = Int32.Parse(lbleq9.Text);
+            }
+            
             if (txt > lbl)
             {
                 MessageBox.Show("The quantity you're trying to input\nexceed the maximum amount of available equipment!");
@@ -1783,8 +1868,18 @@ namespace Function_Hall_Reservation_System.Student
 
         private void textBox9_TextChanged(object sender, EventArgs e)
         {
-            int txt = Int32.Parse(textBox9.Text);
-            int lbl = Int32.Parse(lbleq10.Text);
+            int txt = 0;
+            int lbl = 0;
+            if (textBox9.Text == "" && lbleq10.Text == "")
+            {
+
+            }
+            if (textBox9.Text != "" && lbleq10.Text != "")
+            {
+                txt = Int32.Parse(textBox9.Text);
+                lbl = Int32.Parse(lbleq10.Text);
+            }
+            
             if (txt > lbl)
             {
                 MessageBox.Show("The quantity you're trying to input\nexceed the maximum amount of available equipment!");
@@ -1793,8 +1888,18 @@ namespace Function_Hall_Reservation_System.Student
 
         private void textBox8_TextChanged(object sender, EventArgs e)
         {
-            int txt = Int32.Parse(textBox8.Text);
-            int lbl = Int32.Parse(lbleq11.Text);
+            int txt = 0;
+            int lbl = 0;
+            if (textBox8.Text == "" && lbleq11.Text == "")
+            {
+
+            }
+            if (textBox8.Text != "" && lbleq11.Text != "")
+            {
+                txt = Int32.Parse(textBox8.Text);
+                lbl = Int32.Parse(lbleq11.Text);
+            }
+            
             if (txt > lbl)
             {
                 MessageBox.Show("The quantity you're trying to input\nexceed the maximum amount of available equipment!");
@@ -1803,8 +1908,18 @@ namespace Function_Hall_Reservation_System.Student
 
         private void textBox7_TextChanged(object sender, EventArgs e)
         {
-            int txt = Int32.Parse(textBox7.Text);
-            int lbl = Int32.Parse(lbleq12.Text);
+            int txt = 0;
+            int lbl = 0;
+            if (textBox7.Text == "" && lbleq12.Text == "")
+            {
+
+            }
+            if (textBox7.Text != "" && lbleq12.Text != "")
+            {
+                txt = Int32.Parse(textBox7.Text);
+                lbl = Int32.Parse(lbleq12.Text);
+            }
+            
             if (txt > lbl)
             {
                 MessageBox.Show("The quantity you're trying to input\nexceed the maximum amount of available equipment!");
