@@ -17,6 +17,12 @@ namespace Function_Hall_Reservation_System
             InitializeComponent();
         }
 
+
+        public string getfn()
+        {
+            return setfullname;
+        }
+
         private void button2_Click(object sender, EventArgs e)
         {
 
@@ -189,6 +195,11 @@ namespace Function_Hall_Reservation_System
             {
                 e.Handled = true;
             }
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
 
         }
     }

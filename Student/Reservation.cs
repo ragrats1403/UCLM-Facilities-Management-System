@@ -28,7 +28,8 @@ namespace Function_Hall_Reservation_System.Student
         public static int loadedcount = 0;
         public string newval = "";
         public string cbval = "";
-        public string name = Form1.setfirstname + " " + Form1.setlastname;
+        public static string name = Form1.setfullname;
+        
 
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
@@ -732,7 +733,7 @@ namespace Function_Hall_Reservation_System.Student
         }
 
 
-        
+
 
         public int ComputeDifference()
         {
@@ -740,6 +741,11 @@ namespace Function_Hall_Reservation_System.Student
             int temp = diff.Days - 1;
             int days = temp * -1;
             return days;
+        }
+
+        public void eqtxtbox()
+        {
+            
         }
         private void btnrequest_Click(object sender, EventArgs e)
         {
@@ -751,8 +757,7 @@ namespace Function_Hall_Reservation_System.Student
             string month = "";
 
 
-            
-            string eqres1 = cmbeq1.Text.ToString() + "(" + textBox1.Text.ToString()+")";
+            string eqres1 = cmbeq1.Text.ToString() + "(" + textBox1.Text.ToString() + ")";
             string eqres2 = cmbeq2.Text.ToString() + "(" + textBox2.Text.ToString() + ")";
             string eqres3 = cmbeq3.Text.ToString() + "(" + textBox3.Text.ToString() + ")";
             string eqres4 = cmbeq4.Text.ToString() + "(" + textBox4.Text.ToString() + ")";
@@ -764,12 +769,10 @@ namespace Function_Hall_Reservation_System.Student
             string eqres10 = cmbeq10.Text.ToString() + "(" + textBox9.Text.ToString() + ")";
             string eqres11 = cmbeq11.Text.ToString() + "(" + textBox8.Text.ToString() + ")";
             string eqres12 = cmbeq12.Text.ToString() + "(" + textBox7.Text.ToString() + ")";
-
-
             var selectedequip = new List<string>();
             try
             {
-               
+
                 if (textBox1.Text != "")
                 {
                     selectedequip.Add(eqres1);
@@ -778,11 +781,11 @@ namespace Function_Hall_Reservation_System.Student
                 {
                     selectedequip.Add(eqres2);
                 }
-                if(textBox3.Text != "")
+                if (textBox3.Text != "")
                 {
                     selectedequip.Add(eqres3);
                 }
-                if(textBox4.Text != "")
+                if (textBox4.Text != "")
                 {
                     selectedequip.Add(eqres4);
                 }
@@ -818,11 +821,18 @@ namespace Function_Hall_Reservation_System.Student
                 {
                     selectedequip.Add(eqres12);
                 }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            string allequip = string.Join(", ", selectedequip);
 
 
 
 
-                string allequip = string.Join(", ", selectedequip);
+
+
                 month = dateTimePicker2.Value.ToString("MMMM");
                 dateval = dateTimePicker2.Value.ToString("MM/dd/yyyy");
 
@@ -844,7 +854,7 @@ namespace Function_Hall_Reservation_System.Student
                     if (checkdateconflict(dateTimePicker2.Value.Date) == true)
                     {
                         int test;
-                        MessageBox.Show("Test1");
+                        
                         Connection.Connection.DB();
                         Functions.Functions.gen = "Select count(*) from " + loadedid + " where '" + dateTimePicker1.Value + "' between timestart and timestart and reservationstatus = 'Approved' or '" + dateTimePicker3.Value + "' between timestart and timeend and reservationstatus = 'Approved' and reservationstatus = 'Approved' or timestart between '" + datestart + "' and '" + dateend + "' and reservationstatus = 'Approved' or timeend between '" + dateTimePicker1.Value + "' and '" + dateTimePicker3.Value + "' and reservationstatus = 'Approved'";
 
@@ -854,18 +864,18 @@ namespace Function_Hall_Reservation_System.Student
                        
                         test = Functions.Functions.reader.GetInt32(0);
 
-                        MessageBox.Show("Test2");
+                        
                         Connection.Connection.conn.Close();
 
                         if (test > 0)
                         {
-                            MessageBox.Show("Test3");
+                            
 
                             MessageBox.Show("Someone is using the facility within that time! \nCheck Calendar of Activities for approved schedules. ");
                         }
                         else
                         {
-                            MessageBox.Show("Test4");
+                            
                             Connection.Connection.DB();
                             Functions.Functions.gen = "Insert Into " + loadedid + "(eventname,reservedby,reservationstatus,datereserved,checkedby,reservedequipments,approvedby,timestart,month,timeend,reserveddate,facilityname,readstatus,facilityid)values('" + txtEventname.Text + "','" + name + "','Pending','" + DateTime.Now.ToShortDateString() + "','N/A','" + allequip + "','N/A','" + datestart + "','" + month + " ','" + dateend + "','" + dateTimePicker2.Value.Date + "','" + facilitycb.SelectedItem.ToString() + "',0,'"+loadedid+"')";
                             Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
@@ -886,7 +896,7 @@ namespace Function_Hall_Reservation_System.Student
                         
                         MessageBox.Show("Reserving..");
                         Connection.Connection.DB();
-                        Functions.Functions.gen = "Insert Into " + loadedid + "(eventname,reservedby,reservationstatus,datereserved,checkedby,reservedequipments,approvedby,timestart,month,timeend,reserveddate,facilityname,readstatus,facilityid)values('" + txtEventname.Text + "','" + name + "','Pending','" + DateTime.Now.ToShortDateString() + "','N/A','" + allequip + "','N/A','" + datestart + "','" + month + " ','" + dateend + "','" + dateTimePicker2.Value.Date + "','" + facilitycb.SelectedItem.ToString() +"',0,'"+loadedid+"')";
+                        Functions.Functions.gen = "Insert Into " + loadedid + "(eventname,reservedby,reservationstatus,datereserved,checkedby,reservedequipments,approvedby,timestart,month,timeend,reserveddate,facilityname,readstatus,studentid)values('" + txtEventname.Text + "','" + name + "','Pending','" + DateTime.Now.ToShortDateString() + "','N/A','" + allequip + "','N/A','" + datestart + "','" + month + " ','" + dateend + "','" + dateTimePicker2.Value.Date + "','" + facilitycb.SelectedItem.ToString() +"',0,'"+Form1.setstudentid+"')";
                         Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
 
                         Functions.Functions.command.ExecuteNonQuery();
@@ -913,15 +923,12 @@ namespace Function_Hall_Reservation_System.Student
 
 
 
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            
+            
         }
         public void filldata(String id)
         {
-            Functions.Functions.gen = "Select * from " + id + " where reservedby = '" +name + "'";
+            Functions.Functions.gen = "Select * from reservations where studentid = '" + Form1.setstudentid + "'";
             Functions.Functions.fill(Functions.Functions.gen, dataGridView1);
         }
 
@@ -1561,8 +1568,8 @@ namespace Function_Hall_Reservation_System.Student
                 {
                     //MessageBox.Show("Debug Line for Functionhall selection Executed");
 
-                    loadedid = "fhreservation";
-                    filldata(loadedid);
+                    cbval = "fhreservation";
+                    filldata(cbval);
                 }
                 else if (facilitycb2.SelectedItem.ToString() == "Auditorium")
                 {
