@@ -111,7 +111,7 @@ namespace Function_Hall_Reservation_System.Student
             try
             {
                 Connection.Connection.DB();
-                Functions.Functions.gen = "Select " + loadedeq + ".equipmentname from " + loadedeq + "";
+                Functions.Functions.gen = "Select equipments.equipmentname from equipments where facilityname = '"+facilitycb.SelectedItem.ToString()+"'";
                 Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
                 Functions.Functions.reader = Functions.Functions.command.ExecuteReader();
 
@@ -743,10 +743,7 @@ namespace Function_Hall_Reservation_System.Student
             return days;
         }
 
-        public void eqtxtbox()
-        {
-            
-        }
+        
         private void btnrequest_Click(object sender, EventArgs e)
         {
             DateTime datestart = dateTimePicker2.Value.Date + dateTimePicker1.Value.TimeOfDay;
@@ -856,7 +853,7 @@ namespace Function_Hall_Reservation_System.Student
                         int test;
                         
                         Connection.Connection.DB();
-                        Functions.Functions.gen = "Select count(*) from " + loadedid + " where '" + dateTimePicker1.Value + "' between timestart and timestart and reservationstatus = 'Approved' or '" + dateTimePicker3.Value + "' between timestart and timeend and reservationstatus = 'Approved' and reservationstatus = 'Approved' or timestart between '" + datestart + "' and '" + dateend + "' and reservationstatus = 'Approved' or timeend between '" + dateTimePicker1.Value + "' and '" + dateTimePicker3.Value + "' and reservationstatus = 'Approved'";
+                        Functions.Functions.gen = "Select count(*) from reservations where '" + dateTimePicker1.Value + "' between timestart and timestart and reservationstatus = 'Approved' or '" + dateTimePicker3.Value + "' between timestart and timeend and reservationstatus = 'Approved' and reservationstatus = 'Approved' or timestart between '" + datestart + "' and '" + dateend + "' and reservationstatus = 'Approved' or timeend between '" + dateTimePicker1.Value + "' and '" + dateTimePicker3.Value + "' and reservationstatus = 'Approved'";
 
                         Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
                         Functions.Functions.reader = Functions.Functions.command.ExecuteReader();
@@ -877,7 +874,7 @@ namespace Function_Hall_Reservation_System.Student
                         {
                             
                             Connection.Connection.DB();
-                            Functions.Functions.gen = "Insert Into " + loadedid + "(eventname,reservedby,reservationstatus,datereserved,checkedby,reservedequipments,approvedby,timestart,month,timeend,reserveddate,facilityname,readstatus,facilityid)values('" + txtEventname.Text + "','" + name + "','Pending','" + DateTime.Now.ToShortDateString() + "','N/A','" + allequip + "','N/A','" + datestart + "','" + month + " ','" + dateend + "','" + dateTimePicker2.Value.Date + "','" + facilitycb.SelectedItem.ToString() + "',0,'"+loadedid+"')";
+                            Functions.Functions.gen = "Insert Into reservations (eventname,reservedby,reservationstatus,datereserved,checkedby,reservedequipments,approvedby,timestart,month,timeend,reserveddate,facilityname,readstatus,studentid)values('" + txtEventname.Text + "','" + name + "','Pending','" + DateTime.Now.ToShortDateString() + "','N/A','" + allequip + "','N/A','" + datestart + "','" + month + " ','" + dateend + "','" + dateTimePicker2.Value.Date + "','" + facilitycb.SelectedItem.ToString() + "',0,'"+ Form1.setstudentid + "')";
                             Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
 
                             Functions.Functions.command.ExecuteNonQuery();
@@ -896,7 +893,7 @@ namespace Function_Hall_Reservation_System.Student
                         
                         MessageBox.Show("Reserving..");
                         Connection.Connection.DB();
-                        Functions.Functions.gen = "Insert Into " + loadedid + "(eventname,reservedby,reservationstatus,datereserved,checkedby,reservedequipments,approvedby,timestart,month,timeend,reserveddate,facilityname,readstatus,studentid)values('" + txtEventname.Text + "','" + name + "','Pending','" + DateTime.Now.ToShortDateString() + "','N/A','" + allequip + "','N/A','" + datestart + "','" + month + " ','" + dateend + "','" + dateTimePicker2.Value.Date + "','" + facilitycb.SelectedItem.ToString() +"',0,'"+Form1.setstudentid+"')";
+                        Functions.Functions.gen = "Insert Into reservations (eventname,reservedby,reservationstatus,datereserved,checkedby,reservedequipments,approvedby,timestart,month,timeend,reserveddate,facilityname,readstatus,studentid)values('" + txtEventname.Text + "','" + name + "','Pending','" + DateTime.Now.ToShortDateString() + "','N/A','" + allequip + "','N/A','" + datestart + "','" + month + " ','" + dateend + "','" + dateTimePicker2.Value.Date + "','" + facilitycb.SelectedItem.ToString() +"',0,'"+Form1.setstudentid+"')";
                         Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
 
                         Functions.Functions.command.ExecuteNonQuery();
@@ -928,7 +925,7 @@ namespace Function_Hall_Reservation_System.Student
         }
         public void filldata(String id)
         {
-            Functions.Functions.gen = "Select * from reservations where studentid = '" + Form1.setstudentid + "'";
+            Functions.Functions.gen = "Select * from reservations where studentid = '" + Form1.setstudentid + "' and facilityname = '"+id+"'";
             Functions.Functions.fill(Functions.Functions.gen, dataGridView1);
         }
 
@@ -1020,7 +1017,7 @@ namespace Function_Hall_Reservation_System.Student
                 {
                     //MessageBox.Show("Debug Line for Functionhall selection Executed");|
                     loadedid = "fhreservation";
-                    loadedeq = "fhequipments";
+                    loadedeq = "equipments";
                     cmbeq1.Items.Clear();
                     cmbeq2.Items.Clear();
                     cmbeq3.Items.Clear();
@@ -1054,7 +1051,7 @@ namespace Function_Hall_Reservation_System.Student
 
                     //MessageBox.Show("Debug Line for Auditorium Executed");
                     loadedid = "audreservations";
-                    loadedeq = "audequipments";
+                    loadedeq = "equipments";
                     cmbeq1.Items.Clear();
                     cmbeq2.Items.Clear();
                     cmbeq3.Items.Clear();
@@ -1074,7 +1071,7 @@ namespace Function_Hall_Reservation_System.Student
                 {
                     //MessageBox.Show("Debug Line for New AVR Executed");
                     loadedid = "nareservations";
-                    loadedeq = "naequipments";
+                    loadedeq = "equipments";
                     cmbeq1.Items.Clear();
                     cmbeq2.Items.Clear();
                     cmbeq3.Items.Clear();
@@ -1096,7 +1093,7 @@ namespace Function_Hall_Reservation_System.Student
 
                     //MessageBox.Show("Debug Line for Old AVR Executed");
                     loadedid = "oareservations";
-                    loadedeq = "oaequipments";
+                    loadedeq = "equipments";
                     cmbeq1.Items.Clear();
                     cmbeq2.Items.Clear();
                     cmbeq3.Items.Clear();
@@ -1142,7 +1139,7 @@ namespace Function_Hall_Reservation_System.Student
             {
                 loadedeqid = cmbeq1.SelectedItem.ToString();
                 Connection.Connection.DB();
-                Functions.Functions.gen = "Select " + loadedeq + ".availableqty from " + loadedeq + " where equipmentname = '" + loadedeqid + "'";
+                Functions.Functions.gen = "Select equipments.availableqty from equipments where equipmentname = '" + loadedeqid + "' and facilityname = '" + facilitycb.SelectedItem.ToString() + "'";
                 Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
                 Functions.Functions.reader = Functions.Functions.command.ExecuteReader();
                 while (Functions.Functions.reader.Read())
@@ -1172,7 +1169,7 @@ namespace Function_Hall_Reservation_System.Student
             {
                 loadedeqid = cmbeq2.SelectedItem.ToString();
                 Connection.Connection.DB();
-                Functions.Functions.gen = "Select " + loadedeq + ".availableqty from " + loadedeq + " where equipmentname = '" + loadedeqid + "'";
+                Functions.Functions.gen = "Select equipments.availableqty from equipments where equipmentname = '" + loadedeqid + "' and facilityname = '" + facilitycb.SelectedItem.ToString() + "'";
                 Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
                 Functions.Functions.reader = Functions.Functions.command.ExecuteReader();
                 while (Functions.Functions.reader.Read())
@@ -1200,7 +1197,7 @@ namespace Function_Hall_Reservation_System.Student
             {
                 loadedeqid = cmbeq3.SelectedItem.ToString();
                 Connection.Connection.DB();
-                Functions.Functions.gen = "Select " + loadedeq + ".availableqty from " + loadedeq + " where equipmentname = '" + loadedeqid + "'";
+                Functions.Functions.gen = "Select equipments.availableqty from equipments where equipmentname = '" + loadedeqid + "' and facilityname = '" + facilitycb.SelectedItem.ToString() + "'";
                 Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
                 Functions.Functions.reader = Functions.Functions.command.ExecuteReader();
                 while (Functions.Functions.reader.Read())
@@ -1230,7 +1227,7 @@ namespace Function_Hall_Reservation_System.Student
             {
                 loadedeqid = cmbeq5.SelectedItem.ToString();
                 Connection.Connection.DB();
-                Functions.Functions.gen = "Select " + loadedeq + ".availableqty from " + loadedeq + " where equipmentname = '" + loadedeqid + "'";
+                Functions.Functions.gen = "Select equipments.availableqty from equipments where equipmentname = '" + loadedeqid + "' and facilityname = '" + facilitycb.SelectedItem.ToString() + "'";
                 Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
                 Functions.Functions.reader = Functions.Functions.command.ExecuteReader();
                 while (Functions.Functions.reader.Read())
@@ -1259,7 +1256,7 @@ namespace Function_Hall_Reservation_System.Student
             {
                 loadedeqid = cmbeq4.SelectedItem.ToString();
                 Connection.Connection.DB();
-                Functions.Functions.gen = "Select " + loadedeq + ".availableqty from " + loadedeq + " where equipmentname = '" + loadedeqid + "'";
+                Functions.Functions.gen = "Select equipments.availableqty from equipments where equipmentname = '" + loadedeqid + "' and facilityname = '" + facilitycb.SelectedItem.ToString() + "'";
                 Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
                 Functions.Functions.reader = Functions.Functions.command.ExecuteReader();
                 while (Functions.Functions.reader.Read())
@@ -1287,7 +1284,7 @@ namespace Function_Hall_Reservation_System.Student
             {
                 loadedeqid = cmbeq6.SelectedItem.ToString();
                 Connection.Connection.DB();
-                Functions.Functions.gen = "Select " + loadedeq + ".availableqty from " + loadedeq + " where equipmentname = '" + loadedeqid + "'";
+                Functions.Functions.gen = "Select equipments.availableqty from equipments where equipmentname = '" + loadedeqid + "' and facilityname = '"+facilitycb.SelectedItem.ToString()+"'";
                 Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
                 Functions.Functions.reader = Functions.Functions.command.ExecuteReader();
                 while (Functions.Functions.reader.Read())
@@ -1314,7 +1311,7 @@ namespace Function_Hall_Reservation_System.Student
             {
                 loadedeqid = cmbeq7.SelectedItem.ToString();
                 Connection.Connection.DB();
-                Functions.Functions.gen = "Select " + loadedeq + ".availableqty from " + loadedeq + " where equipmentname = '" + loadedeqid + "'";
+                Functions.Functions.gen = "Select equipments.availableqty from equipments where equipmentname = '" + loadedeqid + "' and facilityname = '" + facilitycb.SelectedItem.ToString() + "'";
                 Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
                 Functions.Functions.reader = Functions.Functions.command.ExecuteReader();
                 while (Functions.Functions.reader.Read())
@@ -1341,7 +1338,7 @@ namespace Function_Hall_Reservation_System.Student
             {
                 loadedeqid = cmbeq8.SelectedItem.ToString();
                 Connection.Connection.DB();
-                Functions.Functions.gen = "Select " + loadedeq + ".availableqty from " + loadedeq + " where equipmentname = '" + loadedeqid + "'";
+                Functions.Functions.gen = "Select equipments.availableqty from equipments where equipmentname = '" + loadedeqid + "' and facilityname = '" + facilitycb.SelectedItem.ToString() + "'";
                 Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
                 Functions.Functions.reader = Functions.Functions.command.ExecuteReader();
                 while (Functions.Functions.reader.Read())
@@ -1368,7 +1365,7 @@ namespace Function_Hall_Reservation_System.Student
             {
                 loadedeqid = cmbeq9.SelectedItem.ToString();
                 Connection.Connection.DB();
-                Functions.Functions.gen = "Select " + loadedeq + ".availableqty from " + loadedeq + " where equipmentname = '" + loadedeqid + "'";
+                Functions.Functions.gen = "Select equipments.availableqty from equipments where equipmentname = '" + loadedeqid + "' and facilityname = '" + facilitycb.SelectedItem.ToString() + "'";
                 Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
                 Functions.Functions.reader = Functions.Functions.command.ExecuteReader();
                 while (Functions.Functions.reader.Read())
@@ -1395,7 +1392,7 @@ namespace Function_Hall_Reservation_System.Student
             {
                 loadedeqid = cmbeq10.SelectedItem.ToString();
                 Connection.Connection.DB();
-                Functions.Functions.gen = "Select " + loadedeq + ".availableqty from " + loadedeq + " where equipmentname = '" + loadedeqid + "'";
+                Functions.Functions.gen = "Select equipments.availableqty from equipments where equipmentname = '" + loadedeqid + "' and facilityname = '" + facilitycb.SelectedItem.ToString() + "'";
                 Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
                 Functions.Functions.reader = Functions.Functions.command.ExecuteReader();
                 while (Functions.Functions.reader.Read())
@@ -1422,7 +1419,7 @@ namespace Function_Hall_Reservation_System.Student
             {
                 loadedeqid = cmbeq11.SelectedItem.ToString();
                 Connection.Connection.DB();
-                Functions.Functions.gen = "Select " + loadedeq + ".availableqty from " + loadedeq + " where equipmentname = '" + loadedeqid + "'";
+                Functions.Functions.gen = "Select equipments.availableqty from equipments where equipmentname = '" + loadedeqid + "' and facilityname = '" + facilitycb.SelectedItem.ToString() + "'";
                 Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
                 Functions.Functions.reader = Functions.Functions.command.ExecuteReader();
                 while (Functions.Functions.reader.Read())
@@ -1449,7 +1446,7 @@ namespace Function_Hall_Reservation_System.Student
             {
                 loadedeqid = cmbeq12.SelectedItem.ToString();
                 Connection.Connection.DB();
-                Functions.Functions.gen = "Select " + loadedeq + ".availableqty from " + loadedeq + " where equipmentname = '" + loadedeqid + "'";
+                Functions.Functions.gen = "Select equipments.availableqty from equipments where equipmentname = '" + loadedeqid + "' and facilityname = '" + facilitycb.SelectedItem.ToString() + "'";
                 Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
                 Functions.Functions.reader = Functions.Functions.command.ExecuteReader();
                 while (Functions.Functions.reader.Read())
@@ -1568,20 +1565,20 @@ namespace Function_Hall_Reservation_System.Student
                 {
                     //MessageBox.Show("Debug Line for Functionhall selection Executed");
 
-                    cbval = "fhreservation";
+                    cbval = "Function Hall";
                     filldata(cbval);
                 }
                 else if (facilitycb2.SelectedItem.ToString() == "Auditorium")
                 {
 
                     //MessageBox.Show("Debug Line for Auditorium Executed");
-                    cbval = "audreservations";
+                    cbval = "Auditorium";
                     filldata(cbval);
                 }
                 else if (facilitycb2.SelectedItem.ToString() == "New AVR")
                 {
                     //MessageBox.Show("Debug Line for New AVR Executed");
-                    cbval = "nareservations";
+                    cbval = "New AVR";
                     filldata(cbval);
                 }
 
@@ -1589,7 +1586,7 @@ namespace Function_Hall_Reservation_System.Student
                 {
 
                     //MessageBox.Show("Debug Line for Old AVR Executed");
-                    cbval = "oareservations";
+                    cbval = "Old AVR";
                     filldata(cbval);
                 }
             }
@@ -1678,7 +1675,7 @@ namespace Function_Hall_Reservation_System.Student
             try
             {
                 Connection.Connection.DB();
-                Functions.Functions.gen = "Select * from fhreservation where reservationstatus = 'Approved' and reservedby = '" + name + "' UNION ALL Select * from nareservations where reservationstatus = 'Approved' and reservedby = '" + name + "' UNION ALL Select * from oareservations where reservationstatus = 'Approved' and reservedby = '" + name + "' UNION ALL Select * from audreservations where reservationstatus = 'Approved' and reservedby = '" + name + "'";
+                Functions.Functions.gen = "Select * from reservations where reservationstatus = 'Approved' and studentid = '" + Form1.setstudentid + "'";
                 Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
                 Functions.Functions.reader = Functions.Functions.command.ExecuteReader();
 
