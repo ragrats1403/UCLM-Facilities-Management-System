@@ -109,6 +109,7 @@ namespace Function_Hall_Reservation_System.Student
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.debugcount = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
@@ -1023,12 +1024,23 @@ namespace Function_Hall_Reservation_System.Student
             this.label3.TabIndex = 84;
             this.label3.Text = "RESERVATION";
             // 
+            // debugcount
+            // 
+            this.debugcount.AutoSize = true;
+            this.debugcount.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.debugcount.Location = new System.Drawing.Point(689, 106);
+            this.debugcount.Name = "debugcount";
+            this.debugcount.Size = new System.Drawing.Size(41, 13);
+            this.debugcount.TabIndex = 85;
+            this.debugcount.Text = "label13";
+            // 
             // Reservation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Highlight;
             this.ClientSize = new System.Drawing.Size(1124, 520);
+            this.Controls.Add(this.debugcount);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.tabControl1);
@@ -1141,5 +1153,6 @@ namespace Function_Hall_Reservation_System.Student
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label debugcount;
     }
 }

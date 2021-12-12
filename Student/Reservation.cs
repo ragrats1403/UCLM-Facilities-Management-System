@@ -67,13 +67,15 @@ namespace Function_Hall_Reservation_System.Student
                 if (count == 0)
                 {
                     confirm = false;
+                    
                 }
                 else
                 {
                     confirm = true;
+                    
                 }
 
-
+                //MessageBox.Show(""+count);
 
                 Connection.Connection.conn.Close();
 
@@ -732,13 +734,12 @@ namespace Function_Hall_Reservation_System.Student
         
         private void btnrequest_Click(object sender, EventArgs e)
         {
-            DateTime datestart = dateTimePicker2.Value.Date + dateTimePicker1.Value.TimeOfDay;
-            DateTime dateend = dateTimePicker2.Value.Date + dateTimePicker3.Value.TimeOfDay;
+            
+            
             var list = new List<String>();
             var name = Form1.setfirstname + " " + Form1.setlastname;
-            
-            string month = "";
 
+            string month = "";
 
             string eqres1 = cmbeq1.Text.ToString() + "(" + textBox1.Text.ToString() + ")";
             string eqres2 = cmbeq2.Text.ToString() + "(" + textBox2.Text.ToString() + ")";
@@ -827,29 +828,31 @@ namespace Function_Hall_Reservation_System.Student
                 {
                     MessageBox.Show("Schedule is open");
                 }
+
+
+            try
+            {
+
+                DateTime datestart = dateTimePicker2.Value.Date + dateTimePicker1.Value.TimeOfDay;
+                DateTime dateend = dateTimePicker2.Value.Date + dateTimePicker3.Value.TimeOfDay;
                 
 
-                try
+                if (checkdateconflict(dateTimePicker2.Value.Date) == true)
                 {
+                    int test = 0;
 
+
+                    Connection.Connection.DB();
+                    Functions.Functions.gen = "Select COUNT(*) from reservations where '"+datestart+"' between timestart and timestart and reservationstatus = 'Approved' or '"+dateend+"' between timestart and timeend and reservationstatus = 'Approved' and reservationstatus = 'Approved' or timestart between '"+datestart+"' and '"+dateend+"' and reservationstatus = 'Approved' or timeend between '"+datestart+"' and '"+dateend+"' and reservationstatus = 'Approved'";
+                    Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
+                    Functions.Functions.reader = Functions.Functions.command.ExecuteReader();
+                    Functions.Functions.reader.Read();
+
+                    test = Functions.Functions.reader.GetInt32(0);
+
+                    debugcount.Text = test.ToString();
+                    Connection.Connection.conn.Close();
                     
-
-                    if (checkdateconflict(dateTimePicker2.Value.Date) == true)
-                    {
-                        int test;
-                        
-                        Connection.Connection.DB();
-                        Functions.Functions.gen = "Select count(*) from reservations where '" + dateTimePicker1.Value + "' between timestart and timestart and reservationstatus = 'Approved' or '" + dateTimePicker3.Value + "' between timestart and timeend and reservationstatus = 'Approved' and reservationstatus = 'Approved' or timestart between '" + datestart + "' and '" + dateend + "' and reservationstatus = 'Approved' or timeend between '" + dateTimePicker1.Value + "' and '" + dateTimePicker3.Value + "' and reservationstatus = 'Approved'";
-
-                        Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
-                        Functions.Functions.reader = Functions.Functions.command.ExecuteReader();
-                        Functions.Functions.reader.Read();
-                       
-                        test = Functions.Functions.reader.GetInt32(0);
-
-                        
-                        Connection.Connection.conn.Close();
-
                         if (test > 0)
                         {
                             
@@ -892,11 +895,13 @@ namespace Function_Hall_Reservation_System.Student
                         
                     }
 
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
+
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
 
 
 
