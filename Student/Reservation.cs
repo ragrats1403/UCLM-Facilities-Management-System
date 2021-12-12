@@ -56,7 +56,7 @@ namespace Function_Hall_Reservation_System.Student
             try
             {
                 Connection.Connection.DB();
-                Functions.Functions.gen = "Select count("+loadedid+".reserveddate) from "+loadedid+" where reserveddate = '" + dt + "' and reservationstatus = 'Approved'";
+                Functions.Functions.gen = "Select count(reservations.reserveddate) from reservations where reserveddate = '" + dt + "' and reservationstatus = 'Approved' and facilityname = '"+facilitycb.SelectedItem.ToString()+"'";
                 Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
                 Functions.Functions.reader = Functions.Functions.command.ExecuteReader();
                 while (Functions.Functions.reader.Read())
@@ -635,21 +635,7 @@ namespace Function_Hall_Reservation_System.Student
                 MessageBox.Show(ex.Message);
             }
         }
-        /* public void chkboxfill()
-         {
-             Connection.Connection.DB();
-             Functions.Functions.gen = "Select equipmentname from fhequipments where equipmentstatus = 'Available'";
-             Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
-             Functions.Functions.reader = Functions.Functions.command.ExecuteReader();
-             while (Functions.Functions.reader.Read())
-             {
-                 string fill = Functions.Functions.reader.GetString(0);
-                 checkedListBox1.Items.Add(fill);
-             }
-
-
-             Connection.Connection.conn.Close();
-         }*/
+            
         public void timestart()
         {
             dateTimePicker1.Format = DateTimePickerFormat.Time;

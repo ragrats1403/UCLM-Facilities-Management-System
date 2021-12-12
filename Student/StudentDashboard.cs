@@ -42,6 +42,10 @@ namespace Function_Hall_Reservation_System.Student
             //filldata();
             Checkapprove();
             lblfullname.Text = name;
+            loadedid = "reservations";
+            reservationtotalcount(loadedid);
+            approvedtotalcount(loadedid);
+            pendingtotalcount(loadedid);
         }
 
 
@@ -137,56 +141,7 @@ namespace Function_Hall_Reservation_System.Student
             sd.Show();
         }
 
-        private void facilitycb_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                if (facilitycb.SelectedItem.ToString() == "Function Hall")
-                {
-
-                    //MessageBox.Show("Debug Line for Functionhall selection Executed");
-                    loadedid = "fhreservation";
-                    reservationtotalcount(loadedid);
-                    approvedtotalcount(loadedid);
-                    pendingtotalcount(loadedid);
-
-                }
-                else if (facilitycb.SelectedItem.ToString() == "Auditorium")
-                {
-
-                    //MessageBox.Show("Debug Line for Auditorium Executed");
-
-                    loadedid = "audreservations";
-                    reservationtotalcount(loadedid);
-                    approvedtotalcount(loadedid);
-                    pendingtotalcount(loadedid);
-                }
-                else if (facilitycb.SelectedItem.ToString() == "New AVR")
-                {
-                    //MessageBox.Show("Debug Line for New AVR Executed");
-
-                    loadedid = "nareservations";
-                    reservationtotalcount(loadedid);
-                    approvedtotalcount(loadedid);
-                    pendingtotalcount(loadedid);
-                }
-
-                else if (facilitycb.SelectedItem.ToString() == "Old AVR")
-                {
-
-                    //MessageBox.Show("Debug Line for Old AVR Executed");
-
-                    loadedid = "oareservations";
-                    reservationtotalcount(loadedid);
-                    approvedtotalcount(loadedid);
-                    pendingtotalcount(loadedid);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
+        
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -207,7 +162,7 @@ namespace Function_Hall_Reservation_System.Student
             try
             {
                 Connection.Connection.DB();
-                Functions.Functions.gen = "Select * from fhreservation where reservationstatus = 'Approved' and reservedby = '" + name + "' UNION ALL Select * from nareservations where reservationstatus = 'Approved' and reservedby = '" + name + "' UNION ALL Select * from oareservations where reservationstatus = 'Approved' and reservedby = '" + name + "' UNION ALL Select * from audreservations where reservationstatus = 'Approved' and reservedby = '" + name + "'";
+                Functions.Functions.gen = "Select * from reservations where reservationstatus = 'Approved' and studentid = '" + Form1.setstudentid + "'";
                 Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
                 Functions.Functions.reader = Functions.Functions.command.ExecuteReader();
 
@@ -238,11 +193,11 @@ namespace Function_Hall_Reservation_System.Student
             String tempeventname;
             String tempdate;
             String tempfac;
-            String facid;
+            
             try
             {
                 Connection.Connection.DB();
-                Functions.Functions.gen = "Select * from fhreservation where reservationstatus = 'Approved' and reservedby = '" + name + "' UNION ALL Select * from nareservations where reservationstatus = 'Approved' and reservedby = '" + name + "' UNION ALL Select * from oareservations where reservationstatus = 'Approved' and reservedby = '" + name + "' UNION ALL Select * from audreservations where reservationstatus = 'Approved' and reservedby = '" + name + "'";
+                Functions.Functions.gen = "Select * from reservations where reservationstatus = 'Approved' and studentid = '" + Form1.setstudentid + "'";
                 Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
                 Functions.Functions.reader = Functions.Functions.command.ExecuteReader();
 
@@ -253,24 +208,26 @@ namespace Function_Hall_Reservation_System.Student
                     tempeventname = Functions.Functions.reader["eventname"].ToString();
                     tempdate = Functions.Functions.reader["reserveddate"].ToString();
                     tempfac = Functions.Functions.reader["facilityname"].ToString();
-                    facid = Functions.Functions.reader["facilityid"].ToString();
+                    //facid = Functions.Functions.reader["facilityid"].ToString();
                     Connection.Connection.conn.Close();
+
+                    DateTime dt = Convert.ToDateTime(tempdate);
 
 
                     if (read == 0)
                     {
 
-                        var gen = MessageBox.Show("Your reservation was approved!\nReservation Name and Date: " + tempeventname + " " + tempdate + "\nFacility: " + tempfac + "\nMark Notification as Read?", "Delete equipment", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        var gen = MessageBox.Show("Your reservation was approved!\nReservation Name: " + tempeventname + "\nReservation Date: " + dt.ToShortDateString() + "\nFacility: " + tempfac + "\nMark Notification as Read?", "Delete equipment", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                         if (gen == DialogResult.Yes)
                         {
 
                             Connection.Connection.DB();
-                            Functions.Functions.gen = "UPDATE " + facid + " SET readstatus = 1 where reservationstatus = 'Approved' and reservedby = '" + name + "'";
+                            Functions.Functions.gen = "UPDATE reservations SET readstatus = 1 where reservationstatus = 'Approved' and reservedby = '" + name + "'";
                             Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
                             Functions.Functions.command.ExecuteNonQuery();
                             Connection.Connection.conn.Close();
                             pbapprovenotif.Visible = false;
-
+                            Checkapprove();
 
                         }
                         else if (gen == DialogResult.No)

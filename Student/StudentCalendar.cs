@@ -143,7 +143,7 @@ namespace Function_Hall_Reservation_System.Student
             String tempeventname;
             String tempdate;
             String tempfac;
-            String facid;
+            
             try
             {
                 Connection.Connection.DB();
@@ -158,24 +158,26 @@ namespace Function_Hall_Reservation_System.Student
                     tempeventname = Functions.Functions.reader["eventname"].ToString();
                     tempdate = Functions.Functions.reader["reserveddate"].ToString();
                     tempfac = Functions.Functions.reader["facilityname"].ToString();
-                    facid = Functions.Functions.reader["facilityid"].ToString();
+                    //facid = Functions.Functions.reader["facilityid"].ToString();
                     Connection.Connection.conn.Close();
+
+                    DateTime dt = Convert.ToDateTime(tempdate);      
 
 
                     if (read == 0)
                     {
 
-                        var gen = MessageBox.Show("Your reservation was approved!\nReservation Name and Date: " + tempeventname + " " + tempdate + "\nFacility: " + tempfac + "\nMark Notification as Read?", "Delete equipment", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        var gen = MessageBox.Show("Your reservation was approved!\nReservation Name: " + tempeventname + "\nReservation Date: " + dt.ToShortDateString() + "\nFacility: " + tempfac + "\nMark Notification as Read?", "Delete equipment", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                         if (gen == DialogResult.Yes)
                         {
 
                             Connection.Connection.DB();
-                            Functions.Functions.gen = "UPDATE " + facid + " SET readstatus = 1 where reservationstatus = 'Approved' and reservedby = '" + name + "'";
+                            Functions.Functions.gen = "UPDATE reservations SET readstatus = 1 where reservationstatus = 'Approved' and reservedby = '" + name + "'";
                             Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
                             Functions.Functions.command.ExecuteNonQuery();
                             Connection.Connection.conn.Close();
                             pbapprovenotif.Visible = false;
-
+                            Checkapprove();
 
                         }
                         else if (gen == DialogResult.No)
