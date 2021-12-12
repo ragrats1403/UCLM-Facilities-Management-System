@@ -1913,7 +1913,7 @@ namespace Function_Hall_Reservation_System.Student
                 txt = Int32.Parse(textBox7.Text);
                 lbl = Int32.Parse(lbleq12.Text);
             }
-            
+            //
             if (txt > lbl)
             {
                 MessageBox.Show("The quantity you're trying to input\nexceed the maximum amount of available equipment!");
