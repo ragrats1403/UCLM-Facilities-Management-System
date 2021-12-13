@@ -29,7 +29,9 @@ namespace Function_Hall_Reservation_System.Student
         public string newval = "";
         public string cbval = "";
         public static string name = Form1.setfullname;
-        
+        public static string setfacilityname = "";
+        public static string seteventname = "";
+
 
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
@@ -41,6 +43,10 @@ namespace Function_Hall_Reservation_System.Student
             int nWidthEllipse, // width of ellipse
             int nHeightEllipse // height of ellipse
         );
+        public String getfacilityname()
+        {
+            return setfacilityname;
+        }
 
         public Reservation()
         {
@@ -1003,10 +1009,12 @@ namespace Function_Hall_Reservation_System.Student
         private void facilitycb_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
+
             {
                 if (facilitycb.SelectedItem.ToString() == "Function Hall")
                 {
                     //MessageBox.Show("Debug Line for Functionhall selection Executed");|
+                    setfacilityname = facilitycb.SelectedItem.ToString();
                     loadedid = "fhreservation";
                     loadedeq = "equipments";
                     cmbeq1.Items.Clear();
@@ -1043,6 +1051,7 @@ namespace Function_Hall_Reservation_System.Student
                     //MessageBox.Show("Debug Line for Auditorium Executed");
                     loadedid = "audreservations";
                     loadedeq = "equipments";
+                    setfacilityname = facilitycb.SelectedItem.ToString();
                     cmbeq1.Items.Clear();
                     cmbeq2.Items.Clear();
                     cmbeq3.Items.Clear();
@@ -1061,6 +1070,7 @@ namespace Function_Hall_Reservation_System.Student
                 else if (facilitycb.SelectedItem.ToString() == "New AVR")
                 {
                     //MessageBox.Show("Debug Line for New AVR Executed");
+                    setfacilityname = facilitycb.SelectedItem.ToString();
                     loadedid = "nareservations";
                     loadedeq = "equipments";
                     cmbeq1.Items.Clear();
@@ -1083,6 +1093,7 @@ namespace Function_Hall_Reservation_System.Student
                 {
 
                     //MessageBox.Show("Debug Line for Old AVR Executed");
+                    setfacilityname = facilitycb.SelectedItem.ToString();
                     loadedid = "oareservations";
                     loadedeq = "equipments";
                     cmbeq1.Items.Clear();
@@ -1935,6 +1946,8 @@ namespace Function_Hall_Reservation_System.Student
 
         private void button5_Click(object sender, EventArgs e)
         {
+            seteventname = txtEventname.Text;
+            setfacilityname = facilitycb.SelectedItem.ToString();
             Student.BorrowEquipment be = new Student.BorrowEquipment();
             this.Visible = true;
             be.Show();
