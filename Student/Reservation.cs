@@ -1130,17 +1130,25 @@ namespace Function_Hall_Reservation_System.Student
             {
                 loadedeqid = cmbeq1.SelectedItem.ToString();
                 Connection.Connection.DB();
-                Functions.Functions.gen = "Select equipments.availableqty from equipments where equipmentname = '" + loadedeqid + "' and facilityname = '" + facilitycb.SelectedItem.ToString() + "'";
+                Functions.Functions.gen = "Select equipments.availableqty,equipments.equipmentstatus from equipments where equipmentname = '" + loadedeqid + "' and facilityname = '" + facilitycb.SelectedItem.ToString() + "'";
                 Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
                 Functions.Functions.reader = Functions.Functions.command.ExecuteReader();
                 while (Functions.Functions.reader.Read())
                 {
                     eqhandler = Functions.Functions.reader.GetInt32(0);
                     lbleq1.Text = eqhandler.ToString();
+                    label15.Text = Functions.Functions.reader["equipmentstatus"].ToString();
 
                 }
 
-
+                if (label15.Text == "Available")
+                {
+                    textBox1.Enabled = true;
+                }
+                else
+                {
+                    textBox1.Enabled = false;
+                }
 
 
                 Connection.Connection.conn.Close();
@@ -1923,6 +1931,13 @@ namespace Function_Hall_Reservation_System.Student
             {
                 MessageBox.Show("The quantity you're trying to input\nexceed the maximum amount of available equipment!");
             }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Student.BorrowEquipment be = new Student.BorrowEquipment();
+            this.Visible = true;
+            be.Show();
         }
     }
 }

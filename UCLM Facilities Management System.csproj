@@ -121,6 +121,12 @@
     <Compile Include="Registration\Registration.Designer.cs">
       <DependentUpon>Registration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Student\BorrowEquipment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student\BorrowEquipment.Designer.cs">
+      <DependentUpon>BorrowEquipment.cs</DependentUpon>
+    </Compile>
     <Compile Include="Student\Reservation.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -196,6 +202,9 @@
     </Compile>
     <EmbeddedResource Include="Registration\Registration.resx">
       <DependentUpon>Registration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student\BorrowEquipment.resx">
+      <DependentUpon>BorrowEquipment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Student\Reservation.resx">
       <DependentUpon>Reservation.cs</DependentUpon>
