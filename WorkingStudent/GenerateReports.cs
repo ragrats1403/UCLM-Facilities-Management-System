@@ -38,7 +38,7 @@ namespace Function_Hall_Reservation_System.WorkingStudent
         }
         public void Filldata()
         {
-            Functions.Functions.gen = "Select reservationid AS [Reservation ID], eventname as [Event Name], reservedby as [Reserved By], checkedby as [Checked By], approvedby as [Approved By], reservedequipments as [Reserved Equipments], datereserved as [Date Reserved], reserveddate as [Reserved Date], timestart as [Time Start], timeend As [Time End],facilityname as [Facility Name] from fhreservation where reservationstatus = 'Approved' UNION ALL Select reservationid AS [Reservation ID], eventname as [Event Name], reservedby as [Reserved By], checkedby as [Checked By], approvedby as [Approved By], reservedequipments as [Reserved Equipments], datereserved as [Date Reserved], reserveddate as [Reserved Date], timestart as [Time Start], timeend As [Time End],facilityname as [Facility Name] from audreservations where reservationstatus = 'Approved' UNION ALL Select reservationid AS [Reservation ID], eventname as [Event Name], reservedby as [Reserved By], checkedby as [Checked By], approvedby as [Approved By], reservedequipments as [Reserved Equipments], datereserved as [Date Reserved], reserveddate as [Reserved Date], timestart as [Time Start], timeend As [Time End],facilityname as [Facility Name] from oareservations where reservationstatus = 'Approved' UNION ALL Select reservationid AS [Reservation ID], eventname as [Event Name], reservedby as [Reserved By], checkedby as [Checked By], approvedby as [Approved By], reservedequipments as [Reserved Equipments], datereserved as [Date Reserved], reserveddate as [Reserved Date], timestart as [Time Start], timeend As [Time End],facilityname as [Facility Name] from nareservations where reservationstatus = 'Approved'";
+            Functions.Functions.gen = "Select eventname as [Event Name], reservedby as [Reserved By], checkedby as [Checked By], approvedby as [Approved By], reservedequipments as [Reserved Equipments], datereserved as [Date Reserved], reserveddate as [Reserved Date], timestart as [Time Start], timeend As [Time End],facilityname as [Facility Name] from reservations where reservationstatus = 'Approved'";
             Functions.Functions.fill(Functions.Functions.gen, dataGridView1);
         }
        
@@ -222,28 +222,28 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             try
             {
 
-                reservationidTextBox.Text = dataGridView1[0, e.RowIndex].Value.ToString();
-                eventnameTextBox.Text = dataGridView1[1, e.RowIndex].Value.ToString();
-                reservedbyTextBox.Text = dataGridView1[2, e.RowIndex].Value.ToString();
-                checkedbyTextBox.Text = dataGridView1[3, e.RowIndex].Value.ToString();
-                approvedbyTextBox.Text = dataGridView1[4, e.RowIndex].Value.ToString();
-                reservedequipmentsTextBox.Text = dataGridView1[5, e.RowIndex].Value.ToString();
                 
-                datereserved = dataGridView1[8, e.RowIndex].Value.ToString();
+                eventnameTextBox.Text = dataGridView1[0, e.RowIndex].Value.ToString();
+                reservedbyTextBox.Text = dataGridView1[1, e.RowIndex].Value.ToString();
+                checkedbyTextBox.Text = dataGridView1[2, e.RowIndex].Value.ToString();
+                approvedbyTextBox.Text = dataGridView1[3, e.RowIndex].Value.ToString();
+                reservedequipmentsTextBox.Text = dataGridView1[4, e.RowIndex].Value.ToString();
+                
+                datereserved = dataGridView1[5, e.RowIndex].Value.ToString();
                 dtpdatereserved.Format = DateTimePickerFormat.Short;
                 dtpdatereserved.Value = Convert.ToDateTime(datereserved);
                 
-                reserveddate = dataGridView1[8, e.RowIndex].Value.ToString();
+                reserveddate = dataGridView1[6, e.RowIndex].Value.ToString();
                 dtpreserveddate.Format = DateTimePickerFormat.Short;
                 dtpreserveddate.Value = Convert.ToDateTime(reserveddate);
-                timestart = dataGridView1[8, e.RowIndex].Value.ToString();
+                timestart = dataGridView1[7, e.RowIndex].Value.ToString();
                 dtptimestart.Format = DateTimePickerFormat.Time;
                 dtptimestart.Value = Convert.ToDateTime(timestart);
                 
-                timeend = dataGridView1[9, e.RowIndex].Value.ToString();
+                timeend = dataGridView1[8, e.RowIndex].Value.ToString();
                 dtptimeend.Format = DateTimePickerFormat.Time;
                 dtptimeend.Value = Convert.ToDateTime(timeend);
-                txtFacility.Text = dataGridView1[10, e.RowIndex].Value.ToString();
+                txtFacility.Text = dataGridView1[9, e.RowIndex].Value.ToString();
 
             }
             catch (Exception ex)

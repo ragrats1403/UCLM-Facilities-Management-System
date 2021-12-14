@@ -89,7 +89,11 @@ namespace Function_Hall_Reservation_System.WorkingStudent
 
 
         }
-
+        public void filldata(String id)
+        {
+            Functions.Functions.gen = "Select * from reservations where reserveddate > '" + DateTime.Now + "' and facilityname = '"+id+"'";
+            Functions.Functions.fill(Functions.Functions.gen, dataGridView1);
+        }
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -234,29 +238,25 @@ namespace Function_Hall_Reservation_System.WorkingStudent
                 if (facilitycb.SelectedItem.ToString() == "Function Hall")
                 {
                     //MessageBox.Show("Debug Line for Functionhall selection Executed");
-                    Fillfhreservationdata();
-                    loadedid = idname;
+                    filldata("Function Hall");
                 }
                 else if (facilitycb.SelectedItem.ToString() == "Auditorium")
                 {
 
                     //MessageBox.Show("Debug Line for Auditorium Executed");
-                    Fillaudreservationdata();
-                    loadedid = idname;
+                    filldata("Auditorium");
                 }
                 else if (facilitycb.SelectedItem.ToString() == "New AVR")
                 {
                     //MessageBox.Show("Debug Line for New AVR Executed");
-                    Fillnareservationdata();
-                    loadedid = idname;
+                    filldata("New AVR");
                 }
 
                 else if (facilitycb.SelectedItem.ToString() == "Old AVR")
                 {
 
                     //MessageBox.Show("Debug Line for Old AVR Executed");
-                    Filloareservationdata();
-                    loadedid = idname;
+                    filldata("Old AVR");
                 }
             }
             catch (Exception ex)
