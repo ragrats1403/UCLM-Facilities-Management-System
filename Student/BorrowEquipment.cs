@@ -92,39 +92,130 @@ namespace Function_Hall_Reservation_System.Student
             this.Close();
         }
 
-        private int subtractqty()
+        private int subtractavailqty()
         {
             int currentqty = Convert.ToInt32(txtAvailqty.Text);
             int borrowedqty = Convert.ToInt32(txtBorrowedqty.Text);
 
-            return currentqty = borrowedqty;
+            return currentqty - borrowedqty;
+        }
+        private int subtracttotalqty()
+        {
+            int currenttotal = Convert.ToInt32(txtTotalqty.Text);
+            int newcurrenttotal = currenttotal - Convert.ToInt32(txtBorrowedqty.Text);
+
+            return newcurrenttotal;
+        }
+
+        private int addedavailqty()
+        {
+            int borrowedqty = Convert.ToInt32(txtBorrowedqty.Text);
+            int oldaddedqty;
+            String temporaryqty;
+            int newaddedqty;
+            Connection.Connection.DB();
+            Functions.Functions.gen = "Select equipmentname,addedqty from equipments where facilityname = '" + Reservation.setfacilityname + "' and equipmentname = '" + txtEqname.Text + "'";
+            Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
+            Functions.Functions.reader = Functions.Functions.command.ExecuteReader();
+            Functions.Functions.reader.Read();
+            temporaryqty = Functions.Functions.reader["addedqty"].ToString();
+            oldaddedqty = Convert.ToInt32(temporaryqty);
+            Connection.Connection.conn.Close();
+            newaddedqty = oldaddedqty + borrowedqty;
+            return newaddedqty;
+        }
+        public void autoupdatetotalqty()
+        {
+
+            int total = 0;
+            int available = 0;
+            int defective = 00;
+            String t = "";
+            String a = "";
+            String d = "";
+            //1st query for designated facility equipment auto update
+            MessageBox.Show("First query");
+            Connection.Connection.DB();
+            Functions.Functions.gen = "Select equipmentname,availableqty,defectiveqty from equipments where facilityname = '"+Reservation.setfacilityname+"' and equipmentname = '"+txtEqname.Text+"'";
+            Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
+            Functions.Functions.reader = Functions.Functions.command.ExecuteReader();
+            Functions.Functions.reader.Read();
+            a = Functions.Functions.reader["availableqty"].ToString();
+            d = Functions.Functions.reader["defectiveqty"].ToString();
+
+            available = Convert.ToInt32(a);
+            defective = Convert.ToInt32(d);
+
+            total = available + defective;
+            Connection.Connection.conn.Close();
+            //2nd query for designated facility equipment auto update
+            MessageBox.Show("2nd query");
+            Connection.Connection.DB();
+            Functions.Functions.gen = "UPDATE equipments SET availableqty='" + available + "',defectiveqty = '" + defective + "',totalqty = '" + total + "' where equipmentname = '" + txtEqname.Text + "' and facilityname = '" + Reservation.setfacilityname + "'";
+            Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
+            Functions.Functions.command.ExecuteNonQuery();
+            Connection.Connection.conn.Close();
+            //1st query for borrowed facility equipment auto update
+            MessageBox.Show("3rd query");
+            Connection.Connection.DB();
+            Functions.Functions.gen = "Select equipmentname,availableqty,defectiveqty from equipments where facilityname = '" + txtStoredFacility.Text + "' and equipmentname = '" + txtEqname.Text + "'";
+            Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
+            Functions.Functions.reader = Functions.Functions.command.ExecuteReader();
+            Functions.Functions.reader.Read();
+            a = Functions.Functions.reader["availableqty"].ToString();
+            d = Functions.Functions.reader["defectiveqty"].ToString();
+
+            available = Convert.ToInt32(a);
+            defective = Convert.ToInt32(d);
+
+            total = available + defective;
+            Connection.Connection.conn.Close();
+            //2nd query for designated facility equipment auto update
+            MessageBox.Show("4th query");
+            Connection.Connection.DB();
+            Functions.Functions.gen = "UPDATE equipments SET availableqty='" + available + "',defectiveqty = '" + defective + "',totalqty = '" + total + "' where equipmentname = '" + txtEqname.Text + "' and facilityname = '" + txtStoredFacility.Text + "'";
+            Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
+            Functions.Functions.command.ExecuteNonQuery();
+            Connection.Connection.conn.Close();
+
+
+
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int subtractedqty = subtractqty();
+            int subtractedqty = subtractavailqty();
+            int newtotalqty = subtracttotalqty();
             int currentqty = Convert.ToInt32(txtAvailqty.Text);
             int borrowedqty = Convert.ToInt32(txtBorrowedqty.Text);
             int oldbqty;
             int newbqty;
             String tempoldbqty;
-            int quantity;
             
+            String tempexorigqty;
+            String tempexaddedqty;
+            int newavailval;
+            int newtotalval;
+            int newaddedval;
+
 
             try
             {
 
                 //first query(save info to borrowedequipment table)
+               // MessageBox.Show("First query");
                 Connection.Connection.DB();
-                Functions.Functions.gen = "Insert into borrowedequipment (borrowedeq,studentid,studentname,borrowedfacilityname,addedfacilityname,eventname)values('"+txtEqname.Text+"','"+Form1.setstudentid+"','"+Form1.setfullname+"','"+txtStoredFacility.Text+"','"+Reservation.setfacilityname+"','"+Reservation.seteventname+"')";
+                Functions.Functions.gen = "Insert into borrowedequipment (borrowedeq,studentid,studentname,borrowedfacilityname,addedfacilityname,eventname,borrowedqty)values('" + txtEqname.Text + "','" + Form1.setstudentid + "','" + Form1.setfullname + "','" + txtStoredFacility.Text + "','" + Reservation.setfacilityname + "','" + Reservation.seteventname + "','" + borrowedqty + "')";
                 Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
                 Functions.Functions.command.ExecuteNonQuery();
                 MessageBox.Show("Successfully Stored Information to BorrowedEquipments!", "Borrow Successful", MessageBoxButtons.OK);
                 Connection.Connection.conn.Close();
 
                 //second query(getting borrowedqty values from deducted facility equipment)
+               // MessageBox.Show("2nd query");
                 Connection.Connection.DB();
-                Functions.Functions.gen = "Select equipmentname,borrowedqty from equipments where facilityname = '"+txtStoredFacility.Text+"' and equipmentname = '"+txtEqname.Text+"'";
+                Functions.Functions.gen = "Select equipmentname,borrowedqty,availableqty,totalqty from equipments where facilityname = '" + txtStoredFacility.Text + "' and equipmentname = '" + txtEqname.Text + "'";
                 Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
                 Functions.Functions.reader = Functions.Functions.command.ExecuteReader();
                 Functions.Functions.reader.Read();
@@ -134,13 +225,41 @@ namespace Function_Hall_Reservation_System.Student
                 Connection.Connection.conn.Close();
 
                 //third query(update info for borrowed facility)
+               // MessageBox.Show("3rd query");
                 Connection.Connection.DB();
-                Functions.Functions.gen = "UPDATE equipments SET borrowedqty='" + newbqty + "', where equipmentname = '" + txtEqname.Text + "' and facilityname = '"+txtStoredFacility.Text+"'";
-                /*Functions.Functions.gen = "UPDATE fhreservation SET fhreservationstatus='" + cmbstatus.Text + "',approvedby = '"+Form1.setfullname+"' where reservationid= '"+txtreservationid.Text+"'";*/
+                Functions.Functions.gen = "UPDATE equipments SET borrowedqty='" + newbqty + "',availableqty = '" + subtractedqty + "' where equipmentname = '" + txtEqname.Text + "' and facilityname = '" + txtStoredFacility.Text + "'";                
                 Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
                 Functions.Functions.command.ExecuteNonQuery();
-                MessageBox.Show("Successfully Updated!", "fhreservation", MessageBoxButtons.OK);
+                // MessageBox.Show("Successfully Updated!", "equipments", MessageBoxButtons.OK);
                 Connection.Connection.conn.Close();
+                newaddedval = addedavailqty();
+                //fourth query(get exising values for availableqty and total qty to desired facility)
+                //MessageBox.Show("4th query");
+                Connection.Connection.DB();
+                Functions.Functions.gen = "Select equipmentname,originalqty from equipments where facilityname = '" + Reservation.setfacilityname + "' and equipmentname = '" + txtEqname.Text + "'";
+                Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
+                Functions.Functions.reader = Functions.Functions.command.ExecuteReader();
+                Functions.Functions.reader.Read();
+                tempexorigqty = Functions.Functions.reader["originalqty"].ToString();
+                
+                newavailval = Convert.ToInt32(tempexorigqty) + newaddedval;
+                
+                Connection.Connection.conn.Close();
+
+                //fifth query(update new values to designated facility)
+
+              //  MessageBox.Show("5th query");
+                Connection.Connection.DB();
+                Functions.Functions.gen = "UPDATE equipments SET availableqty='" + newavailval + "',addedqty = '" + newaddedval + "' where equipmentname = '" + txtEqname.Text + "' and facilityname = '" +Reservation.setfacilityname+ "'";
+                Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
+                Functions.Functions.command.ExecuteNonQuery();
+                MessageBox.Show("Successfully Updated!", "equipments", MessageBoxButtons.OK);
+                Connection.Connection.conn.Close();
+                autoupdatetotalqty();
+                Student.Reservation r = new Student.Reservation();
+                r.Refresh();
+                this.Close();
+                
             }
             catch (Exception ex)
             {
