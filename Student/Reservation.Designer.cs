@@ -31,14 +31,36 @@ namespace Function_Hall_Reservation_System.Student
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Reservation));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label12 = new System.Windows.Forms.Label();
+            this.pbapprovenotif = new System.Windows.Forms.PictureBox();
+            this.pbnotif = new System.Windows.Forms.PictureBox();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.lblfullname = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.button5 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             this.lbleq12 = new System.Windows.Forms.Label();
             this.lbleq11 = new System.Windows.Forms.Label();
             this.lbleq10 = new System.Windows.Forms.Label();
@@ -103,35 +125,7 @@ namespace Function_Hall_Reservation_System.Student
             this.label3 = new System.Windows.Forms.Label();
             this.debugcount = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pbapprovenotif = new System.Windows.Forms.PictureBox();
-            this.pbnotif = new System.Windows.Forms.PictureBox();
-            this.button5 = new System.Windows.Forms.Button();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.tabControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -139,6 +133,12 @@ namespace Function_Hall_Reservation_System.Student
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbapprovenotif)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbnotif)).BeginInit();
+            this.tabPage2.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.tabControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -164,6 +164,59 @@ namespace Function_Hall_Reservation_System.Student
             this.panel1.TabIndex = 4;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(14, 157);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(43, 37);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 89;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click_1);
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
+            this.pictureBox9.Location = new System.Drawing.Point(14, 241);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(43, 37);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox9.TabIndex = 36;
+            this.pictureBox9.TabStop = false;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
+            this.pictureBox8.Location = new System.Drawing.Point(14, 200);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(43, 37);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox8.TabIndex = 35;
+            this.pictureBox8.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(14, 282);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(43, 37);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 31;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(14, 12);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(91, 89);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 26;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // label12
             // 
             this.label12.AutoSize = true;
@@ -175,6 +228,29 @@ namespace Function_Hall_Reservation_System.Student
             this.label12.Size = new System.Drawing.Size(64, 18);
             this.label12.TabIndex = 25;
             this.label12.Text = "Student";
+            // 
+            // pbapprovenotif
+            // 
+            this.pbapprovenotif.Image = ((System.Drawing.Image)(resources.GetObject("pbapprovenotif.Image")));
+            this.pbapprovenotif.Location = new System.Drawing.Point(283, 60);
+            this.pbapprovenotif.Name = "pbapprovenotif";
+            this.pbapprovenotif.Size = new System.Drawing.Size(39, 41);
+            this.pbapprovenotif.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbapprovenotif.TabIndex = 24;
+            this.pbapprovenotif.TabStop = false;
+            this.pbapprovenotif.Visible = false;
+            this.pbapprovenotif.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // pbnotif
+            // 
+            this.pbnotif.Enabled = false;
+            this.pbnotif.Image = ((System.Drawing.Image)(resources.GetObject("pbnotif.Image")));
+            this.pbnotif.Location = new System.Drawing.Point(283, 60);
+            this.pbnotif.Name = "pbnotif";
+            this.pbnotif.Size = new System.Drawing.Size(39, 41);
+            this.pbnotif.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbnotif.TabIndex = 23;
+            this.pbnotif.TabStop = false;
             // 
             // button4
             // 
@@ -253,8 +329,6 @@ namespace Function_Hall_Reservation_System.Student
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.LemonChiffon;
-            this.tabPage2.Controls.Add(this.button5);
-            this.tabPage2.Controls.Add(this.panel2);
             this.tabPage2.Controls.Add(this.facilitycb);
             this.tabPage2.Controls.Add(this.dateTimePicker3);
             this.tabPage2.Controls.Add(this.label10);
@@ -269,18 +343,30 @@ namespace Function_Hall_Reservation_System.Student
             this.tabPage2.Controls.Add(this.label6);
             this.tabPage2.Controls.Add(this.label5);
             this.tabPage2.Controls.Add(this.label4);
-            this.tabPage2.Controls.Add(this.btnrequest);
+            this.tabPage2.Controls.Add(this.panel2);
             this.tabPage2.ForeColor = System.Drawing.SystemColors.Desktop;
             this.tabPage2.Location = new System.Drawing.Point(4, 26);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(783, 390);
+            this.tabPage2.Size = new System.Drawing.Size(783, 401);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Request Reservation";
             this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
             // 
+            // button5
+            // 
+            this.button5.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.button5.Location = new System.Drawing.Point(139, 200);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(200, 56);
+            this.button5.TabIndex = 23;
+            this.button5.Text = "Borrow Equipments";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.button5);
             this.panel2.Controls.Add(this.label24);
             this.panel2.Controls.Add(this.label25);
             this.panel2.Controls.Add(this.label26);
@@ -296,6 +382,7 @@ namespace Function_Hall_Reservation_System.Student
             this.panel2.Controls.Add(this.label15);
             this.panel2.Controls.Add(this.label13);
             this.panel2.Controls.Add(this.lbleq12);
+            this.panel2.Controls.Add(this.btnrequest);
             this.panel2.Controls.Add(this.lbleq11);
             this.panel2.Controls.Add(this.lbleq10);
             this.panel2.Controls.Add(this.lbleq9);
@@ -339,9 +426,135 @@ namespace Function_Hall_Reservation_System.Student
             this.panel2.Controls.Add(this.textBox1);
             this.panel2.Location = new System.Drawing.Point(25, 131);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(732, 194);
+            this.panel2.Size = new System.Drawing.Size(738, 263);
             this.panel2.TabIndex = 22;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(663, 174);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(52, 17);
+            this.label24.TabIndex = 74;
+            this.label24.Text = "label24";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(663, 145);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(52, 17);
+            this.label25.TabIndex = 73;
+            this.label25.Text = "label25";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(663, 116);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(52, 17);
+            this.label26.TabIndex = 72;
+            this.label26.Text = "label26";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(663, 88);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(52, 17);
+            this.label27.TabIndex = 71;
+            this.label27.Text = "label27";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(663, 64);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(52, 17);
+            this.label28.TabIndex = 70;
+            this.label28.Text = "label28";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(663, 33);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(52, 17);
+            this.label29.TabIndex = 69;
+            this.label29.Text = "label29";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(657, 8);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(75, 17);
+            this.label30.TabIndex = 68;
+            this.label30.Text = "Availability";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(300, 169);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(52, 17);
+            this.label23.TabIndex = 67;
+            this.label23.Text = "label23";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(300, 140);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(52, 17);
+            this.label22.TabIndex = 66;
+            this.label22.Text = "label22";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(300, 111);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(52, 17);
+            this.label21.TabIndex = 65;
+            this.label21.Text = "label21";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(300, 83);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(52, 17);
+            this.label17.TabIndex = 64;
+            this.label17.Text = "label17";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(300, 59);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(52, 17);
+            this.label16.TabIndex = 63;
+            this.label16.Text = "label16";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(300, 28);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(52, 17);
+            this.label15.TabIndex = 62;
+            this.label15.Text = "label15";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(294, 3);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(75, 17);
+            this.label13.TabIndex = 60;
+            this.label13.Text = "Availability";
             // 
             // lbleq12
             // 
@@ -622,7 +835,7 @@ namespace Function_Hall_Reservation_System.Student
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label1.Location = new System.Drawing.Point(3, 3);
+            this.label1.Location = new System.Drawing.Point(11, 3);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(110, 17);
             this.label1.TabIndex = 30;
@@ -631,7 +844,7 @@ namespace Function_Hall_Reservation_System.Student
             // cmbeq6
             // 
             this.cmbeq6.FormattingEnabled = true;
-            this.cmbeq6.Location = new System.Drawing.Point(3, 165);
+            this.cmbeq6.Location = new System.Drawing.Point(9, 166);
             this.cmbeq6.Name = "cmbeq6";
             this.cmbeq6.Size = new System.Drawing.Size(121, 25);
             this.cmbeq6.TabIndex = 29;
@@ -641,7 +854,7 @@ namespace Function_Hall_Reservation_System.Student
             // cmbeq5
             // 
             this.cmbeq5.FormattingEnabled = true;
-            this.cmbeq5.Location = new System.Drawing.Point(3, 137);
+            this.cmbeq5.Location = new System.Drawing.Point(9, 138);
             this.cmbeq5.Name = "cmbeq5";
             this.cmbeq5.Size = new System.Drawing.Size(121, 25);
             this.cmbeq5.TabIndex = 28;
@@ -651,7 +864,7 @@ namespace Function_Hall_Reservation_System.Student
             // cmbeq4
             // 
             this.cmbeq4.FormattingEnabled = true;
-            this.cmbeq4.Location = new System.Drawing.Point(3, 108);
+            this.cmbeq4.Location = new System.Drawing.Point(9, 110);
             this.cmbeq4.Name = "cmbeq4";
             this.cmbeq4.Size = new System.Drawing.Size(121, 25);
             this.cmbeq4.TabIndex = 27;
@@ -661,7 +874,7 @@ namespace Function_Hall_Reservation_System.Student
             // cmbeq3
             // 
             this.cmbeq3.FormattingEnabled = true;
-            this.cmbeq3.Location = new System.Drawing.Point(3, 80);
+            this.cmbeq3.Location = new System.Drawing.Point(9, 82);
             this.cmbeq3.Name = "cmbeq3";
             this.cmbeq3.Size = new System.Drawing.Size(121, 25);
             this.cmbeq3.TabIndex = 26;
@@ -671,7 +884,7 @@ namespace Function_Hall_Reservation_System.Student
             // cmbeq2
             // 
             this.cmbeq2.FormattingEnabled = true;
-            this.cmbeq2.Location = new System.Drawing.Point(3, 51);
+            this.cmbeq2.Location = new System.Drawing.Point(9, 51);
             this.cmbeq2.Name = "cmbeq2";
             this.cmbeq2.Size = new System.Drawing.Size(121, 25);
             this.cmbeq2.TabIndex = 25;
@@ -681,7 +894,7 @@ namespace Function_Hall_Reservation_System.Student
             // cmbeq1
             // 
             this.cmbeq1.FormattingEnabled = true;
-            this.cmbeq1.Location = new System.Drawing.Point(3, 23);
+            this.cmbeq1.Location = new System.Drawing.Point(9, 22);
             this.cmbeq1.Name = "cmbeq1";
             this.cmbeq1.Size = new System.Drawing.Size(121, 25);
             this.cmbeq1.TabIndex = 24;
@@ -898,9 +1111,9 @@ namespace Function_Hall_Reservation_System.Student
             // btnrequest
             // 
             this.btnrequest.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.btnrequest.Location = new System.Drawing.Point(612, 338);
+            this.btnrequest.Location = new System.Drawing.Point(401, 200);
             this.btnrequest.Name = "btnrequest";
-            this.btnrequest.Size = new System.Drawing.Size(145, 46);
+            this.btnrequest.Size = new System.Drawing.Size(200, 56);
             this.btnrequest.TabIndex = 0;
             this.btnrequest.Text = "Submit Reservation";
             this.btnrequest.UseVisualStyleBackColor = true;
@@ -915,7 +1128,7 @@ namespace Function_Hall_Reservation_System.Student
             this.tabPage1.Location = new System.Drawing.Point(4, 26);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(783, 345);
+            this.tabPage1.Size = new System.Drawing.Size(783, 401);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "My Reservations";
             // 
@@ -942,7 +1155,7 @@ namespace Function_Hall_Reservation_System.Student
             this.dataGridView1.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.dataGridView1.Location = new System.Drawing.Point(3, 33);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(780, 312);
+            this.dataGridView1.Size = new System.Drawing.Size(780, 368);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -954,7 +1167,7 @@ namespace Function_Hall_Reservation_System.Student
             this.tabControl1.Location = new System.Drawing.Point(330, 144);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(791, 420);
+            this.tabControl1.Size = new System.Drawing.Size(791, 431);
             this.tabControl1.TabIndex = 7;
             // 
             // label3
@@ -988,219 +1201,6 @@ namespace Function_Hall_Reservation_System.Student
             this.pictureBox2.TabIndex = 82;
             this.pictureBox2.TabStop = false;
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(14, 157);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(43, 37);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 89;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click_1);
-            // 
-            // pictureBox9
-            // 
-            this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
-            this.pictureBox9.Location = new System.Drawing.Point(14, 241);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(43, 37);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox9.TabIndex = 36;
-            this.pictureBox9.TabStop = false;
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(14, 200);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(43, 37);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox8.TabIndex = 35;
-            this.pictureBox8.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(14, 282);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(43, 37);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 31;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(14, 12);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(91, 89);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 26;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // pbapprovenotif
-            // 
-            this.pbapprovenotif.Image = ((System.Drawing.Image)(resources.GetObject("pbapprovenotif.Image")));
-            this.pbapprovenotif.Location = new System.Drawing.Point(283, 60);
-            this.pbapprovenotif.Name = "pbapprovenotif";
-            this.pbapprovenotif.Size = new System.Drawing.Size(39, 41);
-            this.pbapprovenotif.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbapprovenotif.TabIndex = 24;
-            this.pbapprovenotif.TabStop = false;
-            this.pbapprovenotif.Visible = false;
-            this.pbapprovenotif.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
-            // pbnotif
-            // 
-            this.pbnotif.Enabled = false;
-            this.pbnotif.Image = ((System.Drawing.Image)(resources.GetObject("pbnotif.Image")));
-            this.pbnotif.Location = new System.Drawing.Point(283, 60);
-            this.pbnotif.Name = "pbnotif";
-            this.pbnotif.Size = new System.Drawing.Size(39, 41);
-            this.pbnotif.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbnotif.TabIndex = 23;
-            this.pbnotif.TabStop = false;
-            // 
-            // button5
-            // 
-            this.button5.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.button5.Location = new System.Drawing.Point(461, 338);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(145, 46);
-            this.button5.TabIndex = 23;
-            this.button5.Text = "Borrow Equipments";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(294, 3);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(75, 17);
-            this.label13.TabIndex = 60;
-            this.label13.Text = "Availability";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(300, 28);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(52, 17);
-            this.label15.TabIndex = 62;
-            this.label15.Text = "label15";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(300, 59);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(52, 17);
-            this.label16.TabIndex = 63;
-            this.label16.Text = "label16";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(300, 83);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(52, 17);
-            this.label17.TabIndex = 64;
-            this.label17.Text = "label17";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(300, 111);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(52, 17);
-            this.label21.TabIndex = 65;
-            this.label21.Text = "label21";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(300, 140);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(52, 17);
-            this.label22.TabIndex = 66;
-            this.label22.Text = "label22";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(300, 169);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(52, 17);
-            this.label23.TabIndex = 67;
-            this.label23.Text = "label23";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(663, 174);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(52, 17);
-            this.label24.TabIndex = 74;
-            this.label24.Text = "label24";
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(663, 145);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(52, 17);
-            this.label25.TabIndex = 73;
-            this.label25.Text = "label25";
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(663, 116);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(52, 17);
-            this.label26.TabIndex = 72;
-            this.label26.Text = "label26";
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(663, 88);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(52, 17);
-            this.label27.TabIndex = 71;
-            this.label27.Text = "label27";
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(663, 64);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(52, 17);
-            this.label28.TabIndex = 70;
-            this.label28.Text = "label28";
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(663, 33);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(52, 17);
-            this.label29.TabIndex = 69;
-            this.label29.Text = "label29";
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(657, 8);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(75, 17);
-            this.label30.TabIndex = 68;
-            this.label30.Text = "Availability";
-            // 
             // Reservation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1220,6 +1220,13 @@ namespace Function_Hall_Reservation_System.Student
             this.Load += new System.EventHandler(this.Reservation_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbapprovenotif)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbnotif)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -1228,13 +1235,6 @@ namespace Function_Hall_Reservation_System.Student
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbapprovenotif)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbnotif)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
