@@ -329,30 +329,21 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             {
                 if (facilitycb.SelectedItem.ToString() == "Function Hall")
                 {
-                    //MessageBox.Show("Debug Line for Functionhall selection Executed");
-                    Fillfhequipmentdata();
-                    loadedid = idname;
+
                 }
                 else if (facilitycb.SelectedItem.ToString() == "Auditorium")
                 {
 
-                    //MessageBox.Show("Debug Line for Auditorium Executed");
-                    Fillaudequipmentdata();
-                    loadedid = idname;
+
                 }
                 else if (facilitycb.SelectedItem.ToString() == "New AVR")
                 {
-                    //MessageBox.Show("Debug Line for New AVR Executed");
-                    Fillnaequipmentdata();
-                    loadedid = idname;
-                }
 
+                }
                 else if (facilitycb.SelectedItem.ToString() == "Old AVR")
                 {
 
-                   //MessageBox.Show("Debug Line for Old AVR Executed");
-                    Filloaequipmentdata();
-                    loadedid = idname;
+
                 }
             }
             catch (Exception ex)
