@@ -550,5 +550,44 @@ namespace Function_Hall_Reservation_System.Admin
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void btnsaveneweq_Click(object sender, EventArgs e)
+        {
+
+            string eq = txtequipmentname.Text;
+            try
+            {
+
+
+                if (chkdup(eq))
+                {
+                    MessageBox.Show("Equipment already exists with Equipment Name: " + txtequipmentname.Text, "" + loadedid, MessageBoxButtons.OK);
+                    this.Close();
+                    Equipments equ = new Equipments();
+                    equ.Show();
+                    this.tabControl1.SelectedIndex = 1;
+                }
+                else
+                {
+
+                    Connection.Connection.DB();
+                    Functions.Functions.gen = "Insert Into equipments(equipmentname,equipmentstatus,defectiveqty,originalqty,totalqty,facilityname)values('" + txtequipmentname.Text + "','" + txtavailability.Text + "'," + Int32.Parse(txtDefective.Text) + "," + Int32.Parse(txtquantity.Text) + "," + totalqty(Int32.Parse(txtquantity.Text), Int32.Parse(txtDefective.Text)) + ",'" + txtfacname.Text + "')";
+                    Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
+
+                    Functions.Functions.command.ExecuteNonQuery();
+                    MessageBox.Show("Equipment Added!", "Equipments", MessageBoxButtons.OK);
+
+                    Connection.Connection.conn.Close();
+                    this.Close();
+                    Equipment equ = new Equipment();
+                    equ.Show();
+                    this.tabControl1.SelectedIndex = 1;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }

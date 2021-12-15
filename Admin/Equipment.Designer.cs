@@ -272,6 +272,7 @@ namespace Function_Hall_Reservation_System.Admin
             this.btnsaveneweq.Text = "Add to Equipments";
             this.btnsaveneweq.UseVisualStyleBackColor = true;
             this.btnsaveneweq.Visible = false;
+            this.btnsaveneweq.Click += new System.EventHandler(this.btnsaveneweq_Click);
             // 
             // label12
             // 
