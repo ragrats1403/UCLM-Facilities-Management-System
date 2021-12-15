@@ -49,6 +49,13 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.txtavailability = new System.Windows.Forms.ComboBox();
+            this.button7 = new System.Windows.Forms.Button();
+            this.btnaddneweq = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnEditEquip = new System.Windows.Forms.Button();
+            this.txtfacname = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.txttotalqty = new System.Windows.Forms.TextBox();
             this.txtDefective = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -64,13 +71,6 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtfacname = new System.Windows.Forms.TextBox();
-            this.btnEditEquip = new System.Windows.Forms.Button();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.btnaddneweq = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.txtavailability = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
@@ -352,6 +352,80 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             this.tabPage2.Text = "Add | Update Equipment";
             this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
             // 
+            // txtavailability
+            // 
+            this.txtavailability.FormattingEnabled = true;
+            this.txtavailability.Items.AddRange(new object[] {
+            "Available",
+            "Unavailable"});
+            this.txtavailability.Location = new System.Drawing.Point(208, 67);
+            this.txtavailability.Name = "txtavailability";
+            this.txtavailability.Size = new System.Drawing.Size(133, 25);
+            this.txtavailability.TabIndex = 45;
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(235, 196);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(88, 49);
+            this.button7.TabIndex = 44;
+            this.button7.Text = "Reset";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click_1);
+            // 
+            // btnaddneweq
+            // 
+            this.btnaddneweq.Location = new System.Drawing.Point(423, 196);
+            this.btnaddneweq.Name = "btnaddneweq";
+            this.btnaddneweq.Size = new System.Drawing.Size(88, 47);
+            this.btnaddneweq.TabIndex = 43;
+            this.btnaddneweq.Text = "Add New Equipment";
+            this.btnaddneweq.UseVisualStyleBackColor = true;
+            this.btnaddneweq.Click += new System.EventHandler(this.btnadd_Click);
+            // 
+            // btnSave
+            // 
+            this.btnSave.Enabled = false;
+            this.btnSave.Location = new System.Drawing.Point(281, 251);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(88, 47);
+            this.btnSave.TabIndex = 42;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Visible = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // btnEditEquip
+            // 
+            this.btnEditEquip.Enabled = false;
+            this.btnEditEquip.Location = new System.Drawing.Point(329, 197);
+            this.btnEditEquip.Name = "btnEditEquip";
+            this.btnEditEquip.Size = new System.Drawing.Size(88, 48);
+            this.btnEditEquip.TabIndex = 41;
+            this.btnEditEquip.Text = "Edit Equipment";
+            this.btnEditEquip.UseVisualStyleBackColor = true;
+            this.btnEditEquip.Click += new System.EventHandler(this.btnEditEquip_Click);
+            // 
+            // txtfacname
+            // 
+            this.txtfacname.Location = new System.Drawing.Point(208, 104);
+            this.txtfacname.Margin = new System.Windows.Forms.Padding(2);
+            this.txtfacname.Multiline = true;
+            this.txtfacname.Name = "txtfacname";
+            this.txtfacname.Size = new System.Drawing.Size(133, 28);
+            this.txtfacname.TabIndex = 40;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(27, 102);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(85, 24);
+            this.label2.TabIndex = 39;
+            this.label2.Text = "Stored In";
+            // 
             // txttotalqty
             // 
             this.txttotalqty.Enabled = false;
@@ -521,80 +595,6 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             this.label5.Size = new System.Drawing.Size(225, 41);
             this.label5.TabIndex = 86;
             this.label5.Text = "EQUIPMENTS";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(27, 102);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(85, 24);
-            this.label2.TabIndex = 39;
-            this.label2.Text = "Stored In";
-            // 
-            // txtfacname
-            // 
-            this.txtfacname.Location = new System.Drawing.Point(208, 104);
-            this.txtfacname.Margin = new System.Windows.Forms.Padding(2);
-            this.txtfacname.Multiline = true;
-            this.txtfacname.Name = "txtfacname";
-            this.txtfacname.Size = new System.Drawing.Size(133, 28);
-            this.txtfacname.TabIndex = 40;
-            // 
-            // btnEditEquip
-            // 
-            this.btnEditEquip.Enabled = false;
-            this.btnEditEquip.Location = new System.Drawing.Point(329, 197);
-            this.btnEditEquip.Name = "btnEditEquip";
-            this.btnEditEquip.Size = new System.Drawing.Size(88, 48);
-            this.btnEditEquip.TabIndex = 41;
-            this.btnEditEquip.Text = "Edit Equipment";
-            this.btnEditEquip.UseVisualStyleBackColor = true;
-            this.btnEditEquip.Click += new System.EventHandler(this.btnEditEquip_Click);
-            // 
-            // btnSave
-            // 
-            this.btnSave.Enabled = false;
-            this.btnSave.Location = new System.Drawing.Point(281, 251);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(88, 47);
-            this.btnSave.TabIndex = 42;
-            this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Visible = false;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // btnaddneweq
-            // 
-            this.btnaddneweq.Location = new System.Drawing.Point(423, 196);
-            this.btnaddneweq.Name = "btnaddneweq";
-            this.btnaddneweq.Size = new System.Drawing.Size(88, 47);
-            this.btnaddneweq.TabIndex = 43;
-            this.btnaddneweq.Text = "Add New Equipment";
-            this.btnaddneweq.UseVisualStyleBackColor = true;
-            this.btnaddneweq.Click += new System.EventHandler(this.btnadd_Click);
-            // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(235, 196);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(88, 49);
-            this.button7.TabIndex = 44;
-            this.button7.Text = "Reset";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click_1);
-            // 
-            // txtavailability
-            // 
-            this.txtavailability.FormattingEnabled = true;
-            this.txtavailability.Items.AddRange(new object[] {
-            "Available",
-            "Unavailable"});
-            this.txtavailability.Location = new System.Drawing.Point(208, 67);
-            this.txtavailability.Name = "txtavailability";
-            this.txtavailability.Size = new System.Drawing.Size(133, 25);
-            this.txtavailability.TabIndex = 45;
             // 
             // Equipments
             // 
