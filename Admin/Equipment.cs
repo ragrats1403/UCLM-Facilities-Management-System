@@ -447,7 +447,7 @@ namespace Function_Hall_Reservation_System.Admin
             txtDefective.Enabled = true;
             txtDefective.Visible = true;
             txtfacname.Enabled = false;
-            txtavailability.Enabled = false;
+            txtavailability.Enabled = true;
             txtfacname.Visible = true;
             txtavailability.Visible = true;
             btnEditEquip.Visible = true;
