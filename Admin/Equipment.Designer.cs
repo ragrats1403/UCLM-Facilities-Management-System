@@ -191,7 +191,6 @@ namespace Function_Hall_Reservation_System.Admin
             // 
             // txttotalqty
             // 
-            this.txttotalqty.Enabled = false;
             this.txttotalqty.Location = new System.Drawing.Point(600, 92);
             this.txttotalqty.Margin = new System.Windows.Forms.Padding(2);
             this.txttotalqty.Multiline = true;
