@@ -271,7 +271,7 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             try
             {
                 Connection.Connection.DB();
-                Functions.Functions.gen = "Select count(" + loadedid + ".reserveddate) from " + loadedid + " where reserveddate = '" + dt + "' and reservationstatus = 'Approved'";
+                Functions.Functions.gen = "Select count(reservations.reserveddate) from reservations where reserveddate = '" + dt + "' and reservationstatus = 'Approved' and facilityname = '" + facilitycb.SelectedItem.ToString() + "'";
                 Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
                 Functions.Functions.reader = Functions.Functions.command.ExecuteReader();
                 while (Functions.Functions.reader.Read())
@@ -307,10 +307,10 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             try
             {
                 Connection.Connection.DB();
-                Functions.Functions.gen = "UPDATE "+loadedid+" SET reservationstatus='" + cmbstatus.Text +"',checkedby='"+Form1.setfullname+"' where eventname = '"+txteventname.Text+"'";
+                Functions.Functions.gen = "UPDATE reservation SET reservationstatus='" + cmbstatus.Text +"',checkedby='"+Form1.setfullname+"' where eventname = '"+txteventname.Text+"' and facilityname = '"+facilitycb.SelectedItem.ToString()+"'";
                 Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
                 Functions.Functions.command.ExecuteNonQuery();
-                MessageBox.Show("Successfully Updated!", "fhreservation", MessageBoxButtons.OK);
+                MessageBox.Show("Successfully Updated!", "Reservation", MessageBoxButtons.OK);
                 Connection.Connection.conn.Close();
                 Reservation res = new Reservation();
                 this.Close();
@@ -381,7 +381,7 @@ namespace Function_Hall_Reservation_System.WorkingStudent
                     {
                         
                         Connection.Connection.DB();
-                        Functions.Functions.gen = "Select count(*) from " + loadedid + " where '" + dtpTimeStart.Value + "' between timestart and timestart and reservationstatus = 'Approved' or '" + dtpTimeEnd.Value + "' between timestart and timeend and reservationstatus = 'Approved'and reservationstatus = 'Approved' or timestart between '" + datestart + "' and '" + dateend + "' and reservationstatus = 'Approved' or timeend between '" + dtpTimeStart.Value + "' and '" + dtpTimeEnd.Value + "' and reservationstatus = 'Approved'";
+                        Functions.Functions.gen = "Select COUNT(*) from reservations where '" + datestart + "' between timestart and timestart and reservationstatus = 'Approved' or '" + dateend + "' between timestart and timeend and reservationstatus = 'Approved' and reservationstatus = 'Approved' or timestart between '" + datestart + "' and '" + dateend + "' and reservationstatus = 'Approved' or timeend between '" + datestart + "' and '" + dateend + "' and reservationstatus = 'Approved'";
 
                         Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
                         Functions.Functions.reader = Functions.Functions.command.ExecuteReader();

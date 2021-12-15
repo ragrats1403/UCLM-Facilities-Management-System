@@ -37,43 +37,7 @@ namespace Function_Hall_Reservation_System.Admin
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
         }
 
-        public void Fillfhreservationdata()
-        {
-            
-            idname = "fhreservation";
-            Functions.Functions.gen = "Select * from fhreservation where reserveddate >= '"+ DateTime.Now+"'";
-            Functions.Functions.fill(Functions.Functions.gen, dataGridView1);
-        }
-        public void Fillaudreservationdata()
-        {
-            
-            idname = "audreservation";
-            Functions.Functions.gen = "Select * from audreservations where reserveddate > '" + DateTime.Now + "'";
-            Functions.Functions.fill(Functions.Functions.gen, dataGridView1);
-
-
-
-        }
-        public void Fillnareservationdata()
-        {
-            
-            idname = "nareservations";
-            Functions.Functions.gen = "Select * from nareservations where reserveddate > '" + DateTime.Now + "'";
-            Functions.Functions.fill(Functions.Functions.gen, dataGridView1);
-
-
-
-        }
-        public void Filloareservationdata()
-        {
-           
-            idname = "oareservations";
-            Functions.Functions.gen = "Select * from oareservations where reserveddate > '" + DateTime.Now + "'";
-            Functions.Functions.fill(Functions.Functions.gen, dataGridView1);
-
-
-
-        }
+        
         private void button5_Click(object sender, EventArgs e)
         {
             
@@ -193,7 +157,7 @@ namespace Function_Hall_Reservation_System.Admin
             try
             {
                 Connection.Connection.DB();
-                Functions.Functions.gen = "UPDATE " + loadedid + " SET reservationstatus='" + cmbstatus.Text + "',checkedby='" + Form1.setfullname + "' where eventname = '" + txteventname.Text + "'";
+                Functions.Functions.gen = "UPDATE reservation SET reservationstatus='" + cmbstatus.Text + "',checkedby='" + Form1.setfullname + "' where eventname = '" + txteventname.Text + "' and facilityname = '" + facilitycb.SelectedItem.ToString() + "'";
                 /*Functions.Functions.gen = "UPDATE fhreservation SET fhreservationstatus='" + cmbstatus.Text + "',approvedby = '"+Form1.setfullname+"' where reservationid= '"+txtreservationid.Text+"'";*/
                 Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
                 Functions.Functions.command.ExecuteNonQuery();
@@ -231,37 +195,37 @@ namespace Function_Hall_Reservation_System.Admin
         {
 
         }
-
+        public void filldata(String id)
+        {
+            Functions.Functions.gen = "Select eventname,reservedby,reservationstatus,datereserved,checkedby,approvedby,reservedequipments,timestart,month,timeend,reserveddate,facilityname from reservations where reserveddate > '" + DateTime.Now + "' and facilityname = '" + id + "'";
+            Functions.Functions.fill(Functions.Functions.gen, dataGridView1);
+        }
         private void facilitycb_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
             {
-                if (facilitycb.SelectedItem.ToString() == "Function Hall")
+                if(facilitycb.SelectedItem.ToString() == "Function Hall")
                 {
-                    
-                    Fillfhreservationdata();
-                    loadedid = idname;
+                    //MessageBox.Show("Debug Line for Functionhall selection Executed");
+                    filldata("Function Hall");
                 }
                 else if (facilitycb.SelectedItem.ToString() == "Auditorium")
                 {
 
-                    
-                    Fillaudreservationdata();
-                    loadedid = idname;
+                    //MessageBox.Show("Debug Line for Auditorium Executed");
+                    filldata("Auditorium");
                 }
                 else if (facilitycb.SelectedItem.ToString() == "New AVR")
                 {
-                    
-                    Fillnareservationdata();
-                    loadedid = idname;
+                    //MessageBox.Show("Debug Line for New AVR Executed");
+                    filldata("New AVR");
                 }
 
                 else if (facilitycb.SelectedItem.ToString() == "Old AVR")
                 {
 
-                   
-                    Filloareservationdata();
-                    loadedid = idname;
+                    //MessageBox.Show("Debug Line for Old AVR Executed");
+                    filldata("Old AVR");
                 }
             }
             catch (Exception ex)
@@ -300,7 +264,7 @@ namespace Function_Hall_Reservation_System.Admin
             try
             {
                 Connection.Connection.DB();
-                Functions.Functions.gen = "Select count(" + loadedid + ".reserveddate) from " + loadedid + " where reserveddate = '" + dt + "' and reservationstatus = 'Approved'";
+                Functions.Functions.gen = "Select count(reservations.reserveddate) from reservations where reserveddate = '" + dt + "' and reservationstatus = 'Approved' and facilityname = '" + facilitycb.SelectedItem.ToString() + "'";
                 Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
                 Functions.Functions.reader = Functions.Functions.command.ExecuteReader();
                 while (Functions.Functions.reader.Read())
@@ -348,7 +312,7 @@ namespace Function_Hall_Reservation_System.Admin
                         {
 
                             Connection.Connection.DB();
-                            Functions.Functions.gen = "Select count(*) from " + loadedid + " where '" + dtpTimeStart.Value + "' between timestart and timestart and reservationstatus = 'Approved' or '" + dtpTimeEnd.Value + "' between timestart and timeend and reservationstatus = 'Approved'and reservationstatus = 'Approved' or timestart between '" + datestart + "' and '" + dateend + "' and reservationstatus = 'Approved' or timeend between '" + dtpTimeStart.Value + "' and '" + dtpTimeEnd.Value + "' and reservationstatus = 'Approved'";
+                            Functions.Functions.gen = "Select COUNT(*) from reservations where '" + datestart + "' between timestart and timestart and reservationstatus = 'Approved' or '" + dateend + "' between timestart and timeend and reservationstatus = 'Approved' and reservationstatus = 'Approved' or timestart between '" + datestart + "' and '" + dateend + "' and reservationstatus = 'Approved' or timeend between '" + datestart + "' and '" + dateend + "' and reservationstatus = 'Approved'";
 
                             Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
                             Functions.Functions.reader = Functions.Functions.command.ExecuteReader();
