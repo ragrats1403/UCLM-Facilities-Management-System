@@ -157,7 +157,7 @@ namespace Function_Hall_Reservation_System.Admin
             try
             {
                 Connection.Connection.DB();
-                Functions.Functions.gen = "UPDATE reservation SET reservationstatus='" + cmbstatus.Text + "',checkedby='" + Form1.setfullname + "' where eventname = '" + txteventname.Text + "' and facilityname = '" + facilitycb.SelectedItem.ToString() + "'";
+                Functions.Functions.gen = "UPDATE reservations SET reservationstatus='" + cmbstatus.Text + "',checkedby='" + Form1.setfullname + "' where eventname = '" + txteventname.Text + "' and facilityname = '" + facilitycb.SelectedItem.ToString() + "'";
                 /*Functions.Functions.gen = "UPDATE fhreservation SET fhreservationstatus='" + cmbstatus.Text + "',approvedby = '"+Form1.setfullname+"' where reservationid= '"+txtreservationid.Text+"'";*/
                 Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
                 Functions.Functions.command.ExecuteNonQuery();

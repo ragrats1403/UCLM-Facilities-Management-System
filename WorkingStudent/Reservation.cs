@@ -307,7 +307,7 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             try
             {
                 Connection.Connection.DB();
-                Functions.Functions.gen = "UPDATE reservation SET reservationstatus='" + cmbstatus.Text +"',checkedby='"+Form1.setfullname+"' where eventname = '"+txteventname.Text+"' and facilityname = '"+facilitycb.SelectedItem.ToString()+"'";
+                Functions.Functions.gen = "UPDATE reservations SET reservationstatus='" + cmbstatus.Text +"',checkedby='"+Form1.setfullname+"' where eventname = '"+txteventname.Text+"' and facilityname = '"+facilitycb.SelectedItem.ToString()+"'";
                 Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
                 Functions.Functions.command.ExecuteNonQuery();
                 MessageBox.Show("Successfully Updated!", "Reservation", MessageBoxButtons.OK);
