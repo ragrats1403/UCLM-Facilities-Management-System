@@ -563,7 +563,7 @@ namespace Function_Hall_Reservation_System.Admin
                 {
                     MessageBox.Show("Equipment already exists with Equipment Name: " + txtequipmentname.Text, "" + loadedid, MessageBoxButtons.OK);
                     this.Close();
-                    Equipments equ = new Equipments();
+                    Equipment equ = new Equipment();
                     equ.Show();
                     this.tabControl1.SelectedIndex = 1;
                 }
