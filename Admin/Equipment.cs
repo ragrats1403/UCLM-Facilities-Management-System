@@ -133,11 +133,9 @@ namespace Function_Hall_Reservation_System.Admin
         {
             try
             {
-                txtequipmentid.Text = dataGridView1[0, e.RowIndex].Value.ToString();
+                /*txtequipmentid.Text = dataGridView1[0, e.RowIndex].Value.ToString();
                 txtequipmentname.Text = dataGridView1[1, e.RowIndex].Value.ToString();
-                txtquantity.Text = dataGridView1[2, e.RowIndex].Value.ToString();
-                txtDefective.Text = dataGridView1[3, e.RowIndex].Value.ToString();
-                txttotalqty.Text = dataGridView1[4, e.RowIndex].Value.ToString();
+                //cmbstatus.Text = dataGridView1[2, e.RowIndex].Value.ToString();
                 this.tabControl1.SelectedIndex = 1;
                 label13.Visible = true;
                 txtequipmentid.Visible = true;
@@ -145,8 +143,33 @@ namespace Function_Hall_Reservation_System.Admin
                 txtequipmentname.Enabled = false;
                 button8.Visible = true;
                 button9.Visible = true;
-                button5.Visible = false;
-                
+                button7.Visible = false;*/
+                txtequipmentname.Text = dataGridView1[0, e.RowIndex].Value.ToString();
+                txtavailability.Text = dataGridView1[1, e.RowIndex].Value.ToString();
+                txtquantity.Text = dataGridView1[2, e.RowIndex].Value.ToString();
+                txtDefective.Text = dataGridView1[3, e.RowIndex].Value.ToString();
+                txttotalqty.Text = dataGridView1[4, e.RowIndex].Value.ToString();
+                txtfacname.Text = dataGridView1[5, e.RowIndex].Value.ToString();
+                this.tabControl1.SelectedIndex = 1;
+                label13.Visible = true;
+                btnSave.Enabled = false;
+                btnSave.Visible = false;
+                btnremove.Enabled = false;
+                btnremove.Visible = false;
+                txtequipmentname.Enabled = false;
+                txtavailability.Enabled = false;
+                txtDefective.Enabled = false;
+                txtfacname.Enabled = false;
+                txttotalqty.Visible = true;
+                txttotalqty.Enabled = true;
+                txttotalqty.Enabled = false;
+                txtquantity.Enabled = false;
+                btnaddneweq.Visible = false;
+                btnaddneweq.Enabled = false;
+                btnsaveneweq.Enabled = false;
+                btnsaveneweq.Visible = false;
+                btnEditEquip.Visible = true;
+                btnEditEquip.Enabled = true;
             }
             catch (Exception ex)
             {
@@ -296,42 +319,38 @@ namespace Function_Hall_Reservation_System.Admin
         {
 
         }
-
+        public void filldata(String id)
+        {
+            Functions.Functions.gen = "Select equipmentname AS [Equipment Name], equipmentstatus AS [Availability], availableqty AS [Available Quantity], defectiveqty AS [Defective Quantity], totalqty AS [Total Quantity], facilityname AS [Stored In],borrowedqty AS [Added Quantity To Other Facility],addedqty AS [Borrowed quantity from other Facility] from equipments where facilityname = '" + id + "'";
+            Functions.Functions.fill(Functions.Functions.gen, dataGridView1);
+        }
         private void facilitycb_SelectedIndexChanged(object sender, EventArgs e)
         {
+
             try
             {
                 if (facilitycb.SelectedItem.ToString() == "Function Hall")
                 {
-                    //MessageBox.Show("Debug Line for Functionhall selection Executed");
-                    Fillfhequipmentdata();
-                    loadedid = idname;
-                    loadedeq = "fhequipments";
+                    filldata("Function Hall");
+                    txtfacname.Text = "Function Hall";
                 }
                 else if (facilitycb.SelectedItem.ToString() == "Auditorium")
                 {
-
-                    //MessageBox.Show("Debug Line for Auditorium Executed");
-                    Fillaudequipmentdata();
-                    loadedid = idname;
-                    loadedeq = "audequipments";
+                    filldata("Auditorium");
+                    txtfacname.Text = "Auditorium";
                 }
                 else if (facilitycb.SelectedItem.ToString() == "New AVR")
                 {
-                    //MessageBox.Show("Debug Line for New AVR Executed");
-                    Fillnaequipmentdata();
-                    loadedid = idname;
+                    filldata("New AVR");
 
-                    loadedeq = "naequipments";
+                    txtfacname.Text = "New AVR";
                 }
-
                 else if (facilitycb.SelectedItem.ToString() == "Old AVR")
                 {
 
-                    //MessageBox.Show("Debug Line for Old AVR Executed");
-                    Filloaequipmentdata();
-                    loadedid = idname;
-                    loadedeq = "oaequipments";
+                    filldata("Old AVR");
+
+                    txtfacname.Text = "Old AVR";
                 }
             }
             catch (Exception ex)
@@ -368,6 +387,166 @@ namespace Function_Hall_Reservation_System.Admin
         private void txttotalqty_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button5_Click_1(object sender, EventArgs e)
+        {
+            btnSave.Enabled = false;
+            btnSave.Visible = false;
+            btnremove.Enabled = false;
+            btnremove.Visible = false;
+            btnaddneweq.Visible = true;
+            btnaddneweq.Enabled = true;
+            btnsaveneweq.Enabled = false;
+            btnsaveneweq.Visible = false;
+            btnEditEquip.Visible = true;
+            btnEditEquip.Enabled = true;
+            txtavailability.Text = "";
+            txtDefective.Text = "";
+            txtquantity.Text = "";
+            txttotalqty.Text = "";
+            txtequipmentname.Text = "";
+            txtfacname.Text = "";
+        }
+
+        private void btnEditEquip_Click(object sender, EventArgs e)
+        {
+            txtequipmentname.Enabled = true;
+            txtequipmentname.Visible = true;
+            txtquantity.Enabled = true;
+            txtquantity.Visible = true;
+            txttotalqty.Enabled = true;
+            txttotalqty.Visible = true;
+            txtDefective.Enabled = true;
+            txtDefective.Visible = true;
+            txtfacname.Enabled = false;
+            txtavailability.Enabled = false;
+            txtfacname.Visible = true;
+            txtavailability.Visible = true;
+            btnsaveneweq.Enabled = false;
+            btnsaveneweq.Visible = false;
+            btnaddneweq.Enabled = false;
+            btnaddneweq.Visible = false;
+            btnremove.Visible = true;
+            btnremove.Enabled = true;
+            btnSave.Enabled = true;
+            btnSave.Visible = true;
+            btnEditEquip.Enabled = false;
+        }
+
+        private void btnaddneweq_Click(object sender, EventArgs e)
+        {
+            txtequipmentname.Enabled = true;
+            txtequipmentname.Visible = true;
+            txtquantity.Enabled = true;
+            txtquantity.Visible = true;
+            label69.Enabled = false;
+            label69.Visible = false;
+            txttotalqty.Enabled = false;
+            txttotalqty.Visible = false;
+            txtDefective.Enabled = true;
+            txtDefective.Visible = true;
+            txtfacname.Enabled = false;
+            txtavailability.Enabled = false;
+            txtfacname.Visible = true;
+            txtavailability.Visible = true;
+            btnEditEquip.Visible = true;
+            btnEditEquip.Enabled = false;
+            btnaddneweq.Enabled = false;
+            btnaddneweq.Visible = false;
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            string defect = txtDefective.Text;
+            string total = txttotalqty.Text;
+            string avail = txtquantity.Text;
+            int def = Int32.Parse(defect);
+            int to = Int32.Parse(total);
+
+            int av = Int32.Parse(avail);
+            string temp;
+            string temp2;
+            int currentavailqty;
+            int currentoriginalqty;
+            int neworigqty;
+            int afterloopval = 0;
+            try
+            {
+                Connection.Connection.DB();
+                Functions.Functions.gen = "Select availableqty,originalqty from equipments where equipmentname = '" + txtequipmentname.Text + "' and facilityname = '" + facilitycb.SelectedItem.ToString() + "'";
+                Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
+                Functions.Functions.reader = Functions.Functions.command.ExecuteReader();
+                Functions.Functions.reader.Read();
+                temp = Functions.Functions.reader["availableqty"].ToString();
+                temp2 = Functions.Functions.reader["originalqty"].ToString();
+                currentoriginalqty = Convert.ToInt32(temp2);
+                currentavailqty = Convert.ToInt32(temp);
+
+                Connection.Connection.conn.Close();
+
+                int f = 0;
+                if (currentavailqty < av)
+                {
+                    for (int i = currentavailqty; i < av; i++)
+                    {
+                        f = f + 1;
+                    }
+                    afterloopval = f;
+                }
+                else if (currentavailqty > av)
+                {
+                    for (int i = currentavailqty; i > av; i--)
+                    {
+                        f = f - 1;
+                    }
+                    afterloopval = f;
+                }
+                neworigqty = currentoriginalqty + afterloopval;
+
+                Connection.Connection.DB();
+                Functions.Functions.gen = "UPDATE equipments SET availableqty = " + av + ", totalqty = " + totalqty(av, def) + ",defectiveqty = " + Int32.Parse(txtDefective.Text) + ",equipmentstatus = '" + txtavailability.Text + "',originalqty = '" + neworigqty + "' where equipmentname = '" + txtequipmentname.Text + "'";
+                Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
+                Functions.Functions.command.ExecuteNonQuery();
+                MessageBox.Show("Successfully Edited Equipments Status!", "equipments", MessageBoxButtons.OK);
+
+                Connection.Connection.conn.Close();
+                this.Close();
+
+
+                Equipment eq = new Equipment();
+                eq.Show();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnremove_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Connection.Connection.DB();
+                var gen = MessageBox.Show("Are you sure you want to delete this Equipment?", "Delete equipment", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (gen == DialogResult.Yes)
+                {
+                    Functions.Functions.gen = "Delete from equipments where equipmentname ='" + txtequipmentname.Text + "'";
+                    Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
+                    Functions.Functions.command.ExecuteNonQuery();
+                    Connection.Connection.conn.Close();
+                    MessageBox.Show("Equipment Removed!", "fhequipments", MessageBoxButtons.OK);
+                    this.Close();
+                    Equipment equ = new Equipment();
+                    equ.Show();
+                    this.tabControl1.SelectedIndex = 1;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

@@ -30,20 +30,7 @@ namespace Function_Hall_Reservation_System.Admin
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Equipment));
-            this.button8 = new System.Windows.Forms.Button();
-            this.label11 = new System.Windows.Forms.Label();
-            this.txtequipmentname = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.txttotalqty = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtDefective = new System.Windows.Forms.TextBox();
-            this.txtquantity = new System.Windows.Forms.TextBox();
-            this.label69 = new System.Windows.Forms.Label();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.txtequipmentid = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabControl1 = new System.Windows.Forms.TabControl();
@@ -66,6 +53,24 @@ namespace Function_Hall_Reservation_System.Admin
             this.facilitycb = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.txtavailability = new System.Windows.Forms.ComboBox();
+            this.button5 = new System.Windows.Forms.Button();
+            this.btnaddneweq = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnEditEquip = new System.Windows.Forms.Button();
+            this.txtfacname = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txttotalqty = new System.Windows.Forms.TextBox();
+            this.txtDefective = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label69 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtquantity = new System.Windows.Forms.TextBox();
+            this.btnremove = new System.Windows.Forms.Button();
+            this.btnsaveneweq = new System.Windows.Forms.Button();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtequipmentname = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabPage1.SuspendLayout();
@@ -81,171 +86,33 @@ namespace Function_Hall_Reservation_System.Admin
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
-            // button8
-            // 
-            this.button8.Location = new System.Drawing.Point(391, 176);
-            this.button8.Margin = new System.Windows.Forms.Padding(2);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(97, 31);
-            this.button8.TabIndex = 25;
-            this.button8.Text = "UPDATE";
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Visible = false;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(374, 70);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(160, 24);
-            this.label11.TabIndex = 23;
-            this.label11.Text = "Defective Quantity";
-            // 
-            // txtequipmentname
-            // 
-            this.txtequipmentname.Location = new System.Drawing.Point(207, 67);
-            this.txtequipmentname.Margin = new System.Windows.Forms.Padding(2);
-            this.txtequipmentname.Multiline = true;
-            this.txtequipmentname.Name = "txtequipmentname";
-            this.txtequipmentname.Size = new System.Drawing.Size(133, 28);
-            this.txtequipmentname.TabIndex = 21;
-            this.txtequipmentname.TextChanged += new System.EventHandler(this.txtequipmentname_TextChanged);
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(26, 70);
-            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(155, 24);
-            this.label12.TabIndex = 20;
-            this.label12.Text = "Equipment name";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(26, 33);
-            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(124, 24);
-            this.label13.TabIndex = 18;
-            this.label13.Text = "Equipment ID";
-            this.label13.Visible = false;
-            // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.txttotalqty);
-            this.tabPage2.Controls.Add(this.label1);
-            this.tabPage2.Controls.Add(this.txtDefective);
-            this.tabPage2.Controls.Add(this.txtquantity);
-            this.tabPage2.Controls.Add(this.label69);
-            this.tabPage2.Controls.Add(this.button9);
+            this.tabPage2.Controls.Add(this.txtavailability);
             this.tabPage2.Controls.Add(this.button5);
-            this.tabPage2.Controls.Add(this.button8);
+            this.tabPage2.Controls.Add(this.btnaddneweq);
+            this.tabPage2.Controls.Add(this.btnSave);
+            this.tabPage2.Controls.Add(this.btnEditEquip);
+            this.tabPage2.Controls.Add(this.txtfacname);
+            this.tabPage2.Controls.Add(this.label2);
+            this.tabPage2.Controls.Add(this.txttotalqty);
+            this.tabPage2.Controls.Add(this.txtDefective);
+            this.tabPage2.Controls.Add(this.label1);
+            this.tabPage2.Controls.Add(this.label69);
             this.tabPage2.Controls.Add(this.label11);
-            this.tabPage2.Controls.Add(this.txtequipmentname);
+            this.tabPage2.Controls.Add(this.txtquantity);
+            this.tabPage2.Controls.Add(this.btnremove);
+            this.tabPage2.Controls.Add(this.btnsaveneweq);
             this.tabPage2.Controls.Add(this.label12);
-            this.tabPage2.Controls.Add(this.txtequipmentid);
+            this.tabPage2.Controls.Add(this.txtequipmentname);
             this.tabPage2.Controls.Add(this.label13);
             this.tabPage2.Location = new System.Drawing.Point(4, 26);
             this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Size = new System.Drawing.Size(730, 278);
+            this.tabPage2.Size = new System.Drawing.Size(786, 311);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Add | Update Equipments";
             this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
-            // 
-            // txttotalqty
-            // 
-            this.txttotalqty.Enabled = false;
-            this.txttotalqty.Location = new System.Drawing.Point(580, 112);
-            this.txttotalqty.Margin = new System.Windows.Forms.Padding(2);
-            this.txttotalqty.Multiline = true;
-            this.txttotalqty.Name = "txttotalqty";
-            this.txttotalqty.Size = new System.Drawing.Size(133, 28);
-            this.txttotalqty.TabIndex = 34;
-            this.txttotalqty.TextChanged += new System.EventHandler(this.txttotalqty_TextChanged);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(375, 29);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(159, 24);
-            this.label1.TabIndex = 33;
-            this.label1.Text = "Available Quantity";
-            // 
-            // txtDefective
-            // 
-            this.txtDefective.Location = new System.Drawing.Point(580, 72);
-            this.txtDefective.Margin = new System.Windows.Forms.Padding(2);
-            this.txtDefective.Multiline = true;
-            this.txtDefective.Name = "txtDefective";
-            this.txtDefective.Size = new System.Drawing.Size(133, 28);
-            this.txtDefective.TabIndex = 32;
-            this.txtDefective.TextChanged += new System.EventHandler(this.txt_TextChanged);
-            // 
-            // txtquantity
-            // 
-            this.txtquantity.Location = new System.Drawing.Point(580, 29);
-            this.txtquantity.Margin = new System.Windows.Forms.Padding(2);
-            this.txtquantity.Multiline = true;
-            this.txtquantity.Name = "txtquantity";
-            this.txtquantity.Size = new System.Drawing.Size(133, 28);
-            this.txtquantity.TabIndex = 31;
-            this.txtquantity.TextChanged += new System.EventHandler(this.txtquantity_TextChanged);
-            // 
-            // label69
-            // 
-            this.label69.AutoSize = true;
-            this.label69.Enabled = false;
-            this.label69.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label69.Location = new System.Drawing.Point(375, 112);
-            this.label69.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label69.Name = "label69";
-            this.label69.Size = new System.Drawing.Size(124, 24);
-            this.label69.TabIndex = 30;
-            this.label69.Text = "Total Quantity";
-            this.label69.Click += new System.EventHandler(this.txtquatity_Click);
-            // 
-            // button9
-            // 
-            this.button9.Location = new System.Drawing.Point(248, 174);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(92, 33);
-            this.button9.TabIndex = 29;
-            this.button9.Text = "DELETE";
-            this.button9.UseVisualStyleBackColor = true;
-            this.button9.Visible = false;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(323, 163);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(88, 31);
-            this.button5.TabIndex = 28;
-            this.button5.Text = "ADD";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // txtequipmentid
-            // 
-            this.txtequipmentid.Enabled = false;
-            this.txtequipmentid.Location = new System.Drawing.Point(207, 29);
-            this.txtequipmentid.Margin = new System.Windows.Forms.Padding(2);
-            this.txtequipmentid.Multiline = true;
-            this.txtequipmentid.Name = "txtequipmentid";
-            this.txtequipmentid.Size = new System.Drawing.Size(133, 28);
-            this.txtequipmentid.TabIndex = 19;
-            this.txtequipmentid.Visible = false;
             // 
             // dataGridView1
             // 
@@ -531,6 +398,198 @@ namespace Function_Hall_Reservation_System.Admin
             this.pictureBox3.TabIndex = 83;
             this.pictureBox3.TabStop = false;
             // 
+            // txtavailability
+            // 
+            this.txtavailability.FormattingEnabled = true;
+            this.txtavailability.Items.AddRange(new object[] {
+            "Available",
+            "Unavailable"});
+            this.txtavailability.Location = new System.Drawing.Point(223, 55);
+            this.txtavailability.Name = "txtavailability";
+            this.txtavailability.Size = new System.Drawing.Size(133, 25);
+            this.txtavailability.TabIndex = 63;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(250, 184);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(88, 49);
+            this.button5.TabIndex = 62;
+            this.button5.Text = "Reset";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click_1);
+            // 
+            // btnaddneweq
+            // 
+            this.btnaddneweq.Location = new System.Drawing.Point(438, 184);
+            this.btnaddneweq.Name = "btnaddneweq";
+            this.btnaddneweq.Size = new System.Drawing.Size(88, 47);
+            this.btnaddneweq.TabIndex = 61;
+            this.btnaddneweq.Text = "Add New Equipment";
+            this.btnaddneweq.UseVisualStyleBackColor = true;
+            this.btnaddneweq.Click += new System.EventHandler(this.btnaddneweq_Click);
+            // 
+            // btnSave
+            // 
+            this.btnSave.Enabled = false;
+            this.btnSave.Location = new System.Drawing.Point(296, 239);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(88, 47);
+            this.btnSave.TabIndex = 60;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Visible = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // btnEditEquip
+            // 
+            this.btnEditEquip.Enabled = false;
+            this.btnEditEquip.Location = new System.Drawing.Point(344, 185);
+            this.btnEditEquip.Name = "btnEditEquip";
+            this.btnEditEquip.Size = new System.Drawing.Size(88, 48);
+            this.btnEditEquip.TabIndex = 59;
+            this.btnEditEquip.Text = "Edit Equipment";
+            this.btnEditEquip.UseVisualStyleBackColor = true;
+            this.btnEditEquip.Click += new System.EventHandler(this.btnEditEquip_Click);
+            // 
+            // txtfacname
+            // 
+            this.txtfacname.Location = new System.Drawing.Point(223, 92);
+            this.txtfacname.Margin = new System.Windows.Forms.Padding(2);
+            this.txtfacname.Multiline = true;
+            this.txtfacname.Name = "txtfacname";
+            this.txtfacname.Size = new System.Drawing.Size(133, 28);
+            this.txtfacname.TabIndex = 58;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(42, 90);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(85, 24);
+            this.label2.TabIndex = 57;
+            this.label2.Text = "Stored In";
+            // 
+            // txttotalqty
+            // 
+            this.txttotalqty.Enabled = false;
+            this.txttotalqty.Location = new System.Drawing.Point(600, 92);
+            this.txttotalqty.Margin = new System.Windows.Forms.Padding(2);
+            this.txttotalqty.Multiline = true;
+            this.txttotalqty.Name = "txttotalqty";
+            this.txttotalqty.Size = new System.Drawing.Size(133, 28);
+            this.txttotalqty.TabIndex = 56;
+            this.txttotalqty.Visible = false;
+            // 
+            // txtDefective
+            // 
+            this.txtDefective.Location = new System.Drawing.Point(600, 56);
+            this.txtDefective.Margin = new System.Windows.Forms.Padding(2);
+            this.txtDefective.Multiline = true;
+            this.txtDefective.Name = "txtDefective";
+            this.txtDefective.Size = new System.Drawing.Size(133, 28);
+            this.txtDefective.TabIndex = 55;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(412, 19);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(159, 24);
+            this.label1.TabIndex = 54;
+            this.label1.Text = "Available Quantity";
+            // 
+            // label69
+            // 
+            this.label69.AutoSize = true;
+            this.label69.Enabled = false;
+            this.label69.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label69.Location = new System.Drawing.Point(412, 96);
+            this.label69.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label69.Name = "label69";
+            this.label69.Size = new System.Drawing.Size(124, 24);
+            this.label69.TabIndex = 53;
+            this.label69.Text = "Total Quantity";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(411, 60);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(160, 24);
+            this.label11.TabIndex = 52;
+            this.label11.Text = "Defective Quantity";
+            // 
+            // txtquantity
+            // 
+            this.txtquantity.Location = new System.Drawing.Point(600, 21);
+            this.txtquantity.Margin = new System.Windows.Forms.Padding(2);
+            this.txtquantity.Multiline = true;
+            this.txtquantity.Name = "txtquantity";
+            this.txtquantity.Size = new System.Drawing.Size(133, 28);
+            this.txtquantity.TabIndex = 51;
+            // 
+            // btnremove
+            // 
+            this.btnremove.Enabled = false;
+            this.btnremove.Location = new System.Drawing.Point(390, 239);
+            this.btnremove.Name = "btnremove";
+            this.btnremove.Size = new System.Drawing.Size(88, 47);
+            this.btnremove.TabIndex = 50;
+            this.btnremove.Text = "Remove Equipment";
+            this.btnremove.UseVisualStyleBackColor = true;
+            this.btnremove.Visible = false;
+            this.btnremove.Click += new System.EventHandler(this.btnremove_Click);
+            // 
+            // btnsaveneweq
+            // 
+            this.btnsaveneweq.Enabled = false;
+            this.btnsaveneweq.Location = new System.Drawing.Point(438, 186);
+            this.btnsaveneweq.Name = "btnsaveneweq";
+            this.btnsaveneweq.Size = new System.Drawing.Size(88, 47);
+            this.btnsaveneweq.TabIndex = 49;
+            this.btnsaveneweq.Text = "Add to Equipments";
+            this.btnsaveneweq.UseVisualStyleBackColor = true;
+            this.btnsaveneweq.Visible = false;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(42, 56);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(96, 24);
+            this.label12.TabIndex = 48;
+            this.label12.Text = "Availability";
+            // 
+            // txtequipmentname
+            // 
+            this.txtequipmentname.Location = new System.Drawing.Point(223, 15);
+            this.txtequipmentname.Margin = new System.Windows.Forms.Padding(2);
+            this.txtequipmentname.Multiline = true;
+            this.txtequipmentname.Name = "txtequipmentname";
+            this.txtequipmentname.Size = new System.Drawing.Size(133, 28);
+            this.txtequipmentname.TabIndex = 47;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(42, 19);
+            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(158, 24);
+            this.label13.TabIndex = 46;
+            this.label13.Text = "Equipment Name";
+            this.label13.Visible = false;
+            // 
             // Equipment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -568,13 +627,7 @@ namespace Function_Hall_Reservation_System.Admin
         }
 
         #endregion
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox txtequipmentname;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TabPage tabPage2;
-        public System.Windows.Forms.TextBox txtequipmentid;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabControl tabControl1;
@@ -586,14 +639,7 @@ namespace Function_Hall_Reservation_System.Admin
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Label label69;
-        private System.Windows.Forms.TextBox txtquantity;
         private System.Windows.Forms.ComboBox facilitycb;
-        private System.Windows.Forms.TextBox txtDefective;
-        private System.Windows.Forms.TextBox txttotalqty;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox3;
@@ -604,5 +650,23 @@ namespace Function_Hall_Reservation_System.Admin
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.ComboBox txtavailability;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnaddneweq;
+        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button btnEditEquip;
+        private System.Windows.Forms.TextBox txtfacname;
+        private System.Windows.Forms.Label label2;
+        public System.Windows.Forms.TextBox txttotalqty;
+        public System.Windows.Forms.TextBox txtDefective;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label69;
+        private System.Windows.Forms.Label label11;
+        public System.Windows.Forms.TextBox txtquantity;
+        private System.Windows.Forms.Button btnremove;
+        private System.Windows.Forms.Button btnsaveneweq;
+        private System.Windows.Forms.Label label12;
+        public System.Windows.Forms.TextBox txtequipmentname;
+        private System.Windows.Forms.Label label13;
     }
 }

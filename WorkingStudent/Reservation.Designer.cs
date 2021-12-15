@@ -69,11 +69,11 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             this.txtreservedby = new System.Windows.Forms.TextBox();
             this.txteventname = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtreservationid = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.facilitycb = new System.Windows.Forms.ComboBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.txtfacilityname = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
@@ -319,6 +319,8 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.txtfacilityname);
+            this.tabPage2.Controls.Add(this.label3);
             this.tabPage2.Controls.Add(this.dtpReservedDate);
             this.tabPage2.Controls.Add(this.dtpTimeEnd);
             this.tabPage2.Controls.Add(this.dtpTimeStart);
@@ -340,8 +342,6 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             this.tabPage2.Controls.Add(this.txtreservedby);
             this.tabPage2.Controls.Add(this.txteventname);
             this.tabPage2.Controls.Add(this.label5);
-            this.tabPage2.Controls.Add(this.txtreservationid);
-            this.tabPage2.Controls.Add(this.label4);
             this.tabPage2.Location = new System.Drawing.Point(4, 26);
             this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage2.Name = "tabPage2";
@@ -363,7 +363,7 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             // dtpTimeEnd
             // 
             this.dtpTimeEnd.Enabled = false;
-            this.dtpTimeEnd.Location = new System.Drawing.Point(208, 249);
+            this.dtpTimeEnd.Location = new System.Drawing.Point(207, 216);
             this.dtpTimeEnd.Name = "dtpTimeEnd";
             this.dtpTimeEnd.Size = new System.Drawing.Size(133, 22);
             this.dtpTimeEnd.TabIndex = 54;
@@ -371,7 +371,7 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             // dtpTimeStart
             // 
             this.dtpTimeStart.Enabled = false;
-            this.dtpTimeStart.Location = new System.Drawing.Point(208, 216);
+            this.dtpTimeStart.Location = new System.Drawing.Point(207, 183);
             this.dtpTimeStart.Name = "dtpTimeStart";
             this.dtpTimeStart.Size = new System.Drawing.Size(133, 22);
             this.dtpTimeStart.TabIndex = 53;
@@ -391,7 +391,7 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(26, 249);
+            this.label15.Location = new System.Drawing.Point(25, 216);
             this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(91, 24);
@@ -402,7 +402,7 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(26, 208);
+            this.label14.Location = new System.Drawing.Point(25, 175);
             this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(91, 24);
@@ -480,7 +480,7 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             // txtcheckedby
             // 
             this.txtcheckedby.Enabled = false;
-            this.txtcheckedby.Location = new System.Drawing.Point(208, 171);
+            this.txtcheckedby.Location = new System.Drawing.Point(207, 138);
             this.txtcheckedby.Margin = new System.Windows.Forms.Padding(2);
             this.txtcheckedby.Multiline = true;
             this.txtcheckedby.Name = "txtcheckedby";
@@ -492,7 +492,7 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(26, 168);
+            this.label12.Location = new System.Drawing.Point(25, 135);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(111, 24);
@@ -502,7 +502,7 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             // txtdatereserved
             // 
             this.txtdatereserved.Enabled = false;
-            this.txtdatereserved.Location = new System.Drawing.Point(208, 124);
+            this.txtdatereserved.Location = new System.Drawing.Point(207, 96);
             this.txtdatereserved.Margin = new System.Windows.Forms.Padding(2);
             this.txtdatereserved.Multiline = true;
             this.txtdatereserved.Name = "txtdatereserved";
@@ -514,7 +514,7 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(28, 124);
+            this.label13.Location = new System.Drawing.Point(25, 94);
             this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(127, 24);
@@ -536,7 +536,7 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(26, 89);
+            this.label6.Location = new System.Drawing.Point(25, 56);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(116, 24);
@@ -546,7 +546,7 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             // txtreservedby
             // 
             this.txtreservedby.Enabled = false;
-            this.txtreservedby.Location = new System.Drawing.Point(208, 89);
+            this.txtreservedby.Location = new System.Drawing.Point(207, 56);
             this.txtreservedby.Margin = new System.Windows.Forms.Padding(2);
             this.txtreservedby.Multiline = true;
             this.txtreservedby.Name = "txtreservedby";
@@ -556,7 +556,7 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             // txteventname
             // 
             this.txteventname.Enabled = false;
-            this.txteventname.Location = new System.Drawing.Point(208, 49);
+            this.txteventname.Location = new System.Drawing.Point(207, 16);
             this.txteventname.Margin = new System.Windows.Forms.Padding(2);
             this.txteventname.Multiline = true;
             this.txteventname.Name = "txteventname";
@@ -567,33 +567,12 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(26, 49);
+            this.label5.Location = new System.Drawing.Point(25, 16);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(111, 24);
             this.label5.TabIndex = 24;
             this.label5.Text = "Event name";
-            // 
-            // txtreservationid
-            // 
-            this.txtreservationid.Enabled = false;
-            this.txtreservationid.Location = new System.Drawing.Point(208, 12);
-            this.txtreservationid.Margin = new System.Windows.Forms.Padding(2);
-            this.txtreservationid.Multiline = true;
-            this.txtreservationid.Name = "txtreservationid";
-            this.txtreservationid.Size = new System.Drawing.Size(133, 28);
-            this.txtreservationid.TabIndex = 23;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(26, 12);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(131, 24);
-            this.label4.TabIndex = 22;
-            this.label4.Text = "Reservation ID";
             // 
             // facilitycb
             // 
@@ -631,6 +610,27 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             this.label2.Size = new System.Drawing.Size(243, 41);
             this.label2.TabIndex = 84;
             this.label2.Text = "RESERVATION";
+            // 
+            // txtfacilityname
+            // 
+            this.txtfacilityname.Enabled = false;
+            this.txtfacilityname.Location = new System.Drawing.Point(585, 171);
+            this.txtfacilityname.Margin = new System.Windows.Forms.Padding(2);
+            this.txtfacilityname.Multiline = true;
+            this.txtfacilityname.Name = "txtfacilityname";
+            this.txtfacilityname.Size = new System.Drawing.Size(133, 28);
+            this.txtfacilityname.TabIndex = 57;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(366, 168);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(120, 24);
+            this.label3.TabIndex = 56;
+            this.label3.Text = "Facility name";
             // 
             // Reservation
             // 
@@ -690,8 +690,6 @@ namespace Function_Hall_Reservation_System.WorkingStudent
         private System.Windows.Forms.TextBox txtreservedby;
         private System.Windows.Forms.TextBox txteventname;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtreservationid;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
@@ -714,6 +712,8 @@ namespace Function_Hall_Reservation_System.WorkingStudent
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox txtfacilityname;
+        private System.Windows.Forms.Label label3;
     }
 }
 

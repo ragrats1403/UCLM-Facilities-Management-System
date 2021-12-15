@@ -57,8 +57,6 @@ namespace Function_Hall_Reservation_System.Admin
             this.txtreservedby = new System.Windows.Forms.TextBox();
             this.txteventname = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtreservationid = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
@@ -77,6 +75,8 @@ namespace Function_Hall_Reservation_System.Admin
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.facilitycb = new System.Windows.Forms.ComboBox();
+            this.txtfacilityname = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabPage1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -156,6 +156,8 @@ namespace Function_Hall_Reservation_System.Admin
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.txtfacilityname);
+            this.tabPage2.Controls.Add(this.label3);
             this.tabPage2.Controls.Add(this.dtpReservedDate);
             this.tabPage2.Controls.Add(this.dtpTimeEnd);
             this.tabPage2.Controls.Add(this.dtpTimeStart);
@@ -177,8 +179,6 @@ namespace Function_Hall_Reservation_System.Admin
             this.tabPage2.Controls.Add(this.txtreservedby);
             this.tabPage2.Controls.Add(this.txteventname);
             this.tabPage2.Controls.Add(this.label5);
-            this.tabPage2.Controls.Add(this.txtreservationid);
-            this.tabPage2.Controls.Add(this.label16);
             this.tabPage2.Location = new System.Drawing.Point(4, 26);
             this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage2.Name = "tabPage2";
@@ -200,7 +200,7 @@ namespace Function_Hall_Reservation_System.Admin
             // dtpTimeEnd
             // 
             this.dtpTimeEnd.Enabled = false;
-            this.dtpTimeEnd.Location = new System.Drawing.Point(202, 252);
+            this.dtpTimeEnd.Location = new System.Drawing.Point(211, 216);
             this.dtpTimeEnd.Name = "dtpTimeEnd";
             this.dtpTimeEnd.Size = new System.Drawing.Size(133, 22);
             this.dtpTimeEnd.TabIndex = 81;
@@ -208,7 +208,7 @@ namespace Function_Hall_Reservation_System.Admin
             // dtpTimeStart
             // 
             this.dtpTimeStart.Enabled = false;
-            this.dtpTimeStart.Location = new System.Drawing.Point(202, 211);
+            this.dtpTimeStart.Location = new System.Drawing.Point(211, 175);
             this.dtpTimeStart.Name = "dtpTimeStart";
             this.dtpTimeStart.Size = new System.Drawing.Size(133, 22);
             this.dtpTimeStart.TabIndex = 80;
@@ -228,7 +228,7 @@ namespace Function_Hall_Reservation_System.Admin
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(20, 250);
+            this.label15.Location = new System.Drawing.Point(29, 214);
             this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(91, 24);
@@ -239,7 +239,7 @@ namespace Function_Hall_Reservation_System.Admin
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(20, 209);
+            this.label14.Location = new System.Drawing.Point(29, 173);
             this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(91, 24);
@@ -316,7 +316,7 @@ namespace Function_Hall_Reservation_System.Admin
             // txtcheckedby
             // 
             this.txtcheckedby.Enabled = false;
-            this.txtcheckedby.Location = new System.Drawing.Point(202, 172);
+            this.txtcheckedby.Location = new System.Drawing.Point(211, 136);
             this.txtcheckedby.Margin = new System.Windows.Forms.Padding(2);
             this.txtcheckedby.Multiline = true;
             this.txtcheckedby.Name = "txtcheckedby";
@@ -327,7 +327,7 @@ namespace Function_Hall_Reservation_System.Admin
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(20, 170);
+            this.label12.Location = new System.Drawing.Point(29, 134);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(111, 24);
@@ -337,7 +337,7 @@ namespace Function_Hall_Reservation_System.Admin
             // txtdatereserved
             // 
             this.txtdatereserved.Enabled = false;
-            this.txtdatereserved.Location = new System.Drawing.Point(202, 132);
+            this.txtdatereserved.Location = new System.Drawing.Point(211, 96);
             this.txtdatereserved.Margin = new System.Windows.Forms.Padding(2);
             this.txtdatereserved.Multiline = true;
             this.txtdatereserved.Name = "txtdatereserved";
@@ -348,7 +348,7 @@ namespace Function_Hall_Reservation_System.Admin
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(20, 130);
+            this.label13.Location = new System.Drawing.Point(29, 94);
             this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(127, 24);
@@ -370,7 +370,7 @@ namespace Function_Hall_Reservation_System.Admin
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(20, 94);
+            this.label6.Location = new System.Drawing.Point(29, 58);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(116, 24);
@@ -380,7 +380,7 @@ namespace Function_Hall_Reservation_System.Admin
             // txtreservedby
             // 
             this.txtreservedby.Enabled = false;
-            this.txtreservedby.Location = new System.Drawing.Point(202, 96);
+            this.txtreservedby.Location = new System.Drawing.Point(211, 60);
             this.txtreservedby.Margin = new System.Windows.Forms.Padding(2);
             this.txtreservedby.Multiline = true;
             this.txtreservedby.Name = "txtreservedby";
@@ -390,7 +390,7 @@ namespace Function_Hall_Reservation_System.Admin
             // txteventname
             // 
             this.txteventname.Enabled = false;
-            this.txteventname.Location = new System.Drawing.Point(202, 56);
+            this.txteventname.Location = new System.Drawing.Point(211, 20);
             this.txteventname.Margin = new System.Windows.Forms.Padding(2);
             this.txteventname.Multiline = true;
             this.txteventname.Name = "txteventname";
@@ -401,33 +401,12 @@ namespace Function_Hall_Reservation_System.Admin
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(20, 56);
+            this.label5.Location = new System.Drawing.Point(29, 20);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(111, 24);
             this.label5.TabIndex = 55;
             this.label5.Text = "Event name";
-            // 
-            // txtreservationid
-            // 
-            this.txtreservationid.Enabled = false;
-            this.txtreservationid.Location = new System.Drawing.Point(202, 20);
-            this.txtreservationid.Margin = new System.Windows.Forms.Padding(2);
-            this.txtreservationid.Multiline = true;
-            this.txtreservationid.Name = "txtreservationid";
-            this.txtreservationid.Size = new System.Drawing.Size(133, 28);
-            this.txtreservationid.TabIndex = 54;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(20, 20);
-            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(131, 24);
-            this.label16.TabIndex = 53;
-            this.label16.Text = "Reservation ID";
             // 
             // panel1
             // 
@@ -670,6 +649,27 @@ namespace Function_Hall_Reservation_System.Admin
             this.facilitycb.Text = "Select Facility";
             this.facilitycb.SelectedIndexChanged += new System.EventHandler(this.facilitycb_SelectedIndexChanged);
             // 
+            // txtfacilityname
+            // 
+            this.txtfacilityname.Enabled = false;
+            this.txtfacilityname.Location = new System.Drawing.Point(578, 179);
+            this.txtfacilityname.Margin = new System.Windows.Forms.Padding(2);
+            this.txtfacilityname.Multiline = true;
+            this.txtfacilityname.Name = "txtfacilityname";
+            this.txtfacilityname.Size = new System.Drawing.Size(133, 28);
+            this.txtfacilityname.TabIndex = 84;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(359, 176);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(120, 24);
+            this.label3.TabIndex = 83;
+            this.label3.Text = "Facility name";
+            // 
             // ViewReservationList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -735,8 +735,6 @@ namespace Function_Hall_Reservation_System.Admin
         private System.Windows.Forms.TextBox txtreservedby;
         private System.Windows.Forms.TextBox txteventname;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtreservationid;
-        private System.Windows.Forms.Label label16;
         private System.Windows.Forms.ComboBox facilitycb;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.DateTimePicker dtpTimeStart;
@@ -750,5 +748,7 @@ namespace Function_Hall_Reservation_System.Admin
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtfacilityname;
+        private System.Windows.Forms.Label label3;
     }
 }
