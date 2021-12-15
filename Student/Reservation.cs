@@ -1338,7 +1338,7 @@ namespace Function_Hall_Reservation_System.Student
             {
                 loadedeqid = cmbeq2.SelectedItem.ToString();
                 Connection.Connection.DB();
-                Functions.Functions.gen = "Select equipments.availableqty from equipments where equipmentname = '" + loadedeqid + "' and facilityname = '" + facilitycb.SelectedItem.ToString() + "'";
+                Functions.Functions.gen = "Select equipments.availableqty,equipments.equipmentstatus from equipments where equipmentname = '" + loadedeqid + "' and facilityname = '" + facilitycb.SelectedItem.ToString() + "'";
                 Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
                 Functions.Functions.reader = Functions.Functions.command.ExecuteReader();
                 while (Functions.Functions.reader.Read())
@@ -1349,11 +1349,11 @@ namespace Function_Hall_Reservation_System.Student
                 }
                 if (label16.Text == "Available")
                 {
-                    textBox1.Enabled = true;
+                    textBox2.Enabled = true;
                 }
                 else
                 {
-                    textBox1.Enabled = false;
+                    textBox2.Enabled = false;
                 }
 
                 Connection.Connection.conn.Close();
@@ -1373,7 +1373,7 @@ namespace Function_Hall_Reservation_System.Student
             {
                 loadedeqid = cmbeq3.SelectedItem.ToString();
                 Connection.Connection.DB();
-                Functions.Functions.gen = "Select equipments.availableqty from equipments where equipmentname = '" + loadedeqid + "' and facilityname = '" + facilitycb.SelectedItem.ToString() + "'";
+                Functions.Functions.gen = "Select equipments.availableqty,equipments.equipmentstatus from equipments where equipmentname = '" + loadedeqid + "' and facilityname = '" + facilitycb.SelectedItem.ToString() + "'";
                 Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
                 Functions.Functions.reader = Functions.Functions.command.ExecuteReader();
                 while (Functions.Functions.reader.Read())
@@ -1384,11 +1384,11 @@ namespace Function_Hall_Reservation_System.Student
                 }
                 if (label17.Text == "Available")
                 {
-                    textBox1.Enabled = true;
+                    textBox3.Enabled = true;
                 }
                 else
                 {
-                    textBox1.Enabled = false;
+                    textBox3.Enabled = false;
                 }
 
                 Connection.Connection.conn.Close();
@@ -1410,7 +1410,7 @@ namespace Function_Hall_Reservation_System.Student
             {
                 loadedeqid = cmbeq5.SelectedItem.ToString();
                 Connection.Connection.DB();
-                Functions.Functions.gen = "Select equipments.availableqty from equipments where equipmentname = '" + loadedeqid + "' and facilityname = '" + facilitycb.SelectedItem.ToString() + "'";
+                Functions.Functions.gen = "Select equipments.availableqty,equipments.equipmentstatus from equipments where equipmentname = '" + loadedeqid + "' and facilityname = '" + facilitycb.SelectedItem.ToString() + "'";
                 Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
                 Functions.Functions.reader = Functions.Functions.command.ExecuteReader();
                 while (Functions.Functions.reader.Read())
@@ -1421,11 +1421,11 @@ namespace Function_Hall_Reservation_System.Student
                 }
                 if (label22.Text == "Available")
                 {
-                    textBox1.Enabled = true;
+                    textBox5.Enabled = true;
                 }
                 else
                 {
-                    textBox1.Enabled = false;
+                    textBox5.Enabled = false;
                 }
 
                 Connection.Connection.conn.Close();
@@ -1446,7 +1446,7 @@ namespace Function_Hall_Reservation_System.Student
             {
                 loadedeqid = cmbeq4.SelectedItem.ToString();
                 Connection.Connection.DB();
-                Functions.Functions.gen = "Select equipments.availableqty from equipments where equipmentname = '" + loadedeqid + "' and facilityname = '" + facilitycb.SelectedItem.ToString() + "'";
+                Functions.Functions.gen = "Select equipments.availableqty,equipments.equipmentstatus from equipments where equipmentname = '" + loadedeqid + "' and facilityname = '" + facilitycb.SelectedItem.ToString() + "'";
                 Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
                 Functions.Functions.reader = Functions.Functions.command.ExecuteReader();
                 while (Functions.Functions.reader.Read())
@@ -1457,11 +1457,11 @@ namespace Function_Hall_Reservation_System.Student
                 }
                 if (label21.Text == "Available")
                 {
-                    textBox1.Enabled = true;
+                    textBox4.Enabled = true;
                 }
                 else
                 {
-                    textBox1.Enabled = false;
+                    textBox4.Enabled = false;
                 }
 
                 Connection.Connection.conn.Close();
@@ -1481,7 +1481,7 @@ namespace Function_Hall_Reservation_System.Student
             {
                 loadedeqid = cmbeq6.SelectedItem.ToString();
                 Connection.Connection.DB();
-                Functions.Functions.gen = "Select equipments.availableqty from equipments where equipmentname = '" + loadedeqid + "' and facilityname = '"+facilitycb.SelectedItem.ToString()+"'";
+                Functions.Functions.gen = "Select equipments.availableqty,equipments.equipmentstatus from equipments where equipmentname = '" + loadedeqid + "' and facilityname = '" + facilitycb.SelectedItem.ToString() + "'";
                 Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
                 Functions.Functions.reader = Functions.Functions.command.ExecuteReader();
                 while (Functions.Functions.reader.Read())
@@ -1492,11 +1492,11 @@ namespace Function_Hall_Reservation_System.Student
                 }
                 if (label23.Text == "Available")
                 {
-                    textBox1.Enabled = true;
+                    textBox6.Enabled = true;
                 }
                 else
                 {
-                    textBox1.Enabled = false;
+                    textBox6.Enabled = false;
                 }
 
                 Connection.Connection.conn.Close();
@@ -1515,7 +1515,7 @@ namespace Function_Hall_Reservation_System.Student
             {
                 loadedeqid = cmbeq7.SelectedItem.ToString();
                 Connection.Connection.DB();
-                Functions.Functions.gen = "Select equipments.availableqty from equipments where equipmentname = '" + loadedeqid + "' and facilityname = '" + facilitycb.SelectedItem.ToString() + "'";
+                Functions.Functions.gen = "Select equipments.availableqty,equipments.equipmentstatus from equipments where equipmentname = '" + loadedeqid + "' and facilityname = '" + facilitycb.SelectedItem.ToString() + "'";
                 Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
                 Functions.Functions.reader = Functions.Functions.command.ExecuteReader();
                 while (Functions.Functions.reader.Read())
@@ -1526,11 +1526,11 @@ namespace Function_Hall_Reservation_System.Student
                 }
                 if (label29.Text == "Available")
                 {
-                    textBox1.Enabled = true;
+                    textBox12.Enabled = true;
                 }
                 else
                 {
-                    textBox1.Enabled = false;
+                    textBox12.Enabled = false;
                 }
 
                 Connection.Connection.conn.Close();
@@ -1549,7 +1549,7 @@ namespace Function_Hall_Reservation_System.Student
             {
                 loadedeqid = cmbeq8.SelectedItem.ToString();
                 Connection.Connection.DB();
-                Functions.Functions.gen = "Select equipments.availableqty from equipments where equipmentname = '" + loadedeqid + "' and facilityname = '" + facilitycb.SelectedItem.ToString() + "'";
+                Functions.Functions.gen = "Select equipments.availableqty,equipments.equipmentstatus from equipments where equipmentname = '" + loadedeqid + "' and facilityname = '" + facilitycb.SelectedItem.ToString() + "'";
                 Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
                 Functions.Functions.reader = Functions.Functions.command.ExecuteReader();
                 while (Functions.Functions.reader.Read())
@@ -1560,11 +1560,11 @@ namespace Function_Hall_Reservation_System.Student
                 }
                 if (label28.Text == "Available")
                 {
-                    textBox1.Enabled = true;
+                    textBox11.Enabled = true;
                 }
                 else
                 {
-                    textBox1.Enabled = false;
+                    textBox11.Enabled = false;
                 }
 
 
@@ -1584,7 +1584,7 @@ namespace Function_Hall_Reservation_System.Student
             {
                 loadedeqid = cmbeq9.SelectedItem.ToString();
                 Connection.Connection.DB();
-                Functions.Functions.gen = "Select equipments.availableqty from equipments where equipmentname = '" + loadedeqid + "' and facilityname = '" + facilitycb.SelectedItem.ToString() + "'";
+                Functions.Functions.gen = "Select equipments.availableqty,equipments.equipmentstatus from equipments where equipmentname = '" + loadedeqid + "' and facilityname = '" + facilitycb.SelectedItem.ToString() + "'";
                 Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
                 Functions.Functions.reader = Functions.Functions.command.ExecuteReader();
                 while (Functions.Functions.reader.Read())
@@ -1595,11 +1595,11 @@ namespace Function_Hall_Reservation_System.Student
                 }
                 if (label27.Text == "Available")
                 {
-                    textBox1.Enabled = true;
+                    textBox10.Enabled = true;
                 }
                 else
                 {
-                    textBox1.Enabled = false;
+                    textBox10.Enabled = false;
                 }
 
 
@@ -1620,7 +1620,7 @@ namespace Function_Hall_Reservation_System.Student
             {
                 loadedeqid = cmbeq10.SelectedItem.ToString();
                 Connection.Connection.DB();
-                Functions.Functions.gen = "Select equipments.availableqty from equipments where equipmentname = '" + loadedeqid + "' and facilityname = '" + facilitycb.SelectedItem.ToString() + "'";
+                Functions.Functions.gen = "Select equipments.availableqty,equipments.equipmentstatus from equipments where equipmentname = '" + loadedeqid + "' and facilityname = '" + facilitycb.SelectedItem.ToString() + "'";
                 Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
                 Functions.Functions.reader = Functions.Functions.command.ExecuteReader();
                 while (Functions.Functions.reader.Read())
@@ -1631,11 +1631,11 @@ namespace Function_Hall_Reservation_System.Student
                 }
                 if (label26.Text == "Available")
                 {
-                    textBox1.Enabled = true;
+                    textBox9.Enabled = true;
                 }
                 else
                 {
-                    textBox1.Enabled = false;
+                    textBox9.Enabled = false;
                 }
 
 
@@ -1655,7 +1655,7 @@ namespace Function_Hall_Reservation_System.Student
             {
                 loadedeqid = cmbeq11.SelectedItem.ToString();
                 Connection.Connection.DB();
-                Functions.Functions.gen = "Select equipments.availableqty from equipments where equipmentname = '" + loadedeqid + "' and facilityname = '" + facilitycb.SelectedItem.ToString() + "'";
+                Functions.Functions.gen = "Select equipments.availableqty,equipments.equipmentstatus from equipments where equipmentname = '" + loadedeqid + "' and facilityname = '" + facilitycb.SelectedItem.ToString() + "'";
                 Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
                 Functions.Functions.reader = Functions.Functions.command.ExecuteReader();
                 while (Functions.Functions.reader.Read())
@@ -1666,11 +1666,11 @@ namespace Function_Hall_Reservation_System.Student
                 }
                 if (label25.Text == "Available")
                 {
-                    textBox1.Enabled = true;
+                    textBox8.Enabled = true;
                 }
                 else
                 {
-                    textBox1.Enabled = false;
+                    textBox8.Enabled = false;
                 }
 
 
@@ -1690,7 +1690,7 @@ namespace Function_Hall_Reservation_System.Student
             {
                 loadedeqid = cmbeq12.SelectedItem.ToString();
                 Connection.Connection.DB();
-                Functions.Functions.gen = "Select equipments.availableqty from equipments where equipmentname = '" + loadedeqid + "' and facilityname = '" + facilitycb.SelectedItem.ToString() + "'";
+                Functions.Functions.gen = "Select equipments.availableqty,equipments.equipmentstatus from equipments where equipmentname = '" + loadedeqid + "' and facilityname = '" + facilitycb.SelectedItem.ToString() + "'";
                 Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
                 Functions.Functions.reader = Functions.Functions.command.ExecuteReader();
                 while (Functions.Functions.reader.Read())
@@ -1701,11 +1701,11 @@ namespace Function_Hall_Reservation_System.Student
                 }
                 if (label24.Text == "Available")
                 {
-                    textBox1.Enabled = true;
+                    textBox7.Enabled = true;
                 }
                 else
                 {
-                    textBox1.Enabled = false;
+                    textBox7.Enabled = false;
                 }
 
 
