@@ -553,15 +553,15 @@ namespace Function_Hall_Reservation_System.Admin
 
         private void btnsaveneweq_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("1");
+            
             string eq = txtequipmentname.Text;
             try
             {
-                MessageBox.Show("2");
+                
 
                 if (chkdup(eq))
                 {
-                    MessageBox.Show("3");
+                    
                     MessageBox.Show("Equipment already exists with Equipment Name: " + txtequipmentname.Text, "" + loadedid, MessageBoxButtons.OK);
                     this.Close();
                     Equipment equ = new Equipment();
@@ -570,7 +570,7 @@ namespace Function_Hall_Reservation_System.Admin
                 }
                 else
                 {
-                    MessageBox.Show("");
+                    
                     Connection.Connection.DB();
                     Functions.Functions.gen = "Insert Into equipments(equipmentname,equipmentstatus,defectiveqty,availableqty,originalqty,totalqty,facilityname,borrowedqty,addedqty)values('" + txtequipmentname.Text + "','" + txtavailability.Text + "'," + Int32.Parse(txtDefective.Text) + "," + Int32.Parse(txtquantity.Text) + "," + Int32.Parse(txtquantity.Text) + "," + totalqty(Int32.Parse(txtquantity.Text), Int32.Parse(txtDefective.Text)) + ",'" + txtfacname.Text + "',0,0)";
                     Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
