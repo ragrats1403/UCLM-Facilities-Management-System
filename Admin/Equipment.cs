@@ -440,10 +440,10 @@ namespace Function_Hall_Reservation_System.Admin
             txtequipmentname.Visible = true;
             txtquantity.Enabled = true;
             txtquantity.Visible = true;
-            label69.Enabled = false;
-            label69.Visible = false;
-            txttotalqty.Enabled = false;
-            txttotalqty.Visible = false;
+            label69.Enabled = true;
+            label69.Visible = true;
+            txttotalqty.Enabled = true;
+            txttotalqty.Visible = true;
             txtDefective.Enabled = true;
             txtDefective.Visible = true;
             txtfacname.Enabled = false;
