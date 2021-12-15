@@ -435,7 +435,6 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             this.txttotalqty.Name = "txttotalqty";
             this.txttotalqty.Size = new System.Drawing.Size(133, 28);
             this.txttotalqty.TabIndex = 38;
-            this.txttotalqty.Visible = false;
             this.txttotalqty.TextChanged += new System.EventHandler(this.txttotalqty_TextChanged);
             // 
             // txtDefective
@@ -545,7 +544,6 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             this.label13.Size = new System.Drawing.Size(158, 24);
             this.label13.TabIndex = 18;
             this.label13.Text = "Equipment Name";
-            this.label13.Visible = false;
             // 
             // facilitycb
             // 
