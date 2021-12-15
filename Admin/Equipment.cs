@@ -215,7 +215,7 @@ namespace Function_Hall_Reservation_System.Admin
             // Connection.Connection.conn.Open();
             if (Connection.Connection.conn.State == System.Data.ConnectionState.Open)
             {
-                Functions.Functions.gen = "Select * from equipments where equipmentname='" + txtequipmentname.Text + "'";
+                Functions.Functions.gen = "Select * from equipments where equipmentname='" + txtequipmentname.Text + "' and facilityname = '"+facilitycb.SelectedItem.ToString()+"'";
                 Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
                 Functions.Functions.command.Connection = Connection.Connection.conn;
                 Functions.Functions.command.CommandType = System.Data.CommandType.Text;
