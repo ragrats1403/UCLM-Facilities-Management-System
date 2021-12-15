@@ -148,7 +148,7 @@ namespace Function_Hall_Reservation_System.Student
             String a = "";
             String d = "";
             //1st query for designated facility equipment auto update
-            MessageBox.Show("First query");
+            
             Connection.Connection.DB();
             Functions.Functions.gen = "Select equipmentname,availableqty,defectiveqty from equipments where facilityname = '"+Reservation.setfacilityname+"' and equipmentname = '"+txtEqname.Text+"'";
             Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
@@ -163,14 +163,14 @@ namespace Function_Hall_Reservation_System.Student
             total = available + defective;
             Connection.Connection.conn.Close();
             //2nd query for designated facility equipment auto update
-            MessageBox.Show("2nd query");
+            
             Connection.Connection.DB();
             Functions.Functions.gen = "UPDATE equipments SET availableqty='" + available + "',defectiveqty = '" + defective + "',totalqty = '" + total + "' where equipmentname = '" + txtEqname.Text + "' and facilityname = '" + Reservation.setfacilityname + "'";
             Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
             Functions.Functions.command.ExecuteNonQuery();
             Connection.Connection.conn.Close();
             //1st query for borrowed facility equipment auto update
-            MessageBox.Show("3rd query");
+            
             Connection.Connection.DB();
             Functions.Functions.gen = "Select equipmentname,availableqty,defectiveqty from equipments where facilityname = '" + txtStoredFacility.Text + "' and equipmentname = '" + txtEqname.Text + "'";
             Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
@@ -185,7 +185,7 @@ namespace Function_Hall_Reservation_System.Student
             total = available + defective;
             Connection.Connection.conn.Close();
             //2nd query for designated facility equipment auto update
-            MessageBox.Show("4th query");
+            
             Connection.Connection.DB();
             Functions.Functions.gen = "UPDATE equipments SET availableqty='" + available + "',defectiveqty = '" + defective + "',totalqty = '" + total + "' where equipmentname = '" + txtEqname.Text + "' and facilityname = '" + txtStoredFacility.Text + "'";
             Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
