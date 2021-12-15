@@ -387,7 +387,9 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             btnEditEquip.Visible = true;
             btnEditEquip.Enabled = false;
             btnaddneweq.Enabled = false;
-            btnaddneweq.Visible = false;
+            btnaddneweq.Visible = true;
+            btnsaveneweq.Visible = true;
+            btnsaveneweq.Enabled = true;
 
 
         }

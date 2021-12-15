@@ -386,7 +386,7 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             // btnSave
             // 
             this.btnSave.Enabled = false;
-            this.btnSave.Location = new System.Drawing.Point(281, 251);
+            this.btnSave.Location = new System.Drawing.Point(235, 251);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(88, 47);
             this.btnSave.TabIndex = 42;
@@ -494,7 +494,7 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             // btnremove
             // 
             this.btnremove.Enabled = false;
-            this.btnremove.Location = new System.Drawing.Point(375, 251);
+            this.btnremove.Location = new System.Drawing.Point(329, 251);
             this.btnremove.Name = "btnremove";
             this.btnremove.Size = new System.Drawing.Size(88, 47);
             this.btnremove.TabIndex = 28;
@@ -506,7 +506,7 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             // btnsaveneweq
             // 
             this.btnsaveneweq.Enabled = false;
-            this.btnsaveneweq.Location = new System.Drawing.Point(423, 198);
+            this.btnsaveneweq.Location = new System.Drawing.Point(423, 251);
             this.btnsaveneweq.Name = "btnsaveneweq";
             this.btnsaveneweq.Size = new System.Drawing.Size(88, 47);
             this.btnsaveneweq.TabIndex = 27;

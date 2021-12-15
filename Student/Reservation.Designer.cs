@@ -45,8 +45,22 @@ namespace Function_Hall_Reservation_System.Student
             this.button1 = new System.Windows.Forms.Button();
             this.lblfullname = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.button5 = new System.Windows.Forms.Button();
+            this.facilitycb = new System.Windows.Forms.ComboBox();
+            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.txtStudentid = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.txtStudentName = new System.Windows.Forms.TextBox();
+            this.txtEventname = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button5 = new System.Windows.Forms.Button();
             this.label24 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
@@ -62,6 +76,7 @@ namespace Function_Hall_Reservation_System.Student
             this.label15 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.lbleq12 = new System.Windows.Forms.Label();
+            this.btnrequest = new System.Windows.Forms.Button();
             this.lbleq11 = new System.Windows.Forms.Label();
             this.lbleq10 = new System.Windows.Forms.Label();
             this.lbleq9 = new System.Windows.Forms.Label();
@@ -103,21 +118,6 @@ namespace Function_Hall_Reservation_System.Student
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.facilitycb = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.txtStudentid = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.txtStudentName = new System.Windows.Forms.TextBox();
-            this.txtEventname = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.btnrequest = new System.Windows.Forms.Button();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.facilitycb2 = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -353,16 +353,152 @@ namespace Function_Hall_Reservation_System.Student
             this.tabPage2.Text = "Request Reservation";
             this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
             // 
-            // button5
+            // facilitycb
             // 
-            this.button5.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.button5.Location = new System.Drawing.Point(139, 200);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(200, 56);
-            this.button5.TabIndex = 23;
-            this.button5.Text = "Borrow Equipments";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.facilitycb.FormattingEnabled = true;
+            this.facilitycb.Items.AddRange(new object[] {
+            "Function Hall",
+            "Old AVR",
+            "New AVR",
+            "Auditorium"});
+            this.facilitycb.Location = new System.Drawing.Point(25, 7);
+            this.facilitycb.Name = "facilitycb";
+            this.facilitycb.Size = new System.Drawing.Size(121, 25);
+            this.facilitycb.TabIndex = 8;
+            this.facilitycb.Text = "Select Facility";
+            this.facilitycb.SelectedIndexChanged += new System.EventHandler(this.facilitycb_SelectedIndexChanged);
+            // 
+            // dateTimePicker3
+            // 
+            this.dateTimePicker3.Location = new System.Drawing.Point(529, 92);
+            this.dateTimePicker3.Name = "dateTimePicker3";
+            this.dateTimePicker3.Size = new System.Drawing.Size(200, 22);
+            this.dateTimePicker3.TabIndex = 20;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.label10.Location = new System.Drawing.Point(369, 92);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(98, 24);
+            this.label10.TabIndex = 19;
+            this.label10.Text = "Event End";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.label9.Location = new System.Drawing.Point(369, 68);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(99, 24);
+            this.label9.TabIndex = 18;
+            this.label9.Text = "Event Start";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Location = new System.Drawing.Point(529, 40);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(200, 22);
+            this.dateTimePicker2.TabIndex = 17;
+            // 
+            // txtStudentid
+            // 
+            this.txtStudentid.Enabled = false;
+            this.txtStudentid.Location = new System.Drawing.Point(182, 87);
+            this.txtStudentid.Multiline = true;
+            this.txtStudentid.Name = "txtStudentid";
+            this.txtStudentid.Size = new System.Drawing.Size(159, 24);
+            this.txtStudentid.TabIndex = 16;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.label8.Location = new System.Drawing.Point(23, 85);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(101, 24);
+            this.label8.TabIndex = 15;
+            this.label8.Text = "Student ID:";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(529, 66);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
+            this.dateTimePicker1.TabIndex = 8;
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            // 
+            // txtStudentName
+            // 
+            this.txtStudentName.Enabled = false;
+            this.txtStudentName.Location = new System.Drawing.Point(182, 60);
+            this.txtStudentName.Multiline = true;
+            this.txtStudentName.Name = "txtStudentName";
+            this.txtStudentName.Size = new System.Drawing.Size(159, 24);
+            this.txtStudentName.TabIndex = 6;
+            this.txtStudentName.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            // 
+            // txtEventname
+            // 
+            this.txtEventname.Location = new System.Drawing.Point(182, 30);
+            this.txtEventname.Multiline = true;
+            this.txtEventname.Name = "txtEventname";
+            this.txtEventname.Size = new System.Drawing.Size(159, 24);
+            this.txtEventname.TabIndex = 5;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.label7.Location = new System.Drawing.Point(22, 111);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(256, 18);
+            this.label7.TabIndex = 4;
+            this.label7.Text = "Available Equipments To be Reserved";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.label6.Location = new System.Drawing.Point(23, 60);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(135, 24);
+            this.label6.TabIndex = 3;
+            this.label6.Text = "Student Name:";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.label5.Location = new System.Drawing.Point(369, 40);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(152, 24);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Reservation Date";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.label4.Location = new System.Drawing.Point(23, 30);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(119, 24);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Event Name:";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // panel2
             // 
@@ -429,6 +565,17 @@ namespace Function_Hall_Reservation_System.Student
             this.panel2.Size = new System.Drawing.Size(738, 263);
             this.panel2.TabIndex = 22;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // button5
+            // 
+            this.button5.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.button5.Location = new System.Drawing.Point(139, 200);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(200, 56);
+            this.button5.TabIndex = 23;
+            this.button5.Text = "Borrow Equipments";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // label24
             // 
@@ -564,6 +711,17 @@ namespace Function_Hall_Reservation_System.Student
             this.lbleq12.Size = new System.Drawing.Size(0, 17);
             this.lbleq12.TabIndex = 59;
             this.lbleq12.Visible = false;
+            // 
+            // btnrequest
+            // 
+            this.btnrequest.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.btnrequest.Location = new System.Drawing.Point(401, 200);
+            this.btnrequest.Name = "btnrequest";
+            this.btnrequest.Size = new System.Drawing.Size(200, 56);
+            this.btnrequest.TabIndex = 0;
+            this.btnrequest.Text = "Submit Reservation";
+            this.btnrequest.UseVisualStyleBackColor = true;
+            this.btnrequest.Click += new System.EventHandler(this.btnrequest_Click);
             // 
             // lbleq11
             // 
@@ -961,164 +1119,6 @@ namespace Function_Hall_Reservation_System.Student
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
-            // facilitycb
-            // 
-            this.facilitycb.FormattingEnabled = true;
-            this.facilitycb.Items.AddRange(new object[] {
-            "Function Hall",
-            "Old AVR",
-            "New AVR",
-            "Auditorium"});
-            this.facilitycb.Location = new System.Drawing.Point(25, 7);
-            this.facilitycb.Name = "facilitycb";
-            this.facilitycb.Size = new System.Drawing.Size(121, 25);
-            this.facilitycb.TabIndex = 8;
-            this.facilitycb.Text = "Select Facility";
-            this.facilitycb.SelectedIndexChanged += new System.EventHandler(this.facilitycb_SelectedIndexChanged);
-            // 
-            // dateTimePicker3
-            // 
-            this.dateTimePicker3.Location = new System.Drawing.Point(529, 92);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(200, 22);
-            this.dateTimePicker3.TabIndex = 20;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label10.Location = new System.Drawing.Point(369, 92);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(98, 24);
-            this.label10.TabIndex = 19;
-            this.label10.Text = "Event End";
-            this.label10.Click += new System.EventHandler(this.label10_Click);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label9.Location = new System.Drawing.Point(369, 68);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(99, 24);
-            this.label9.TabIndex = 18;
-            this.label9.Text = "Event Start";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(529, 40);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 22);
-            this.dateTimePicker2.TabIndex = 17;
-            // 
-            // txtStudentid
-            // 
-            this.txtStudentid.Enabled = false;
-            this.txtStudentid.Location = new System.Drawing.Point(182, 87);
-            this.txtStudentid.Multiline = true;
-            this.txtStudentid.Name = "txtStudentid";
-            this.txtStudentid.Size = new System.Drawing.Size(159, 24);
-            this.txtStudentid.TabIndex = 16;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label8.Location = new System.Drawing.Point(23, 85);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(101, 24);
-            this.label8.TabIndex = 15;
-            this.label8.Text = "Student ID:";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(529, 66);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
-            this.dateTimePicker1.TabIndex = 8;
-            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
-            // 
-            // txtStudentName
-            // 
-            this.txtStudentName.Enabled = false;
-            this.txtStudentName.Location = new System.Drawing.Point(182, 60);
-            this.txtStudentName.Multiline = true;
-            this.txtStudentName.Name = "txtStudentName";
-            this.txtStudentName.Size = new System.Drawing.Size(159, 24);
-            this.txtStudentName.TabIndex = 6;
-            this.txtStudentName.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
-            // 
-            // txtEventname
-            // 
-            this.txtEventname.Location = new System.Drawing.Point(182, 30);
-            this.txtEventname.Multiline = true;
-            this.txtEventname.Name = "txtEventname";
-            this.txtEventname.Size = new System.Drawing.Size(159, 24);
-            this.txtEventname.TabIndex = 5;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label7.Location = new System.Drawing.Point(22, 111);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(256, 18);
-            this.label7.TabIndex = 4;
-            this.label7.Text = "Available Equipments To be Reserved";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label6.Location = new System.Drawing.Point(23, 60);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(135, 24);
-            this.label6.TabIndex = 3;
-            this.label6.Text = "Student Name:";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label5.Location = new System.Drawing.Point(369, 40);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(152, 24);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "Reservation Date";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label4.Location = new System.Drawing.Point(23, 30);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(119, 24);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Event Name:";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
-            // 
-            // btnrequest
-            // 
-            this.btnrequest.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.btnrequest.Location = new System.Drawing.Point(401, 200);
-            this.btnrequest.Name = "btnrequest";
-            this.btnrequest.Size = new System.Drawing.Size(200, 56);
-            this.btnrequest.TabIndex = 0;
-            this.btnrequest.Text = "Submit Reservation";
-            this.btnrequest.UseVisualStyleBackColor = true;
-            this.btnrequest.Click += new System.EventHandler(this.btnrequest_Click);
-            // 
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.SystemColors.Menu;
@@ -1191,6 +1191,7 @@ namespace Function_Hall_Reservation_System.Student
             this.debugcount.Size = new System.Drawing.Size(41, 13);
             this.debugcount.TabIndex = 85;
             this.debugcount.Text = "label13";
+            this.debugcount.Visible = false;
             // 
             // pictureBox2
             // 

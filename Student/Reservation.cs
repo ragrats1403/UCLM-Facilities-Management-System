@@ -153,6 +153,21 @@ namespace Function_Hall_Reservation_System.Student
                     cmbeq11.Visible = false;
                     cmbeq12.Visible = false;
 
+                    label15.Visible = true;
+                    label16.Visible = false;
+                    label17.Visible = false;
+                    label21.Visible = false;
+                    label22.Visible = false;
+                    label23.Visible = false;
+                    label29.Visible = false;
+                    label28.Visible = false;
+                    label27.Visible = false;
+                    label26.Visible = false;
+                    label25.Visible = false;
+                    label24.Visible = false;
+
+
+
                     lbleq1.Visible = true;
                     lbleq2.Visible = false;
                     lbleq3.Visible = false;
@@ -208,6 +223,20 @@ namespace Function_Hall_Reservation_System.Student
                     lbleq11.Visible = false;
                     lbleq12.Visible = false;
 
+
+                    label15.Visible = true;
+                    label16.Visible = true;
+                    label17.Visible = false;
+                    label21.Visible = false;
+                    label22.Visible = false;
+                    label23.Visible = false;
+                    label29.Visible = false;
+                    label28.Visible = false;
+                    label27.Visible = false;
+                    label26.Visible = false;
+                    label25.Visible = false;
+                    label24.Visible = false;
+
                     textBox12.Visible = false;
                     textBox11.Visible = false;
                     textBox10.Visible = false;
@@ -236,6 +265,19 @@ namespace Function_Hall_Reservation_System.Student
                     cmbeq10.Visible = false;
                     cmbeq11.Visible = false;
                     cmbeq12.Visible = false;
+
+                    label15.Visible = true;
+                    label16.Visible = true;
+                    label17.Visible = true;
+                    label21.Visible = false;
+                    label22.Visible = false;
+                    label23.Visible = false;
+                    label29.Visible = false;
+                    label28.Visible = false;
+                    label27.Visible = false;
+                    label26.Visible = false;
+                    label25.Visible = false;
+                    label24.Visible = false;
 
                     lbleq1.Visible = true;
                     lbleq2.Visible = true;
@@ -277,6 +319,19 @@ namespace Function_Hall_Reservation_System.Student
                     cmbeq10.Visible = false;
                     cmbeq11.Visible = false;
                     cmbeq12.Visible = false;
+
+                    label15.Visible = true;
+                    label16.Visible = true;
+                    label17.Visible = true;
+                    label21.Visible = true;
+                    label22.Visible = false;
+                    label23.Visible = false;
+                    label29.Visible = false;
+                    label28.Visible = false;
+                    label27.Visible = false;
+                    label26.Visible = false;
+                    label25.Visible = false;
+                    label24.Visible = false;
 
                     lbleq1.Visible = true;
                     lbleq2.Visible = true;
@@ -320,6 +375,19 @@ namespace Function_Hall_Reservation_System.Student
                         cmbeq11.Visible = false;
                         cmbeq12.Visible = false;
 
+                        label15.Visible = true;
+                        label16.Visible = true;
+                        label17.Visible = true;
+                        label21.Visible = true;
+                        label22.Visible = true;
+                        label23.Visible = false;
+                        label29.Visible = false;
+                        label28.Visible = false;
+                        label27.Visible = false;
+                        label26.Visible = false;
+                        label25.Visible = false;
+                        label24.Visible = false;
+
                         lbleq1.Visible = true;
                         lbleq2.Visible = true;
                         lbleq3.Visible = true;
@@ -362,6 +430,19 @@ namespace Function_Hall_Reservation_System.Student
                     cmbeq11.Visible = false;
                     cmbeq12.Visible = false;
 
+                    label15.Visible = true;
+                    label16.Visible = true;
+                    label17.Visible = true;
+                    label21.Visible = true;
+                    label22.Visible = true;
+                    label23.Visible = true;
+                    label29.Visible = false;
+                    label28.Visible = false;
+                    label27.Visible = false;
+                    label26.Visible = false;
+                    label25.Visible = false;
+                    label24.Visible = false;
+
                     lbleq1.Visible = true;
                     lbleq2.Visible = true;
                     lbleq3.Visible = true;
@@ -402,6 +483,19 @@ namespace Function_Hall_Reservation_System.Student
                     cmbeq10.Visible = false;
                     cmbeq11.Visible = false;
                     cmbeq12.Visible = false;
+
+                    label15.Visible = true;
+                    label16.Visible = true;
+                    label17.Visible = true;
+                    label21.Visible = true;
+                    label22.Visible = true;
+                    label23.Visible = true;
+                    label29.Visible = true;
+                    label28.Visible = false;
+                    label27.Visible = false;
+                    label26.Visible = false;
+                    label25.Visible = false;
+                    label24.Visible = false;
 
                     lbleq1.Visible = true;
                     lbleq2.Visible = true;
@@ -444,6 +538,19 @@ namespace Function_Hall_Reservation_System.Student
                     cmbeq11.Visible = false;
                     cmbeq12.Visible = false;
 
+                    label15.Visible = true;
+                    label16.Visible = true;
+                    label17.Visible = true;
+                    label21.Visible = true;
+                    label22.Visible = true;
+                    label23.Visible = true;
+                    label29.Visible = true;
+                    label28.Visible = true;
+                    label27.Visible = false;
+                    label26.Visible = false;
+                    label25.Visible = false;
+                    label24.Visible = false;
+
                     lbleq1.Visible = true;
                     lbleq2.Visible = true;
                     lbleq3.Visible = true;
@@ -484,6 +591,19 @@ namespace Function_Hall_Reservation_System.Student
                     cmbeq10.Visible = false;
                     cmbeq11.Visible = false;
                     cmbeq12.Visible = false;
+
+                    label15.Visible = true;
+                    label16.Visible = true;
+                    label17.Visible = true;
+                    label21.Visible = true;
+                    label22.Visible = true;
+                    label23.Visible = true;
+                    label29.Visible = true;
+                    label28.Visible = true;
+                    label27.Visible = true;
+                    label26.Visible = false;
+                    label25.Visible = false;
+                    label24.Visible = false;
 
                     lbleq1.Visible = true;
                     lbleq2.Visible = true;
@@ -526,6 +646,19 @@ namespace Function_Hall_Reservation_System.Student
                     cmbeq11.Visible = false;
                     cmbeq12.Visible = false;
 
+                    label15.Visible = true;
+                    label16.Visible = true;
+                    label17.Visible = true;
+                    label21.Visible = true;
+                    label22.Visible = true;
+                    label23.Visible = true;
+                    label29.Visible = true;
+                    label28.Visible = true;
+                    label27.Visible = true;
+                    label26.Visible = true;
+                    label25.Visible = false;
+                    label24.Visible = false;
+
                     lbleq1.Visible = true;
                     lbleq2.Visible = true;
                     lbleq3.Visible = true;
@@ -567,6 +700,19 @@ namespace Function_Hall_Reservation_System.Student
                     cmbeq11.Visible = true;
                     cmbeq12.Visible = false;
 
+                    label15.Visible = true;
+                    label16.Visible = true;
+                    label17.Visible = true;
+                    label21.Visible = true;
+                    label22.Visible = true;
+                    label23.Visible = true;
+                    label29.Visible = true;
+                    label28.Visible = true;
+                    label27.Visible = true;
+                    label26.Visible = true;
+                    label25.Visible = true;
+                    label24.Visible = false;
+
                     lbleq1.Visible = true;
                     lbleq2.Visible = true;
                     lbleq3.Visible = true;
@@ -607,6 +753,19 @@ namespace Function_Hall_Reservation_System.Student
                     cmbeq10.Visible = true;
                     cmbeq11.Visible = true;
                     cmbeq12.Visible = true;
+
+                    label15.Visible = true;
+                    label16.Visible = true;
+                    label17.Visible = true;
+                    label21.Visible = true;
+                    label22.Visible = true;
+                    label23.Visible = true;
+                    label29.Visible = true;
+                    label28.Visible = true;
+                    label27.Visible = true;
+                    label26.Visible = true;
+                    label25.Visible = true;
+                    label24.Visible = true;
 
                     lbleq1.Visible = true;
                     lbleq2.Visible = true;
@@ -1186,9 +1345,16 @@ namespace Function_Hall_Reservation_System.Student
                 {
                     eqhandler = Functions.Functions.reader.GetInt32(0);
                     lbleq2.Text = eqhandler.ToString();
-
+                    label16.Text = Functions.Functions.reader["equipmentstatus"].ToString();
                 }
-
+                if (label16.Text == "Available")
+                {
+                    textBox1.Enabled = true;
+                }
+                else
+                {
+                    textBox1.Enabled = false;
+                }
 
                 Connection.Connection.conn.Close();
 
@@ -1214,9 +1380,16 @@ namespace Function_Hall_Reservation_System.Student
                 {
                     eqhandler = Functions.Functions.reader.GetInt32(0);
                     lbleq3.Text = eqhandler.ToString();
-
+                    label17.Text = Functions.Functions.reader["equipmentstatus"].ToString();
                 }
-
+                if (label17.Text == "Available")
+                {
+                    textBox1.Enabled = true;
+                }
+                else
+                {
+                    textBox1.Enabled = false;
+                }
 
                 Connection.Connection.conn.Close();
 
@@ -1244,9 +1417,16 @@ namespace Function_Hall_Reservation_System.Student
                 {
                     eqhandler = Functions.Functions.reader.GetInt32(0);
                     lbleq5.Text = eqhandler.ToString();
-
+                    label22.Text = Functions.Functions.reader["equipmentstatus"].ToString();
                 }
-
+                if (label22.Text == "Available")
+                {
+                    textBox1.Enabled = true;
+                }
+                else
+                {
+                    textBox1.Enabled = false;
+                }
 
                 Connection.Connection.conn.Close();
 
@@ -1273,9 +1453,16 @@ namespace Function_Hall_Reservation_System.Student
                 {
                     eqhandler = Functions.Functions.reader.GetInt32(0);
                     lbleq4.Text = eqhandler.ToString();
-
+                    label21.Text = Functions.Functions.reader["equipmentstatus"].ToString();
                 }
-
+                if (label21.Text == "Available")
+                {
+                    textBox1.Enabled = true;
+                }
+                else
+                {
+                    textBox1.Enabled = false;
+                }
 
                 Connection.Connection.conn.Close();
 
@@ -1301,9 +1488,16 @@ namespace Function_Hall_Reservation_System.Student
                 {
                     eqhandler = Functions.Functions.reader.GetInt32(0);
                     lbleq6.Text = eqhandler.ToString();
-
+                    label23.Text = Functions.Functions.reader["equipmentstatus"].ToString();
                 }
-
+                if (label23.Text == "Available")
+                {
+                    textBox1.Enabled = true;
+                }
+                else
+                {
+                    textBox1.Enabled = false;
+                }
 
                 Connection.Connection.conn.Close();
 
@@ -1328,9 +1522,16 @@ namespace Function_Hall_Reservation_System.Student
                 {
                     eqhandler = Functions.Functions.reader.GetInt32(0);
                     lbleq7.Text = eqhandler.ToString();
-
+                    label29.Text = Functions.Functions.reader["equipmentstatus"].ToString();
                 }
-
+                if (label29.Text == "Available")
+                {
+                    textBox1.Enabled = true;
+                }
+                else
+                {
+                    textBox1.Enabled = false;
+                }
 
                 Connection.Connection.conn.Close();
 
@@ -1355,7 +1556,15 @@ namespace Function_Hall_Reservation_System.Student
                 {
                     eqhandler = Functions.Functions.reader.GetInt32(0);
                     lbleq8.Text = eqhandler.ToString();
-
+                    label28.Text = Functions.Functions.reader["equipmentstatus"].ToString();
+                }
+                if (label28.Text == "Available")
+                {
+                    textBox1.Enabled = true;
+                }
+                else
+                {
+                    textBox1.Enabled = false;
                 }
 
 
@@ -1382,8 +1591,17 @@ namespace Function_Hall_Reservation_System.Student
                 {
                     eqhandler = Functions.Functions.reader.GetInt32(0);
                     lbleq9.Text = eqhandler.ToString();
-
+                    label27.Text = Functions.Functions.reader["equipmentstatus"].ToString();
                 }
+                if (label27.Text == "Available")
+                {
+                    textBox1.Enabled = true;
+                }
+                else
+                {
+                    textBox1.Enabled = false;
+                }
+
 
 
                 Connection.Connection.conn.Close();
@@ -1409,7 +1627,15 @@ namespace Function_Hall_Reservation_System.Student
                 {
                     eqhandler = Functions.Functions.reader.GetInt32(0);
                     lbleq10.Text = eqhandler.ToString();
-
+                    label26.Text = Functions.Functions.reader["equipmentstatus"].ToString();
+                }
+                if (label26.Text == "Available")
+                {
+                    textBox1.Enabled = true;
+                }
+                else
+                {
+                    textBox1.Enabled = false;
                 }
 
 
@@ -1436,7 +1662,15 @@ namespace Function_Hall_Reservation_System.Student
                 {
                     eqhandler = Functions.Functions.reader.GetInt32(0);
                     lbleq11.Text = eqhandler.ToString();
-
+                    label25.Text = Functions.Functions.reader["equipmentstatus"].ToString();
+                }
+                if (label25.Text == "Available")
+                {
+                    textBox1.Enabled = true;
+                }
+                else
+                {
+                    textBox1.Enabled = false;
                 }
 
 
@@ -1463,7 +1697,15 @@ namespace Function_Hall_Reservation_System.Student
                 {
                     eqhandler = Functions.Functions.reader.GetInt32(0);
                     lbleq12.Text = eqhandler.ToString();
-
+                    label24.Text = Functions.Functions.reader["equipmentstatus"].ToString();
+                }
+                if (label24.Text == "Available")
+                {
+                    textBox1.Enabled = true;
+                }
+                else
+                {
+                    textBox1.Enabled = false;
                 }
 
 
@@ -1477,12 +1719,7 @@ namespace Function_Hall_Reservation_System.Student
             }
         }
 
-        public void checkconflictevent()
-        {
-
-
-
-        }
+        
 
 
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
