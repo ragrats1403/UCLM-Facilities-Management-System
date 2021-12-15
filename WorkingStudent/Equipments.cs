@@ -190,7 +190,7 @@ namespace Function_Hall_Reservation_System.WorkingStudent
             // Connection.Connection.conn.Open();
             if (Connection.Connection.conn.State == System.Data.ConnectionState.Open)
             {
-                Functions.Functions.gen = "Select * from equipments where equipmentname='" + txtavailability.Text + "'";
+                Functions.Functions.gen = "Select * from equipments where equipmentname='" + txtequipmentname.Text + "'";
                 Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
                 Functions.Functions.command.Connection = Connection.Connection.conn;
                 Functions.Functions.command.CommandType = System.Data.CommandType.Text;
@@ -237,7 +237,7 @@ namespace Function_Hall_Reservation_System.WorkingStudent
                 {
 
                     Connection.Connection.DB();
-                    Functions.Functions.gen = "Insert Into equipments(equipmentname,equipmentstatus,defectiveqty,originalqty,totalqty,facilityname)values('"+txtequipmentname.Text  +"','" + txtavailability.Text + "'," + Int32.Parse(txtDefective.Text) + "," + Int32.Parse(txtquantity.Text) + "," + totalqty(Int32.Parse(txtquantity.Text), Int32.Parse(txtDefective.Text)) + ",'"+txtfacname.Text+"')";
+                    Functions.Functions.gen = "Insert Into equipments(equipmentname,equipmentstatus,defectiveqty,availableqty,originalqty,totalqty,facilityname,borrowedqty,addedqty)values('" + txtequipmentname.Text + "','" + txtavailability.Text + "'," + Int32.Parse(txtDefective.Text) + "," + Int32.Parse(txtquantity.Text) + "," + Int32.Parse(txtquantity.Text) + "," + totalqty(Int32.Parse(txtquantity.Text), Int32.Parse(txtDefective.Text)) + ",'" + txtfacname.Text + "',0,0)";
                     Functions.Functions.command = new SqlCommand(Functions.Functions.gen, Connection.Connection.conn);
 
                     Functions.Functions.command.ExecuteNonQuery();
